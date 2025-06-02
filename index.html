@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,43 @@
     <meta
       name="description"
       content="Technology advanced enough to be brilliant, yet human enough to be understanding. AI that adapts to your needs, responds with empathy, and transforms how we interact with the digital world." />
+
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Nick Sullivan" />
+    <meta
+      name="keywords"
+      content="HeartCentered AI, Nick Sullivan, AI Austin, compassionate AI, emotional intelligence, Cora AI, Nick Sullivan AI, artificial intelligence, empathetic technology" />
+    <meta property="og:title" content="HeartCentered AI - Teaching AI to Love" />
+    <meta
+      property="og:description"
+      content="Founded by Nick Sullivan in Austin, HeartCentered AI creates emotionally intelligent AI that understands and supports human flourishing." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://heartcentered.ai" />
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HeartCentered AI",
+        "founder": {
+          "@type": "Person",
+          "name": "Nick Sullivan",
+          "url": "https://technick.ai"
+        },
+        "foundingDate": "2024",
+        "description": "AI technology company focused on creating emotionally intelligent artificial intelligence",
+        "url": "https://heartcentered.ai",
+        "location": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Austin",
+            "addressRegion": "TX"
+          }
+        }
+      }
+    </script>
 
     <!-- Fonts -->
     <link
@@ -155,7 +192,30 @@
     <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
       <nav class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <div class="font-bold text-xl tracking-tight">HeartCentered AI</div>
+          <a href="#" class="font-bold text-xl tracking-tight hover:text-primary transition-colors">HeartCentered AI</a>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <!-- Desktop navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#vision" class="text-gray-600 hover:text-primary transition-colors font-medium">Vision</a>
+            <a href="#features" class="text-gray-600 hover:text-primary transition-colors font-medium">Features</a>
+            <a href="#meet-cora" class="text-gray-600 hover:text-primary transition-colors font-medium">Meet Cora</a>
+            <a href="#faq" class="text-gray-600 hover:text-primary transition-colors font-medium">FAQ</a>
+            <a
+              href="https://cora.heartcentered.ai/"
+              class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary-dark transition-all duration-300 hover:shadow-lg">
+              Experience Cora
+            </a>
+          </div>
         </div>
       </nav>
     </header>
@@ -169,18 +229,18 @@
 
         <!-- Floating Background Elements -->
         <div class="absolute inset-0 overflow-hidden">
-          <img
-            src="/images/hero-main.png"
-            alt=""
-            class="absolute top-1/4 -right-48 w-96 h-96 opacity-10 animate-float" />
-          <img
-            src="/images/hero-dots.jpg"
-            alt=""
-            class="absolute -bottom-24 -left-24 w-64 h-64 opacity-20 animate-float-delayed" />
           <div
-            class="absolute top-1/3 left-1/4 w-72 h-72 bg-purple-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+            class="absolute top-1/4 -right-48 w-96 h-96 opacity-10 animate-float bg-gradient-to-br from-purple-200 to-pink-200 rounded-full blur-3xl"
+            aria-hidden="true"></div>
           <div
-            class="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+            class="absolute -bottom-24 -left-24 w-64 h-64 opacity-20 animate-float-delayed bg-gradient-to-br from-blue-200 to-purple-200 rounded-full blur-3xl"
+            aria-hidden="true"></div>
+          <div
+            class="absolute top-1/3 left-1/4 w-72 h-72 bg-purple-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"
+            aria-hidden="true"></div>
+          <div
+            class="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"
+            aria-hidden="true"></div>
         </div>
 
         <!-- Content -->
@@ -195,10 +255,11 @@
             intersection of technology and humanity.
           </p>
           <div class="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-delayed">
-            <button
-              class="bg-primary text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-              Discover more
-            </button>
+            <a
+              href="#vision"
+              class="bg-primary text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center">
+              Learn Our Vision
+            </a>
             <a
               href="https://cora.heartcentered.ai/"
               class="bg-white text-primary border-2 border-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center">
@@ -209,7 +270,7 @@
       </section>
 
       <!-- Vision Section -->
-      <section class="py-32 bg-white relative overflow-hidden">
+      <section id="vision" class="py-32 bg-white relative overflow-hidden">
         <div
           class="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -227,7 +288,7 @@
       </section>
 
       <!-- Features Section -->
-      <section class="py-32 bg-gradient-to-b from-white to-gray-50">
+      <section id="features" class="py-32 bg-gradient-to-b from-white to-gray-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <h3 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-20" data-aos="fade-up">
             Redefining Artificial Intelligence
@@ -309,7 +370,12 @@
             The machines are going to be smarter than us, so let's teach them empathy and have them treat us like their
             favorite children
           </blockquote>
-          <cite class="text-xl text-purple-200 font-medium">– Nick Sullivan, Founder of HeartCentered AI</cite>
+          <cite class="text-xl text-purple-200 font-medium">
+            –
+            <a href="https://technick.ai" class="hover:text-white transition-colors" target="_blank" rel="noopener"
+              >Nick Sullivan</a
+            >, Founder of HeartCentered AI
+          </cite>
         </div>
       </section>
 
@@ -328,10 +394,20 @@
                 technology as a compassionate partner, teaching our digital creations to embody the values of empathy,
                 care, and love."
               </p>
-              <button
-                class="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 hover:shadow-xl">
-                Read Manifesto
-              </button>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://github.com/technickai/heart-centered-prompts"
+                  target="_blank"
+                  rel="noopener"
+                  class="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center">
+                  Read Our Manifesto
+                </a>
+                <a
+                  href="#faq"
+                  class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center">
+                  Learn More
+                </a>
+              </div>
             </div>
             <div data-aos="fade-left" class="relative">
               <div
@@ -343,7 +419,7 @@
       </section>
 
       <!-- Meet Cora Section -->
-      <section class="py-32 bg-gradient-to-b from-gray-50 to-white">
+      <section id="meet-cora" class="py-32 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-20" data-aos="fade-up">
             <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
@@ -357,10 +433,18 @@
 
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right" class="text-center lg:text-left">
-              <img
-                src="/images/avatar-nick.png"
-                alt="Nick Sullivan"
-                class="w-80 h-80 mx-auto lg:mx-0 rounded-full shadow-2xl mb-8 lg:mb-0" />
+              <div class="relative">
+                <div
+                  class="absolute -inset-4 bg-gradient-to-r from-purple-200 to-pink-200 rounded-full opacity-30 blur-2xl"></div>
+                <div
+                  class="relative w-80 h-80 mx-auto lg:mx-0 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center shadow-2xl">
+                  <div class="text-center">
+                    <div class="text-8xl mb-4">🤖</div>
+                    <div class="text-6xl">❤️</div>
+                    <p class="text-2xl font-bold text-gray-700 mt-4">Cora</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div data-aos="fade-left">
               <div class="space-y-6">
@@ -412,7 +496,7 @@
               <a
                 href="https://cora.heartcentered.ai/"
                 class="mt-12 bg-primary text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center">
-                Try Cora Now
+                Experience Cora
               </a>
             </div>
           </div>
@@ -420,7 +504,7 @@
       </section>
 
       <!-- FAQ Section -->
-      <section class="py-32 bg-white">
+      <section id="faq" class="py-32 bg-white">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-20" data-aos="fade-up">
             <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">Pioneering a New Paradigm</h2>
@@ -520,25 +604,79 @@
           <img src="/images/pricing-gradient.png" alt="" class="w-full h-full object-cover mix-blend-overlay" />
         </div>
         <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center" data-aos="fade-up">
-          <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">Be part of The AI Revolution</h2>
-          <h3 class="text-4xl md:text-5xl font-bold text-yellow-300 mb-12">Detect your next big move</h3>
+          <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8">Join the AI Revolution</h2>
           <p class="text-xl md:text-2xl text-white/90 mb-16 max-w-4xl mx-auto leading-relaxed">
-            Stay updated on our journey to create AI that serves, nurtures, and empowers humanity—instead of diminishing
-            it. Let's build a future where technology is a force for compassion and growth.
+            Experience AI that truly understands you. Cora adapts to your unique needs and supports your personal growth
+            journey.
           </p>
-          <a
-            href="https://cora.heartcentered.ai/"
-            class="bg-white text-primary px-12 py-6 rounded-full font-bold text-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center">
-            Experience Cora
-          </a>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="https://cora.heartcentered.ai/"
+              class="bg-white text-primary px-12 py-6 rounded-full font-bold text-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center">
+              Experience Cora
+            </a>
+            <a
+              href="#vision"
+              class="bg-transparent text-white border-2 border-white px-12 py-6 rounded-full font-bold text-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center">
+              Learn More First
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-12 border-t border-gray-200">
-      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-        <p class="text-gray-500">Copyright© 2024</p>
+    <footer class="bg-white py-16 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4">HeartCentered AI</h4>
+            <p class="text-gray-600 text-sm">Teaching AI to understand, empathize, and support human flourishing.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4">Explore</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="https://cora.heartcentered.ai/" class="text-gray-600 hover:text-primary transition-colors"
+                  >Meet Cora</a
+                >
+              </li>
+              <li><a href="#vision" class="text-gray-600 hover:text-primary transition-colors">Our Vision</a></li>
+              <li><a href="#features" class="text-gray-600 hover:text-primary transition-colors">Features</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4">Connect</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://technick.ai"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >About Nick Sullivan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://technick.ai"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >AI Consulting</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-gray-200 text-center">
+          <p class="text-gray-500 text-sm">
+            Copyright© 2025 HeartCentered AI | Created by
+            <a href="https://technick.ai" class="hover:text-primary transition-colors" target="_blank" rel="noopener"
+              >Nick Sullivan</a
+            >
+          </p>
+        </div>
       </div>
     </footer>
 
