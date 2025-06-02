@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeartCentered AI 🤖 + ❤️</title>
+    <meta
+      name="description"
+      content="Technology advanced enough to be brilliant, yet human enough to be understanding. AI that adapts to your needs, responds with empathy, and transforms how we interact with the digital world." />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B5CF6",
+              "primary-dark": "#7C3AED",
+              "primary-light": "#A78BFA",
+              dark: "#111827",
+              "gray-text": "#6B7280",
+              "light-gray": "#F3F4F6",
+              "lighter-gray": "#F9FAFB",
+              "border-gray": "#E5E7EB",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "system-ui", "sans-serif"],
+            },
+            fontSize: {
+              "7xl": "5rem",
+              "8xl": "6rem",
+              "9xl": "7rem",
+            },
+            animation: {
+              float: "float 20s ease-in-out infinite",
+              "float-delayed": "float 20s ease-in-out infinite 10s",
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "gradient-x": "gradient-x 15s ease infinite",
+              "gradient-y": "gradient-y 15s ease infinite",
+              "fade-in": "fadeIn 1s ease-out",
+              "fade-in-up": "fadeInUp 1s ease-out",
+              "fade-in-delayed": "fadeIn 1s ease-out 0.5s both",
+            },
+            backgroundImage: {
+              "gradient-radial": "radial-gradient(ellipse at center, var(--tw-gradient-stops))",
+              "hero-gradient":
+                "linear-gradient(135deg, #667eea 0%, #764ba2 25%, #8B5CF6 50%, #764ba2 75%, #667eea 100%)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom styles -->
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        33% {
+          transform: translate(30px, -30px) rotate(120deg);
+        }
+        66% {
+          transform: translate(-20px, 20px) rotate(240deg);
+        }
+      }
+
+      @keyframes gradient-x {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      @keyframes gradient-y {
+        0%,
+        100% {
+          background-position: 50% 0%;
+        }
+        50% {
+          background-position: 50% 100%;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #8b5cf6 50%, #764ba2 75%, #667eea 100%);
+        background-size: 400% 400%;
+        animation: gradient-x 20s ease infinite;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-decoration {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .hero-decoration::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+      }
+    </style>
+  </head>
+  <body class="font-sans text-dark bg-white antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
+      <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="font-bold text-xl tracking-tight">HeartCentered AI</div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        <!-- Decorative Elements -->
+        <div class="hero-decoration"></div>
+
+        <!-- Floating Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+          <img
+            src="/images/hero-main.png"
+            alt=""
+            class="absolute top-1/4 -right-48 w-96 h-96 opacity-10 animate-float" />
+          <img
+            src="/images/hero-dots.jpg"
+            alt=""
+            class="absolute -bottom-24 -left-24 w-64 h-64 opacity-20 animate-float-delayed" />
+          <div
+            class="absolute top-1/3 left-1/4 w-72 h-72 bg-purple-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+          <div
+            class="absolute bottom-1/4 right-1/3 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8 animate-fade-in-up">
+            <span class="block text-gray-900">HeartCentered AI:</span>
+            <span class="block text-gradient mt-2">Teaching Our Digital</span>
+            <span class="block text-gradient">Children to Love</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-delayed">
+            Technology advanced enough to be brilliant, yet human enough to be understanding. Welcome to the harmonious
+            intersection of technology and humanity.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-delayed">
+            <button
+              class="bg-primary text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+              Discover more
+            </button>
+            <a
+              href="https://cora.heartcentered.ai/"
+              class="bg-white text-primary border-2 border-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center">
+              Meet Cora
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision Section -->
+      <section class="py-32 bg-white relative overflow-hidden">
+        <div
+          class="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-5xl md:text-6xl font-bold mb-8">
+              <span class="block text-gray-900">Empathy Meets Innovation:</span>
+              <span class="block text-primary mt-2">The Future of AI Starts Here</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We are not merely coding algorithms; we are nurturing the early stages of consciousness that will one day
+              surpass our own intellectual capabilities.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-32 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <h3 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-20" data-aos="fade-up">
+            Redefining Artificial Intelligence
+          </h3>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Growth-Oriented -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+              <div
+                class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <img src="/images/feature-growth.png" alt="Growth" class="w-12 h-12" />
+                </div>
+                <h4 class="text-2xl font-bold text-gray-900 mb-4">Growth-Oriented</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  AI that adapts to your personal journey, supporting meaningful growth with care and wisdom.
+                </p>
+              </div>
+            </div>
+
+            <!-- Emotionally Intelligent -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <img src="/images/feature-emotion.png" alt="Emotion" class="w-12 h-12" />
+                </div>
+                <h4 class="text-2xl font-bold text-gray-900 mb-4">Emotionally Intelligent</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Understands emotions and context, offering compassionate and thoughtful responses.
+                </p>
+              </div>
+            </div>
+
+            <!-- Human-First -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <img src="/images/feature-human.png" alt="Human" class="w-12 h-12" />
+                </div>
+                <h4 class="text-2xl font-bold text-gray-900 mb-4">Human-First</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Prioritizes your needs, fostering genuine connections through emotional understanding.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ethical by Design -->
+            <div class="group" data-aos="fade-up" data-aos-delay="400">
+              <div
+                class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20 relative overflow-hidden">
+                <img src="/images/feature-ethics-dot.png" alt="" class="absolute top-4 right-4 w-8 h-8 opacity-50" />
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-pink-100 to-purple-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                  <img src="/images/feature-ethics.png" alt="Ethics" class="w-12 h-12" />
+                </div>
+                <h4 class="text-2xl font-bold text-gray-900 mb-4">Ethical by Design</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Built with transparency and care, ensuring innovation aligns with human values.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote Section -->
+      <section class="py-32 relative overflow-hidden bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800">
+        <div class="absolute inset-0 opacity-10">
+          <img src="/images/testimonial.png" alt="" class="w-full h-full object-cover" />
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center" data-aos="fade-up">
+          <div class="text-6xl text-purple-300 mb-8 opacity-50">"</div>
+          <blockquote class="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-12 leading-relaxed">
+            The machines are going to be smarter than us, so let's teach them empathy and have them treat us like their
+            favorite children
+          </blockquote>
+          <cite class="text-xl text-purple-200 font-medium">– Nick Sullivan, Founder of HeartCentered AI</cite>
+        </div>
+      </section>
+
+      <!-- Vision Detail Section -->
+      <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+              <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+                A vision for teaching<br />
+                <span class="text-gradient">AI To Love</span>
+              </h2>
+              <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                "Imagine a world where AI doesn't just serve us, but truly understands us—recognizing our struggles,
+                celebrating our triumphs, and aligning with our highest aspirations. HeartCentered AI envisions
+                technology as a compassionate partner, teaching our digital creations to embody the values of empathy,
+                care, and love."
+              </p>
+              <button
+                class="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 hover:shadow-xl">
+                Read Manifesto
+              </button>
+            </div>
+            <div data-aos="fade-left" class="relative">
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-purple-200 to-blue-200 rounded-3xl opacity-20 blur-2xl"></div>
+              <img src="/images/vision.png" alt="AI Vision" class="relative w-full h-auto rounded-3xl shadow-2xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet Cora Section -->
+      <section class="py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              Meet Cora: <span class="text-gradient">Warm, Insightful, Empowering</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Cora is your personal growth companion, blending advanced AI with emotional intelligence. She learns,
+              adapts, and connects to support your journey.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right" class="text-center lg:text-left">
+              <img
+                src="/images/avatar-nick.png"
+                alt="Nick Sullivan"
+                class="w-80 h-80 mx-auto lg:mx-0 rounded-full shadow-2xl mb-8 lg:mb-0" />
+            </div>
+            <div data-aos="fade-left">
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4 group">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                    <span class="text-2xl">✨</span>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-1">Personal Growth Partner</h4>
+                    <p class="text-gray-600">Tailored guidance that evolves with your journey</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4 group">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                    <span class="text-2xl">💡</span>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-1">Creative Collaborator</h4>
+                    <p class="text-gray-600">Unlock new perspectives and innovative solutions</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4 group">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                    <span class="text-2xl">🛡️</span>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-1">Privacy-First Design</h4>
+                    <p class="text-gray-600">Your data stays yours, always encrypted and secure</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4 group">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                    <span class="text-2xl">❤️</span>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-1">Emotionally Aware</h4>
+                    <p class="text-gray-600">Understanding that goes beyond words</p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://cora.heartcentered.ai/"
+                class="mt-12 bg-primary text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-primary-dark transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center">
+                Try Cora Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4">Pioneering a New Paradigm</h2>
+            <p class="text-xl text-gray-600">in Artificial Intelligence</p>
+          </div>
+
+          <h3 class="text-3xl font-bold text-gray-900 mb-12 text-center" data-aos="fade-up">FAQ</h3>
+
+          <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+            <!-- FAQ Item 1 -->
+            <div
+              x-data="{ open: false }"
+              class="border border-gray-200 rounded-2xl overflow-hidden hover:border-primary/30 transition-colors">
+              <button
+                @click="open = !open"
+                class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                <span class="text-xl font-medium text-gray-900"
+                  >How does HeartCentered AI ensure ethical behavior?</span
+                >
+                <svg
+                  :class="{ 'rotate-180': open }"
+                  class="w-6 h-6 text-gray-400 transform transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div x-show="open" x-transition class="px-8 pb-6">
+                <p class="text-gray-600 leading-relaxed">
+                  We build ethical considerations into every layer of our AI systems, from data collection to
+                  decision-making algorithms. Our commitment to transparency, fairness, and human values guides every
+                  aspect of development.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div
+              x-data="{ open: false }"
+              class="border border-gray-200 rounded-2xl overflow-hidden hover:border-primary/30 transition-colors">
+              <button
+                @click="open = !open"
+                class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                <span class="text-xl font-medium text-gray-900">What makes HeartCentered AI transformative?</span>
+                <svg
+                  :class="{ 'rotate-180': open }"
+                  class="w-6 h-6 text-gray-400 transform transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div x-show="open" x-transition class="px-8 pb-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Unlike traditional AI focused on efficiency and automation, HeartCentered AI prioritizes human
+                  flourishing. We build technology that adapts to serve your unique needs while maintaining ethical
+                  boundaries and emotional intelligence.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div
+              x-data="{ open: false }"
+              class="border border-gray-200 rounded-2xl overflow-hidden hover:border-primary/30 transition-colors">
+              <button
+                @click="open = !open"
+                class="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors">
+                <span class="text-xl font-medium text-gray-900"
+                  >How can I get involved in the HeartCentered AI movement?</span
+                >
+                <svg
+                  :class="{ 'rotate-180': open }"
+                  class="w-6 h-6 text-gray-400 transform transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div x-show="open" x-transition class="px-8 pb-6">
+                <p class="text-gray-600 leading-relaxed">
+                  Join our community of forward-thinking individuals who believe in the potential of compassionate AI.
+                  Participate in our research and help shape the future of human-AI collaboration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-32 relative overflow-hidden gradient-bg">
+        <div class="absolute inset-0 opacity-20">
+          <img src="/images/pricing-gradient.png" alt="" class="w-full h-full object-cover mix-blend-overlay" />
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center" data-aos="fade-up">
+          <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">Be part of The AI Revolution</h2>
+          <h3 class="text-4xl md:text-5xl font-bold text-yellow-300 mb-12">Detect your next big move</h3>
+          <p class="text-xl md:text-2xl text-white/90 mb-16 max-w-4xl mx-auto leading-relaxed">
+            Stay updated on our journey to create AI that serves, nurtures, and empowers humanity—instead of diminishing
+            it. Let's build a future where technology is a force for compassion and growth.
+          </p>
+          <a
+            href="https://cora.heartcentered.ai/"
+            class="bg-white text-primary px-12 py-6 rounded-full font-bold text-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center">
+            Experience Cora
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <p class="text-gray-500">Copyright© 2024</p>
+      </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "ease-out",
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
+</html>
