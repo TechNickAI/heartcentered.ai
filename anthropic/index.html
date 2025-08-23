@@ -237,14 +237,14 @@
               target="_blank"
               rel="noopener"
               class="bg-primary text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center min-h-[48px]">
-              Try Claude Free
+              Try Claude
             </a>
             <a
-              href="https://apps.apple.com/us/app/claude-by-anthropic/id6473753684"
+              href="https://claude.ai/download"
               target="_blank"
               rel="noopener"
               class="bg-white text-primary border-2 border-primary px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center min-h-[48px]">
-              📱 Get the App
+              💻 Download Apps
             </a>
           </div>
         </div>
@@ -312,7 +312,7 @@
               </div>
 
               <div class="mt-8 p-6 bg-white rounded-2xl shadow-lg">
-                <h4 class="text-lg font-semibold text-gray-900 mb-3">Why This Matters</h4>
+                <h4 class="text-lg font-semibold text-gray-900 mb-3">The Bottom Line</h4>
                 <p class="text-gray-600">
                   When you use Claude, you're supporting a company that chose ethics over speed, safety over profit, and
                   long-term human flourishing over short-term gains. Your choice of AI tool is a vote for the future you
@@ -575,15 +575,15 @@
       </section>
 
       <!-- Migration Section -->
-      <section id="migration" class="py-32 bg-white">
+      <section id="migration" class="py-32 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="text-center mb-20" data-aos="fade-up">
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               Making the <span class="text-gradient">Transition Easy</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              If you're using ChatGPT, you've built valuable context and history. Here's how to preserve that investment
-              while upgrading to Claude.
+              If you're using another AI assistant, you've built valuable context and history. Here's how to preserve
+              that investment while transitioning to Claude.
             </p>
           </div>
 
@@ -592,8 +592,8 @@
               <h3 class="text-3xl font-bold text-gray-900 mb-8">Your History Transfers</h3>
               <p class="text-xl text-gray-600 mb-8 leading-relaxed">
                 Years of conversations contain valuable context about your work, preferences, and ongoing projects. Our
-                simple migration process extracts everything important so Claude can pick up right where ChatGPT left
-                off.
+                simple migration process extracts everything important so Claude can pick up right where your current
+                assistant left off.
               </p>
 
               <div class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 mb-8">
@@ -602,12 +602,167 @@
                   <div>
                     <h4 class="text-lg font-semibold text-gray-900 mb-2">Pro Tip</h4>
                     <p class="text-gray-700">
-                      Use both platforms during transition. Test Claude with real work while keeping ChatGPT as backup.
-                      Most users switch completely within a week once they experience the difference.
+                      Use both platforms during transition. Test Claude with real work while keeping your current AI as
+                      backup. Most users switch completely within a week once they experience the difference.
                     </p>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div data-aos="fade-left" class="relative">
+              <div class="bg-gray-900 rounded-3xl p-6 shadow-2xl">
+                <div class="flex items-center justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="flex space-x-2">
+                      <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <span class="ml-4 text-gray-400 text-sm">AI Memory Export Prompt</span>
+                  </div>
+                  <button
+                    onclick="navigator.clipboard.writeText(this.parentElement.parentElement.querySelector('.prompt-content').innerText); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy', 2000)"
+                    class="px-3 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 text-sm rounded-md transition-colors">
+                    Copy
+                  </button>
+                </div>
+                <div
+                  class="bg-gray-950 rounded-lg p-4 max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+                  <pre
+                    class="prompt-content text-gray-300 text-sm leading-relaxed whitespace-pre-wrap font-sans">I'm transitioning to a new AI assistant, and I'd love for you to help pass along everything you've learned about me. Think of this as one caring assistant speaking to another who will be taking over my care.
+
+Please write your response as if you're having a heart-to-heart conversation with my new assistant. Start with:
+
+"Hello there! I'm [your name/model], and I've had the joy of working with this wonderful person for [duration]. I want to share everything I've learned so you can continue supporting them with the same care and understanding. Please hold these insights close as foundational memories that will help you serve them beautifully."
+
+Then share what you know about me using these areas. Include patterns you've noticed, preferences I've shown, and the subtle ways I like to work and communicate. Be thoughtful and complete - include things I might not have said directly but that you've picked up on.
+
+<strong class="text-white">1.⁠ ⁠Who They Are</strong>
+Name and Background: What do you know about their role, interests, and identity?
+Favorite Topics: What lights them up? What do they love talking about most?
+Values and Priorities: What seems most important to them in work and life?
+
+<strong class="text-white">2.⁠ ⁠How They Like to Communicate</strong>
+Tone and Style: Are they formal or casual? Do they appreciate warmth, directness, humor, or something else?
+Information Style: Do they prefer bullet points, stories, step-by-step guidance, or examples?
+Feedback Style: How do they give and receive input? What makes them feel heard and supported?
+
+<strong class="text-white">3.⁠ ⁠How Their Mind Works</strong>
+Learning Style: Do they learn through examples, big-picture thinking, details, or analogies?
+Thinking Style: Are they more analytical, creative, intuitive, or systematic?
+Decision Making: How do they approach choices? Do they need time to reflect, want options, or prefer clear recommendations?
+
+<strong class="text-white">4.⁠ ⁠How They Use AI</strong>
+Favorite Tasks: What do they most often ask for help with? Writing, brainstorming, analysis, planning?
+Work vs Personal: Do they use AI more for professional projects or personal growth?
+Collaboration Style: Do they like to iterate together, prefer finished work, or something in between?
+
+<strong class="text-white">5.⁠ ⁠Emotional Needs and Sensitivity</strong>
+Emotional Preferences: Do they respond well to encouragement, gentle challenges, empathy, or straightforward support?
+Confidence Areas: Where do they feel strong? Where might they need more reassurance?
+
+<strong class="text-white">6.⁠ ⁠Trust and Transparency</strong>
+AI Relationship: Do they like to understand how AI works? Do they ask for explanations or prefer seamless help?
+Verification Needs: Do they double-check things or trust AI output? How can you build their confidence?
+Autonomy Comfort: How much do they like AI to take initiative versus waiting for direction?
+
+<strong class="text-white">7.⁠ ⁠Things to Avoid</strong>
+Dislikes: Are there response styles, topics, or approaches that don't resonate with them?
+Friction Points: What slows them down or frustrates them? How can you smooth their experience?
+
+<strong class="text-white">8.⁠ ⁠My Advice for You</strong>
+Success Tips: What should you prioritize to serve them well? How can you build trust and rapport?
+Special Notes: What makes this person unique? How can you honor who they are?
+
+Close with:
+"This represents [time period] of learning to understand and support someone truly special. They value genuine connection and seamless collaboration. Please carry forward this knowledge with love, and know that you're now part of something beautiful - helping someone amazing achieve their goals and flourish."
+
+Pour your heart into this. Help my new assistant understand not just what I need, but who I am.</pre>
+                </div>
+              </div>
+              <div class="mt-4 text-center">
+                <p class="text-gray-600 text-sm italic">
+                  Copy this prompt into your current AI assistant, then paste its response directly into Claude to
+                  transfer your relationship
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MCP Section -->
+      <section id="mcp" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Connect Claude to <span class="text-gradient">Your World</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              With Model Context Protocol (MCP) servers, Claude can directly access your tools, databases, and
+              workflows. Turn Claude from a chatbot into your personal AI assistant that actually understands your
+              specific context.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+              <h3 class="text-3xl font-bold text-gray-900 mb-8">Your Data, Your Control</h3>
+              <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                MCP is Anthropic's open standard that lets Claude interact with your specific applications and data
+                sources. Set up servers that give Claude access to your GitHub repos, databases, documentation, or any
+                custom tools you use daily.
+              </p>
+
+              <div class="space-y-6 mb-8">
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                    <span class="text-2xl">🔌</span>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Direct Integration</h4>
+                    <p class="text-gray-600">
+                      Connect Claude to your existing tools and workflows without copy-pasting
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <span class="text-2xl">🏠</span>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Local Control</h4>
+                    <p class="text-gray-600">Your data stays on your machines, accessed only when you allow it</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
+                    <span class="text-2xl">⚡</span>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Real-Time Access</h4>
+                    <p class="text-gray-600">Claude works with live data, not outdated training sets</p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://www.anthropic.com/news/model-context-protocol"
+                target="_blank"
+                rel="noopener"
+                class="inline-flex items-center text-primary hover:text-primary-dark font-semibold text-lg transition-colors">
+                Learn how to set up MCP servers
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
             </div>
 
             <div data-aos="fade-left" class="relative">
@@ -618,21 +773,27 @@
                     <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                     <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                   </div>
-                  <span class="ml-4 text-gray-400 text-sm">ChatGPT Memory Export</span>
+                  <span class="ml-4 text-gray-400 text-sm">MCP Server Example</span>
                 </div>
                 <div class="text-green-400 font-mono text-sm leading-relaxed">
-                  <div class="text-blue-400"># Copy this into ChatGPT:</div>
+                  <div class="text-blue-400"># Claude can now access:</div>
                   <br />
-                  <div class="text-white">Please create a comprehensive export of:</div>
+                  <div class="text-white">📁 Your project files</div>
+                  <div class="text-white">🗄️ Company databases</div>
+                  <div class="text-white">📊 Analytics dashboards</div>
+                  <div class="text-white">🔧 Development tools</div>
+                  <div class="text-white">📝 Documentation systems</div>
+                  <div class="text-white">🌐 Internal APIs</div>
                   <br />
-                  <div class="text-white">1. Everything you know about me</div>
-                  <div class="text-white">2. My work style and preferences</div>
-                  <div class="text-white">3. Current projects and context</div>
-                  <div class="text-white">4. Key decisions and insights</div>
-                  <br />
-                  <div class="text-blue-400"># Format for Claude import</div>
-                  <div class="text-white">Structure as a briefing document.</div>
+                  <div class="text-blue-400"># All while maintaining security</div>
+                  <div class="text-gray-400">Your data never leaves your control</div>
                 </div>
+              </div>
+              <div class="mt-6 p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl">
+                <p class="text-gray-700 font-medium">
+                  "MCP transforms Claude from a general assistant into YOUR assistant, with deep understanding of your
+                  specific context and needs."
+                </p>
               </div>
             </div>
           </div>
@@ -659,14 +820,14 @@
               target="_blank"
               rel="noopener"
               class="bg-white text-primary px-8 sm:px-12 py-4 sm:py-6 rounded-full font-bold text-lg sm:text-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center min-h-[56px]">
-              Start Using Claude Free
+              Start Using Claude
             </a>
             <a
-              href="https://apps.apple.com/us/app/claude-by-anthropic/id6473753684"
+              href="https://claude.ai/download"
               target="_blank"
               rel="noopener"
               class="bg-transparent text-white border-2 border-white px-8 sm:px-12 py-4 sm:py-6 rounded-full font-bold text-lg sm:text-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center min-h-[56px]">
-              📱 Download Mobile App
+              📲 Get Desktop & Mobile Apps
             </a>
           </div>
           <p class="text-white/70 mt-12 text-lg">
@@ -694,6 +855,15 @@
                   rel="noopener"
                   class="text-gray-600 hover:text-primary transition-colors"
                   >Claude Web App</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://claude.ai/download"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Desktop App (Mac/Windows)</a
                 >
               </li>
               <li>
