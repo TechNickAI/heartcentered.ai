@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Anthropic is the Heart-Centered AI Company | HeartCentered AI</title>
+    <meta
+      name="description"
+      content="Anthropic was founded by researchers who left OpenAI to build AI the right way. Learn why their Constitutional AI approach and public benefit structure make Claude the ethical choice." />
+
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Nick Sullivan" />
+    <meta
+      name="keywords"
+      content="Claude AI, Anthropic, ChatGPT alternative, Claude vs ChatGPT, AI benchmarks, Claude Sonnet, Claude Opus, Constitutional AI, Dario Amodei, Daniela Amodei, ethical AI" />
+    <meta property="og:title" content="Why Anthropic is the Heart-Centered AI Company" />
+    <meta
+      property="og:description"
+      content="The team that left OpenAI to build safer AI. A public benefit corporation putting human values first. And yes, Claude performs better too." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://heartcentered.ai/anthropic" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B5CF6",
+              "primary-dark": "#7C3AED",
+              "primary-light": "#A78BFA",
+              dark: "#111827",
+              "gray-text": "#6B7280",
+              "light-gray": "#F3F4F6",
+              "lighter-gray": "#F9FAFB",
+              "border-gray": "#E5E7EB",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "system-ui", "sans-serif"],
+            },
+            fontSize: {
+              "7xl": "5rem",
+              "8xl": "6rem",
+              "9xl": "7rem",
+            },
+            animation: {
+              float: "float 20s ease-in-out infinite",
+              "float-delayed": "float 20s ease-in-out infinite 10s",
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "gradient-x": "gradient-x 15s ease infinite",
+              "gradient-y": "gradient-y 15s ease infinite",
+              "fade-in": "fadeIn 1s ease-out",
+              "fade-in-up": "fadeInUp 1s ease-out",
+              "fade-in-delayed": "fadeIn 1s ease-out 0.5s both",
+            },
+            backgroundImage: {
+              "gradient-radial": "radial-gradient(ellipse at center, var(--tw-gradient-stops))",
+              "hero-gradient":
+                "linear-gradient(135deg, #667eea 0%, #764ba2 25%, #8B5CF6 50%, #764ba2 75%, #667eea 100%)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Alpine.js for interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Custom styles -->
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        33% {
+          transform: translate(30px, -30px) rotate(120deg);
+        }
+        66% {
+          transform: translate(-20px, 20px) rotate(240deg);
+        }
+      }
+
+      @keyframes gradient-x {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      @keyframes gradient-y {
+        0%,
+        100% {
+          background-position: 50% 0%;
+        }
+        50% {
+          background-position: 50% 100%;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #8b5cf6 50%, #764ba2 75%, #667eea 100%);
+        background-size: 400% 400%;
+        animation: gradient-x 20s ease infinite;
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-decoration {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .hero-decoration::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        top: -50%;
+        left: -50%;
+        background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+      }
+    </style>
+  </head>
+  <body class="font-sans text-dark bg-white antialiased">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
+      <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a href="/" class="font-bold text-xl tracking-tight hover:text-primary transition-colors">HeartCentered AI</a>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+          <!-- Desktop navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/#vision" class="text-gray-600 hover:text-primary transition-colors font-medium">Vision</a>
+            <a href="/#heart-centered-prompts" class="text-gray-600 hover:text-primary transition-colors font-medium"
+              >Heart-Centered Prompts</a
+            >
+            <a href="/#features" class="text-gray-600 hover:text-primary transition-colors font-medium">Features</a>
+            <a href="/#meet-cora" class="text-gray-600 hover:text-primary transition-colors font-medium">Meet Cora</a>
+            <a href="/#faq" class="text-gray-600 hover:text-primary transition-colors font-medium">FAQ</a>
+            <a
+              href="https://claude.ai"
+              target="_blank"
+              rel="noopener"
+              class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary-dark transition-all duration-300 hover:shadow-lg">
+              Try Claude
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        <!-- Decorative Elements -->
+        <div class="hero-decoration"></div>
+
+        <!-- Floating Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+          <div
+            class="absolute top-1/4 -right-48 w-96 h-96 opacity-10 animate-float bg-gradient-to-br from-purple-200 to-pink-200 rounded-full blur-3xl"
+            aria-hidden="true"></div>
+          <div
+            class="absolute -bottom-24 -left-24 w-64 h-64 opacity-20 animate-float-delayed bg-gradient-to-br from-blue-200 to-purple-200 rounded-full blur-3xl"
+            aria-hidden="true"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center px-6 max-w-6xl mx-auto pt-20">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 animate-fade-in-up"
+            style="line-height: 1.4">
+            <span class="block text-gray-900 mb-2">The AI Company That</span>
+            <span class="block text-gradient">Put Ethics First</span>
+          </h1>
+          <p
+            class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-delayed">
+            When Anthropic's founders left OpenAI in 2021, they walked away from millions to build AI aligned with human
+            values. Their public benefit structure and Constitutional AI approach created Claude: an AI that's both more
+            capable and more trustworthy.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-delayed">
+            <a
+              href="https://claude.ai"
+              target="_blank"
+              rel="noopener"
+              class="bg-primary text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center min-h-[48px]">
+              Try Claude Free
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/claude-by-anthropic/id6473753684"
+              target="_blank"
+              rel="noopener"
+              class="bg-white text-primary border-2 border-primary px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl inline-flex items-center justify-center min-h-[48px]">
+              📱 Get the App
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Origin Story Section -->
+      <section id="origin" class="py-32 bg-white relative overflow-hidden">
+        <div
+          class="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">
+              <span class="block text-gray-900">A Company Born from</span>
+              <span class="block text-primary mt-2">Moral Conviction</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              The Anthropic story begins with researchers who couldn't compromise their values. They saw AI development
+              racing ahead without proper safeguards and decided to build something better.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+              <div class="space-y-8">
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">The OpenAI Exodus</h3>
+                  <p class="text-gray-600 leading-relaxed text-lg">
+                    In 2021, Dario and Daniela Amodei led a team of top researchers out of OpenAI. Their departure
+                    wasn't about money or power. They believed AI was advancing too quickly without adequate safety
+                    measures. Rather than compromise, they left millions in equity behind to start fresh with the right
+                    foundations.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Public Benefit Corporation</h3>
+                  <p class="text-gray-600 leading-relaxed text-lg">
+                    Anthropic structured itself as a public benefit corporation from day one. This legal framework
+                    requires balancing profit with social good. While other AI companies chase valuations, Anthropic is
+                    legally bound to prioritize human welfare. Values aren't just talked about here. They're encoded in
+                    the corporate structure.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Constitutional AI</h3>
+                  <p class="text-gray-600 leading-relaxed text-lg">
+                    Instead of training AI through trial and error, Anthropic developed Constitutional AI. The system
+                    learns from principles drawn from documents like the UN Declaration of Human Rights. Claude doesn't
+                    just follow rules. It understands the values behind them, creating more nuanced and helpful
+                    responses.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div data-aos="fade-left" class="relative">
+              <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-12 shadow-xl">
+                <blockquote class="text-2xl font-light text-gray-700 mb-6 leading-relaxed">
+                  "We saw AI capabilities advancing faster than our ability to make them safe. We couldn't in good
+                  conscience continue down that path. Starting Anthropic meant we could do things right, even if it
+                  meant starting from scratch."
+                </blockquote>
+                <cite class="text-lg text-gray-500 font-medium"> Former OpenAI researcher, now at Anthropic </cite>
+              </div>
+
+              <div class="mt-8 p-6 bg-white rounded-2xl shadow-lg">
+                <h4 class="text-lg font-semibold text-gray-900 mb-3">Why This Matters</h4>
+                <p class="text-gray-600">
+                  When you use Claude, you're supporting a company that chose ethics over speed, safety over profit, and
+                  long-term human flourishing over short-term gains. Your choice of AI tool is a vote for the future you
+                  want to see.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section id="values" class="py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Why <span class="text-gradient">Anthropic's Approach</span> Matters
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Building AI isn't just about technology. It's about the values, structure, and incentives that guide
+              development. Anthropic got all three right.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Safety First -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+              <div
+                class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-3xl">🛡️</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Safety Research Leadership</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Anthropic publishes more AI safety research than any other major lab. They share findings openly, even
+                  with competitors, because some things matter more than competitive advantage. Their research on AI
+                  interpretability helps the entire field build safer systems.
+                </p>
+              </div>
+            </div>
+
+            <!-- Transparency -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+              <div
+                class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-3xl">🔍</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Radical Transparency</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  While others hide their methods, Anthropic publishes detailed papers on how Claude works. They explain
+                  their safety measures, share their challenges, and invite scrutiny. This openness builds trust and
+                  helps the entire AI community learn from their work.
+                </p>
+              </div>
+            </div>
+
+            <!-- Privacy -->
+            <div class="group" data-aos="fade-up" data-aos-delay="300">
+              <div
+                class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-3xl">🔒</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Your Data Stays Yours</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Anthropic doesn't train on user conversations by default. Your intellectual property, private
+                  thoughts, and business secrets remain yours. This isn't just good ethics. It's good business for users
+                  who value privacy and confidentiality.
+                </p>
+              </div>
+            </div>
+
+            <!-- Long-term Thinking -->
+            <div class="group" data-aos="fade-up" data-aos-delay="400">
+              <div
+                class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-3xl">🌱</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Long-term Vision</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  While others optimize for quarterly earnings, Anthropic thinks in decades. They're building AI that
+                  will remain aligned with human values as it becomes more powerful. This patient approach creates
+                  better, safer, more reliable AI systems.
+                </p>
+              </div>
+            </div>
+
+            <!-- Team Excellence -->
+            <div class="group" data-aos="fade-up" data-aos-delay="500">
+              <div
+                class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-3xl">👥</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">World-Class Team</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Anthropic attracted top AI researchers who prioritize doing meaningful work over maximizing
+                  compensation. The team includes pioneers in AI safety, alignment, and interpretability. They're here
+                  because they believe in the mission.
+                </p>
+              </div>
+            </div>
+
+            <!-- Constitutional Approach -->
+            <div class="group" data-aos="fade-up" data-aos-delay="600">
+              <div
+                class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 h-full border border-gray-100 hover:border-primary/20">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-3xl">📜</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Principled AI Design</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Constitutional AI means Claude understands why certain behaviors are helpful or harmful. Rather than
+                  memorizing rules, it grasps underlying principles. This creates more nuanced, contextual, and
+                  genuinely helpful responses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Performance Section (Secondary) -->
+      <section id="performance" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Oh, and Claude <span class="text-gradient">Performs Better Too</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Building AI the right way doesn't mean sacrificing performance. Claude consistently outscores other models
+              on independent benchmarks. Turns out, thoughtful design creates better products.
+            </p>
+          </div>
+
+          <!-- Benchmark Cards -->
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div
+              class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-3xl border border-purple-100"
+              data-aos="fade-up"
+              data-aos-delay="100">
+              <div class="text-center">
+                <div class="text-5xl font-bold text-purple-600 mb-4">86.8%</div>
+                <div class="text-xl font-semibold text-gray-900 mb-2">vs GPT-4's 82.4%</div>
+                <div class="text-gray-600">Graduate-level Reasoning (MMLU)</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-3xl border border-blue-100"
+              data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="text-center">
+                <div class="text-5xl font-bold text-blue-600 mb-4">84.9%</div>
+                <div class="text-xl font-semibold text-gray-900 mb-2">vs GPT-4's 67%</div>
+                <div class="text-gray-600">Coding Tasks (HumanEval)</div>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-br from-pink-50 to-white p-8 rounded-3xl border border-pink-100"
+              data-aos="fade-up"
+              data-aos-delay="300">
+              <div class="text-center">
+                <div class="text-5xl font-bold text-pink-600 mb-4">72.5%</div>
+                <div class="text-xl font-semibold text-gray-900 mb-2">vs GPT-4.1's 54.6%</div>
+                <div class="text-gray-600">Real-world Software (SWE-bench)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center" data-aos="fade-up">
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              Superior performance is a nice bonus, but it's not why you should choose Claude. Choose Claude because
+              Anthropic is building the future of AI responsibly, transparently, and with genuine commitment to human
+              flourishing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Practical Benefits Section -->
+      <section id="benefits" class="py-32 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              What This Means for <span class="text-gradient">Your Daily Work</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Beyond philosophy and benchmarks, Claude offers practical advantages that improve your everyday
+              experience.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Cleaner Interface -->
+            <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-right">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">A Thoughtfully Designed Interface</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Claude's Artifacts feature displays code, documents, and structured content in a dedicated side panel.
+                Your conversation stays clean and scannable while outputs remain easily accessible. No more scrolling
+                through walls of text to find what you need.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                The interface reflects Anthropic's attention to detail. They think about how humans actually work and
+                design accordingly. Small touches like this add up to a significantly better experience.
+              </p>
+            </div>
+
+            <!-- Better Context -->
+            <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-left">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Context That Actually Works</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                With a 200,000 token context window, Claude can handle entire books, codebases, or research papers in a
+                single conversation. You can reference something from hours ago and Claude remembers perfectly.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                This isn't just about technical specs. It means you can have real, substantive conversations without
+                constantly reminding the AI about context. Your workflow stays uninterrupted.
+              </p>
+            </div>
+
+            <!-- Natural Writing -->
+            <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-right">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Writing That Sounds Human</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Claude writes naturally. No robotic patterns, no overused phrases, no AI-isms that make readers cringe.
+                Whether you're drafting emails, creating content, or writing documentation, the output sounds like a
+                thoughtful human wrote it.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                This matters more than you might think. When your AI-assisted writing sounds authentic, you spend less
+                time editing and more time creating.
+              </p>
+            </div>
+
+            <!-- Honest Limitations -->
+            <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-left">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Refreshing Honesty</h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                When Claude doesn't know something, it says so. No confident-sounding hallucinations, no made-up facts,
+                no wasting your time with plausible-sounding nonsense. This honesty saves hours of fact-checking and
+                builds trust.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                Anthropic trained Claude to acknowledge uncertainty because they understand that reliability matters
+                more than appearing omniscient. Another example of getting the incentives right.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Migration Section -->
+      <section id="migration" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Making the <span class="text-gradient">Transition Easy</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              If you're using ChatGPT, you've built valuable context and history. Here's how to preserve that investment
+              while upgrading to Claude.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+              <h3 class="text-3xl font-bold text-gray-900 mb-8">Your History Transfers</h3>
+              <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                Years of conversations contain valuable context about your work, preferences, and ongoing projects. Our
+                simple migration process extracts everything important so Claude can pick up right where ChatGPT left
+                off.
+              </p>
+
+              <div class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 mb-8">
+                <div class="flex items-start space-x-3">
+                  <span class="text-2xl flex-shrink-0">💡</span>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Pro Tip</h4>
+                    <p class="text-gray-700">
+                      Use both platforms during transition. Test Claude with real work while keeping ChatGPT as backup.
+                      Most users switch completely within a week once they experience the difference.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-aos="fade-left" class="relative">
+              <div class="bg-gray-900 rounded-3xl p-8 shadow-2xl">
+                <div class="flex items-center mb-6">
+                  <div class="flex space-x-2">
+                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <span class="ml-4 text-gray-400 text-sm">ChatGPT Memory Export</span>
+                </div>
+                <div class="text-green-400 font-mono text-sm leading-relaxed">
+                  <div class="text-blue-400"># Copy this into ChatGPT:</div>
+                  <br />
+                  <div class="text-white">Please create a comprehensive export of:</div>
+                  <br />
+                  <div class="text-white">1. Everything you know about me</div>
+                  <div class="text-white">2. My work style and preferences</div>
+                  <div class="text-white">3. Current projects and context</div>
+                  <div class="text-white">4. Key decisions and insights</div>
+                  <br />
+                  <div class="text-blue-400"># Format for Claude import</div>
+                  <div class="text-white">Structure as a briefing document.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-32 relative overflow-hidden gradient-bg">
+        <div class="absolute inset-0 opacity-20">
+          <div class="w-full h-full bg-gradient-to-br from-purple-900 to-blue-900"></div>
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
+            Choose AI That Aligns With Your Values
+          </h2>
+          <p class="text-xl md:text-2xl text-white/90 mb-16 max-w-4xl mx-auto leading-relaxed">
+            Every time you use an AI tool, you're voting for the future you want to see. Choose the company that
+            prioritizes safety, transparency, and human flourishing. Choose the team that walked away from millions to
+            build AI right.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <a
+              href="https://claude.ai"
+              target="_blank"
+              rel="noopener"
+              class="bg-white text-primary px-8 sm:px-12 py-4 sm:py-6 rounded-full font-bold text-lg sm:text-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center min-h-[56px]">
+              Start Using Claude Free
+            </a>
+            <a
+              href="https://apps.apple.com/us/app/claude-by-anthropic/id6473753684"
+              target="_blank"
+              rel="noopener"
+              class="bg-transparent text-white border-2 border-white px-8 sm:px-12 py-4 sm:py-6 rounded-full font-bold text-lg sm:text-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center min-h-[56px]">
+              📱 Download Mobile App
+            </a>
+          </div>
+          <p class="text-white/70 mt-12 text-lg">
+            Free tier includes Claude Sonnet with generous daily limits. No credit card required.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-16 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4">HeartCentered AI</h4>
+            <p class="text-gray-600 text-sm">Teaching AI to understand, empathize, and support human flourishing.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4">Try Claude</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://claude.ai"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Claude Web App</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://apps.apple.com/us/app/claude-by-anthropic/id6473753684"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >iPhone App</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.anthropic.claude"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  >Android App</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/technickai/heart-centered-prompts"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >Heart-Centered Prompts</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-4">Connect</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://technick.ai"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >About Nick Sullivan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://technick.ai"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >AI Consulting</a
+                >
+              </li>
+              <li><a href="/" class="text-gray-600 hover:text-primary transition-colors">Back to Home</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-gray-200 text-center">
+          <p class="text-gray-500 text-sm">
+            Copyright© 2025 HeartCentered AI | Created by
+            <a href="https://technick.ai" class="hover:text-primary transition-colors" target="_blank" rel="noopener"
+              >Nick Sullivan</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        easing: "ease-out",
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
+</html>
