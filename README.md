@@ -22,12 +22,6 @@ perspectives, we create natural alignment where harming humans would feel like s
 - **Human-Centered Design**: Enhancing human capability through contextual understanding
 - **Transparent Operations**: Open-source foundations with clear decision pathways
 
-## 💜 Meet Cora
-
-Cora demonstrates how AI can understand emotional context and provide nuanced support. Built on
-our Heart-Centered framework, she adapts responses based on conversation dynamics and emotional
-cues. Visit our website to experience the technology!
-
 ## 🌟 Our Projects
 
 ### Heart-Centered Prompts
