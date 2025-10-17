@@ -1,5 +1,5 @@
 {
-    "printWidth": 120,
+    "printWidth": 88,
     "tabWidth": 4,
     "singleQuote": false,
     "trailingComma": "es5",
@@ -14,7 +14,7 @@
             "options": {
                 "parser": "markdown",
                 "tabWidth": 2,
-                "printWidth": 95
+                "printWidth": 88
             }
         },
         {
@@ -30,6 +30,12 @@
                 "bracketSameLine": true,
                 "htmlWhitespaceSensitivity": "css",
                 "singleAttributePerLine": false
+            }
+        },
+        {
+            "files": ["*.yml", "*.yaml"],
+            "options": {
+                "tabWidth": 2
             }
         }
     ]

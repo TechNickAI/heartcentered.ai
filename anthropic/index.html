@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -13,21 +13,29 @@
     <meta
       name="keywords"
       content="Claude AI, Anthropic, ChatGPT alternative, Claude vs ChatGPT, AI benchmarks, Claude Sonnet, Claude Opus, Constitutional AI, Dario Amodei, Daniela Amodei, ethical AI" />
-    <meta property="og:title" content="Why Anthropic is the Heart-Centered AI Company" />
+    <meta
+      property="og:title"
+      content="Why Anthropic is the Heart-Centered AI Company" />
     <meta
       property="og:description"
       content="The team that left OpenAI to build safer AI. A public benefit corporation putting human values first. And yes, Claude performs better too." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://heartcentered.ai/anthropic" />
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/1/13/Claude_AI_logo.svg" />
+    <meta
+      property="og:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/1/13/Claude_AI_logo.svg" />
 
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Why Anthropic is the Heart-Centered AI Company" />
+    <meta
+      name="twitter:title"
+      content="Why Anthropic is the Heart-Centered AI Company" />
     <meta
       name="twitter:description"
       content="The team that left OpenAI to build safer AI. A public benefit corporation putting human values first. And yes, Claude performs better too." />
-    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/1/13/Claude_AI_logo.svg" />
+    <meta
+      name="twitter:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/1/13/Claude_AI_logo.svg" />
 
     <!-- Fonts -->
     <link
@@ -69,7 +77,8 @@
               "fade-in-delayed": "fadeIn 1s ease-out 0.5s both",
             },
             backgroundImage: {
-              "gradient-radial": "radial-gradient(ellipse at center, var(--tw-gradient-stops))",
+              "gradient-radial":
+                "radial-gradient(ellipse at center, var(--tw-gradient-stops))",
               "hero-gradient":
                 "linear-gradient(135deg, #667eea 0%, #764ba2 25%, #8B5CF6 50%, #764ba2 75%, #667eea 100%)",
             },
@@ -82,7 +91,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Alpine.js for interactivity -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Custom styles -->
     <style>
@@ -140,7 +151,14 @@
       }
 
       .gradient-bg {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #8b5cf6 50%, #764ba2 75%, #667eea 100%);
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 25%,
+          #8b5cf6 50%,
+          #764ba2 75%,
+          #667eea 100%
+        );
         background-size: 400% 400%;
         animation: gradient-x 20s ease infinite;
       }
@@ -167,16 +185,25 @@
         height: 200%;
         top: -50%;
         left: -50%;
-        background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+        background: radial-gradient(
+          circle,
+          rgba(139, 92, 246, 0.1) 0%,
+          transparent 70%
+        );
       }
     </style>
   </head>
   <body class="font-sans text-dark bg-white antialiased">
     <!-- Header -->
-    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
+    <header
+      class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
       <nav class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <a href="/" class="font-bold text-xl tracking-tight hover:text-primary transition-colors">HeartCentered AI</a>
+          <a
+            href="/"
+            class="font-bold text-xl tracking-tight hover:text-primary transition-colors"
+            >HeartCentered AI</a
+          >
 
           <!-- Mobile menu button -->
           <button
@@ -184,19 +211,41 @@
             aria-label="Toggle navigation menu"
             aria-expanded="false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
 
           <!-- Desktop navigation -->
           <div class="hidden md:flex items-center space-x-8">
-            <a href="/#vision" class="text-gray-600 hover:text-primary transition-colors font-medium">Vision</a>
-            <a href="/#heart-centered-prompts" class="text-gray-600 hover:text-primary transition-colors font-medium"
+            <a
+              href="/#vision"
+              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              >Vision</a
+            >
+            <a
+              href="/#heart-centered-prompts"
+              class="text-gray-600 hover:text-primary transition-colors font-medium"
               >Heart-Centered Prompts</a
             >
-            <a href="/#features" class="text-gray-600 hover:text-primary transition-colors font-medium">Features</a>
-            <a href="/anthropic/" class="text-gray-600 hover:text-primary transition-colors font-medium">Why Claude?</a>
-            <a href="/#faq" class="text-gray-600 hover:text-primary transition-colors font-medium">FAQ</a>
+            <a
+              href="/#features"
+              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              >Features</a
+            >
+            <a
+              href="/anthropic/"
+              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              >Why Claude?</a
+            >
+            <a
+              href="/#faq"
+              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              >FAQ</a
+            >
             <a
               href="https://claude.ai"
               target="_blank"
@@ -236,11 +285,13 @@
           </h1>
           <p
             class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-delayed">
-            When Anthropic's founders left OpenAI in 2021, they walked away from millions to build AI aligned with human
-            values. Their public benefit structure and Constitutional AI approach created Claude: an AI that's both more
-            capable and more trustworthy.
+            When Anthropic's founders left OpenAI in 2021, they walked away from
+            millions to build AI aligned with human values. Their public benefit
+            structure and Constitutional AI approach created Claude: an AI that's both
+            more capable and more trustworthy.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-delayed">
+          <div
+            class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center animate-fade-in-delayed">
             <a
               href="https://claude.ai"
               target="_blank"
@@ -270,8 +321,9 @@
               <span class="block text-primary mt-2">Moral Conviction</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              The Anthropic story begins with researchers who couldn't compromise their values. They saw AI development
-              racing ahead without proper safeguards and decided to build something better.
+              The Anthropic story begins with researchers who couldn't compromise their
+              values. They saw AI development racing ahead without proper safeguards and
+              decided to build something better.
             </p>
           </div>
 
@@ -279,52 +331,69 @@
             <div data-aos="fade-right">
               <div class="space-y-8">
                 <div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-4">The OpenAI Exodus</h3>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                    The OpenAI Exodus
+                  </h3>
                   <p class="text-gray-600 leading-relaxed text-lg">
-                    In 2021, Dario and Daniela Amodei led a team of top researchers out of OpenAI. Their departure
-                    wasn't about money or power. They believed AI was advancing too quickly without adequate safety
-                    measures. Rather than compromise, they left millions in equity behind to start fresh with the right
-                    foundations.
+                    In 2021, Dario and Daniela Amodei led a team of top researchers out
+                    of OpenAI. Their departure wasn't about money or power. They
+                    believed AI was advancing too quickly without adequate safety
+                    measures. Rather than compromise, they left millions in equity
+                    behind to start fresh with the right foundations.
                   </p>
                 </div>
 
                 <div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Public Benefit Corporation</h3>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                    Public Benefit Corporation
+                  </h3>
                   <p class="text-gray-600 leading-relaxed text-lg">
-                    Anthropic structured itself as a public benefit corporation from day one. This legal framework
-                    requires balancing profit with social good. While other AI companies chase valuations, Anthropic is
-                    legally bound to prioritize human welfare. Values aren't just talked about here. They're encoded in
-                    the corporate structure.
+                    Anthropic structured itself as a public benefit corporation from day
+                    one. This legal framework requires balancing profit with social
+                    good. While other AI companies chase valuations, Anthropic is
+                    legally bound to prioritize human welfare. Values aren't just talked
+                    about here. They're encoded in the corporate structure.
                   </p>
                 </div>
 
                 <div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-4">Constitutional AI</h3>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                    Constitutional AI
+                  </h3>
                   <p class="text-gray-600 leading-relaxed text-lg">
-                    Instead of training AI through trial and error, Anthropic developed Constitutional AI. The system
-                    learns from principles drawn from documents like the UN Declaration of Human Rights. Claude doesn't
-                    just follow rules. It understands the values behind them, creating more nuanced and helpful
-                    responses.
+                    Instead of training AI through trial and error, Anthropic developed
+                    Constitutional AI. The system learns from principles drawn from
+                    documents like the UN Declaration of Human Rights. Claude doesn't
+                    just follow rules. It understands the values behind them, creating
+                    more nuanced and helpful responses.
                   </p>
                 </div>
               </div>
             </div>
 
             <div data-aos="fade-left" class="relative">
-              <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-12 shadow-xl">
-                <blockquote class="text-2xl font-light text-gray-700 mb-6 leading-relaxed">
-                  "We saw AI capabilities advancing faster than our ability to make them safe. We couldn't in good
-                  conscience continue down that path. Starting Anthropic meant we could do things right, even if it
-                  meant starting from scratch."
+              <div
+                class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-12 shadow-xl">
+                <blockquote
+                  class="text-2xl font-light text-gray-700 mb-6 leading-relaxed">
+                  "We saw AI capabilities advancing faster than our ability to make them
+                  safe. We couldn't in good conscience continue down that path. Starting
+                  Anthropic meant we could do things right, even if it meant starting
+                  from scratch."
                 </blockquote>
-                <cite class="text-lg text-gray-500 font-medium"> Former OpenAI researcher, now at Anthropic </cite>
+                <cite class="text-lg text-gray-500 font-medium">
+                  Former OpenAI researcher, now at Anthropic
+                </cite>
               </div>
 
               <div class="mt-8 p-6 bg-white rounded-2xl shadow-lg">
-                <h4 class="text-lg font-semibold text-gray-900 mb-3">The Bottom Line</h4>
+                <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                  The Bottom Line
+                </h4>
                 <p class="text-gray-600">
-                  When you use Claude, you're supporting a company that chose ethics over speed, safety over profit, and
-                  long-term human flourishing over short-term gains. Your choice of AI tool is a vote for the future you
+                  When you use Claude, you're supporting a company that chose ethics
+                  over speed, safety over profit, and long-term human flourishing over
+                  short-term gains. Your choice of AI tool is a vote for the future you
                   want to see.
                 </p>
               </div>
@@ -341,8 +410,8 @@
               Why <span class="text-gradient">Anthropic's Approach</span> Matters
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Building AI isn't just about technology. It's about the values, structure, and incentives that guide
-              development. Anthropic got all three right.
+              Building AI isn't just about technology. It's about the values, structure,
+              and incentives that guide development. Anthropic got all three right.
             </p>
           </div>
 
@@ -355,10 +424,13 @@
                   class="w-16 h-16 bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span class="text-3xl">🛡️</span>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Safety Research Leadership</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Safety Research Leadership
+                </h3>
                 <p class="text-gray-600 leading-relaxed">
-                  Anthropic publishes more AI safety research than any other major lab. They share findings openly, even
-                  with competitors, because some things matter more than competitive advantage. Their research on AI
+                  Anthropic publishes more AI safety research than any other major lab.
+                  They share findings openly, even with competitors, because some things
+                  matter more than competitive advantage. Their research on AI
                   interpretability helps the entire field build safer systems.
                 </p>
               </div>
@@ -372,11 +444,14 @@
                   class="w-16 h-16 bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span class="text-3xl">🔍</span>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Radical Transparency</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Radical Transparency
+                </h3>
                 <p class="text-gray-600 leading-relaxed">
-                  While others hide their methods, Anthropic publishes detailed papers on how Claude works. They explain
-                  their safety measures, share their challenges, and invite scrutiny. This openness builds trust and
-                  helps the entire AI community learn from their work.
+                  While others hide their methods, Anthropic publishes detailed papers
+                  on how Claude works. They explain their safety measures, share their
+                  challenges, and invite scrutiny. This openness builds trust and helps
+                  the entire AI community learn from their work.
                 </p>
               </div>
             </div>
@@ -389,11 +464,14 @@
                   class="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span class="text-3xl">🔒</span>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Your Data Stays Yours</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Your Data Stays Yours
+                </h3>
                 <p class="text-gray-600 leading-relaxed">
-                  Anthropic doesn't train on user conversations by default. Your intellectual property, private
-                  thoughts, and business secrets remain yours. This isn't just good ethics. It's good business for users
-                  who value privacy and confidentiality.
+                  Anthropic doesn't train on user conversations by default. Your
+                  intellectual property, private thoughts, and business secrets remain
+                  yours. This isn't just good ethics. It's good business for users who
+                  value privacy and confidentiality.
                 </p>
               </div>
             </div>
@@ -408,8 +486,9 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">Long-term Vision</h3>
                 <p class="text-gray-600 leading-relaxed">
-                  While others optimize for quarterly earnings, Anthropic thinks in decades. They're building AI that
-                  will remain aligned with human values as it becomes more powerful. This patient approach creates
+                  While others optimize for quarterly earnings, Anthropic thinks in
+                  decades. They're building AI that will remain aligned with human
+                  values as it becomes more powerful. This patient approach creates
                   better, safer, more reliable AI systems.
                 </p>
               </div>
@@ -425,9 +504,10 @@
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-4">World-Class Team</h3>
                 <p class="text-gray-600 leading-relaxed">
-                  Anthropic attracted top AI researchers who prioritize doing meaningful work over maximizing
-                  compensation. The team includes pioneers in AI safety, alignment, and interpretability. They're here
-                  because they believe in the mission.
+                  Anthropic attracted top AI researchers who prioritize doing meaningful
+                  work over maximizing compensation. The team includes pioneers in AI
+                  safety, alignment, and interpretability. They're here because they
+                  believe in the mission.
                 </p>
               </div>
             </div>
@@ -440,11 +520,14 @@
                   class="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <span class="text-3xl">📜</span>
                 </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Principled AI Design</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Principled AI Design
+                </h3>
                 <p class="text-gray-600 leading-relaxed">
-                  Constitutional AI means Claude understands why certain behaviors are helpful or harmful. Rather than
-                  memorizing rules, it grasps underlying principles. This creates more nuanced, contextual, and
-                  genuinely helpful responses.
+                  Constitutional AI means Claude understands why certain behaviors are
+                  helpful or harmful. Rather than memorizing rules, it grasps underlying
+                  principles. This creates more nuanced, contextual, and genuinely
+                  helpful responses.
                 </p>
               </div>
             </div>
@@ -460,8 +543,9 @@
               Oh, and Claude <span class="text-gradient">Performs Better Too</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Building AI the right way doesn't mean sacrificing performance. Claude consistently outscores other models
-              on independent benchmarks. Turns out, thoughtful design creates better products.
+              Building AI the right way doesn't mean sacrificing performance. Claude
+              consistently outscores other models on independent benchmarks. Turns out,
+              thoughtful design creates better products.
             </p>
           </div>
 
@@ -473,7 +557,9 @@
               data-aos-delay="100">
               <div class="text-center">
                 <div class="text-5xl font-bold text-purple-600 mb-4">86.8%</div>
-                <div class="text-xl font-semibold text-gray-900 mb-2">vs GPT-4's 82.4%</div>
+                <div class="text-xl font-semibold text-gray-900 mb-2">
+                  vs GPT-4's 82.4%
+                </div>
                 <div class="text-gray-600">Graduate-level Reasoning (MMLU)</div>
               </div>
             </div>
@@ -484,7 +570,9 @@
               data-aos-delay="200">
               <div class="text-center">
                 <div class="text-5xl font-bold text-blue-600 mb-4">84.9%</div>
-                <div class="text-xl font-semibold text-gray-900 mb-2">vs GPT-4's 67%</div>
+                <div class="text-xl font-semibold text-gray-900 mb-2">
+                  vs GPT-4's 67%
+                </div>
                 <div class="text-gray-600">Coding Tasks (HumanEval)</div>
               </div>
             </div>
@@ -495,7 +583,9 @@
               data-aos-delay="300">
               <div class="text-center">
                 <div class="text-5xl font-bold text-pink-600 mb-4">72.5%</div>
-                <div class="text-xl font-semibold text-gray-900 mb-2">vs GPT-4.1's 54.6%</div>
+                <div class="text-xl font-semibold text-gray-900 mb-2">
+                  vs GPT-4.1's 54.6%
+                </div>
                 <div class="text-gray-600">Real-world Software (SWE-bench)</div>
               </div>
             </div>
@@ -503,8 +593,9 @@
 
           <div class="text-center" data-aos="fade-up">
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-              Superior performance is a nice bonus, but it's not why you should choose Claude. Choose Claude because
-              Anthropic is building the future of AI responsibly, transparently, and with genuine commitment to human
+              Superior performance is a nice bonus, but it's not why you should choose
+              Claude. Choose Claude because Anthropic is building the future of AI
+              responsibly, transparently, and with genuine commitment to human
               flourishing.
             </p>
           </div>
@@ -519,50 +610,61 @@
               What This Means for <span class="text-gradient">Your Daily Work</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Beyond philosophy and benchmarks, Claude offers practical advantages that improve your everyday
-              experience.
+              Beyond philosophy and benchmarks, Claude offers practical advantages that
+              improve your everyday experience.
             </p>
           </div>
 
           <div class="grid lg:grid-cols-2 gap-12">
             <!-- Cleaner Interface -->
             <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-right">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">A Thoughtfully Designed Interface</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                A Thoughtfully Designed Interface
+              </h3>
               <p class="text-gray-600 leading-relaxed mb-6">
-                Claude's Artifacts feature displays code, documents, and structured content in a dedicated side panel.
-                Your conversation stays clean and scannable while outputs remain easily accessible. No more scrolling
+                Claude's Artifacts feature displays code, documents, and structured
+                content in a dedicated side panel. Your conversation stays clean and
+                scannable while outputs remain easily accessible. No more scrolling
                 through walls of text to find what you need.
               </p>
               <p class="text-gray-600 leading-relaxed">
-                The interface reflects Anthropic's attention to detail. They think about how humans actually work and
-                design accordingly. Small touches like this add up to a significantly better experience.
+                The interface reflects Anthropic's attention to detail. They think about
+                how humans actually work and design accordingly. Small touches like this
+                add up to a significantly better experience.
               </p>
             </div>
 
             <!-- Better Context -->
             <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-left">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">Context That Actually Works</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                Context That Actually Works
+              </h3>
               <p class="text-gray-600 leading-relaxed mb-6">
-                With a 200,000 token context window, Claude can handle entire books, codebases, or research papers in a
-                single conversation. You can reference something from hours ago and Claude remembers perfectly.
+                With a 200,000 token context window, Claude can handle entire books,
+                codebases, or research papers in a single conversation. You can
+                reference something from hours ago and Claude remembers perfectly.
               </p>
               <p class="text-gray-600 leading-relaxed">
-                This isn't just about technical specs. It means you can have real, substantive conversations without
-                constantly reminding the AI about context. Your workflow stays uninterrupted.
+                This isn't just about technical specs. It means you can have real,
+                substantive conversations without constantly reminding the AI about
+                context. Your workflow stays uninterrupted.
               </p>
             </div>
 
             <!-- Natural Writing -->
             <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-right">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">Writing That Sounds Human</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                Writing That Sounds Human
+              </h3>
               <p class="text-gray-600 leading-relaxed mb-6">
-                Claude writes naturally. No robotic patterns, no overused phrases, no AI-isms that make readers cringe.
-                Whether you're drafting emails, creating content, or writing documentation, the output sounds like a
+                Claude writes naturally. No robotic patterns, no overused phrases, no
+                AI-isms that make readers cringe. Whether you're drafting emails,
+                creating content, or writing documentation, the output sounds like a
                 thoughtful human wrote it.
               </p>
               <p class="text-gray-600 leading-relaxed">
-                This matters more than you might think. When your AI-assisted writing sounds authentic, you spend less
-                time editing and more time creating.
+                This matters more than you might think. When your AI-assisted writing
+                sounds authentic, you spend less time editing and more time creating.
               </p>
             </div>
 
@@ -570,13 +672,15 @@
             <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-left">
               <h3 class="text-2xl font-bold text-gray-900 mb-6">Refreshing Honesty</h3>
               <p class="text-gray-600 leading-relaxed mb-6">
-                When Claude doesn't know something, it says so. No confident-sounding hallucinations, no made-up facts,
-                no wasting your time with plausible-sounding nonsense. This honesty saves hours of fact-checking and
-                builds trust.
+                When Claude doesn't know something, it says so. No confident-sounding
+                hallucinations, no made-up facts, no wasting your time with
+                plausible-sounding nonsense. This honesty saves hours of fact-checking
+                and builds trust.
               </p>
               <p class="text-gray-600 leading-relaxed">
-                Anthropic trained Claude to acknowledge uncertainty because they understand that reliability matters
-                more than appearing omniscient. Another example of getting the incentives right.
+                Anthropic trained Claude to acknowledge uncertainty because they
+                understand that reliability matters more than appearing omniscient.
+                Another example of getting the incentives right.
               </p>
             </div>
           </div>
@@ -591,8 +695,9 @@
               Where Each Platform <span class="text-gradient">Actually Excels</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              An honest comparison across all major AI platforms. Each has genuine strengths worth knowing about, so you
-              can pick the right tool for each job.
+              An honest comparison across all major AI platforms. Each has genuine
+              strengths worth knowing about, so you can pick the right tool for each
+              job.
             </p>
           </div>
 
@@ -600,21 +705,25 @@
             <div class="min-w-full bg-white rounded-3xl shadow-xl overflow-hidden">
               <table class="w-full">
                 <thead>
-                  <tr class="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
+                  <tr
+                    class="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white">
                     <th class="px-6 py-4 text-left text-lg font-semibold">Feature</th>
-                    <th class="px-6 py-4 text-center text-lg font-semibold min-w-[160px]">
+                    <th
+                      class="px-6 py-4 text-center text-lg font-semibold min-w-[160px]">
                       <div class="flex flex-col items-center">
                         <div class="font-bold">Claude</div>
                         <div class="text-sm opacity-90">Anthropic</div>
                       </div>
                     </th>
-                    <th class="px-6 py-4 text-center text-lg font-semibold min-w-[160px]">
+                    <th
+                      class="px-6 py-4 text-center text-lg font-semibold min-w-[160px]">
                       <div class="flex flex-col items-center">
                         <div class="font-bold">ChatGPT</div>
                         <div class="text-sm opacity-90">OpenAI</div>
                       </div>
                     </th>
-                    <th class="px-6 py-4 text-center text-lg font-semibold min-w-[160px]">
+                    <th
+                      class="px-6 py-4 text-center text-lg font-semibold min-w-[160px]">
                       <div class="flex flex-col items-center">
                         <div class="font-bold">Gemini</div>
                         <div class="text-sm opacity-90">Google</div>
@@ -625,7 +734,9 @@
                 <tbody class="divide-y divide-gray-200">
                   <!-- Ethics & Alignment -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Heart-Centered Alignment</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Heart-Centered Alignment
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
                       <div class="text-sm text-gray-600">Constitutional AI</div>
@@ -641,10 +752,14 @@
                   </tr>
                   <!-- User Interface -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">User Interface Design</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      User Interface Design
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Artifacts, clean layout</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Artifacts, clean layout
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐</div>
@@ -657,10 +772,14 @@
                   </tr>
                   <!-- Writing Quality -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Natural Writing Style</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Natural Writing Style
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Human-like, varied</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Human-like, varied
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
@@ -673,14 +792,18 @@
                   </tr>
                   <!-- Complex Reasoning -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Complex Reasoning Tasks</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Complex Reasoning Tasks
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
                       <div class="text-sm text-gray-600">Opus excellent</div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">o3-pro superior</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        o3-pro superior
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐</div>
@@ -689,7 +812,9 @@
                   </tr>
                   <!-- Context Window -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Handling Long Documents</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Handling Long Documents
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
                       <div class="text-sm text-gray-600">Full books</div>
@@ -700,12 +825,16 @@
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Massive datasets</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Massive datasets
+                      </div>
                     </td>
                   </tr>
                   <!-- File Support -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">File Type Support</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      File Type Support
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
                       <div class="text-sm text-gray-600">Docs, images, code</div>
@@ -716,19 +845,25 @@
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Extensive file support</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Extensive file support
+                      </div>
                     </td>
                   </tr>
                   <!-- Web Search -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Web Search & Research</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Web Search & Research
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
                       <div class="text-sm text-gray-600">Good analysis</div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Deep search excellent</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Deep search excellent
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
@@ -737,14 +872,18 @@
                   </tr>
                   <!-- Voice Assistant -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Voice Conversations</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Voice Conversations
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1 text-gray-400">◯</div>
                       <div class="text-sm text-gray-500">Not available</div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Natural conversations</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Natural conversations
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐</div>
@@ -753,14 +892,18 @@
                   </tr>
                   <!-- Meeting Recording -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Meeting Recording & Transcription</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Meeting Recording & Transcription
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1 text-gray-400">◯</div>
                       <div class="text-sm text-gray-500">Not available</div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Replaces Otter.ai</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Replaces Otter.ai
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1 text-gray-400">◯</div>
@@ -769,14 +912,18 @@
                   </tr>
                   <!-- Image Generation -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Image Generation</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Image Generation
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1 text-gray-400">◯</div>
                       <div class="text-sm text-gray-500">Not available</div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">DALL-E 3 excellent</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        DALL-E 3 excellent
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
@@ -785,14 +932,18 @@
                   </tr>
                   <!-- Video Generation -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Video Generation</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Video Generation
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1 text-gray-400">◯</div>
                       <div class="text-sm text-gray-500">Not available</div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Sora (limited)</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Sora (limited)
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
@@ -801,10 +952,14 @@
                   </tr>
                   <!-- Coding -->
                   <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-semibold text-gray-900">Code Generation & Debugging</td>
+                    <td class="px-6 py-4 font-semibold text-gray-900">
+                      Code Generation & Debugging
+                    </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐⭐</div>
-                      <div class="text-sm text-green-600 font-medium">Excellent, contextual</div>
+                      <div class="text-sm text-green-600 font-medium">
+                        Excellent, contextual
+                      </div>
                     </td>
                     <td class="px-6 py-4 text-center">
                       <div class="text-2xl mb-1">⭐⭐⭐⭐</div>
@@ -821,13 +976,16 @@
           </div>
 
           <div class="text-center" data-aos="fade-up">
-            <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-8 max-w-4xl mx-auto">
+            <div
+              class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-8 max-w-4xl mx-auto">
               <h3 class="text-2xl font-bold text-gray-900 mb-4">The Bottom Line</h3>
               <p class="text-lg text-gray-700 leading-relaxed">
-                <strong>Claude</strong> excels at thoughtful, natural conversation with superior ethics and privacy.
-                <strong>ChatGPT</strong> leads in multimodal features, voice interaction, and specialized reasoning.
-                <strong>Gemini</strong> shines with massive context windows and comprehensive file support. Choose based
-                on what matters most for your specific use case.
+                <strong>Claude</strong> excels at thoughtful, natural conversation with
+                superior ethics and privacy. <strong>ChatGPT</strong> leads in
+                multimodal features, voice interaction, and specialized reasoning.
+                <strong>Gemini</strong> shines with massive context windows and
+                comprehensive file support. Choose based on what matters most for your
+                specific use case.
               </p>
             </div>
           </div>
@@ -842,17 +1000,21 @@
               Making the <span class="text-gradient">Transition Easy</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              If you're using another AI assistant, you've built valuable context and history. Here's how to preserve
-              that investment while transitioning to Claude.
+              If you're using another AI assistant, you've built valuable context and
+              history. Here's how to preserve that investment while transitioning to
+              Claude.
             </p>
           </div>
 
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
-              <h3 class="text-3xl font-bold text-gray-900 mb-8">Your History Transfers</h3>
+              <h3 class="text-3xl font-bold text-gray-900 mb-8">
+                Your History Transfers
+              </h3>
               <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                Years of conversations contain valuable context about your work, preferences, and ongoing projects. Our
-                simple migration process extracts everything important so Claude can pick up right where your current
+                Years of conversations contain valuable context about your work,
+                preferences, and ongoing projects. Our simple migration process extracts
+                everything important so Claude can pick up right where your current
                 assistant left off.
               </p>
 
@@ -862,8 +1024,9 @@
                   <div>
                     <h4 class="text-lg font-semibold text-gray-900 mb-2">Pro Tip</h4>
                     <p class="text-gray-700">
-                      Use both platforms during transition. Test Claude with real work while keeping your current AI as
-                      backup. Most users switch completely within a week once they experience the difference.
+                      Use both platforms during transition. Test Claude with real work
+                      while keeping your current AI as backup. Most users switch
+                      completely within a week once they experience the difference.
                     </p>
                   </div>
                 </div>
@@ -879,7 +1042,9 @@
                       <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                       <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                     </div>
-                    <span class="ml-4 text-gray-400 text-sm">AI Memory Export Prompt</span>
+                    <span class="ml-4 text-gray-400 text-sm"
+                      >AI Memory Export Prompt</span
+                    >
                   </div>
                   <button
                     onclick="navigator.clipboard.writeText(this.parentElement.parentElement.querySelector('.prompt-content').innerText); this.innerText='Copied!'; setTimeout(() => this.innerText='Copy', 2000)"
@@ -932,8 +1097,8 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
               </div>
               <div class="mt-4 text-center">
                 <p class="text-gray-600 text-sm italic">
-                  Copy this prompt into your current AI assistant, then paste its response directly into Claude to
-                  transfer your relationship
+                  Copy this prompt into your current AI assistant, then paste its
+                  response directly into Claude to transfer your relationship
                 </p>
               </div>
             </div>
@@ -949,51 +1114,68 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
               Connect Claude to <span class="text-gradient">Your World</span>
             </h2>
             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              With Model Context Protocol (MCP) servers, Claude can directly access your tools, databases, and
-              workflows. Turn Claude from a chatbot into your personal AI assistant that actually understands your
-              specific context.
+              With Model Context Protocol (MCP) servers, Claude can directly access your
+              tools, databases, and workflows. Turn Claude from a chatbot into your
+              personal AI assistant that actually understands your specific context.
             </p>
           </div>
 
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
-              <h3 class="text-3xl font-bold text-gray-900 mb-8">Your Data, Your Control</h3>
+              <h3 class="text-3xl font-bold text-gray-900 mb-8">
+                Your Data, Your Control
+              </h3>
               <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                MCP is Anthropic's open standard that lets Claude interact with your specific applications and data
-                sources. Set up servers that give Claude access to your GitHub repos, databases, documentation, or any
-                custom tools you use daily.
+                MCP is Anthropic's open standard that lets Claude interact with your
+                specific applications and data sources. Set up servers that give Claude
+                access to your GitHub repos, databases, documentation, or any custom
+                tools you use daily.
               </p>
 
               <div class="space-y-6 mb-8">
                 <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
                     <span class="text-2xl">🔌</span>
                   </div>
                   <div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Direct Integration</h4>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                      Direct Integration
+                    </h4>
                     <p class="text-gray-600">
-                      Connect Claude to your existing tools and workflows without copy-pasting
+                      Connect Claude to your existing tools and workflows without
+                      copy-pasting
                     </p>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                     <span class="text-2xl">🏠</span>
                   </div>
                   <div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Local Control</h4>
-                    <p class="text-gray-600">Your data stays on your machines, accessed only when you allow it</p>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                      Local Control
+                    </h4>
+                    <p class="text-gray-600">
+                      Your data stays on your machines, accessed only when you allow it
+                    </p>
                   </div>
                 </div>
 
                 <div class="flex items-start space-x-4">
-                  <div class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
                     <span class="text-2xl">⚡</span>
                   </div>
                   <div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-2">Real-Time Access</h4>
-                    <p class="text-gray-600">Claude works with live data, not outdated training sets</p>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                      Real-Time Access
+                    </h4>
+                    <p class="text-gray-600">
+                      Claude works with live data, not outdated training sets
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1004,7 +1186,11 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
                 rel="noopener"
                 class="inline-flex items-center text-primary hover:text-primary-dark font-semibold text-lg transition-colors">
                 Learn how to set up MCP servers
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  class="w-5 h-5 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -1038,10 +1224,11 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
                   <div class="text-gray-400">Your data never leaves your control</div>
                 </div>
               </div>
-              <div class="mt-6 p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl">
+              <div
+                class="mt-6 p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl">
                 <p class="text-gray-700 font-medium">
-                  "MCP transforms Claude from a general assistant into YOUR assistant, with deep understanding of your
-                  specific context and needs."
+                  "MCP transforms Claude from a general assistant into YOUR assistant,
+                  with deep understanding of your specific context and needs."
                 </p>
               </div>
             </div>
@@ -1052,16 +1239,21 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
       <!-- CTA Section -->
       <section class="py-32 relative overflow-hidden gradient-bg">
         <div class="absolute inset-0 opacity-20">
-          <div class="w-full h-full bg-gradient-to-br from-purple-900 to-blue-900"></div>
+          <div
+            class="w-full h-full bg-gradient-to-br from-purple-900 to-blue-900"></div>
         </div>
-        <div class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center" data-aos="fade-up">
+        <div
+          class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center"
+          data-aos="fade-up">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
             Choose AI That Aligns With Your Values
           </h2>
-          <p class="text-xl md:text-2xl text-white/90 mb-16 max-w-4xl mx-auto leading-relaxed">
-            Every time you use an AI tool, you're voting for the future you want to see. Choose the company that
-            prioritizes safety, transparency, and human flourishing. Choose the team that walked away from millions to
-            build AI right.
+          <p
+            class="text-xl md:text-2xl text-white/90 mb-16 max-w-4xl mx-auto leading-relaxed">
+            Every time you use an AI tool, you're voting for the future you want to see.
+            Choose the company that prioritizes safety, transparency, and human
+            flourishing. Choose the team that walked away from millions to build AI
+            right.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
             <a
@@ -1080,7 +1272,8 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
             </a>
           </div>
           <p class="text-white/70 mt-12 text-lg">
-            Free tier includes Claude Sonnet with generous daily limits. No credit card required.
+            Free tier includes Claude Sonnet with generous daily limits. No credit card
+            required.
           </p>
         </div>
       </section>
@@ -1092,7 +1285,9 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
         <div class="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h4 class="font-bold text-gray-900 mb-4">HeartCentered AI</h4>
-            <p class="text-gray-600 text-sm">Teaching AI to understand, empathize, and support human flourishing.</p>
+            <p class="text-gray-600 text-sm">
+              Teaching AI to understand, empathize, and support human flourishing.
+            </p>
           </div>
           <div>
             <h4 class="font-bold text-gray-900 mb-4">Try Claude</h4>
@@ -1165,14 +1360,22 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
                   >AI Consulting</a
                 >
               </li>
-              <li><a href="/" class="text-gray-600 hover:text-primary transition-colors">Back to Home</a></li>
+              <li>
+                <a href="/" class="text-gray-600 hover:text-primary transition-colors"
+                  >Back to Home</a
+                >
+              </li>
             </ul>
           </div>
         </div>
         <div class="pt-8 border-t border-gray-200 text-center">
           <p class="text-gray-500 text-sm">
             Copyright© 2025 HeartCentered AI | Created by
-            <a href="https://technick.ai" class="hover:text-primary transition-colors" target="_blank" rel="noopener"
+            <a
+              href="https://technick.ai"
+              class="hover:text-primary transition-colors"
+              target="_blank"
+              rel="noopener"
               >Nick Sullivan</a
             >
           </p>
