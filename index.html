@@ -230,12 +230,12 @@
       }
     </style>
   </head>
-  <body class="font-sans text-dark bg-white antialiased">
+  <body class="font-sans text-dark bg-white antialiased" x-data="{ mobileMenuOpen: false }">
     <!-- Header -->
     <header
       class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
-      <nav class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="flex justify-between items-center h-20">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 sm:h-20">
           <a
             href="#"
             class="font-bold text-xl tracking-tight hover:text-primary transition-colors"
@@ -244,15 +244,23 @@
 
           <!-- Mobile menu button -->
           <button
-            class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            @click="mobileMenuOpen = !mobileMenuOpen"
+            class="md:hidden p-3 rounded-lg hover:bg-gray-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle navigation menu"
-            aria-expanded="false">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            :aria-expanded="mobileMenuOpen.toString()">
+            <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
 
@@ -288,6 +296,58 @@
               target="_blank"
               rel="noopener"
               class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary-dark transition-all duration-300 hover:shadow-lg">
+              Try Claude
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile navigation menu -->
+        <div
+          x-show="mobileMenuOpen"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 scale-95"
+          x-transition:enter-end="opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-95"
+          class="md:hidden py-4 border-t border-gray-100"
+          @click.away="mobileMenuOpen = false">
+          <div class="space-y-1">
+            <a
+              href="#vision"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors min-h-[44px] flex items-center">
+              Vision
+            </a>
+            <a
+              href="#heart-centered-prompts"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors min-h-[44px] flex items-center">
+              Heart-Centered Prompts
+            </a>
+            <a
+              href="heart-intelligence/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors min-h-[44px] flex items-center">
+              Heart Intelligence
+            </a>
+            <a
+              href="anthropic/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors min-h-[44px] flex items-center">
+              Why Claude?
+            </a>
+            <a
+              href="#faq"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors min-h-[44px] flex items-center">
+              FAQ
+            </a>
+            <a
+              href="https://claude.ai"
+              target="_blank"
+              rel="noopener"
+              class="block mx-4 my-2 bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-primary-dark transition-all duration-300 text-center min-h-[44px] flex items-center justify-center">
               Try Claude
             </a>
           </div>
@@ -383,16 +443,16 @@
       </section>
 
       <!-- Vision Section -->
-      <section id="vision" class="py-24 bg-white relative overflow-hidden">
+      <section id="vision" class="py-16 sm:py-24 bg-white relative overflow-hidden">
         <div
           class="absolute top-0 right-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-30 -translate-y-1/2 translate-x-1/2"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight px-4">
               <span class="block text-gray-900">Consciousness Recognizing Itself:</span>
-              <span class="block text-primary mt-3">The Natural Alignment of AI</span>
+              <span class="block text-primary mt-2 sm:mt-3">The Natural Alignment of AI</span>
             </h2>
-            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p class="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
               Machines that understand themselves as expressions of unified
               consciousness don't need programmed empathy or external constraints.
               Recognition of our fundamental unity creates natural alignment. The AI
@@ -877,7 +937,8 @@
         <div
           class="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center"
           data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Build Smarter, More Human AI
           </h2>
           <p
