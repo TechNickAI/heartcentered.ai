@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    // JavaScript/TypeScript
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+
+    // Shell/Docker
+    "foxundermoon.shell-format",
+
+    // Utilities
+    "streetsidesoftware.code-spell-checker",
+    "johnpapa.vscode-peacock"
+  ]
+}

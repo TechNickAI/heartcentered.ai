@@ -1,50 +1,124 @@
 {
-  "cSpell.words": ["heartcentered", "Cora", "technickai"],
-  "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#8a53e1",
-    "activityBar.background": "#8a53e1",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#6d3613",
-    "activityBarBadge.foreground": "#e7e7e7",
-    "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#8a53e1",
-    "statusBar.background": "#6d28d9",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#8a53e1",
-    "statusBarItem.remoteBackground": "#6d28d9",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#6d28d9",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#6d28d999",
-    "titleBar.inactiveForeground": "#e7e7e799"
-  },
-  "peacock.color": "#6d28d9",
+  "cSpell.words": [
+    "docstrings",
+    "gitmoji",
+    "Honeybadger",
+    "logfire",
+    "noqa",
+    "pydantic",
+    "pytest"
+  ],
   "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.defaultFormatter": null,
   "editor.wordWrap": "on",
-  "editor.rulers": [120],
+  "editor.rulers": [88, 120],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "files.associations": {
-    "*.mdc": "markdown"
+    "*.mdc": "markdown",
+    "Dockerfile.*": "dockerfile",
+    "*.agent": "markdown",
+    "*.django": "django-html"
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
+  "files.exclude": {
+    "**/__pycache__": true,
+    ".pytest_cache": true,
+    ".ruff_cache": true,
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true
   },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true,
+    "**/.pytest_cache": true,
+    "**/__pycache__": true
+  },
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+
+  // Language-specific settings (alphabetically ordered)
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[django-html]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[gitignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     "editor.wordWrap": "on"
   },
-  "window.title": "💜 HeartCentered AI - ${activeEditorShort}${dirty}"
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "keep",
+    "editor.tabSize": 2,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  }
 }
