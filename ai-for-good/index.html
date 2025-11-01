@@ -86,7 +86,7 @@
       @keyframes fadeInUp {
         from {
           opacity: 0;
-          transform: translateY(40px);
+          transform: translateY(30px);
         }
         to {
           opacity: 1;
@@ -94,19 +94,156 @@
         }
       }
 
+      @keyframes breathe {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1.15);
+          opacity: 0.5;
+        }
+      }
+
+      @keyframes connection-flow {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(50%);
+        }
+      }
+
+      /* Enhanced typography with tighter letter-spacing */
+      h1 {
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+
+      h2 {
+        letter-spacing: -0.025em;
+        line-height: 1.2;
+      }
+
+      h3 {
+        letter-spacing: -0.02em;
+        line-height: 1.3;
+      }
+
+      p {
+        line-height: 1.7;
+      }
+
+      /* Smoother transitions */
+      a, button {
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Better focus states for accessibility */
+      a:focus-visible, button:focus-visible {
+        outline: 2px solid #8B5CF6;
+        outline-offset: 3px;
+      }
+
+      /* Better text selection color */
+      ::selection {
+        background-color: rgba(139, 92, 246, 0.15);
+        color: #4C1D95;
+      }
+
+      /* Flowing connection lines - subtle */
+      .connection-lines {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .connection-lines::before,
+      .connection-lines::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        background: linear-gradient(90deg,
+          transparent 0%,
+          rgba(139, 92, 246, 0.08) 20%,
+          rgba(139, 92, 246, 0.15) 50%,
+          rgba(139, 92, 246, 0.08) 80%,
+          transparent 100%
+        );
+        animation: connection-flow 30s linear infinite;
+      }
+
+      .connection-lines::before {
+        top: 30%;
+        left: -100%;
+        width: 200%;
+      }
+
+      .connection-lines::after {
+        top: 70%;
+        right: -100%;
+        width: 200%;
+        animation-delay: 15s;
+        animation-direction: reverse;
+      }
+
+      .breathe {
+        animation: breathe 10s ease-in-out infinite;
+      }
+
       .text-gradient {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
+        background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 50%, #A78BFA 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
 
+      /* Hero background - subtle */
+      .hero-bg {
+        background: linear-gradient(135deg, #FAFBFF 0%, #F5F3FF 50%, #FAF8FF 100%);
+      }
+
+      /* Refined button shadows */
+      .btn-shadow {
+        box-shadow: 0 2px 8px -2px rgba(139, 92, 246, 0.25), 0 1px 3px -1px rgba(139, 92, 246, 0.3);
+      }
+
+      .btn-shadow:hover {
+        box-shadow: 0 8px 20px -4px rgba(139, 92, 246, 0.35), 0 4px 10px -3px rgba(139, 92, 246, 0.3);
+      }
+
+      /* Improve section spacing */
+      section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+
+      @media (min-width: 640px) {
+        section {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        section {
+          padding-top: 8rem;
+          padding-bottom: 8rem;
+        }
+      }
+
       .project-card {
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: white;
+        border: 1px solid rgba(229, 231, 235, 0.5);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       }
 
       .project-card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.25);
+        border-color: rgba(139, 92, 246, 0.2);
       }
     </style>
   </head>
