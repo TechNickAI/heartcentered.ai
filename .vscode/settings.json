@@ -4,12 +4,16 @@
     "Cora",
     "technickai",
     "docstrings",
+    "frontmatter",
     "gitmoji",
     "Honeybadger",
     "logfire",
     "noqa",
     "pydantic",
-    "pytest"
+    "pytest",
+    "tavily",
+    "worktree",
+    "worktrees"
   ],
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#8a53e1",
@@ -36,7 +40,7 @@
   "files.trimTrailingWhitespace": true,
   "editor.defaultFormatter": null,
   "editor.wordWrap": "on",
-  "editor.rulers": [120],
+  "editor.rulers": [88, 120],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "files.associations": {
@@ -83,8 +87,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
+    "editor.defaultFormatter": "monosans.djlint"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -99,8 +102,7 @@
     }
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.tabSize": 2
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
