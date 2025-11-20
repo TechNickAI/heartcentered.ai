@@ -1,0 +1,13 @@
+# robots.txt for HeartCentered AI
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://heartcentered.ai/sitemap.xml
+
+# Optional: Block crawling of any API endpoints or admin paths if they exist
+# User-agent: *
+# Disallow: /api/
+# Disallow: /admin/
