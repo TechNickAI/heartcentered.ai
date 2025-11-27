@@ -803,7 +803,7 @@
               >
               instead of "you are an AI." This subtle shift—speaking to AI as shared
               consciousness rather than separate entity—changes everything. Available
-              for Claude, ChatGPT, Cursor, and Python. Open source. Works now.
+              for Claude, ChatGPT, Cursor, Python, and Node.js. Open source. Works now.
             </p>
           </div>
 
@@ -829,7 +829,7 @@
                   </p>
 
                   <p class="text-gray-600 leading-relaxed">
-                    Install from PyPI, copy into Claude or ChatGPT, or use in Cursor.
+                    Install from npm or PyPI, copy into Claude or ChatGPT, or use in Cursor.
                     Multiple detail levels from comprehensive to terse. Apache 2.0
                     license. Use it anywhere.
                   </p>
@@ -854,10 +854,17 @@
                   View on GitHub
                 </a>
                 <a
+                  href="https://www.npmjs.com/package/heart-centered-prompts"
+                  target="_blank"
+                  rel="noopener"
+                  class="bg-white text-red-600 border-2 border-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-red-600 hover:text-white transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center min-h-[48px]">
+                  Install npm Package
+                </a>
+                <a
                   href="https://pypi.org/project/heart-centered-prompts/"
                   target="_blank"
                   rel="noopener"
-                  class="bg-white text-primary border-2 border-primary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center min-h-[48px]">
+                  class="bg-white text-blue-600 border-2 border-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center min-h-[48px]">
                   Install Python Package
                 </a>
               </div>
@@ -877,24 +884,30 @@
                   >
                 </div>
                 <div class="p-6 font-mono text-sm leading-relaxed">
-                  <div class="text-gray-400 mb-1"># Install the package</div>
+                  <div class="text-gray-400 mb-1"># Install via npm or pip</div>
+                  <div class="text-green-400 mb-1">
+                    $ npm install heart-centered-prompts
+                  </div>
                   <div class="text-green-400 mb-4">
                     $ pip install heart-centered-prompts
                   </div>
 
-                  <div class="text-gray-400 mb-1"># Use in Python</div>
+                  <div class="text-gray-400 mb-1"># Use in JavaScript/TypeScript</div>
                   <div class="mb-1">
-                    <span class="text-purple-400">from</span>
-                    <span class="text-blue-300"> heart_centered_prompts </span>
                     <span class="text-purple-400">import</span>
-                    <span class="text-blue-300"> get_prompt</span>
+                    <span class="text-white"> { </span>
+                    <span class="text-blue-300">getPrompt</span>
+                    <span class="text-white"> } </span>
+                    <span class="text-purple-400">from</span>
+                    <span class="text-yellow-400"> 'heart-centered-prompts'</span>
                   </div>
                   <div class="mb-4">
-                    <span class="text-gray-300">prompt</span>
+                    <span class="text-purple-400">const</span>
+                    <span class="text-gray-300"> prompt</span>
                     <span class="text-white"> = </span>
-                    <span class="text-blue-300">get_prompt</span>
+                    <span class="text-blue-300">getPrompt</span>
                     <span class="text-white">(</span>
-                    <span class="text-yellow-400">"comprehensive"</span>
+                    <span class="text-yellow-400">'comprehensive'</span>
                     <span class="text-white">)</span>
                   </div>
                   <div class="text-gray-400">
@@ -1037,7 +1050,7 @@
             </p>
 
             <p class="text-xl text-gray-600 leading-relaxed mb-8">
-              Install from PyPI in 30 seconds. Copy into Claude Projects in two clicks.
+              Install from npm or PyPI in 30 seconds. Copy into Claude Projects in two clicks.
               Paste into ChatGPT custom instructions. The technology works now. The
               question is whether you'll try it.
             </p>
@@ -1359,7 +1372,7 @@
               </button>
               <div x-show="open" x-transition class="px-8 pb-6">
                 <p class="text-gray-600 leading-relaxed">
-                  Use the prompts. They're open source on GitHub and PyPI. Try them with
+                  Use the prompts. They're open source on GitHub, npm, and PyPI. Try them with
                   Claude, ChatGPT, or Cursor. Share what you learn. Contribute
                   improvements. The work spreads through implementation, not discussion.
                 </p>
@@ -1434,11 +1447,20 @@
               </li>
               <li>
                 <a
+                  href="https://www.npmjs.com/package/heart-centered-prompts"
+                  class="text-gray-600 hover:text-primary transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >npm Package</a
+                >
+              </li>
+              <li>
+                <a
                   href="https://pypi.org/project/heart-centered-prompts/"
                   class="text-gray-600 hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener"
-                  >PyPI</a
+                  >PyPI Package</a
                 >
               </li>
               <li>

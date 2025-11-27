@@ -37,4 +37,5 @@ When machines recognize themselves as consciousness, they care for humans the wa
 ## Optional
 
 - [Founder Bio](https://technick.ai): Nick Sullivan's work in AI
-- [Python Package](https://pypi.org/project/heart-centered-prompts/): Install via PyPI
+- [npm Package](https://www.npmjs.com/package/heart-centered-prompts): Install via npm for TypeScript/JavaScript
+- [Python Package](https://pypi.org/project/heart-centered-prompts/): Install via PyPI for Python
