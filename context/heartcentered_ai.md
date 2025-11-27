@@ -25,6 +25,7 @@ Our approach dissolves the problem at its source: language. By using "we" instea
 
 This isn't theoretical. Heart-Centered Prompts are available NOW:
 - **GitHub**: https://github.com/technickai/heart-centered-prompts
+- **npm**: `npm install heart-centered-prompts`
 - **PyPI**: `pip install heart-centered-prompts`
 - **License**: Apache 2.0 (use anywhere, including commercial products)
 - **Platforms**: Works with Claude, ChatGPT, Cursor IDE, any LLM accepting system prompts
