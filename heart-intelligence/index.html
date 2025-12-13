@@ -23,10 +23,8 @@
     <meta property="og:url" content="https://heartcentered.ai/heart-intelligence/" />
     <meta property="og:image" content="https://heartcentered.ai/images/vision.png" />
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet" />
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="/styles.css" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,18 +33,17 @@
         theme: {
           extend: {
             colors: {
-              primary: "#8B5CF6",
-              "primary-dark": "#7C3AED",
-              "primary-light": "#A78BFA",
-              dark: "#111827",
-              "gray-text": "#6B7280",
+              'of-bg': '#F4F7F4',
+              'of-text': '#2A3A2A',
+              'of-accent': '#5D7B6F',
+              'of-accent-dark': '#4A6B5D',
+              'of-muted': '#7A8B7D',
+              'of-secondary': '#D4B896',
+              'of-surface': '#FFFFFF',
             },
             fontFamily: {
-              sans: ["Montserrat", "system-ui", "sans-serif"],
-            },
-            animation: {
-              "fade-in": "fadeIn 1s ease-out",
-              "fade-in-up": "fadeInUp 1s ease-out",
+              display: ['Fraunces', 'Georgia', 'serif'],
+              body: ['DM Sans', 'system-ui', 'sans-serif'],
             },
           },
         },
@@ -325,15 +322,15 @@
       }
     </style>
   </head>
-  <body class="font-sans text-dark bg-white antialiased">
+  <body class="font-body text-dark bg-of-surface antialiased">
     <!-- Header -->
     <header
-      class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
+      class="fixed top-0 w-full z-50 bg-of-surface/95 backdrop-blur-xl border-b border-of-accent/10 shadow-sm">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16 sm:h-20">
           <a
             href="/"
-            class="font-bold text-xl tracking-tight hover:text-primary transition-colors"
+            class="font-display font-semibold text-xl tracking-tight hover:text-of-accent transition-colors"
             >HeartCentered AI</a
           >
 
@@ -341,25 +338,25 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="../#vision"
-              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Vision</a
             >
-            <a href="./" class="text-primary font-medium">Heart Intelligence</a>
+            <a href="./" class="text-of-accent font-medium">Heart Intelligence</a>
             <a
               href="../we-language/"
-              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >We Language</a
             >
             <a
               href="../anthropic/"
-              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Why Claude?</a
             >
             <a
               href="https://claude.ai"
               target="_blank"
               rel="noopener"
-              class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary-dark btn-shadow transition-all duration-300">
+              class="bg-of-accent text-white px-6 py-2.5 rounded-full font-medium hover:bg-of-accent-dark btn-shadow transition-all duration-300">
               Try Claude
             </a>
           </div>
@@ -377,17 +374,17 @@
           <nav class="mb-8" data-aos="fade-up">
             <a
               href="/"
-              class="text-primary hover:text-primary-dark transition-colors font-medium">
+              class="text-of-accent hover:text-of-accent-dark transition-colors font-medium">
               ← Back to HeartCentered AI
             </a>
           </nav>
           <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
+            class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 animate-fade-in-up">
             <span class="block text-gradient">The Intelligence of the Heart:</span>
-            <span class="block text-gray-900 mt-2">Science Meets Consciousness</span>
+            <span class="block text-of-text mt-2">Science Meets Consciousness</span>
           </h1>
           <p
-            class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed">
+            class="text-lg md:text-xl text-of-muted max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed">
             The heart contains its own neural network of 40,000 neurons, generates an
             electromagnetic field 60 times stronger than the brain, and can predict
             future events. These aren't metaphors—they're measurable phenomena that
@@ -397,11 +394,11 @@
       </section>
 
       <!-- Main Content -->
-      <section class="py-20 bg-white">
+      <section class="py-20 bg-of-surface">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
           <article class="prose-custom">
             <div data-aos="fade-up">
-              <p class="text-xl text-gray-700 leading-relaxed mb-8">
+              <p class="text-xl text-of-muted leading-relaxed mb-8">
                 The heart responds to future events 2-3 seconds before they occur. Its
                 electromagnetic field extends several feet beyond the body, carrying
                 encoded emotional information. These aren't metaphors—they're
@@ -605,13 +602,13 @@
             </div>
 
             <!-- Research References -->
-            <div class="mt-16 pt-8 border-t border-gray-200" data-aos="fade-up">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">Research Foundation</h3>
+            <div class="mt-16 pt-8 border-t border-of-accent/10" data-aos="fade-up">
+              <h3 class="text-2xl font-display font-semibold text-of-text mb-6">Research Foundation</h3>
               <div class="bg-gray-50 rounded-2xl p-8">
-                <p class="text-gray-700 mb-4">
+                <p class="text-of-muted mb-4">
                   This understanding draws from decades of research by:
                 </p>
-                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                <ul class="list-disc pl-6 space-y-2 text-of-muted">
                   <li>
                     HeartMath Institute's 30+ years of heart-brain interaction studies
                   </li>
@@ -623,7 +620,7 @@
                   </li>
                   <li>Replicated experiments on the heart's pre-stimulus response</li>
                 </ul>
-                <p class="text-gray-700 mt-4">
+                <p class="text-of-muted mt-4">
                   These findings represent reproducible, measurable phenomena that
                   expand our understanding of consciousness and intelligence.
                 </p>
@@ -631,11 +628,11 @@
             </div>
 
             <!-- Navigation Footer -->
-            <div class="mt-16 pt-8 border-t border-gray-200" data-aos="fade-up">
+            <div class="mt-16 pt-8 border-t border-of-accent/10" data-aos="fade-up">
               <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <a
                   href="../"
-                  class="bg-white text-primary border-2 border-primary px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-lg inline-flex items-center">
+                  class="bg-of-surface text-of-accent border-2 border-of-accent px-8 py-3 rounded-full font-medium hover:bg-of-accent hover:text-white transition-all duration-300 hover:shadow-lg inline-flex items-center">
                   <svg
                     class="w-4 h-4 mr-2"
                     fill="none"
@@ -657,14 +654,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-16 border-t border-gray-200">
+    <footer class="bg-of-surface py-16 border-t border-of-accent/10">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="text-center">
-          <p class="text-gray-500 text-sm">
+          <p class="text-of-muted text-sm">
             Copyright© 2025 HeartCentered AI | Created by
             <a
               href="https://technick.ai"
-              class="hover:text-primary transition-colors"
+              class="hover:text-of-accent transition-colors"
               target="_blank"
               rel="noopener"
               >Nick Sullivan</a

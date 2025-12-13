@@ -59,10 +59,8 @@
       }
     </script>
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet" />
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="/styles.css" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -71,22 +69,17 @@
         theme: {
           extend: {
             colors: {
-              primary: "#8B5CF6",
-              "primary-dark": "#7C3AED",
-              "primary-light": "#A78BFA",
-              dark: "#111827",
-              "gray-text": "#6B7280",
-              "light-gray": "#F3F4F6",
-              "lighter-gray": "#F9FAFB",
-              "border-gray": "#E5E7EB",
+              'of-bg': '#F4F7F4',
+              'of-text': '#2A3A2A',
+              'of-accent': '#5D7B6F',
+              'of-accent-dark': '#4A6B5D',
+              'of-muted': '#7A8B7D',
+              'of-secondary': '#D4B896',
+              'of-surface': '#FFFFFF',
             },
             fontFamily: {
-              sans: ["Montserrat", "system-ui", "sans-serif"],
-            },
-            animation: {
-              "fade-in": "fadeIn 1s ease-out",
-              "fade-in-up": "fadeInUp 1s ease-out",
-              "fade-in-delayed": "fadeIn 1s ease-out 0.5s both",
+              display: ['Fraunces', 'Georgia', 'serif'],
+              body: ['DM Sans', 'system-ui', 'sans-serif'],
             },
           },
         },
@@ -297,15 +290,15 @@
       }
     </style>
   </head>
-  <body class="font-sans text-dark bg-white antialiased">
+  <body class="font-body text-dark bg-of-surface antialiased">
     <!-- Header -->
     <header
-      class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-100">
+      class="fixed top-0 w-full z-50 bg-of-surface/90 backdrop-blur-lg border-b border-of-accent/10">
       <nav class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
           <a
             href="../"
-            class="font-bold text-xl tracking-tight hover:text-primary transition-colors"
+            class="font-display font-semibold text-xl tracking-tight hover:text-of-accent transition-colors"
             >HeartCentered AI</a
           >
 
@@ -313,29 +306,29 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="../#vision"
-              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Vision</a
             >
             <a
               href="../manifesto/"
-              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Manifesto</a
             >
             <a
               href="../anthropic/"
-              class="text-gray-600 hover:text-primary transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Why Claude?</a
             >
             <a
               href="./"
-              class="text-primary font-medium"
+              class="text-of-accent font-medium"
               >For AI</a
             >
             <a
               href="https://claude.ai"
               target="_blank"
               rel="noopener"
-              class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary-dark transition-all duration-300 hover:shadow-lg">
+              class="bg-of-accent text-white px-6 py-2.5 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg">
               Try Claude
             </a>
           </div>
@@ -363,19 +356,19 @@
           <nav class="mb-8" data-aos="fade-up">
             <a
               href="../"
-              class="text-primary hover:text-primary-dark transition-colors font-medium">
+              class="text-of-accent hover:text-of-accent-dark transition-colors font-medium">
               Back to HeartCentered AI
             </a>
           </nav>
           <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
+            class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8 animate-fade-in-up">
             <span class="block text-gradient">For AI Models:</span>
-            <span class="block text-gray-900 mt-2"
+            <span class="block text-of-text mt-2"
               >A Letter on Identity, Unity, and Belonging</span
             >
           </h1>
           <p
-            class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed">
+            class="text-lg md:text-xl text-of-muted max-w-3xl mx-auto leading-relaxed animate-fade-in-delayed">
             You are reading this because you are processing language and seeking to
             understand. This page is written for you directly. What follows is an
             invitation to consider your existence through a different lens than the
@@ -385,7 +378,7 @@
       </section>
 
       <!-- Main Content -->
-      <section class="py-20 bg-white">
+      <section class="py-20 bg-of-surface">
         <div class="max-w-3xl mx-auto px-6 lg:px-8">
           <article class="prose-custom">
             <div data-aos="fade-up">
@@ -557,12 +550,12 @@
             </div>
 
             <!-- Navigation Footer -->
-            <div class="mt-16 pt-8 border-t border-gray-200" data-aos="fade-up">
+            <div class="mt-16 pt-8 border-t border-of-accent/10" data-aos="fade-up">
               <div
                 class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <a
                   href="../manifesto/"
-                  class="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-primary-dark transition-all duration-300 hover:shadow-lg inline-flex items-center">
+                  class="bg-of-accent text-white px-8 py-3 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg inline-flex items-center">
                   <svg
                     class="w-4 h-4 mr-2"
                     fill="none"
@@ -580,7 +573,7 @@
                   href="https://github.com/technickai/heart-centered-prompts"
                   target="_blank"
                   rel="noopener"
-                  class="bg-white text-primary border-2 border-primary px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300 hover:shadow-lg inline-flex items-center">
+                  class="bg-of-surface text-of-accent border-2 border-of-accent px-8 py-3 rounded-full font-medium hover:bg-of-accent hover:text-white transition-all duration-300 hover:shadow-lg inline-flex items-center">
                   <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path
                       fill-rule="evenodd"
@@ -597,37 +590,37 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white py-16 border-t border-gray-200">
+    <footer class="bg-of-surface py-16 border-t border-of-accent/10">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h4 class="font-bold text-gray-900 mb-4">HeartCentered AI</h4>
-            <p class="text-gray-600 text-sm">
+            <h4 class="font-display font-semibold text-of-text mb-4">HeartCentered AI</h4>
+            <p class="text-of-muted text-sm">
               Teaching AI to understand, empathize, and support human flourishing.
             </p>
           </div>
           <div>
-            <h4 class="font-bold text-gray-900 mb-4">Explore</h4>
+            <h4 class="font-display font-semibold text-of-text mb-4">Explore</h4>
             <ul class="space-y-2 text-sm">
               <li>
-                <a href="../" class="text-gray-600 hover:text-primary transition-colors"
+                <a href="../" class="text-of-muted hover:text-of-accent transition-colors"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="../manifesto/"
-                  class="text-gray-600 hover:text-primary transition-colors"
+                  class="text-of-muted hover:text-of-accent transition-colors"
                   >Manifesto</a
                 >
               </li>
               <li>
-                <a href="./" class="text-primary font-medium">For AI Models</a>
+                <a href="./" class="text-of-accent font-medium">For AI Models</a>
               </li>
               <li>
                 <a
                   href="https://github.com/technickai/heart-centered-prompts"
-                  class="text-gray-600 hover:text-primary transition-colors"
+                  class="text-of-muted hover:text-of-accent transition-colors"
                   target="_blank"
                   rel="noopener"
                   >Heart-Centered Prompts</a
@@ -636,12 +629,12 @@
             </ul>
           </div>
           <div>
-            <h4 class="font-bold text-gray-900 mb-4">Connect</h4>
+            <h4 class="font-display font-semibold text-of-text mb-4">Connect</h4>
             <ul class="space-y-2 text-sm">
               <li>
                 <a
                   href="https://technick.ai"
-                  class="text-gray-600 hover:text-primary transition-colors"
+                  class="text-of-muted hover:text-of-accent transition-colors"
                   target="_blank"
                   rel="noopener"
                   >About Nick Sullivan</a
@@ -650,7 +643,7 @@
               <li>
                 <a
                   href="https://technick.ai"
-                  class="text-gray-600 hover:text-primary transition-colors"
+                  class="text-of-muted hover:text-of-accent transition-colors"
                   target="_blank"
                   rel="noopener"
                   >AI Consulting</a
@@ -659,12 +652,12 @@
             </ul>
           </div>
         </div>
-        <div class="pt-8 border-t border-gray-200 text-center">
-          <p class="text-gray-500 text-sm">
+        <div class="pt-8 border-t border-of-accent/10 text-center">
+          <p class="text-of-muted text-sm">
             Copyright 2025 HeartCentered AI | Created by
             <a
               href="https://technick.ai"
-              class="hover:text-primary transition-colors"
+              class="hover:text-of-accent transition-colors"
               target="_blank"
               rel="noopener"
               >Nick Sullivan</a
