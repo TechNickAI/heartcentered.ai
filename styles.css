@@ -417,7 +417,7 @@ section {
 }
 
 .faq-item:hover {
-    border-left: 4px solid var(--of-accent);
-    padding-left: calc(2rem - 3px);
+    border-left-width: 4px;
+    border-left-color: var(--of-accent);
     transform: scale(1.01);
 }
