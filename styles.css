@@ -418,6 +418,6 @@ section {
 
 .faq-item:hover {
     border-left: 4px solid var(--of-accent);
-    padding-left: calc(2rem - 4px);
+    padding-left: calc(2rem - 3px);
     transform: scale(1.01);
 }
