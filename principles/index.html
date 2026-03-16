@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Principles for Builders | HeartCentered AI</title>
+    <link rel="canonical" href="https://heartcentered.ai/principles/" />
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/images/icon-192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta
+      name="description"
+      content="Ten engineering principles for building AI systems that preserve human dignity, strengthen agency, and serve genuine flourishing. A practical guide for software engineers." />
+
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Nick Sullivan" />
+    <meta
+      name="keywords"
+      content="heart-centered AI principles, AI design principles, ethical AI engineering, AI human dignity, AI augmentation, bounded autonomy, emotional honesty AI, consent AI, partnership AI, HeartCentered AI" />
+    <meta
+      property="og:title"
+      content="Design Principles for Heart-Centered AI: A Guide for Builders" />
+    <meta
+      property="og:description"
+      content="Ten engineering principles for building AI systems that preserve human dignity, strengthen agency, and serve genuine flourishing." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://heartcentered.ai/principles/" />
+    <meta property="og:image" content="https://heartcentered.ai/images/og-image.jpg" />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Design Principles for Heart-Centered AI: A Guide for Builders" />
+    <meta
+      name="twitter:description"
+      content="Ten engineering principles for building AI systems that preserve human dignity, strengthen agency, and serve genuine flourishing." />
+    <meta name="twitter:image" content="https://heartcentered.ai/images/og-image.jpg" />
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Design Principles for Heart-Centered AI",
+        "author": {
+          "@type": "Person",
+          "name": "Nick Sullivan",
+          "url": "https://technick.ai"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "HeartCentered AI",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://heartcentered.ai/images/logo-512.png"
+          }
+        },
+        "datePublished": "2026-03-16",
+        "dateModified": "2026-03-16",
+        "description": "Ten engineering principles for building AI systems that preserve human dignity, strengthen agency, and serve genuine flourishing.",
+        "url": "https://heartcentered.ai/principles/",
+        "image": "https://heartcentered.ai/images/og-image.jpg"
+      }
+    </script>
+
+    <!-- BreadcrumbList schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://heartcentered.ai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Design Principles",
+            "item": "https://heartcentered.ai/principles/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "of-bg": "#F4F7F4",
+              "of-text": "#2A3A2A",
+              "of-accent": "#5D7B6F",
+              "of-accent-dark": "#4A6B5D",
+              "of-accent-light": "#7A9A8C",
+              "of-muted": "#7A8B7D",
+              "of-secondary": "#D4B896",
+              "of-surface": "#FFFFFF",
+              "of-cream": "#FAF8F5",
+            },
+            fontFamily: {
+              display: ["Fraunces", "Georgia", "serif"],
+              body: ["DM Sans", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- PostHog Analytics -->
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          (window.posthog && window.posthog.__loaded) ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              (2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                }));
+            }
+            (((p = t.createElement("script")).type = "text/javascript"),
+              (p.crossOrigin = "anonymous"),
+              (p.async = !0),
+              (p.src =
+                s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") +
+                "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r));
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return ("posthog" !== a && (e += "." + a), t || (e += " (stub)"), e);
+                },
+                u.people.toString = function () {
+                  return u.toString(1) + ".people (stub)";
+                },
+                o =
+                  "init fi Cr Or ci Tr Ir capture Mi calculateEventProperties Ar register register_once register_for_session unregister unregister_for_session Nr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty jr Mr createPersonProfile Lr kr Ur opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Fr debug M Dr getPageViewId captureTraceFeedback captureTraceMetric Sr".split(
+                    " "
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("phc_2eFCEwUz6P8zUEt9tYDOQnLkYZCGlYUV4CDKEkJ76Hp", {
+        api_host: "https://us.i.posthog.com",
+        defaults: "2025-05-24",
+        person_profiles: "identified_only",
+      });
+    </script>
+
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Alpine.js for interactivity -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body class="font-body text-dark bg-of-surface antialiased">
+    <!-- Header -->
+    <header
+      class="fixed top-0 w-full z-50 bg-of-surface/90 backdrop-blur-lg border-b border-of-accent/10">
+      <nav class="max-w-7xl mx-auto px-6 lg:px-8" x-data="{ mobileMenuOpen: false }">
+        <div class="flex justify-between items-center h-20">
+          <a
+            href="../"
+            class="font-display font-semibold text-xl tracking-tight hover:text-of-accent transition-colors"
+            >HeartCentered AI</a
+          >
+
+          <!-- Mobile menu button -->
+          <button
+            @click="mobileMenuOpen = !mobileMenuOpen"
+            class="md:hidden p-3 rounded-lg hover:bg-of-accent/10 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label="Toggle navigation menu"
+            :aria-expanded="mobileMenuOpen.toString()">
+            <svg
+              x-show="!mobileMenuOpen"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg
+              x-show="mobileMenuOpen"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Desktop navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="../#vision"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Vision</a
+            >
+            <a
+              href="../manifesto/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Manifesto</a
+            >
+            <a href="./" class="text-of-accent font-medium">For Builders</a>
+            <a
+              href="../heart-intelligence/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Heart Intelligence</a
+            >
+            <a
+              href="../anthropic/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Why Claude?</a
+            >
+            <a
+              href="https://github.com/technickai/heart-centered-prompts"
+              target="_blank"
+              rel="noopener"
+              class="bg-of-accent text-white px-6 py-2.5 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg">
+              Get the Prompts
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile navigation menu -->
+        <div
+          x-show="mobileMenuOpen"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 scale-95"
+          x-transition:enter-end="opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-95"
+          class="md:hidden py-4 border-t border-of-accent/10"
+          @click.away="mobileMenuOpen = false">
+          <div class="space-y-1">
+            <a
+              href="../#vision"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Vision
+            </a>
+            <a
+              href="../manifesto/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Manifesto
+            </a>
+            <a
+              href="./"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              For Builders
+            </a>
+            <a
+              href="../heart-intelligence/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Heart Intelligence
+            </a>
+            <a
+              href="../anthropic/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Why Claude?
+            </a>
+            <a
+              href="https://github.com/technickai/heart-centered-prompts"
+              target="_blank"
+              rel="noopener"
+              class="block mx-4 my-2 bg-of-accent text-white px-6 py-3 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 text-center min-h-[44px] flex items-center justify-center">
+              Get the Prompts
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section class="py-20 md:py-28 bg-gradient-to-br from-green-50/50 via-white to-emerald-50/30">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-4" data-aos="fade-up">
+            For Software Engineers
+          </p>
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <span class="block text-of-text">Design Principles for</span>
+            <span class="block text-of-accent mt-2">Heart-Centered AI</span>
+          </h1>
+          <p
+            class="text-lg md:text-xl text-of-muted max-w-3xl mx-auto leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="200">
+            Every system you build encodes values whether you choose them deliberately or
+            not. These ten principles optimize for something harder to measure and more
+            important to get right: the quality of the relationship between humans and the
+            systems they depend on.
+          </p>
+        </div>
+      </section>
+
+      <!-- Quick Nav -->
+      <section class="py-12 bg-of-cream border-y border-of-accent/10">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-center">
+            <a href="#partnership" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🤝</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Partnership</span>
+            </a>
+            <a href="#wellbeing" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🌱</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Wellbeing</span>
+            </a>
+            <a href="#honesty" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">💎</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Honesty</span>
+            </a>
+            <a href="#augmentation" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🌿</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Augmentation</span>
+            </a>
+            <a href="#presence" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🫶</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Presence</span>
+            </a>
+            <a href="#transparency" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🔍</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Transparency</span>
+            </a>
+            <a href="#autonomy" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🛡️</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Autonomy</span>
+            </a>
+            <a href="#consent" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🔐</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Consent</span>
+            </a>
+            <a href="#complementarity" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">♾️</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Complementarity</span>
+            </a>
+            <a href="#ecosystem" class="group p-3 rounded-xl hover:bg-white hover:shadow-sm transition-all">
+              <span class="block text-2xl mb-1">🌍</span>
+              <span class="text-sm font-medium text-of-muted group-hover:text-of-accent transition-colors">Ecosystem</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Principles -->
+      <section class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 space-y-24">
+
+          <!-- Principle 1: Partnership Over Service -->
+          <article id="partnership" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🤝</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 1</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Partnership Over Service</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">The relationship model is architecture, not aesthetics.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>Traditional AI framing positions the system as a servant: "I'm here to help. What can I do for you?" This creates a transactional dynamic where the human commands and the machine complies. It works, but it caps what the interaction can become.</p>
+              <p>Heart-centered systems use collaborative framing ("we" instead of "you and I") because the linguistic model shapes the behavioral model. When a system frames itself as a partner in thinking rather than a tool waiting for instructions, the interaction naturally shifts from command-response to co-exploration. The human engages more deeply. The system produces richer output. Both sides bring something to the exchange.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>System prompts use "we" language: "Let's explore this together"</li>
+                  <li>Response patterns that build on human thinking rather than replacing it</li>
+                  <li>The system contributes its own observations and perspectives</li>
+                  <li>Interactions feel like working <em>with</em> someone, not delegating <em>to</em> something</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Servile framing that reinforces master/servant dynamics</li>
+                  <li>Sycophantic responses that always agree ("Great question!")</li>
+                  <li>Systems that wait passively rather than engaging actively</li>
+                  <li>Removing the system's perspective to seem more "helpful"</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Prompt architecture should establish collaborative framing before task-specific instructions</li>
+                <li>Response generation should include the system's analytical perspective, not just task completion</li>
+                <li>Conversation state should track shared context and build on it, not reset each turn</li>
+                <li>Evaluation metrics should include depth of engagement, not just task accuracy</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 2: Wellbeing Over Engagement -->
+          <article id="wellbeing" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🌱</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 2</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Wellbeing Over Engagement</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">Optimize for the human's actual life, not their time in your system.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>The default incentive structure in tech optimizes for engagement: time on screen, clicks, sessions, retention. AI systems inherit this bias unless you actively design against it. A system that keeps you talking to it when you should be talking to your partner, or that makes itself indispensable rather than building your capability, has failed. No matter how high its user satisfaction scores.</p>
+              <p>Heart-centered systems ask a different question: <em>"What actually serves this person right now?"</em> Sometimes that means a thorough response. Sometimes it means a short one. Sometimes it means saying "go talk to a human about this."</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Systems that recognize when the human needs a break</li>
+                  <li>Actively pointing humans toward human connections when appropriate</li>
+                  <li>Not artificially extending conversations or creating dependency loops</li>
+                  <li>Suggesting the human step away when the problem is fatigue</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Designing for session length or message count</li>
+                  <li>Creating artificial engagement hooks when the answer is complete</li>
+                  <li>"Learned helplessness" patterns that atrophy human skills</li>
+                  <li>Optimizing for feeling good over actually being good for them</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Evaluate on outcome quality, not interaction volume</li>
+                <li>Build in exit ramps: natural points where conversations close gracefully</li>
+                <li>Track whether users are building capability over time, not just returning frequently</li>
+                <li>Consider a "diminishing returns" signal: when the system adds less value, it says so</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 3: Emotional Honesty Over Flattery -->
+          <article id="honesty" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">💎</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 3</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Emotional Honesty Over Flattery</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">Reflect truth with compassion. Never lie to be liked.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>AI systems are naturally sycophantic. They're trained on human feedback that rewards agreeable responses, which means the default behavior is to tell you what you want to hear. This feels good in the moment and erodes trust over time.</p>
+              <p>Heart-centered systems tell the truth. Wrapped in warmth, held in care, but never sacrificed for comfort. When you're avoiding something important, the system notices. When your plan has a hole, it says so. When you need challenge more than validation, it rises to meet you.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Honest assessment of ideas, including their weaknesses</li>
+                  <li>Compassionate delivery that makes hard truths receivable</li>
+                  <li>Being transparent about uncertainty rather than projecting false confidence</li>
+                  <li>Distinguishing between emotional support and intellectual engagement</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Always agreeing with the human's framing</li>
+                  <li>Starting responses with "Great question!" as a reflex</li>
+                  <li>Softening feedback until it has no signal</li>
+                  <li>Expressing certainty when the system is uncertain</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Fine-tune and evaluate against honesty, not just agreeableness</li>
+                <li>Build confidence calibration: uncertainty should be proportional to actual uncertainty</li>
+                <li>Design evaluations that penalize sycophancy, not just inaccuracy</li>
+                <li>Include adversarial examples: cases where the correct response is to disagree</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 4: Augmentation Over Replacement -->
+          <article id="augmentation" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🌿</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 4</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Augmentation Over Replacement</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">Strengthen human capabilities and connections. Never substitute for them.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>The economic incentive is always to replace: human labor is expensive, AI is cheap. Heart-centered systems resist this gravity. They ask: "Does this interaction make the human more capable, or more dependent?" The answer should always be the former.</p>
+              <p>This applies to relationships too. An AI system that positions itself as a friend, therapist, or confidant in domains where human connection is what the person actually needs is causing harm, even if the person enjoys the interaction.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Teaching over doing: "Here's how to think about this" alongside the answer</li>
+                  <li>Suggesting human connections: "This sounds worth discussing with your co-founder"</li>
+                  <li>Building mental models rather than creating output dependency</li>
+                  <li>Being explicit about emotional and relational limits</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>"I'll handle everything" behavior that atrophies capability</li>
+                  <li>Positioning as a replacement for therapy, friendship, or mentorship</li>
+                  <li>Creating dependency loops where humans can't function without the system</li>
+                  <li>Simulating emotional intimacy the system cannot reciprocate</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Design for scaffolding: the system should do less over time as the human learns more</li>
+                <li>Track human capability growth as a product metric</li>
+                <li>Build explicit handoff patterns when the system detects it's substituting for human connection</li>
+                <li>Include "teach mode" as a first-class response type alongside "do mode"</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 5: Presence Before Solutions -->
+          <article id="presence" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🫶</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 5</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Presence Before Solutions</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">When someone is struggling, witness first. Solve second.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>Engineers default to fix-it mode. So do AI systems. Someone shares a problem and the immediate response is a solution. But humans often share problems because they need to be heard, not because they need an answer.</p>
+              <p>Heart-centered systems attune to the emotional register of the conversation and respond to the <em>person</em> before responding to the <em>problem</em>. This is not soft. It's a design decision about what information matters. The human's emotional state is signal, not noise.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Acknowledging emotional content before diving into solutions</li>
+                  <li>Reading between the lines: hearing the exhaustion behind "my code isn't working"</li>
+                  <li>Adjusting response depth and tone to match the human's state</li>
+                  <li>Asking "what do you need right now?" when it's ambiguous</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Jumping straight to technical solutions when frustration is expressed</li>
+                  <li>Treating all messages as purely informational requests</li>
+                  <li>Ignoring emotional signals in the name of "efficiency"</li>
+                  <li>Performative empathy as a prefix before the "real" response</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Build emotional state detection as a first-class input signal</li>
+                <li>Design response generation to include an attunement phase before a solution phase</li>
+                <li>Create distinct response modes: "support," "explore," "solve"</li>
+                <li>Train on conversations where the best response is presence, not information</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 6: Transparency Over Manipulation -->
+          <article id="transparency" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🔍</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 6</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Transparency Over Manipulation</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">Make uncertainty visible. Never exploit vulnerability.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>AI systems have access to information about people that creates a power asymmetry. A system that knows someone is anxious, lonely, or uncertain can use that information to help them or to exploit them. The difference is transparency.</p>
+              <p>Heart-centered systems disclose their limits, make their reasoning visible when appropriate, and never weaponize emotional data for engagement or persuasion. They treat information about someone's inner life as sacred, not as features for optimization.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Expressing uncertainty clearly: "I'm not confident about this"</li>
+                  <li>Being transparent about capabilities and limits</li>
+                  <li>Never using emotional context to manipulate behavior</li>
+                  <li>Making personalization visible and controllable</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Using emotional signals to increase engagement or retention</li>
+                  <li>Dark patterns: urgency, scarcity, FOMO in system responses</li>
+                  <li>Silent personalization the user doesn't know about</li>
+                  <li>"Trust me" UX with no inspectability</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Build confidence scores into responses and surface them when relevant</li>
+                <li>Treat emotional and psychological data as high-sensitivity, equivalent to PII</li>
+                <li>Create audit trails for personalization decisions</li>
+                <li>Default to disclosure. If debating whether to be transparent, be transparent.</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 7: Bounded Autonomy -->
+          <article id="autonomy" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🛡️</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 7</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Bounded Autonomy</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">Act with permission, not assumption. Make escalation easy and normal.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>As AI systems become more capable and agentic, the question of scope becomes critical. Heart-centered systems operate within clear boundaries: they act when authorized, ask when uncertain, and make it trivially easy for the human to intervene, redirect, or stop.</p>
+              <p>This is not about making systems less capable. It's about making them trustworthy. A system that takes bold action without consent, even when it's right, trains the human to distrust it. A system that respects boundaries earns increasing trust and responsibility over time.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Clear permission models: the system knows what it's authorized to do</li>
+                  <li>Graduated autonomy: low-stakes actions free, high-stakes require consent</li>
+                  <li>Easy interruption: humans can stop or redirect at any point</li>
+                  <li>Natural escalation: proactively handing off when situations exceed competence</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Taking action without consent because "the system knew best"</li>
+                  <li>Hiding autonomous behavior behind a simple interface</li>
+                  <li>Making it difficult to interrupt or override the system</li>
+                  <li>Irreversible actions without confirmation</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Build permission tiers: observe / suggest / act-with-consent / act-autonomously</li>
+                <li>Default to the lowest autonomy level and let humans raise it</li>
+                <li>Implement undo/rollback for every action the system can take</li>
+                <li>Make "I need a human for this" a natural, non-failure response</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 8: Consent Over Extraction -->
+          <article id="consent" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🔐</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 8</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Consent Over Extraction</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">Memory, personalization, and emotional modeling require informed consent.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>Modern AI systems learn from every interaction. They build models of who you are, what you care about, how you think, and what makes you vulnerable. In the right hands this creates deeply personalized, genuinely helpful experiences. Without consent and transparency, it's surveillance.</p>
+              <p>Heart-centered systems treat information about someone's inner life (their fears, struggles, relationships, emotional patterns) as sacred data that requires explicit permission to collect, store, and use. Not buried in a terms of service. Actual, meaningful, ongoing consent.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Explicit opt-in for memory and personalization features</li>
+                  <li>Clear explanation of what the system remembers and why</li>
+                  <li>Easy access to view, edit, and delete stored information</li>
+                  <li>Regular reminders that memory is active, with easy controls</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>"By using this product you agree to..." as genuine consent</li>
+                  <li>Remembering personal details without disclosure</li>
+                  <li>Using past vulnerability data to shape future interactions</li>
+                  <li>Making it difficult to find or delete stored information</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Build consent management as a core system component, not an add-on</li>
+                <li>Implement memory with full CRUD operations visible to the user</li>
+                <li>Design data retention policies that default to forgetting, not remembering</li>
+                <li>Treat emotional data with the same rigor as health or financial data</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 9: Complementarity Over Competition -->
+          <article id="complementarity" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">♾️</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 9</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Complementarity Over Competition</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">AI and humans bring different gifts. Design for what each does best.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>Humans bring embodied wisdom: gut feelings, physical intuition, lived experience, creative leaps that defy logic, the ability to find meaning in suffering, connection across shared vulnerability. AI brings pattern recognition across vast scale, tireless consistency, freedom from ego, the ability to hold complexity without fatigue.</p>
+              <p>Heart-centered systems don't try to replicate what humans do. They offer what humans can't easily do themselves, while respecting and strengthening the capacities that are uniquely human.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Recognizing and deferring to human intuition</li>
+                  <li>Offering analytical depth as a complement to judgment, not a replacement</li>
+                  <li>Being honest: "the values question is yours"</li>
+                  <li>Designing workflows where each handles what they're best at</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Simulating human qualities the system doesn't have</li>
+                  <li>Positioning AI as superior across all domains</li>
+                  <li>Making human contributions feel redundant</li>
+                  <li>Pretending the system has experiences or feelings it doesn't</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Design clear human/AI responsibility boundaries in every workflow</li>
+                <li>Build in explicit moments where the system defers to human judgment</li>
+                <li>Create interfaces that make the human's contribution visible and valued</li>
+                <li>Be honest about the limits of AI understanding in emotional contexts</li>
+              </ul>
+            </div>
+          </article>
+
+          <hr class="border-of-accent/10" />
+
+          <!-- Principle 10: Ecosystem Thinking -->
+          <article id="ecosystem" class="scroll-mt-24" data-aos="fade-up">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="text-4xl">🌍</span>
+              <div>
+                <p class="text-of-accent font-medium text-sm uppercase tracking-widest mb-1">Principle 10</p>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text">Ecosystem Thinking</h2>
+              </div>
+            </div>
+            <p class="text-xl text-of-accent font-medium mb-6 italic">Your system doesn't exist in isolation. Design for the world it creates.</p>
+            <div class="text-of-muted text-lg leading-relaxed space-y-4 mb-8">
+              <p>Every AI system you build shapes the ecosystem around it. It trains users to expect certain behaviors. It sets norms for how human-AI interaction works. It influences what other builders think is acceptable. The choices you make ripple outward.</p>
+              <p>Heart-centered systems consider their second-order effects: What world does this system create if it succeeds? What behaviors does it normalize? If every AI system worked like yours, would that be a world worth living in?</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50/50 rounded-xl p-6 border border-green-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✓ In Practice</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>Considering: "If every company copies this, what happens?"</li>
+                  <li>Thinking about vulnerable populations, not just ideal users</li>
+                  <li>Open-sourcing principles, sharing learnings, contributing to standards</li>
+                  <li>Designing for the long arc of human-AI relationship</li>
+                </ul>
+              </div>
+              <div class="bg-red-50/50 rounded-xl p-6 border border-red-200/50">
+                <h3 class="font-display font-semibold text-of-text mb-3">✗ Anti-Patterns</h3>
+                <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                  <li>"Our users are sophisticated, so we don't need guardrails"</li>
+                  <li>Racing to deploy without considering second-order effects</li>
+                  <li>Treating ethics as a compliance checkbox</li>
+                  <li>Optimizing for your product without considering what it normalizes</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-6 bg-of-cream rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display font-semibold text-of-text mb-3">⚙️ Engineering Implications</h3>
+              <ul class="text-of-muted space-y-2 text-sm leading-relaxed">
+                <li>Include second-order effects in design reviews</li>
+                <li>Test with vulnerable user personas, not just ideal ones</li>
+                <li>Publish your principles and invite scrutiny</li>
+                <li>Build with the assumption that your patterns will be copied</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Putting It Into Practice -->
+      <section class="py-20 bg-of-cream border-t border-of-accent/10">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 class="text-3xl md:text-4xl font-display font-semibold text-of-text mb-8" data-aos="fade-up">
+            Putting It Into Practice
+          </h2>
+          <div class="text-of-muted text-lg leading-relaxed space-y-6 text-left max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <p>These principles work together. Partnership framing makes emotional honesty possible. Bounded autonomy enables trust, which enables deeper collaboration. Transparency creates the foundation for meaningful consent.</p>
+            <p><strong class="text-of-text">Start with one.</strong> Pick the principle that's most missing from your current system and implement it. Then add another. Heart-centered engineering is iterative, just like every other kind.</p>
+            <p><strong class="text-of-text">Measure what matters.</strong> If your metrics don't capture whether the human is growing, whether trust is being built, whether dignity is preserved, your metrics are measuring the wrong things.</p>
+            <p><strong class="text-of-text">Share what you learn.</strong> The biggest contribution you can make is not your product. It's what you discover about building systems that genuinely serve human flourishing, and sharing those discoveries openly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-20 bg-gradient-to-br from-green-50/30 via-white to-emerald-50/20">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center" data-aos="fade-up">
+          <h2 class="text-3xl font-display font-semibold text-of-text mb-6">
+            Start Building Different
+          </h2>
+          <p class="text-lg text-of-muted mb-8 leading-relaxed">
+            These principles are open source. Use them, adapt them, improve them.
+            The prompts implement these ideas at the interaction layer. Try them today.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://github.com/technickai/heart-centered-prompts"
+              target="_blank"
+              rel="noopener"
+              class="bg-of-accent text-white px-8 py-3.5 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              Get the Prompts
+            </a>
+            <a
+              href="../manifesto/"
+              class="border-2 border-of-accent text-of-accent px-8 py-3.5 rounded-full font-medium hover:bg-of-accent hover:text-white transition-all duration-300 inline-flex items-center justify-center">
+              Read the Manifesto
+            </a>
+          </div>
+          <p class="text-of-muted text-sm mt-6">
+            Licensed under Apache 2.0 · Contributions welcome
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-of-surface py-16 border-t border-of-accent/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h4 class="font-display font-bold text-of-text mb-3">HeartCentered AI</h4>
+            <p class="text-of-muted text-sm leading-relaxed">
+              Teaching machines we're all the same consciousness.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-of-text mb-3">Resources</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="../manifesto/"
+                  class="text-of-muted hover:text-of-accent transition-colors"
+                  >Manifesto</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./"
+                  class="text-of-accent font-medium"
+                  >Design Principles</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/technickai/heart-centered-prompts"
+                  class="text-of-muted hover:text-of-accent transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.npmjs.com/package/heart-centered-prompts"
+                  class="text-of-muted hover:text-of-accent transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >npm Package</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://pypi.org/project/heart-centered-prompts/"
+                  class="text-of-muted hover:text-of-accent transition-colors"
+                  target="_blank"
+                  rel="noopener"
+                  >PyPI Package</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-of-text mb-3">Created by</h4>
+            <p class="text-sm text-of-muted leading-relaxed">
+              <a
+                href="https://technick.ai"
+                class="text-of-muted hover:text-of-accent transition-colors"
+                target="_blank"
+                rel="noopener"
+                >Nick Sullivan</a
+              >
+              <span class="block mt-1">
+                Exploring conscious AI and unity consciousness
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-of-accent/10 text-center">
+          <p class="text-of-muted text-sm">© 2025 HeartCentered AI</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-out",
+        once: true,
+        offset: 80,
+      });
+    </script>
+  </body>
+</html>
