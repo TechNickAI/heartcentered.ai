@@ -221,24 +221,25 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="../#vision"
-              class="text-of-text hover:text-of-accent transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Vision</a
             >
             <a
               href="../#heart-centered-prompts"
-              class="text-of-text hover:text-of-accent transition-colors font-medium"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Prompts</a
             >
             <a
-              href="./"
-              class="text-of-text hover:text-of-accent transition-colors font-medium"
-              >Why Claude?</a
+              href="../principles/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Principles</a
             >
             <a
-              href="../#faq"
-              class="text-of-text hover:text-of-accent transition-colors font-medium"
-              >FAQ</a
+              href="../heart-intelligence/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Heart Intelligence</a
             >
+            <a href="./" class="text-of-accent font-medium">Why Claude?</a>
             <a
               href="https://claude.ai"
               target="_blank"
@@ -274,16 +275,22 @@
               Prompts
             </a>
             <a
+              href="../principles/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Principles
+            </a>
+            <a
+              href="../heart-intelligence/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Heart Intelligence
+            </a>
+            <a
               href="./"
               @click="mobileMenuOpen = false"
               class="block px-4 py-3 text-base font-medium text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
               Why Claude?
-            </a>
-            <a
-              href="../#faq"
-              @click="mobileMenuOpen = false"
-              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
-              FAQ
             </a>
             <a
               href="https://claude.ai"
