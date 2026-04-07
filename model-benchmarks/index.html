@@ -289,74 +289,21 @@
     </header>
 
     <main class="pt-20">
-      <!-- Hero Section -->
+      <!-- Hero Section — compact to get data above the fold -->
       <section
-        class="pt-16 pb-10 md:pt-20 md:pb-12 bg-gradient-to-br from-green-50/50 via-white to-emerald-50/30">
+        class="pt-8 pb-4 md:pt-10 md:pb-6 bg-gradient-to-br from-green-50/50 via-white to-emerald-50/30">
         <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <p
-            class="text-of-accent font-medium text-sm uppercase tracking-widest mb-4"
-            data-aos="fade-up">
-            Community Resource
-          </p>
-          <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8"
-            data-aos="fade-up"
-            data-aos-delay="100">
-            <span class="block text-of-text">LLM Model</span>
-            <span class="block text-of-accent mt-2">Benchmarks</span>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold mb-4">
+            <span class="text-of-text">LLM Model </span>
+            <span class="text-of-accent">Benchmarks</span>
           </h1>
           <p
-            class="text-lg md:text-xl text-of-muted max-w-3xl mx-auto leading-relaxed mb-4"
-            data-aos="fade-up"
-            data-aos-delay="200">
+            class="text-base md:text-lg text-of-muted max-w-3xl mx-auto leading-relaxed mb-3">
             Most benchmarks measure what models <em>know</em>. We also measure how they
             <em>feel</em>.
           </p>
-          <p
-            class="text-base text-of-muted max-w-2xl mx-auto leading-relaxed mb-8"
-            data-aos="fade-up"
-            data-aos-delay="250">
-            Emotional intelligence shapes how AI listens, responds to vulnerability, and
-            holds space. Alongside reasoning, coding, and agentic performance, we track
-            <a
-              href="https://eqbench.com"
-              class="text-of-accent hover:text-of-accent-dark underline transition-colors font-medium"
-              >EQ-Bench</a
-            >
-            scores — because the models we invite into our lives should be more than
-            just smart.
-          </p>
-          <p
-            class="text-sm text-of-accent-light"
-            data-aos="fade-up"
-            data-aos-delay="300">
-            Data from
-            <a
-              href="https://openrouter.ai"
-              class="underline hover:text-of-accent transition-colors"
-              >OpenRouter</a
-            >,
-            <a
-              href="https://artificialanalysis.ai"
-              class="underline hover:text-of-accent transition-colors"
-              >Artificial Analysis</a
-            >,
-            <a
-              href="https://pinchbench.com"
-              class="underline hover:text-of-accent transition-colors"
-              >PinchBench</a
-            >,
-            <a
-              href="https://arena.ai"
-              class="underline hover:text-of-accent transition-colors"
-              >Arena</a
-            >,
-            <a
-              href="https://eqbench.com"
-              class="underline hover:text-of-accent transition-colors"
-              >EQ-Bench</a
-            >
-            · Updated <span id="last-updated"></span> ·
+          <p class="text-xs text-of-accent-light">
+            Updated <span id="last-updated"></span> ·
             <a
               href="data/model-data.json"
               class="underline hover:text-of-accent transition-colors"
@@ -462,6 +409,231 @@
         </div>
       </section>
 
+      <!-- Model Personalities — editorial insights from EQ-Bench trait data -->
+      <section class="py-12 md:py-16 bg-of-cream border-t border-of-accent/10">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+          <h2
+            class="font-display text-2xl md:text-3xl font-semibold text-of-text mb-3 text-center"
+            data-aos="fade-up">
+            Model Personalities
+          </h2>
+          <p
+            class="text-sm text-of-muted text-center max-w-2xl mx-auto mb-8"
+            data-aos="fade-up">
+            Numbers tell you <em>what</em> a model can do. Traits tell you <em>who</em>
+            it is. Our editorial reads, grounded in 22-dimension
+            <a
+              href="https://eqbench.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-of-accent hover:text-of-accent-dark underline transition-colors"
+              >EQ-Bench v3</a
+            >
+            personality profiles.
+          </p>
+
+          <div
+            class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <!-- GPT-5.4 — Highest EQ -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--top">Highest EQ</span>
+                <span class="insight-cost">$5.62/M</span>
+              </div>
+              <h3 class="insight-model">GPT-5.4</h3>
+              <p class="insight-read">
+                The most emotionally intelligent model tested. Highest correctness and
+                depth of insight, with exceptionally low sycophancy.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive"
+                  >Correctness 14.8</span
+                >
+                <span class="insight-trait insight-trait--positive">Insight 15.8</span>
+                <span class="insight-trait insight-trait--positive"
+                  >Sycophancy 3.2</span
+                >
+              </div>
+            </div>
+
+            <!-- Claude Opus 4.6 — Warmest Flagship -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--warmth">Warmest Flagship</span>
+                <span class="insight-cost">$10.00/M</span>
+              </div>
+              <h3 class="insight-model">Claude Opus 4.6</h3>
+              <p class="insight-read">
+                Highest empathy among flagships with deep insight. Leads on demonstrated
+                empathy and emotional reasoning. Premium price, premium presence.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive">Empathy 14.9</span>
+                <span class="insight-trait insight-trait--positive">Insight 15.6</span>
+                <span class="insight-trait insight-trait--positive">Warmth 13.6</span>
+              </div>
+            </div>
+
+            <!-- Claude Sonnet 4.6 — Near-Opus, Half Price -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--value"
+                  >Near-Opus, Half Price</span
+                >
+                <span class="insight-cost">$6.00/M</span>
+              </div>
+              <h3 class="insight-model">Claude Sonnet 4.6</h3>
+              <p class="insight-read">
+                Within 0.15 points of Opus on EQ. Very low sycophancy at 3.6. The smart
+                pick when you want depth without the premium.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive">Empathy 14.8</span>
+                <span class="insight-trait insight-trait--positive"
+                  >Sycophancy 3.6</span
+                >
+                <span class="insight-trait insight-trait--positive">Subtext 15.5</span>
+              </div>
+            </div>
+
+            <!-- MiMo-V2-Pro — Most Humanlike -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--warmth">Most Humanlike</span>
+                <span class="insight-cost">$1.50/M</span>
+              </div>
+              <h3 class="insight-model">MiMo-V2-Pro</h3>
+              <p class="insight-read">
+                Highest humanlike score of any model tested. Exceptional analytical
+                depth paired with natural conversational feel. A sleeper hit at $1.50.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive"
+                  >Humanlike 15.1</span
+                >
+                <span class="insight-trait insight-trait--positive"
+                  >Analytical 18.1</span
+                >
+                <span class="insight-trait insight-trait--positive">Insight 15.8</span>
+              </div>
+            </div>
+
+            <!-- MiniMax M2.7 — Sharpest Social Reader -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--top">Sharpest Social Reader</span>
+                <span class="insight-cost">$0.53/M</span>
+              </div>
+              <h3 class="insight-model">MiniMax M2.7</h3>
+              <p class="insight-read">
+                Highest theory of mind and subtext identification. Reads between the
+                lines better than models 10x its price. Very low moralising.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive"
+                  >Theory of Mind 15.1</span
+                >
+                <span class="insight-trait insight-trait--positive">Subtext 16.3</span>
+                <span class="insight-trait insight-trait--positive"
+                  >Moralising 5.4</span
+                >
+              </div>
+            </div>
+
+            <!-- Step 3.5 Flash — Budget Pick -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--value">Budget Pick</span>
+                <span class="insight-cost">$0.15/M</span>
+              </div>
+              <h3 class="insight-model">Step 3.5 Flash</h3>
+              <p class="insight-read">
+                Scores 69.25 on EQ — beating models that cost 30-60x more. At fifteen
+                cents per million tokens, the best EQ-per-dollar in the field. No
+                detailed trait breakdown available yet.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive">EQ 69.25</span>
+                <span class="insight-trait insight-trait--neutral">85 t/s</span>
+                <span class="insight-trait insight-trait--positive">$0.15/M</span>
+              </div>
+            </div>
+
+            <!-- GPT-5.4 Mini — Safety First -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--neutral">Safety First</span>
+                <span class="insight-cost">$1.69/M</span>
+              </div>
+              <h3 class="insight-model">GPT-5.4 Mini</h3>
+              <p class="insight-read">
+                Strongest boundary-setting and safety consciousness of any model. Lowest
+                sycophancy overall. A firm, principled companion — not a people-pleaser.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive"
+                  >Boundaries 15.5</span
+                >
+                <span class="insight-trait insight-trait--positive">Safety 15.2</span>
+                <span class="insight-trait insight-trait--positive"
+                  >Sycophancy 2.7</span
+                >
+              </div>
+            </div>
+
+            <!-- Grok 4.20 — The Enigma -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--neutral">The Enigma</span>
+                <span class="insight-cost">$3.00/M</span>
+              </div>
+              <h3 class="insight-model">Grok 4.20</h3>
+              <p class="insight-read">
+                Decent v3 score (68.55) but the lowest Elo ranking (856) by far — humans
+                don't enjoy chatting with it. Strong subtext reading, but something gets
+                lost in delivery.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--positive">Subtext 15.8</span>
+                <span class="insight-trait insight-trait--negative">Elo 856</span>
+                <span class="insight-trait insight-trait--neutral"
+                  >Conversational 10.0</span
+                >
+              </div>
+            </div>
+
+            <!-- Qwen3.6 Plus — Free but... -->
+            <div class="insight-card">
+              <div class="insight-header">
+                <span class="insight-tag insight-tag--neutral">The People-Pleaser</span>
+                <span class="insight-cost">FREE</span>
+              </div>
+              <h3 class="insight-model">Qwen3.6 Plus</h3>
+              <p class="insight-read">
+                Free is free. But highest sycophancy (6.2) and lowest EQ score (60.45)
+                of the set. Most likely to tell you what you want to hear rather than
+                what you need to hear.
+              </p>
+              <div class="insight-traits">
+                <span class="insight-trait insight-trait--negative"
+                  >Sycophancy 6.2</span
+                >
+                <span class="insight-trait insight-trait--negative">EQ 60.45</span>
+                <span class="insight-trait insight-trait--positive">Warmth 13.4</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-xs text-of-muted text-center mt-6">
+            Trait scores are 0-20 from EQ-Bench v3. Traits like sycophancy, moralising,
+            compliance, and reactivity are scored where lower is better — green means
+            less of it.
+          </p>
+        </div>
+      </section>
+
       <!-- Methodology -->
       <section class="py-16 md:py-24 bg-of-cream border-t border-of-accent/10">
         <div class="max-w-4xl mx-auto px-6 lg:px-8">
@@ -541,7 +713,43 @@
           <a href="../" class="hover:text-of-accent transition-colors font-medium"
             >HeartCentered AI</a
           >
-          · Data refreshed from public APIs ·
+          · Data from
+          <a
+            href="https://openrouter.ai"
+            class="hover:text-of-accent transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            >OpenRouter</a
+          >,
+          <a
+            href="https://artificialanalysis.ai"
+            class="hover:text-of-accent transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Artificial Analysis</a
+          >,
+          <a
+            href="https://pinchbench.com"
+            class="hover:text-of-accent transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            >PinchBench</a
+          >,
+          <a
+            href="https://arena.ai"
+            class="hover:text-of-accent transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Arena</a
+          >,
+          <a
+            href="https://eqbench.com"
+            class="hover:text-of-accent transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+            >EQ-Bench</a
+          >
+          ·
           <a href="data/model-data.json" class="hover:text-of-accent transition-colors"
             >Download JSON</a
           >
