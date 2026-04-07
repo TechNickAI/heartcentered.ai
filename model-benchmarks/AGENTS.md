@@ -120,11 +120,10 @@ common pitfalls (AA slug mismatches, rate limits, sparse data for newer models).
 - Accessibility is not a priority (decline ARIA suggestions)
 - Always regenerate llms.txt after changing model-data.json
 
-## Current Models (15)
+## Model Curation
 
-Curated set of current-generation models. Not comprehensive — chosen to represent the
-frontier across different providers, price points, and capability profiles. Includes
-budget/fast variants (Gemini Flash Lite, Gemma 4, Qwen3.5-122B) used as routing aliases.
+Not comprehensive — chosen to represent the frontier across different providers, price
+points, and capability profiles. Check `model-data.json` for the current set.
 
-Models not in CURATED_MODELS were added manually and should be refreshed via `--refresh`
-not `--curated`.
+Models in `CURATED_MODELS` in the fetch script are refreshed via `--curated`. All others
+were added manually and should be refreshed via `--refresh`.
