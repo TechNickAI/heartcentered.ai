@@ -9,20 +9,24 @@
 }
 
 .bench-table thead th {
-    position: sticky;
-    top: 3.5rem;
     background: var(--of-bg);
     padding: 0.75rem 0.75rem;
-    text-align: left;
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 0.8125rem;
+    letter-spacing: 0;
     color: var(--of-muted);
     border-bottom: 2px solid var(--of-accent);
     white-space: nowrap;
     z-index: 10;
+}
+
+.bench-table thead th:first-child {
+    text-align: left;
+}
+
+.bench-table thead th:not(:first-child) {
+    text-align: right;
 }
 
 .bench-table thead th.sortable {
@@ -92,7 +96,7 @@
 /* Score cells */
 .score-cell {
     font-variant-numeric: tabular-nums;
-    text-align: center;
+    text-align: right;
     font-weight: 500;
 }
 

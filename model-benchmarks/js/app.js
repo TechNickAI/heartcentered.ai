@@ -159,7 +159,7 @@
     }
 
     function sortModels(list) {
-        return list.sort((a, b) => {
+        return [...list].sort((a, b) => {
             const va = getSortValue(a, sortKey);
             const vb = getSortValue(b, sortKey);
 
@@ -195,17 +195,7 @@
         if (value == null) return `<span class="score-na">—</span>`;
         const pct = Math.min((value / max) * 100, 100);
         const tier = pct >= 70 ? "score-high" : pct >= 45 ? "score-mid" : "score-low";
-        return `
-      <span class="score-bar ${tier}">
-        <span class="score-bar-bg"><span class="score-bar-fill" style="width:${pct}%"></span></span>
-        <span class="score-value">${Math.round(value)}</span>
-      </span>`;
-    }
-
-    function eloHtml(value, note) {
-        if (value == null) return `<span class="score-na">—</span>`;
-        const noteHtml = note ? `<span class="data-note" title="${note}">*</span>` : "";
-        return `<span class="score-value">${Math.round(value)}</span>${noteHtml}`;
+        return `<span class="score-value ${tier}">${Math.round(value)}</span>`;
     }
 
     function eqHtml(model) {
@@ -280,7 +270,7 @@
                 (m, i) => `
       <tr style="animation-delay: ${i * 0.03}s">
         <td>
-          <a href="https://openrouter.ai/${esc(m.id)}" target="_blank" rel="noopener" class="model-link">
+          <a href="https://openrouter.ai/${esc(m.id)}" target="_blank" rel="noopener noreferrer" class="model-link">
             <div class="model-name">${esc(m.name)}</div>
             <div class="model-provider">${esc(m.provider)}${m.notes ? ` <span class="data-note" title="${esc(m.notes)}">*</span>` : ""}</div>
           </a>
@@ -309,7 +299,7 @@
                 (m, i) => `
       <div class="model-card" style="animation-delay: ${i * 0.05}s">
         <div class="flex items-center justify-between">
-          <a href="https://openrouter.ai/${esc(m.id)}" target="_blank" rel="noopener" class="model-link">
+          <a href="https://openrouter.ai/${esc(m.id)}" target="_blank" rel="noopener noreferrer" class="model-link">
             <div class="model-name">${esc(m.name)}</div>
             <div class="model-provider">${esc(m.provider)}${m.notes ? ` <span class="data-note" title="${esc(m.notes)}">*</span>` : ""}</div>
           </a>

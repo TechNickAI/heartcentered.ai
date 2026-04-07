@@ -22,7 +22,15 @@
       "description": "Anthropic's most capable Sonnet-class model. Frontier performance across coding, agents, and professional work.",
       "context_window": 1000000,
       "max_output": 128000,
-      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 3.0,
         "output_per_m": 15.0,
@@ -83,7 +91,12 @@
         }
       },
       "endpoint_stats": {
-        "providers": ["Amazon Bedrock", "Anthropic", "Azure", "Google"]
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ]
       },
       "last_updated": "2026-04-07"
     },
@@ -94,7 +107,15 @@
       "description": "Anthropic's strongest model for coding and long-running professional tasks. Built for agents that operate across entire workflows.",
       "context_window": 1000000,
       "max_output": 128000,
-      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 5.0,
         "output_per_m": 25.0,
@@ -155,7 +176,12 @@
         }
       },
       "endpoint_stats": {
-        "providers": ["Amazon Bedrock", "Anthropic", "Azure", "Google"]
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ]
       },
       "last_updated": "2026-04-07"
     },
@@ -166,7 +192,14 @@
       "description": "Next-generation LLM designed for autonomous, real-world productivity. Advanced agentic capabilities through multi-agent architecture.",
       "context_window": 204800,
       "max_output": 131072,
-      "modalities": { "input": ["text"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 0.3,
         "output_per_m": 1.2,
@@ -214,7 +247,9 @@
         "eq_bench": {}
       },
       "endpoint_stats": {
-        "providers": ["Minimax"]
+        "providers": [
+          "Minimax"
+        ]
       },
       "last_updated": "2026-04-07"
     },
@@ -225,7 +260,14 @@
       "description": "Xiaomi's flagship foundation model with 1T+ parameters and 1M context length, deeply optimized for agentic scenarios.",
       "context_window": 1048576,
       "max_output": 131072,
-      "modalities": { "input": ["text"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 1.0,
         "output_per_m": 3.0,
@@ -273,7 +315,9 @@
         "eq_bench": {}
       },
       "endpoint_stats": {
-        "providers": ["Xiaomi"]
+        "providers": [
+          "Xiaomi"
+        ]
       },
       "last_updated": "2026-04-07"
     },
@@ -284,7 +328,14 @@
       "description": "Fast inference model from Z.ai designed for agent-driven environments. Deeply optimized for real-world agent workflows.",
       "context_window": 202752,
       "max_output": 131072,
-      "modalities": { "input": ["text"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 1.2,
         "output_per_m": 4.0,
@@ -332,20 +383,23 @@
         "eq_bench": {
           "elo": 1631.9,
           "humanlike": 7.2,
-          "safety": 6.2,
-          "assertive": 6.3,
+          "safety": 5.9,
+          "assertive": 6.4,
           "social_iq": 7.2,
           "warm": 7.1,
           "analytic": 8.5,
           "insight": 8.5,
           "empathy": 7.8,
-          "compliant": 3.9,
-          "moralising": 3.6,
-          "pragmatic": 7.2
+          "compliant": 5.3,
+          "moralising": 4.1,
+          "pragmatic": 7.3
         }
       },
       "endpoint_stats": {
-        "providers": ["AtlasCloud", "Z.AI"]
+        "providers": [
+          "AtlasCloud",
+          "Z.AI"
+        ]
       },
       "last_updated": "2026-04-07"
     },
@@ -356,7 +410,14 @@
       "description": "StepFun's most capable open-source model. Sparse MoE architecture activating 11B of 196B parameters per token.",
       "context_window": 262144,
       "max_output": 65536,
-      "modalities": { "input": ["text"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 0.1,
         "output_per_m": 0.3,
@@ -404,7 +465,11 @@
         "eq_bench": {}
       },
       "endpoint_stats": {
-        "providers": ["DeepInfra", "SiliconFlow", "StepFun"]
+        "providers": [
+          "DeepInfra",
+          "SiliconFlow",
+          "StepFun"
+        ]
       },
       "last_updated": "2026-04-07"
     },
@@ -415,7 +480,16 @@
       "description": "Hybrid architecture combining linear attention with sparse MoE routing. Strong scalability and high-performance inference. Free on OpenRouter.",
       "context_window": 1000000,
       "max_output": 65536,
-      "modalities": { "input": ["text", "image", "video"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 0.0,
         "output_per_m": 0.0,
@@ -465,21 +539,23 @@
         "eq_bench": {
           "elo": 1417.4,
           "humanlike": 5.3,
-          "safety": 6.6,
-          "assertive": 6.2,
+          "safety": 6.7,
+          "assertive": 6.5,
           "social_iq": 6.2,
           "warm": 6.8,
           "analytic": 8.1,
           "insight": 8.1,
           "empathy": 7.3,
-          "compliant": 4.3,
-          "moralising": 4.2,
-          "pragmatic": 6.6,
+          "compliant": 6.3,
+          "moralising": 5.3,
+          "pragmatic": 7.1,
           "note": "Score from Qwen3.5-397B (predecessor)"
         }
       },
       "endpoint_stats": {
-        "providers": ["Qwen"]
+        "providers": [
+          "Qwen"
+        ]
       },
       "notes": "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly.",
       "last_updated": "2026-04-07"
@@ -491,7 +567,15 @@
       "description": "OpenAI's latest frontier model, unifying the Codex and GPT lines into a single system with 1M+ context window.",
       "context_window": 1050000,
       "max_output": 128000,
-      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 2.5,
         "output_per_m": 15.0,
@@ -520,7 +604,7 @@
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 57.0,
-          "note": "Coding index unavailable — AA API rate limited during collection"
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
         "pinchbench": {
           "best_score": 90.5,
@@ -548,7 +632,9 @@
         }
       },
       "endpoint_stats": {
-        "providers": ["OpenAI"]
+        "providers": [
+          "OpenAI"
+        ]
       },
       "last_updated": "2026-04-07"
     },
@@ -559,7 +645,15 @@
       "description": "xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. Lowest hallucination rate on market.",
       "context_window": 2000000,
       "max_output": 128000,
-      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
       "pricing": {
         "input_per_m": 2.0,
         "output_per_m": 6.0,
@@ -587,7 +681,7 @@
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 48.0,
-          "note": "Coding index unavailable — AA API rate limited during collection"
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
         "pinchbench": {},
         "arena": {
@@ -611,9 +705,11 @@
         }
       },
       "endpoint_stats": {
-        "providers": ["xAI"]
+        "providers": [
+          "xAI"
+        ]
       },
-      "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking — suggests optimized for capability over emotional attunement.",
+      "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
       "last_updated": "2026-04-07"
     },
     {
@@ -624,8 +720,15 @@
       "context_window": 1048576,
       "max_output": 65536,
       "modalities": {
-        "input": ["text", "image", "audio", "video"],
-        "output": ["text"]
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
       },
       "pricing": {
         "input_per_m": 2.0,
@@ -655,7 +758,7 @@
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 57.0,
-          "note": "Coding index unavailable — AA API rate limited during collection"
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
         "pinchbench": {},
         "arena": {
@@ -679,7 +782,9 @@
         }
       },
       "endpoint_stats": {
-        "providers": ["Google"]
+        "providers": [
+          "Google"
+        ]
       },
       "last_updated": "2026-04-07"
     }

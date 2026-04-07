@@ -166,7 +166,7 @@
     <!-- Alpine.js for interactivity -->
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"></script>
   </head>
 
   <body class="font-body text-dark bg-of-surface antialiased">
@@ -233,7 +233,7 @@
             <a
               href="https://claude.ai"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="bg-of-accent text-white px-6 py-2.5 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg">
               Try Claude
             </a>
@@ -279,7 +279,7 @@
             <a
               href="https://claude.ai"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               class="block mx-4 my-2 bg-of-accent text-white px-6 py-3 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 text-center min-h-[44px] flex items-center justify-center">
               Try Claude
             </a>
@@ -396,30 +396,28 @@
               <thead>
                 <tr>
                   <th class="sortable" data-sort="name">Model</th>
-                  <th class="sortable text-center has-tooltip" data-sort="reasoning">
+                  <th class="sortable has-tooltip" data-sort="reasoning">
                     Reasoning
                     <span class="col-tooltip"
                       >Weighted composite of graduate-level reasoning (GPQA), broad
                       knowledge, and frontier difficulty benchmarks. Scale 0–100.</span
                     >
                   </th>
-                  <th class="sortable text-center has-tooltip" data-sort="coding">
+                  <th class="sortable has-tooltip" data-sort="coding">
                     Coding
                     <span class="col-tooltip"
                       >Weighted composite of coding benchmarks including LiveCodeBench,
                       TerminalBench, and SciCode. Scale 0–100.</span
                     >
                   </th>
-                  <th class="sortable text-center has-tooltip" data-sort="agentic">
+                  <th class="sortable has-tooltip" data-sort="agentic">
                     Agentic
                     <span class="col-tooltip"
                       >How well it uses tools and follows instructions. Based on
                       PinchBench and IFBench scores. Scale 0–100.</span
                     >
                   </th>
-                  <th
-                    class="sortable text-center has-tooltip eq-col"
-                    data-sort="eq_elo">
+                  <th class="sortable has-tooltip eq-col" data-sort="eq_elo">
                     EQ
                     <span class="col-tooltip"
                       >Emotional intelligence Elo from EQ-Bench 3 — measures empathy,
@@ -427,27 +425,27 @@
                       score for trait breakdown.</span
                     >
                   </th>
-                  <th class="sortable text-center has-tooltip" data-sort="arena_elo">
+                  <th class="sortable has-tooltip" data-sort="arena_elo">
                     Chat
                     <span class="col-tooltip"
                       >Arena Elo from blind human A/B preference tests. Higher = humans
                       prefer chatting with this model.</span
                     >
                   </th>
-                  <th class="sortable text-center has-tooltip" data-sort="speed">
+                  <th class="sortable has-tooltip" data-sort="speed">
                     Speed
                     <span class="col-tooltip"
                       >Output tokens per second. Higher = faster responses.</span
                     >
                   </th>
-                  <th class="sortable text-center has-tooltip" data-sort="cost">
+                  <th class="sortable has-tooltip" data-sort="cost">
                     Cost
                     <span class="col-tooltip"
                       >Blended cost per 1M tokens (3:1 input-to-output ratio). Lower is
                       better.</span
                     >
                   </th>
-                  <th class="sortable text-center has-tooltip" data-sort="context">
+                  <th class="sortable has-tooltip" data-sort="context">
                     Context
                     <span class="col-tooltip"
                       >Maximum input context window in thousands of tokens.</span

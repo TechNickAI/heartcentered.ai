@@ -49,7 +49,6 @@ CURATED_MODELS = [
     "minimax/minimax-m2.7",
     "qwen/qwen3.6-plus:free",
     "anthropic/claude-opus-4.6",
-    "arcee-ai/trinity-large-preview:free",
 ]
 
 # Maps OpenRouter model IDs to Artificial Analysis slugs.
@@ -74,7 +73,6 @@ PINCHBENCH_DATA = {
     "z-ai/glm-5-turbo": {"best_score": 86.5, "avg_score": 81.6, "runs": 11},
     "minimax/minimax-m2.7": {"best_score": 89.8, "avg_score": 83.2, "runs": 11},
     "qwen/qwen3.6-plus:free": {"best_score": 88.6, "avg_score": 84.0, "runs": 5},
-    "arcee-ai/trinity-large-preview:free": {"best_score": 80.6, "avg_score": 69.4, "runs": 8},
 }
 
 
@@ -398,10 +396,13 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
     for i, m in enumerate(models):
         if m["id"] == new_model["id"]:
             # Preserve manually-entered benchmark data (don't overwrite with empty)
-            for bench_key in ("eq_bench",):
+            for bench_key in ("eq_bench", "arena"):
                 existing_bench = m.get("benchmarks", {}).get(bench_key, {})
                 if existing_bench and not new_model["benchmarks"].get(bench_key):
                     new_model["benchmarks"][bench_key] = existing_bench
+            # Preserve top-level notes
+            if m.get("notes") and not new_model.get("notes"):
+                new_model["notes"] = m["notes"]
             # Preserve speed data if new model doesn't have it
             if not new_model.get("speed") and m.get("speed"):
                 new_model["speed"] = m["speed"]
