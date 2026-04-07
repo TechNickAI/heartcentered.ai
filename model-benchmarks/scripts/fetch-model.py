@@ -505,6 +505,8 @@ def generate_llms_txt(data: dict) -> None:
                 lines.append(f"Benchmarks (Artificial Analysis): {', '.join(aa_parts)}")
 
         eq = benchmarks.get("eq_bench", {})
+        if eq.get("v3_score") is not None:
+            lines.append(f"EQ-Bench v3 Score: {eq['v3_score']}/100")
         if eq.get("elo"):
             lines.append(f"EQ-Bench Elo: {eq['elo']}")
 
