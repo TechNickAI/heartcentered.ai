@@ -50,7 +50,7 @@
 }
 
 .bench-table tbody tr:hover {
-    background: var(--of-surface);
+    background: rgba(93, 123, 111, 0.05);
 }
 
 .bench-table tbody td {
@@ -105,7 +105,7 @@
 .score-bar-bg {
     width: 3rem;
     height: 0.375rem;
-    background: rgba(93, 123, 111, 0.1);
+    background: rgba(93, 123, 111, 0.2);
     border-radius: 999px;
     overflow: hidden;
 }
@@ -225,7 +225,8 @@
 
 /* Filter buttons */
 .filter-btn {
-    padding: 0.375rem 0.75rem;
+    padding: 0.5rem 0.875rem;
+    min-height: 2.75rem;
     border: 1px solid rgba(93, 123, 111, 0.2);
     border-radius: 999px;
     background: transparent;
@@ -359,6 +360,16 @@
     color: var(--of-accent-dark);
     font-weight: 700;
     font-size: 0.8125rem;
+}
+
+.eq-cell {
+    background: rgba(93, 123, 111, 0.03);
+}
+
+.eq-cell .score-value {
+    color: var(--of-accent-dark);
+    font-weight: 600;
+    font-size: 0.875rem;
 }
 
 /* EQ detail tooltip */

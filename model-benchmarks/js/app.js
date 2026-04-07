@@ -288,7 +288,7 @@
         <td class="score-cell">${scoreHtml(m.scores?.reasoning, 100)}</td>
         <td class="score-cell">${scoreHtml(m.scores?.coding, 100)}</td>
         <td class="score-cell">${scoreHtml(m.scores?.agentic, 100)}</td>
-        <td class="score-cell">${eqHtml(m)}</td>
+        <td class="score-cell eq-cell">${eqHtml(m)}</td>
         <td class="score-cell">${arenaHtml(m)}</td>
         <td class="score-cell">${speedHtml(m.speed)}</td>
         <td class="score-cell">${costHtml(m.pricing)}</td>
