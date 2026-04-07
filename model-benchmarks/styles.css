@@ -465,11 +465,6 @@
     color: var(--of-muted);
 }
 
-.insight-tag--caution {
-    background: rgba(180, 83, 9, 0.1);
-    color: #92400e;
-}
-
 .insight-cost {
     font-size: 0.75rem;
     font-weight: 500;
