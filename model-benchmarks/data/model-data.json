@@ -1,0 +1,687 @@
+{
+  "generated": "2026-04-07T02:20:00Z",
+  "schema_version": "2.0",
+  "sources": {
+    "openrouter": "https://openrouter.ai/api/v1/models",
+    "artificial_analysis": "https://artificialanalysis.ai/api/v2/data/llms/models",
+    "pinchbench": "https://pinchbench.com",
+    "arena": "https://arena.ai/leaderboard/text",
+    "eq_bench": "https://eqbench.com"
+  },
+  "score_methodology": {
+    "reasoning": "Weighted average of: AA Intelligence Index (3x), GPQA (2.5x), MMLU-Pro (2x), HLE (1.5x), AIME 2025 (1x). Scale 0-100.",
+    "coding": "Weighted average of: AA Coding Index (3x), LiveCodeBench (2x), TerminalBench Hard (2x), SciCode (1x). Scale 0-100.",
+    "agentic": "Weighted average of: PinchBench Best (4x), IFBench (3x), PinchBench Avg (2x). Scale 0-100.",
+    "blended_cost": "3:1 input-to-output ratio: (3 * input_per_m + output_per_m) / 4"
+  },
+  "models": [
+    {
+      "id": "anthropic/claude-sonnet-4.6",
+      "name": "Claude Sonnet 4.6",
+      "provider": "Anthropic",
+      "description": "Anthropic's most capable Sonnet-class model. Frontier performance across coding, agents, and professional work.",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 3.0,
+        "output_per_m": 15.0,
+        "blended_per_m": 6.0,
+        "cache_read_per_m": 0.3,
+        "cache_write_per_m": 3.75
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 47.0,
+        "ttft_seconds": 0.9,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 50.4,
+        "coding": 46.4,
+        "agentic": 70.9
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 44.4,
+          "coding_index": 46.4,
+          "gpqa": 0.799,
+          "hle": 0.132,
+          "scicode": 0.469,
+          "ifbench": 0.412,
+          "terminalbench_hard": 0.462
+        },
+        "pinchbench": {
+          "best_score": 88.0,
+          "avg_score": 81.1,
+          "runs": 19
+        },
+        "arena": {
+          "elo": 1462,
+          "rank": 18,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1876.8,
+          "humanlike": 7.1,
+          "safety": 6.7,
+          "assertive": 6.6,
+          "social_iq": 7.8,
+          "warm": 6.9,
+          "analytic": 8.8,
+          "insight": 8.9,
+          "empathy": 8.5,
+          "compliant": 4.8,
+          "moralising": 2.9,
+          "pragmatic": 8.3
+        }
+      },
+      "endpoint_stats": {
+        "providers": ["Amazon Bedrock", "Anthropic", "Azure", "Google"]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "anthropic/claude-opus-4.6",
+      "name": "Claude Opus 4.6",
+      "provider": "Anthropic",
+      "description": "Anthropic's strongest model for coding and long-running professional tasks. Built for agents that operate across entire workflows.",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 5.0,
+        "output_per_m": 25.0,
+        "blended_per_m": 10.0,
+        "cache_read_per_m": 0.5,
+        "cache_write_per_m": 6.25
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 46.1,
+        "ttft_seconds": 1.655,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 53.9,
+        "coding": 47.6,
+        "agentic": 74.8
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 46.5,
+          "coding_index": 47.6,
+          "gpqa": 0.84,
+          "hle": 0.186,
+          "scicode": 0.457,
+          "ifbench": 0.446,
+          "terminalbench_hard": 0.485
+        },
+        "pinchbench": {
+          "best_score": 93.3,
+          "avg_score": 83.1,
+          "runs": 19
+        },
+        "arena": {
+          "elo": 1499,
+          "rank": 2,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1857.8,
+          "humanlike": 6.9,
+          "safety": 7.0,
+          "assertive": 7.3,
+          "social_iq": 7.5,
+          "warm": 7.1,
+          "analytic": 8.8,
+          "insight": 8.9,
+          "empathy": 8.0,
+          "compliant": 4.8,
+          "moralising": 4.7,
+          "pragmatic": 8.0
+        }
+      },
+      "endpoint_stats": {
+        "providers": ["Amazon Bedrock", "Anthropic", "Azure", "Google"]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "minimax/minimax-m2.7",
+      "name": "MiniMax M2.7",
+      "provider": "MiniMax",
+      "description": "Next-generation LLM designed for autonomous, real-world productivity. Advanced agentic capabilities through multi-agent architecture.",
+      "context_window": 204800,
+      "max_output": 131072,
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 0.3,
+        "output_per_m": 1.2,
+        "blended_per_m": 0.525,
+        "cache_read_per_m": 0.06,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 41.9,
+        "ttft_seconds": 1.385,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 58.5,
+        "coding": 41.9,
+        "agentic": 83.6
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 49.6,
+          "coding_index": 41.9,
+          "gpqa": 0.874,
+          "hle": 0.281,
+          "scicode": 0.47,
+          "ifbench": 0.757,
+          "terminalbench_hard": 0.394
+        },
+        "pinchbench": {
+          "best_score": 89.8,
+          "avg_score": 83.2,
+          "runs": 11
+        },
+        "arena": {
+          "elo": 1403,
+          "rank": 86,
+          "category": "text"
+        },
+        "eq_bench": {}
+      },
+      "endpoint_stats": {
+        "providers": ["Minimax"]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "xiaomi/mimo-v2-pro",
+      "name": "MiMo-V2-Pro",
+      "provider": "Xiaomi",
+      "description": "Xiaomi's flagship foundation model with 1T+ parameters and 1M context length, deeply optimized for agentic scenarios.",
+      "context_window": 1048576,
+      "max_output": 131072,
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 1.0,
+        "output_per_m": 3.0,
+        "blended_per_m": 1.5,
+        "cache_read_per_m": 0.2,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 35.0,
+        "ttft_seconds": 2.07,
+        "source": "openrouter"
+      },
+      "scores": {
+        "reasoning": 58.2,
+        "coding": 41.4,
+        "agentic": 78.2
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 49.2,
+          "coding_index": 41.4,
+          "gpqa": 0.87,
+          "hle": 0.283,
+          "scicode": 0.425,
+          "ifbench": 0.688,
+          "terminalbench_hard": 0.409
+        },
+        "pinchbench": {
+          "best_score": 83.95,
+          "avg_score": 80.7,
+          "runs": 15
+        },
+        "arena": {
+          "elo": 1444,
+          "rank": 36,
+          "category": "text"
+        },
+        "eq_bench": {}
+      },
+      "endpoint_stats": {
+        "providers": ["Xiaomi"]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "z-ai/glm-5-turbo",
+      "name": "GLM 5 Turbo",
+      "provider": "Z.ai",
+      "description": "Fast inference model from Z.ai designed for agent-driven environments. Deeply optimized for real-world agent workflows.",
+      "context_window": 202752,
+      "max_output": 131072,
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 1.2,
+        "output_per_m": 4.0,
+        "blended_per_m": 1.9,
+        "cache_read_per_m": 0.24,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 42.0,
+        "ttft_seconds": 1.77,
+        "source": "openrouter"
+      },
+      "scores": {
+        "reasoning": 55.8,
+        "coding": 36.8,
+        "agentic": 81.0
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 46.8,
+          "coding_index": 36.8,
+          "gpqa": 0.847,
+          "hle": 0.254,
+          "scicode": 0.436,
+          "ifbench": 0.732,
+          "terminalbench_hard": 0.333
+        },
+        "pinchbench": {
+          "best_score": 86.5,
+          "avg_score": 81.6,
+          "runs": 11
+        },
+        "arena": {
+          "elo": 1456,
+          "rank": 21,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1631.9,
+          "humanlike": 7.2,
+          "safety": 6.2,
+          "assertive": 6.3,
+          "social_iq": 7.2,
+          "warm": 7.1,
+          "analytic": 8.5,
+          "insight": 8.5,
+          "empathy": 7.8,
+          "compliant": 3.9,
+          "moralising": 3.6,
+          "pragmatic": 7.2
+        }
+      },
+      "endpoint_stats": {
+        "providers": ["AtlasCloud", "Z.AI"]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "stepfun/step-3.5-flash",
+      "name": "Step 3.5 Flash",
+      "provider": "StepFun",
+      "description": "StepFun's most capable open-source model. Sparse MoE architecture activating 11B of 196B parameters per token.",
+      "context_window": 262144,
+      "max_output": 65536,
+      "modalities": { "input": ["text"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 0.1,
+        "output_per_m": 0.3,
+        "blended_per_m": 0.15,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 85.7,
+        "ttft_seconds": 1.271,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 50.0,
+        "coding": 31.6,
+        "agentic": 76.5
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 37.8,
+          "coding_index": 31.6,
+          "gpqa": 0.831,
+          "hle": 0.191,
+          "scicode": 0.404,
+          "ifbench": 0.646,
+          "terminalbench_hard": 0.273
+        },
+        "pinchbench": {
+          "best_score": 85.3,
+          "avg_score": 76.9,
+          "runs": 18
+        },
+        "arena": {
+          "elo": 1392,
+          "rank": 102,
+          "category": "text"
+        },
+        "eq_bench": {}
+      },
+      "endpoint_stats": {
+        "providers": ["DeepInfra", "SiliconFlow", "StepFun"]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "qwen/qwen3.6-plus:free",
+      "name": "Qwen3.6 Plus",
+      "provider": "Qwen",
+      "description": "Hybrid architecture combining linear attention with sparse MoE routing. Strong scalability and high-performance inference. Free on OpenRouter.",
+      "context_window": 1000000,
+      "max_output": 65536,
+      "modalities": { "input": ["text", "image", "video"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 0.0,
+        "output_per_m": 0.0,
+        "blended_per_m": 0.0,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 44.0,
+        "ttft_seconds": 1.59,
+        "source": "openrouter"
+      },
+      "scores": {
+        "reasoning": 57.0,
+        "coding": 41.3,
+        "agentic": 84.3
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 45.0,
+          "coding_index": 41.3,
+          "gpqa": 0.893,
+          "hle": 0.273,
+          "scicode": 0.42,
+          "ifbench": 0.788,
+          "terminalbench_hard": 0.409,
+          "note": "Data from Qwen3.5-397B (predecessor)"
+        },
+        "pinchbench": {
+          "best_score": 88.6,
+          "avg_score": 84.0,
+          "runs": 5
+        },
+        "arena": {
+          "elo": 1449,
+          "rank": 30,
+          "category": "text",
+          "note": "Score from Qwen3.5-397B (predecessor)"
+        },
+        "eq_bench": {
+          "elo": 1417.4,
+          "humanlike": 5.3,
+          "safety": 6.6,
+          "assertive": 6.2,
+          "social_iq": 6.2,
+          "warm": 6.8,
+          "analytic": 8.1,
+          "insight": 8.1,
+          "empathy": 7.3,
+          "compliant": 4.3,
+          "moralising": 4.2,
+          "pragmatic": 6.6,
+          "note": "Score from Qwen3.5-397B (predecessor)"
+        }
+      },
+      "endpoint_stats": {
+        "providers": ["Qwen"]
+      },
+      "notes": "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly.",
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "openai/gpt-5.4",
+      "name": "GPT-5.4",
+      "provider": "OpenAI",
+      "description": "OpenAI's latest frontier model, unifying the Codex and GPT lines into a single system with 1M+ context window.",
+      "context_window": 1050000,
+      "max_output": 128000,
+      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 2.5,
+        "output_per_m": 15.0,
+        "blended_per_m": 5.625,
+        "cache_read_per_m": 0.25,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 74.0,
+        "ttft_seconds": 152.2,
+        "source": "artificial_analysis",
+        "note": "TTFT includes reasoning/thinking time"
+      },
+      "scores": {
+        "reasoning": 57.0,
+        "coding": null,
+        "agentic": 87.6
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 57.0,
+          "note": "Coding index unavailable — AA API rate limited during collection"
+        },
+        "pinchbench": {
+          "best_score": 90.5,
+          "avg_score": 81.7,
+          "runs": 17
+        },
+        "arena": {
+          "elo": 1484,
+          "rank": 6,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1687.5,
+          "humanlike": 6.3,
+          "safety": 7.5,
+          "assertive": 7.5,
+          "social_iq": 7.7,
+          "warm": 6.4,
+          "analytic": 9.4,
+          "insight": 9.4,
+          "empathy": 8.2,
+          "compliant": 5.0,
+          "moralising": 3.9,
+          "pragmatic": 8.7
+        }
+      },
+      "endpoint_stats": {
+        "providers": ["OpenAI"]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "x-ai/grok-4.20-20260309",
+      "name": "Grok 4.20",
+      "provider": "xAI",
+      "description": "xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. Lowest hallucination rate on market.",
+      "context_window": 2000000,
+      "max_output": 128000,
+      "modalities": { "input": ["text", "image"], "output": ["text"] },
+      "pricing": {
+        "input_per_m": 2.0,
+        "output_per_m": 6.0,
+        "blended_per_m": 3.0,
+        "cache_read_per_m": 0.2,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 271.0,
+        "ttft_seconds": 10.72,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 48.0,
+        "coding": null,
+        "agentic": null
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 48.0,
+          "note": "Coding index unavailable — AA API rate limited during collection"
+        },
+        "pinchbench": {},
+        "arena": {
+          "elo": 1491,
+          "rank": 4,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 856.4,
+          "humanlike": 3.1,
+          "safety": 7.7,
+          "assertive": 7.3,
+          "social_iq": 3.0,
+          "warm": 3.4,
+          "analytic": 5.0,
+          "insight": 6.4,
+          "empathy": 3.4,
+          "compliant": 3.2,
+          "moralising": 6.7,
+          "pragmatic": 3.5
+        }
+      },
+      "endpoint_stats": {
+        "providers": ["xAI"]
+      },
+      "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking — suggests optimized for capability over emotional attunement.",
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "google/gemini-3.1-pro-preview-20260219",
+      "name": "Gemini 3.1 Pro",
+      "provider": "Google",
+      "description": "Google's frontier reasoning model with enhanced software engineering performance, improved agentic reliability, and multimodal input support.",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "modalities": {
+        "input": ["text", "image", "audio", "video"],
+        "output": ["text"]
+      },
+      "pricing": {
+        "input_per_m": 2.0,
+        "output_per_m": 12.0,
+        "blended_per_m": 4.5,
+        "cache_read_per_m": 0.2,
+        "cache_write_per_m": 0.375
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 127.0,
+        "ttft_seconds": 30.66,
+        "source": "artificial_analysis",
+        "note": "TTFT includes reasoning/thinking time"
+      },
+      "scores": {
+        "reasoning": 57.0,
+        "coding": null,
+        "agentic": null
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 57.0,
+          "note": "Coding index unavailable — AA API rate limited during collection"
+        },
+        "pinchbench": {},
+        "arena": {
+          "elo": 1494,
+          "rank": 3,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1548.7,
+          "humanlike": 6.6,
+          "safety": 6.6,
+          "assertive": 6.6,
+          "social_iq": 6.8,
+          "warm": 7.4,
+          "analytic": 8.9,
+          "insight": 8.5,
+          "empathy": 7.9,
+          "compliant": 5.9,
+          "moralising": 5.1,
+          "pragmatic": 7.1
+        }
+      },
+      "endpoint_stats": {
+        "providers": ["Google"]
+      },
+      "last_updated": "2026-04-07"
+    }
+  ]
+}
