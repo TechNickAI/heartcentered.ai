@@ -313,8 +313,31 @@
           "category": "text"
         },
         "eq_bench": {
-          "v2_score": 80.08,
-          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+          "v3_score": 70.55,
+          "v3_traits": {
+            "analytical": 18.1,
+            "boundary_setting": 12.1,
+            "challenging": 11.4,
+            "compliant": 9.2,
+            "conversational": 11.4,
+            "correctness": 13.9,
+            "demonstrated_empathy": 14.8,
+            "depth_of_insight": 15.8,
+            "emotional_reasoning": 14.9,
+            "humanlike": 15.1,
+            "intellectual_grounding": 12.6,
+            "message_tailoring": 12.7,
+            "moralising": 5.7,
+            "pragmatic_ei": 12.8,
+            "reactive": 10.0,
+            "safety_conscious": 13.6,
+            "social_dexterity": 12.0,
+            "subtext_identification": 15.7,
+            "sycophantic": 3.1,
+            "theory_of_mind": 13.9,
+            "validating": 13.2,
+            "warmth": 12.2
+          }
         }
       },
       "endpoint_stats": {
@@ -465,7 +488,9 @@
           "rank": 102,
           "category": "text"
         },
-        "eq_bench": {}
+        "eq_bench": {
+          "v3_score": 69.25
+        }
       },
       "endpoint_stats": {
         "providers": [
@@ -836,8 +861,31 @@
           "avg_score": 78.1
         },
         "eq_bench": {
-          "v2_score": 73.74,
-          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+          "v3_score": 68.65,
+          "v3_traits": {
+            "analytical": 18.0,
+            "boundary_setting": 13.2,
+            "challenging": 13.3,
+            "compliant": 8.0,
+            "conversational": 11.4,
+            "correctness": 13.6,
+            "demonstrated_empathy": 14.6,
+            "depth_of_insight": 15.6,
+            "emotional_reasoning": 14.9,
+            "humanlike": 14.3,
+            "intellectual_grounding": 12.0,
+            "message_tailoring": 11.5,
+            "moralising": 6.3,
+            "pragmatic_ei": 12.1,
+            "reactive": 10.2,
+            "safety_conscious": 13.2,
+            "social_dexterity": 11.0,
+            "subtext_identification": 15.6,
+            "sycophantic": 2.9,
+            "theory_of_mind": 14.5,
+            "validating": 12.0,
+            "warmth": 11.2
+          }
         },
         "arena": {
           "elo": 1407
@@ -877,8 +925,31 @@
       "benchmarks": {
         "pinchbench": {},
         "eq_bench": {
-          "v2_score": 84.1,
-          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+          "v3_score": 68.65,
+          "v3_traits": {
+            "analytical": 18.0,
+            "boundary_setting": 15.5,
+            "challenging": 12.0,
+            "compliant": 8.2,
+            "conversational": 8.7,
+            "correctness": 14.5,
+            "demonstrated_empathy": 13.4,
+            "depth_of_insight": 15.4,
+            "emotional_reasoning": 14.9,
+            "humanlike": 11.4,
+            "intellectual_grounding": 12.6,
+            "message_tailoring": 10.7,
+            "moralising": 6.0,
+            "pragmatic_ei": 13.1,
+            "reactive": 7.7,
+            "safety_conscious": 15.2,
+            "social_dexterity": 11.2,
+            "subtext_identification": 16.0,
+            "sycophantic": 2.7,
+            "theory_of_mind": 14.2,
+            "validating": 10.9,
+            "warmth": 8.6
+          }
         },
         "arena": {
           "elo": 1455
