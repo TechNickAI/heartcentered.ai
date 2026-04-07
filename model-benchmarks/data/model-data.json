@@ -313,7 +313,8 @@
           "category": "text"
         },
         "eq_bench": {
-          "note": "EQ-Bench v2: 80.08 (not comparable to v3 Elo scores)"
+          "v2_score": 80.08,
+          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
         }
       },
       "endpoint_stats": {
@@ -834,7 +835,10 @@
           "best_score": 89.5,
           "avg_score": 78.1
         },
-        "eq_bench": {},
+        "eq_bench": {
+          "v2_score": 73.74,
+          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+        },
         "arena": {
           "elo": 1407
         }
@@ -872,7 +876,10 @@
       },
       "benchmarks": {
         "pinchbench": {},
-        "eq_bench": {},
+        "eq_bench": {
+          "v2_score": 84.1,
+          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+        },
         "arena": {
           "elo": 1455
         }
