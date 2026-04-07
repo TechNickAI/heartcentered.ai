@@ -1,0 +1,418 @@
+/* Model Benchmarks — extends Organic Flow Design System */
+
+/* Table */
+.bench-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.875rem;
+}
+
+.bench-table thead th {
+    position: sticky;
+    top: 3.5rem;
+    background: var(--of-bg);
+    padding: 0.75rem 0.75rem;
+    text-align: left;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--of-muted);
+    border-bottom: 2px solid var(--of-accent);
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.bench-table thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.15s;
+}
+
+.bench-table thead th.sortable:hover {
+    color: var(--of-accent-dark);
+}
+
+.bench-table thead th.sort-asc::after {
+    content: " \2191";
+    color: var(--of-accent);
+}
+
+.bench-table thead th.sort-desc::after {
+    content: " \2193";
+    color: var(--of-accent);
+}
+
+.bench-table tbody tr {
+    transition: background 0.15s;
+}
+
+.bench-table tbody tr:hover {
+    background: var(--of-surface);
+}
+
+.bench-table tbody td {
+    padding: 0.875rem 0.75rem;
+    border-bottom: 1px solid rgba(93, 123, 111, 0.08);
+    vertical-align: middle;
+}
+
+.bench-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Model link */
+.model-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.model-link:hover .model-name {
+    color: var(--of-accent);
+}
+
+/* Model name cell */
+.model-name {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    color: var(--of-text);
+    line-height: 1.3;
+}
+
+.model-provider {
+    font-size: 0.75rem;
+    color: var(--of-muted);
+    margin-top: 0.125rem;
+}
+
+/* Score cells */
+.score-cell {
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    font-weight: 500;
+}
+
+.score-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.score-bar-bg {
+    width: 3rem;
+    height: 0.375rem;
+    background: rgba(93, 123, 111, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.score-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.4s ease;
+}
+
+.score-value {
+    min-width: 2rem;
+    text-align: right;
+    font-size: 0.8125rem;
+}
+
+/* Score color tiers */
+.score-high {
+    color: #2d6a4f;
+}
+.score-high .score-bar-fill {
+    background: #2d6a4f;
+}
+
+.score-mid {
+    color: var(--of-accent);
+}
+.score-mid .score-bar-fill {
+    background: var(--of-accent);
+}
+
+.score-low {
+    color: var(--of-accent-light);
+}
+.score-low .score-bar-fill {
+    background: var(--of-accent-light);
+}
+
+.score-na {
+    color: var(--of-accent-light);
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+/* Cost cell */
+.cost-free {
+    color: #2d6a4f;
+    font-weight: 600;
+    font-size: 0.8125rem;
+}
+
+.cost-value {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8125rem;
+}
+
+.cost-detail {
+    cursor: help;
+}
+
+/* Speed cell */
+.speed-value {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8125rem;
+}
+
+.speed-fast {
+    color: #2d6a4f;
+}
+.speed-mid {
+    color: var(--of-accent);
+}
+
+/* Context cell */
+.context-value {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8125rem;
+}
+
+/* Capability tags */
+.cap-tag {
+    display: inline-block;
+    padding: 0.125rem 0.375rem;
+    border-radius: 999px;
+    font-size: 0.625rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background: rgba(93, 123, 111, 0.08);
+    color: var(--of-accent);
+    margin-right: 0.25rem;
+    margin-bottom: 0.125rem;
+}
+
+.cap-tag.active {
+    background: var(--of-accent);
+    color: white;
+}
+
+/* Filter input */
+.bench-input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(93, 123, 111, 0.2);
+    border-radius: 0.5rem;
+    background: var(--of-surface);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--of-text);
+    transition: border-color 0.15s;
+}
+
+.bench-input:focus {
+    outline: none;
+    border-color: var(--of-accent);
+    box-shadow: 0 0 0 3px rgba(93, 123, 111, 0.1);
+}
+
+/* Filter buttons */
+.filter-btn {
+    padding: 0.375rem 0.75rem;
+    border: 1px solid rgba(93, 123, 111, 0.2);
+    border-radius: 999px;
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: var(--of-muted);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.filter-btn:hover {
+    border-color: var(--of-accent);
+    color: var(--of-accent);
+}
+
+.filter-btn.active {
+    background: var(--of-accent);
+    border-color: var(--of-accent);
+    color: white;
+}
+
+/* Mobile cards */
+.model-card {
+    background: var(--of-surface);
+    border: 1px solid rgba(93, 123, 111, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    transition: box-shadow 0.2s;
+}
+
+.model-card:hover {
+    box-shadow: 0 4px 12px rgba(42, 58, 42, 0.06);
+}
+
+.card-scores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.card-score-item {
+    text-align: center;
+}
+
+.card-score-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--of-muted);
+    margin-bottom: 0.25rem;
+}
+
+.card-score-value {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(93, 123, 111, 0.08);
+    font-size: 0.75rem;
+    color: var(--of-muted);
+}
+
+/* Details/methodology */
+.bench-details {
+    background: var(--of-surface);
+    border: 1px solid rgba(93, 123, 111, 0.1);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+}
+
+.bench-details[open] summary {
+    margin-bottom: 0.5rem;
+}
+
+/* Data note */
+.data-note {
+    font-size: 0.6875rem;
+    color: var(--of-accent-light);
+    font-style: italic;
+}
+
+/* Column header tooltips */
+.has-tooltip {
+    position: relative;
+}
+
+.col-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--of-text);
+    color: var(--of-bg);
+    padding: 0.625rem 0.875rem;
+    border-radius: 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.5;
+    white-space: normal;
+    width: 220px;
+    z-index: 50;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.col-tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-bottom-color: var(--of-text);
+}
+
+.has-tooltip:hover .col-tooltip {
+    display: block;
+}
+
+/* EQ column emphasis — the heart of this page */
+.eq-col {
+    color: var(--of-accent-dark);
+    font-weight: 700;
+    font-size: 0.8125rem;
+}
+
+/* EQ detail tooltip */
+.eq-detail {
+    position: relative;
+    cursor: help;
+}
+
+.eq-tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--of-text);
+    color: var(--of-bg);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    z-index: 50;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.eq-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--of-text);
+}
+
+.eq-detail:hover .eq-tooltip {
+    display: block;
+}
+
+/* Animations — rows start visible, animate in subtly */
+.bench-table tbody tr {
+    animation: fadeInRow 0.3s ease forwards;
+}
+
+@keyframes fadeInRow {
+    from {
+        opacity: 0.6;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.model-card {
+    animation: fadeInRow 0.3s ease forwards;
+}

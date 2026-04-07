@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM Model Benchmarks · HeartCentered AI</title>
+    <link rel="canonical" href="https://heartcentered.ai/model-benchmarks/" />
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/images/icon-192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta
+      name="description"
+      content="Compare current-generation LLM models across reasoning, coding, agentic performance, emotional intelligence, speed, and cost. Data from OpenRouter, Artificial Analysis, PinchBench, Arena, and EQ-Bench." />
+
+    <meta name="author" content="Nick Sullivan" />
+    <meta
+      name="keywords"
+      content="LLM benchmarks, model comparison, AI model rankings, reasoning benchmarks, agentic AI, emotional intelligence AI, EQ-Bench, PinchBench, Arena Elo, OpenRouter, Artificial Analysis" />
+    <meta property="og:title" content="LLM Model Benchmarks · HeartCentered AI" />
+    <meta
+      property="og:description"
+      content="Compare current-generation LLM models across reasoning, coding, agentic performance, emotional intelligence, speed, and cost." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://heartcentered.ai/model-benchmarks/" />
+    <meta property="og:image" content="https://heartcentered.ai/images/og-image.jpg" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="LLM Model Benchmarks · HeartCentered AI" />
+    <meta
+      name="twitter:description"
+      content="Compare current-generation LLM models across reasoning, coding, agentic, emotional intelligence, speed, and cost." />
+    <meta name="twitter:image" content="https://heartcentered.ai/images/og-image.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "HeartCentered AI LLM Model Benchmarks",
+        "description": "Current-generation LLM model comparison across reasoning, coding, agentic performance, emotional intelligence, speed, and pricing.",
+        "url": "https://heartcentered.ai/model-benchmarks/",
+        "creator": {
+          "@type": "Organization",
+          "name": "HeartCentered AI",
+          "url": "https://heartcentered.ai"
+        },
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "https://heartcentered.ai/model-benchmarks/data/model-data.json"
+          },
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "text/plain",
+            "contentUrl": "https://heartcentered.ai/model-benchmarks/llms.txt"
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://heartcentered.ai/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Model Benchmarks",
+            "item": "https://heartcentered.ai/model-benchmarks/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "of-bg": "#F4F7F4",
+              "of-bg-warm": "#FAF8F5",
+              "of-text": "#2A3A2A",
+              "of-accent": "#5D7B6F",
+              "of-accent-dark": "#4A6B5D",
+              "of-accent-light": "#7A9A8C",
+              "of-muted": "#7A8B7D",
+              "of-secondary": "#D4B896",
+              "of-surface": "#FFFFFF",
+              "of-cream": "#FAF8F5",
+            },
+            fontFamily: {
+              display: ["Fraunces", "Georgia", "serif"],
+              body: ["DM Sans", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- PostHog Analytics -->
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          (window.posthog && window.posthog.__loaded) ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              (2 == o.length && ((t = t[o[0]]), (e = o[1])),
+                (t[e] = function () {
+                  t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+                }));
+            }
+            (((p = t.createElement("script")).type = "text/javascript"),
+              (p.crossOrigin = "anonymous"),
+              (p.async = !0),
+              (p.src =
+                s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") +
+                "/static/array.js"),
+              (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r));
+            var u = e;
+            for (
+              void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                u.people = u.people || [],
+                u.toString = function (t) {
+                  var e = "posthog";
+                  return ("posthog" !== a && (e += "." + a), t || (e += " (stub)"), e);
+                },
+                o =
+                  "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(
+                    " "
+                  ),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+      posthog.init("phc_hyD2NBSE7eJXWw1lsdN4Zj5ojP3ArpfYJ5Ho0iWMZmg", {
+        api_host: "https://us.i.posthog.com",
+        person_profiles: "identified_only",
+      });
+    </script>
+
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Alpine.js for interactivity -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body class="font-body text-dark bg-of-surface antialiased">
+    <!-- Header -->
+    <header
+      class="fixed top-0 w-full z-50 bg-of-surface/90 backdrop-blur-lg border-b border-of-accent/10">
+      <nav class="max-w-7xl mx-auto px-6 lg:px-8" x-data="{ mobileMenuOpen: false }">
+        <div class="flex justify-between items-center h-20">
+          <a
+            href="../"
+            class="font-display font-semibold text-xl tracking-tight hover:text-of-accent transition-colors"
+            >HeartCentered AI</a
+          >
+
+          <!-- Mobile menu button -->
+          <button
+            @click="mobileMenuOpen = !mobileMenuOpen"
+            class="md:hidden p-3 rounded-lg hover:bg-of-accent/10 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+            :aria-expanded="mobileMenuOpen.toString()">
+            <svg
+              x-show="!mobileMenuOpen"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg
+              x-show="mobileMenuOpen"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <!-- Desktop navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="../#vision"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Vision</a
+            >
+            <a
+              href="../principles/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Principles</a
+            >
+            <a
+              href="../heart-intelligence/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Heart Intelligence</a
+            >
+            <a href="./" class="text-of-accent font-medium">Benchmarks</a>
+            <a
+              href="https://claude.ai"
+              target="_blank"
+              rel="noopener"
+              class="bg-of-accent text-white px-6 py-2.5 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg">
+              Try Claude
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile navigation menu -->
+        <div
+          x-show="mobileMenuOpen"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 scale-95"
+          x-transition:enter-end="opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-95"
+          class="md:hidden py-4 border-t border-of-accent/10"
+          @click.away="mobileMenuOpen = false">
+          <div class="space-y-1">
+            <a
+              href="../#vision"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Vision
+            </a>
+            <a
+              href="../principles/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Principles
+            </a>
+            <a
+              href="../heart-intelligence/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Heart Intelligence
+            </a>
+            <a
+              href="./"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium text-of-accent hover:bg-of-accent/5 transition-colors min-h-[44px] flex items-center">
+              Benchmarks
+            </a>
+            <a
+              href="https://claude.ai"
+              target="_blank"
+              rel="noopener"
+              class="block mx-4 my-2 bg-of-accent text-white px-6 py-3 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 text-center min-h-[44px] flex items-center justify-center">
+              Try Claude
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        class="py-20 md:py-28 bg-gradient-to-br from-green-50/50 via-white to-emerald-50/30">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <p
+            class="text-of-accent font-medium text-sm uppercase tracking-widest mb-4"
+            data-aos="fade-up">
+            Community Resource
+          </p>
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold mb-8"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <span class="block text-of-text">LLM Model</span>
+            <span class="block text-of-accent mt-2">Benchmarks</span>
+          </h1>
+          <p
+            class="text-lg md:text-xl text-of-muted max-w-3xl mx-auto leading-relaxed mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200">
+            Most benchmarks measure what models <em>know</em>. We also measure how they
+            <em>feel</em>.
+          </p>
+          <p
+            class="text-base text-of-muted max-w-2xl mx-auto leading-relaxed mb-8"
+            data-aos="fade-up"
+            data-aos-delay="250">
+            Emotional intelligence shapes how AI listens, responds to vulnerability, and
+            holds space. Alongside reasoning, coding, and agentic performance, we track
+            <a
+              href="https://eqbench.com"
+              class="text-of-accent hover:text-of-accent-dark underline transition-colors font-medium"
+              >EQ-Bench</a
+            >
+            scores — because the models we invite into our lives should be more than
+            just smart.
+          </p>
+          <p
+            class="text-sm text-of-accent-light"
+            data-aos="fade-up"
+            data-aos-delay="300">
+            Data from
+            <a
+              href="https://openrouter.ai"
+              class="underline hover:text-of-accent transition-colors"
+              >OpenRouter</a
+            >,
+            <a
+              href="https://artificialanalysis.ai"
+              class="underline hover:text-of-accent transition-colors"
+              >Artificial Analysis</a
+            >,
+            <a
+              href="https://pinchbench.com"
+              class="underline hover:text-of-accent transition-colors"
+              >PinchBench</a
+            >,
+            <a
+              href="https://arena.ai"
+              class="underline hover:text-of-accent transition-colors"
+              >Arena</a
+            >,
+            <a
+              href="https://eqbench.com"
+              class="underline hover:text-of-accent transition-colors"
+              >EQ-Bench</a
+            >
+            · Updated <span id="last-updated"></span> ·
+            <a
+              href="data/model-data.json"
+              class="underline hover:text-of-accent transition-colors"
+              >JSON</a
+            >
+            ·
+            <a href="llms.txt" class="underline hover:text-of-accent transition-colors"
+              >llms.txt</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Filters -->
+      <section class="py-6 bg-of-cream border-y border-of-accent/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="flex flex-wrap gap-3 items-center">
+            <div class="relative">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search by name or provider..."
+                class="bench-input w-48 sm:w-64" />
+            </div>
+            <div class="flex gap-2 flex-wrap" id="capability-filters"></div>
+            <div class="ml-auto text-sm text-of-muted" id="model-count"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table Section -->
+      <section class="py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Desktop table -->
+          <div class="hidden lg:block overflow-x-auto" data-aos="fade-up">
+            <table class="bench-table" id="model-table">
+              <thead>
+                <tr>
+                  <th class="sortable" data-sort="name">Model</th>
+                  <th class="sortable text-center has-tooltip" data-sort="reasoning">
+                    Reasoning
+                    <span class="col-tooltip"
+                      >Weighted composite of graduate-level reasoning (GPQA), broad
+                      knowledge, and frontier difficulty benchmarks. Scale 0–100.</span
+                    >
+                  </th>
+                  <th class="sortable text-center has-tooltip" data-sort="coding">
+                    Coding
+                    <span class="col-tooltip"
+                      >Weighted composite of coding benchmarks including LiveCodeBench,
+                      TerminalBench, and SciCode. Scale 0–100.</span
+                    >
+                  </th>
+                  <th class="sortable text-center has-tooltip" data-sort="agentic">
+                    Agentic
+                    <span class="col-tooltip"
+                      >How well it uses tools and follows instructions. Based on
+                      PinchBench and IFBench scores. Scale 0–100.</span
+                    >
+                  </th>
+                  <th
+                    class="sortable text-center has-tooltip eq-col"
+                    data-sort="eq_elo">
+                    EQ
+                    <span class="col-tooltip"
+                      >Emotional intelligence Elo from EQ-Bench 3 — measures empathy,
+                      social IQ, warmth, insight across pairwise comparisons. Hover a
+                      score for trait breakdown.</span
+                    >
+                  </th>
+                  <th class="sortable text-center has-tooltip" data-sort="arena_elo">
+                    Chat
+                    <span class="col-tooltip"
+                      >Arena Elo from blind human A/B preference tests. Higher = humans
+                      prefer chatting with this model.</span
+                    >
+                  </th>
+                  <th class="sortable text-center has-tooltip" data-sort="speed">
+                    Speed
+                    <span class="col-tooltip"
+                      >Output tokens per second. Higher = faster responses.</span
+                    >
+                  </th>
+                  <th class="sortable text-center has-tooltip" data-sort="cost">
+                    Cost
+                    <span class="col-tooltip"
+                      >Blended cost per 1M tokens (3:1 input-to-output ratio). Lower is
+                      better.</span
+                    >
+                  </th>
+                  <th class="sortable text-center has-tooltip" data-sort="context">
+                    Context
+                    <span class="col-tooltip"
+                      >Maximum input context window in thousands of tokens.</span
+                    >
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+
+          <!-- Mobile cards -->
+          <div class="lg:hidden space-y-4" id="mobile-cards"></div>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="py-16 md:py-24 bg-of-cream border-t border-of-accent/10">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+          <h2
+            class="font-display text-2xl md:text-3xl font-semibold text-of-text mb-8 text-center"
+            data-aos="fade-up">
+            Scoring Methodology
+          </h2>
+          <div
+            class="grid gap-8 sm:grid-cols-2"
+            data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="bg-white rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display text-of-text text-lg font-medium mb-2">
+                Reasoning Score
+              </h3>
+              <p class="text-sm text-of-muted leading-relaxed">
+                Weighted average of AA Intelligence Index (3x), GPQA (2.5x), MMLU-Pro
+                (2x), HLE (1.5x), AIME 2025 (1x). Scale 0-100.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display text-of-text text-lg font-medium mb-2">
+                Coding Score
+              </h3>
+              <p class="text-sm text-of-muted leading-relaxed">
+                Weighted average of AA Coding Index (3x), LiveCodeBench (2x),
+                TerminalBench Hard (2x), SciCode (1x). Scale 0-100.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display text-of-text text-lg font-medium mb-2">
+                Agentic Score
+              </h3>
+              <p class="text-sm text-of-muted leading-relaxed">
+                Weighted average of PinchBench Best (4x), IFBench (3x), PinchBench Avg
+                (2x). Scale 0-100. Measures tool use and instruction following.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display text-of-text text-lg font-medium mb-2">
+                Blended Cost
+              </h3>
+              <p class="text-sm text-of-muted leading-relaxed">
+                3:1 input-to-output ratio: (3 × input + output) / 4. Reflects typical
+                conversational usage patterns.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display text-of-text text-lg font-medium mb-2">
+                EQ Score
+              </h3>
+              <p class="text-sm text-of-muted leading-relaxed">
+                EQ-Bench 3 Elo rating from pairwise comparisons across 8 emotional
+                intelligence dimensions. Higher = more emotionally intelligent.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-of-accent/10">
+              <h3 class="font-display text-of-text text-lg font-medium mb-2">
+                Chat Score
+              </h3>
+              <p class="text-sm text-of-muted leading-relaxed">
+                Arena Elo rating from blind human A/B preference tests. Higher = humans
+                prefer chatting with this model.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-of-surface border-t border-of-accent/10">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center text-sm text-of-muted">
+        <p>
+          <a href="../" class="hover:text-of-accent transition-colors font-medium"
+            >HeartCentered AI</a
+          >
+          · Data refreshed from public APIs ·
+          <a href="data/model-data.json" class="hover:text-of-accent transition-colors"
+            >Download JSON</a
+          >
+          ·
+          <a href="llms.txt" class="hover:text-of-accent transition-colors">llms.txt</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 600,
+        easing: "ease-out",
+        once: true,
+      });
+    </script>
+  </body>
+</html>
