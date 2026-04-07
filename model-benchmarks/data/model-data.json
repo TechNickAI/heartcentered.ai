@@ -312,7 +312,9 @@
           "rank": 36,
           "category": "text"
         },
-        "eq_bench": {}
+        "eq_bench": {
+          "note": "EQ-Bench v2: 80.08 (not comparable to v3 Elo scores)"
+        }
       },
       "endpoint_stats": {
         "providers": [
@@ -796,6 +798,89 @@
         ]
       },
       "last_updated": "2026-04-07"
+    },
+    {
+      "id": "anthropic/claude-haiku-4.5",
+      "name": "Claude Haiku 4.5",
+      "provider": "Anthropic",
+      "context_window": 200000,
+      "max_output": 64000,
+      "pricing": {
+        "input_per_m": 1.0,
+        "output_per_m": 5.0,
+        "blended_per_m": 2.0,
+        "cache_read_per_m": 0.1,
+        "cache_write_per_m": 1.25
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": false,
+        "vision": true,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 93,
+        "ttft_seconds": 0.4,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 31,
+        "coding": null,
+        "agentic": 85.7
+      },
+      "benchmarks": {
+        "pinchbench": {
+          "best_score": 89.5,
+          "avg_score": 78.1
+        },
+        "eq_bench": {},
+        "arena": {
+          "elo": 1407
+        }
+      },
+      "sources": {
+        "openrouter": true
+      }
+    },
+    {
+      "id": "openai/gpt-5.4-mini",
+      "name": "GPT-5.4 Mini",
+      "provider": "OpenAI",
+      "context_window": 400000,
+      "max_output": 128000,
+      "pricing": {
+        "input_per_m": 0.75,
+        "output_per_m": 4.5,
+        "blended_per_m": 1.688
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 186,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 48,
+        "coding": 51,
+        "agentic": 56
+      },
+      "benchmarks": {
+        "pinchbench": {},
+        "eq_bench": {},
+        "arena": {
+          "elo": 1455
+        }
+      },
+      "sources": {
+        "openrouter": true
+      },
+      "notes": "Agentic score from AA Agentic Index (not PinchBench-based)"
     }
   ]
 }
