@@ -53,7 +53,7 @@
       "scores": {
         "reasoning": 50.4,
         "coding": 46.4,
-        "agentic": 70.9
+        "agentic": 85.7
       },
       "benchmarks": {
         "artificial_analysis": {
@@ -138,7 +138,7 @@
       "scores": {
         "reasoning": 53.9,
         "coding": 47.6,
-        "agentic": 74.8
+        "agentic": 89.9
       },
       "benchmarks": {
         "artificial_analysis": {
@@ -222,7 +222,7 @@
       "scores": {
         "reasoning": 58.5,
         "coding": 41.9,
-        "agentic": 83.6
+        "agentic": 87.6
       },
       "benchmarks": {
         "artificial_analysis": {
@@ -290,7 +290,7 @@
       "scores": {
         "reasoning": 58.2,
         "coding": 41.4,
-        "agentic": 78.2
+        "agentic": 82.9
       },
       "benchmarks": {
         "artificial_analysis": {
@@ -358,7 +358,7 @@
       "scores": {
         "reasoning": 55.8,
         "coding": 36.8,
-        "agentic": 81.0
+        "agentic": 84.9
       },
       "benchmarks": {
         "artificial_analysis": {
@@ -440,7 +440,7 @@
       "scores": {
         "reasoning": 50.0,
         "coding": 31.6,
-        "agentic": 76.5
+        "agentic": 82.5
       },
       "benchmarks": {
         "artificial_analysis": {
@@ -512,7 +512,7 @@
       "scores": {
         "reasoning": 57.0,
         "coding": 41.3,
-        "agentic": 84.3
+        "agentic": 87.1
       },
       "benchmarks": {
         "artificial_analysis": {
@@ -598,7 +598,7 @@
       },
       "scores": {
         "reasoning": 57.0,
-        "coding": null,
+        "coding": 57,
         "agentic": 87.6
       },
       "benchmarks": {
@@ -675,15 +675,20 @@
       },
       "scores": {
         "reasoning": 48.0,
-        "coding": null,
-        "agentic": null
+        "coding": 42,
+        "agentic": 78.9
       },
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 48.0,
           "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
-        "pinchbench": {},
+        "pinchbench": {
+          "best_score": 82.4,
+          "avg_score": 71.8,
+          "runs": 18,
+          "note": "Score from grok-4.1-fast (closest available)"
+        },
         "arena": {
           "elo": 1491,
           "rank": 4,
@@ -752,15 +757,19 @@
       },
       "scores": {
         "reasoning": 57.0,
-        "coding": null,
-        "agentic": null
+        "coding": 56,
+        "agentic": 83.5
       },
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 57.0,
           "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
-        "pinchbench": {},
+        "pinchbench": {
+          "best_score": 86.7,
+          "avg_score": 77.0,
+          "runs": 15
+        },
         "arena": {
           "elo": 1494,
           "rank": 3,
