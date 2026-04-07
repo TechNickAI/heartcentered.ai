@@ -259,6 +259,7 @@
     border-radius: 0.75rem;
     padding: 1.25rem;
     transition: box-shadow 0.2s;
+    animation: fadeInRow 0.3s ease forwards;
 }
 
 .model-card:hover {
@@ -426,8 +427,4 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.model-card {
-    animation: fadeInRow 0.3s ease forwards;
 }

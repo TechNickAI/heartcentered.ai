@@ -18,8 +18,7 @@ Usage:
     # Dry run (print what would be written, don't save)
     python fetch-model.py --dry-run anthropic/claude-sonnet-4.6
 
-Designed to be run by parallel agents — each invocation locks the JSON file
-briefly during the merge step to avoid conflicts.
+Not safe for concurrent execution — parallel runs will race on model-data.json.
 """
 
 import argparse
@@ -40,7 +39,10 @@ OPENROUTER_MODELS_URL = "https://openrouter.ai/api/v1/models"
 OPENROUTER_ENDPOINTS_URL = "https://openrouter.ai/api/v1/models/{slug}/endpoints"
 AA_MODELS_URL = "https://artificialanalysis.ai/api/v2/data/llms/models"
 
-# Current-generation models we track
+# Current-generation models we track via --curated.
+# GPT-5.4, Grok 4.20, Gemini 3.1 Pro, and Claude Haiku 4.5 are in model-data.json
+# but not here — their AA slugs or pricing weren't available at add time, so they
+# were added manually and are refreshed via --refresh rather than --curated.
 CURATED_MODELS = [
     "stepfun/step-3.5-flash",
     "xiaomi/mimo-v2-pro",
@@ -396,10 +398,13 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
     for i, m in enumerate(models):
         if m["id"] == new_model["id"]:
             # Preserve manually-entered benchmark data (don't overwrite with empty)
-            for bench_key in ("eq_bench", "arena"):
+            for bench_key in ("eq_bench", "arena", "pinchbench"):
                 existing_bench = m.get("benchmarks", {}).get(bench_key, {})
                 if existing_bench and not new_model["benchmarks"].get(bench_key):
                     new_model["benchmarks"][bench_key] = existing_bench
+            # Preserve manually-entered scores (e.g. for models without AA slug)
+            if m.get("scores") and not any(new_model.get("scores", {}).values()):
+                new_model["scores"] = m["scores"]
             # Preserve top-level notes
             if m.get("notes") and not new_model.get("notes"):
                 new_model["notes"] = m["notes"]

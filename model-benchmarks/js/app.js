@@ -191,7 +191,7 @@
         renderCards(filtered);
     }
 
-    function scoreHtml(value, max) {
+    function scoreHtml(value, max = 100) {
         if (value == null) return `<span class="score-na">—</span>`;
         const pct = Math.min((value / max) * 100, 100);
         const tier = pct >= 70 ? "score-high" : pct >= 45 ? "score-mid" : "score-low";
@@ -256,7 +256,7 @@
         const note = arena.note
             ? `<span class="data-note" title="${esc(arena.note)}">*</span>`
             : "";
-        return `<span class="score-value">${arena.elo}</span>${note}`;
+        return `<span class="score-value">${Math.round(arena.elo)}</span>${note}`;
     }
 
     function renderTable(list) {
@@ -270,14 +270,14 @@
                 (m, i) => `
       <tr style="animation-delay: ${i * 0.03}s">
         <td>
-          <a href="https://openrouter.ai/${esc(m.id)}" target="_blank" rel="noopener noreferrer" class="model-link">
+          <a href="https://openrouter.ai/models/${esc(m.id)}" target="_blank" rel="noopener noreferrer" class="model-link">
             <div class="model-name">${esc(m.name)}</div>
             <div class="model-provider">${esc(m.provider)}${m.notes ? ` <span class="data-note" title="${esc(m.notes)}">*</span>` : ""}</div>
           </a>
         </td>
-        <td class="score-cell">${scoreHtml(m.scores?.reasoning, 100)}</td>
-        <td class="score-cell">${scoreHtml(m.scores?.coding, 100)}</td>
-        <td class="score-cell">${scoreHtml(m.scores?.agentic, 100)}</td>
+        <td class="score-cell">${scoreHtml(m.scores?.reasoning)}</td>
+        <td class="score-cell">${scoreHtml(m.scores?.coding)}</td>
+        <td class="score-cell">${scoreHtml(m.scores?.agentic)}</td>
         <td class="score-cell eq-cell">${eqHtml(m)}</td>
         <td class="score-cell">${arenaHtml(m)}</td>
         <td class="score-cell">${speedHtml(m.speed)}</td>
@@ -299,7 +299,7 @@
                 (m, i) => `
       <div class="model-card" style="animation-delay: ${i * 0.05}s">
         <div class="flex items-center justify-between">
-          <a href="https://openrouter.ai/${esc(m.id)}" target="_blank" rel="noopener noreferrer" class="model-link">
+          <a href="https://openrouter.ai/models/${esc(m.id)}" target="_blank" rel="noopener noreferrer" class="model-link">
             <div class="model-name">${esc(m.name)}</div>
             <div class="model-provider">${esc(m.provider)}${m.notes ? ` <span class="data-note" title="${esc(m.notes)}">*</span>` : ""}</div>
           </a>
@@ -322,7 +322,7 @@
           </div>
           <div class="card-score-item">
             <div class="card-score-label">EQ</div>
-            <div class="card-score-value">${m.benchmarks?.eq_bench?.elo ? Math.round(m.benchmarks.eq_bench.elo) : "—"}</div>
+            <div class="card-score-value ${eqTier(m.benchmarks?.eq_bench?.elo)}">${m.benchmarks?.eq_bench?.elo ? Math.round(m.benchmarks.eq_bench.elo) : "—"}</div>
           </div>
           <div class="card-score-item">
             <div class="card-score-label">Chat</div>
@@ -346,6 +346,13 @@
         if (val == null) return "";
         if (val >= 70) return "score-high";
         if (val >= 45) return "score-mid";
+        return "score-low";
+    }
+
+    function eqTier(elo) {
+        if (elo == null) return "";
+        if (elo >= 1700) return "score-high";
+        if (elo >= 1400) return "score-mid";
         return "score-low";
     }
 
