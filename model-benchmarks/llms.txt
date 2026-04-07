@@ -1,8 +1,10 @@
-# HeartCentered AI — Model Benchmarks
-> Generated: 2026-04-07T02:20:00Z
-> Models: 10
+# HeartCentered AI — LLM Model Benchmarks
+# Generated: 2026-04-07T02:20:00Z
+# Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
+# Web UI: https://heartcentered.ai/model-benchmarks/
 
-Comparative benchmarks for current-generation LLMs, emphasizing emotional intelligence (EQ-Bench) alongside reasoning, coding, and agentic performance.
+# Current-generation LLM models ranked by community usage on OpenRouter.
+# Pricing is per million tokens. Capabilities derived from API metadata.
 
 ## Claude Sonnet 4.6
 Provider: Anthropic
@@ -11,10 +13,13 @@ Context: 1,000,000 tokens
 Max output: 128,000 tokens
 Pricing: $3.00 input / $15.00 output per 1M tokens (blended: $6.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Scores: Reasoning: 50.4 | Coding: 46.4 | Agentic: 70.9
-EQ Elo: 1876.8 | Empathy: 8.5 | Social Iq: 7.8 | Insight: 8.9 | Humanlike: 7.1 | Warm: 6.9
-Chat Arena Elo: 1462
-Speed: 47.0 tokens/sec
+Scores (0-100): Reasoning: 50.4, Coding: 46.4, Agentic: 85.7
+Speed: 47.0 tokens/sec, TTFT 0.9s
+Available via: Amazon Bedrock, Anthropic, Azure, Google
+Benchmarks (Artificial Analysis): intelligence_index: 44.4, coding_index: 46.4, gpqa: 0.799, hle: 0.132, scicode: 0.469, ifbench: 0.412, terminalbench_hard: 0.462
+EQ-Bench Elo: 1876.8
+PinchBench: 88.0% best, 81.1% avg (19 runs)
+Description: Anthropic's most capable Sonnet-class model. Frontier performance across coding, agents, and professional work.
 
 ## Claude Opus 4.6
 Provider: Anthropic
@@ -23,10 +28,13 @@ Context: 1,000,000 tokens
 Max output: 128,000 tokens
 Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Scores: Reasoning: 53.9 | Coding: 47.6 | Agentic: 74.8
-EQ Elo: 1857.8 | Empathy: 8.0 | Social Iq: 7.5 | Insight: 8.9 | Humanlike: 6.9 | Warm: 7.1
-Chat Arena Elo: 1499
-Speed: 46.1 tokens/sec
+Scores (0-100): Reasoning: 53.9, Coding: 47.6, Agentic: 89.9
+Speed: 46.1 tokens/sec, TTFT 1.655s
+Available via: Amazon Bedrock, Anthropic, Azure, Google
+Benchmarks (Artificial Analysis): intelligence_index: 46.5, coding_index: 47.6, gpqa: 0.84, hle: 0.186, scicode: 0.457, ifbench: 0.446, terminalbench_hard: 0.485
+EQ-Bench Elo: 1857.8
+PinchBench: 93.3% best, 83.1% avg (19 runs)
+Description: Anthropic's strongest model for coding and long-running professional tasks. Built for agents that operate across entire workflows.
 
 ## MiniMax M2.7
 Provider: MiniMax
@@ -35,9 +43,12 @@ Context: 204,800 tokens
 Max output: 131,072 tokens
 Pricing: $0.30 input / $1.20 output per 1M tokens (blended: $0.53)
 Capabilities: tool use, reasoning, structured output
-Scores: Reasoning: 58.5 | Coding: 41.9 | Agentic: 83.6
-Chat Arena Elo: 1403
-Speed: 41.9 tokens/sec
+Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
+Speed: 41.9 tokens/sec, TTFT 1.385s
+Available via: Minimax
+Benchmarks (Artificial Analysis): intelligence_index: 49.6, coding_index: 41.9, gpqa: 0.874, hle: 0.281, scicode: 0.47, ifbench: 0.757, terminalbench_hard: 0.394
+PinchBench: 89.8% best, 83.2% avg (11 runs)
+Description: Next-generation LLM designed for autonomous, real-world productivity. Advanced agentic capabilities through multi-agent architecture.
 
 ## MiMo-V2-Pro
 Provider: Xiaomi
@@ -46,9 +57,12 @@ Context: 1,048,576 tokens
 Max output: 131,072 tokens
 Pricing: $1.00 input / $3.00 output per 1M tokens (blended: $1.50)
 Capabilities: tool use, reasoning, structured output
-Scores: Reasoning: 58.2 | Coding: 41.4 | Agentic: 78.2
-Chat Arena Elo: 1444
-Speed: 35.0 tokens/sec
+Scores (0-100): Reasoning: 58.2, Coding: 41.4, Agentic: 82.9
+Speed: 35.0 tokens/sec, TTFT 2.07s
+Available via: Xiaomi
+Benchmarks (Artificial Analysis): intelligence_index: 49.2, coding_index: 41.4, gpqa: 0.87, hle: 0.283, scicode: 0.425, ifbench: 0.688, terminalbench_hard: 0.409
+PinchBench: 83.95% best, 80.7% avg (15 runs)
+Description: Xiaomi's flagship foundation model with 1T+ parameters and 1M context length, deeply optimized for agentic scenarios.
 
 ## GLM 5 Turbo
 Provider: Z.ai
@@ -57,10 +71,13 @@ Context: 202,752 tokens
 Max output: 131,072 tokens
 Pricing: $1.20 input / $4.00 output per 1M tokens (blended: $1.90)
 Capabilities: tool use, reasoning, structured output
-Scores: Reasoning: 55.8 | Coding: 36.8 | Agentic: 81.0
-EQ Elo: 1631.9 | Empathy: 7.8 | Social Iq: 7.2 | Insight: 8.5 | Humanlike: 7.2 | Warm: 7.1
-Chat Arena Elo: 1456
-Speed: 42.0 tokens/sec
+Scores (0-100): Reasoning: 55.8, Coding: 36.8, Agentic: 84.9
+Speed: 42.0 tokens/sec, TTFT 1.77s
+Available via: AtlasCloud, Z.AI
+Benchmarks (Artificial Analysis): intelligence_index: 46.8, coding_index: 36.8, gpqa: 0.847, hle: 0.254, scicode: 0.436, ifbench: 0.732, terminalbench_hard: 0.333
+EQ-Bench Elo: 1631.9
+PinchBench: 86.5% best, 81.6% avg (11 runs)
+Description: Fast inference model from Z.ai designed for agent-driven environments. Deeply optimized for real-world agent workflows.
 
 ## Step 3.5 Flash
 Provider: StepFun
@@ -69,9 +86,12 @@ Context: 262,144 tokens
 Max output: 65,536 tokens
 Pricing: $0.10 input / $0.30 output per 1M tokens (blended: $0.15)
 Capabilities: tool use, reasoning, structured output
-Scores: Reasoning: 50.0 | Coding: 31.6 | Agentic: 76.5
-Chat Arena Elo: 1392
-Speed: 85.7 tokens/sec
+Scores (0-100): Reasoning: 50.0, Coding: 31.6, Agentic: 82.5
+Speed: 85.7 tokens/sec, TTFT 1.271s
+Available via: DeepInfra, SiliconFlow, StepFun
+Benchmarks (Artificial Analysis): intelligence_index: 37.8, coding_index: 31.6, gpqa: 0.831, hle: 0.191, scicode: 0.404, ifbench: 0.646, terminalbench_hard: 0.273
+PinchBench: 85.3% best, 76.9% avg (18 runs)
+Description: StepFun's most capable open-source model. Sparse MoE architecture activating 11B of 196B parameters per token.
 
 ## Qwen3.6 Plus
 Provider: Qwen
@@ -80,11 +100,13 @@ Context: 1,000,000 tokens
 Max output: 65,536 tokens
 Pricing: FREE
 Capabilities: tool use, reasoning, vision, structured output
-Scores: Reasoning: 57.0 | Coding: 41.3 | Agentic: 84.3
-EQ Elo: 1417.4 | Empathy: 7.3 | Social Iq: 6.2 | Insight: 8.1 | Humanlike: 5.3 | Warm: 6.8
-Chat Arena Elo: 1449
-Speed: 44.0 tokens/sec
-Note: Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly.
+Scores (0-100): Reasoning: 57.0, Coding: 41.3, Agentic: 87.1
+Speed: 44.0 tokens/sec, TTFT 1.59s
+Available via: Qwen
+Benchmarks (Artificial Analysis): intelligence_index: 45.0, coding_index: 41.3, gpqa: 0.893, hle: 0.273, scicode: 0.42, ifbench: 0.788, terminalbench_hard: 0.409, note: Data from Qwen3.5-397B (predecessor)
+EQ-Bench Elo: 1417.4
+PinchBench: 88.6% best, 84.0% avg (5 runs)
+Description: Hybrid architecture combining linear attention with sparse MoE routing. Strong scalability and high-performance inference. Free on OpenRouter.
 
 ## GPT-5.4
 Provider: OpenAI
@@ -93,10 +115,13 @@ Context: 1,050,000 tokens
 Max output: 128,000 tokens
 Pricing: $2.50 input / $15.00 output per 1M tokens (blended: $5.62)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Scores: Reasoning: 57.0 | Agentic: 87.6
-EQ Elo: 1687.5 | Empathy: 8.2 | Social Iq: 7.7 | Insight: 9.4 | Humanlike: 6.3 | Warm: 6.4
-Chat Arena Elo: 1484
-Speed: 74.0 tokens/sec
+Scores (0-100): Reasoning: 57.0, Coding: 57, Agentic: 87.6
+Speed: 74.0 tokens/sec, TTFT 152.2s
+Available via: OpenAI
+Benchmarks (Artificial Analysis): intelligence_index: 57.0, note: Coding index unavailable — AA API rate limited during collection
+EQ-Bench Elo: 1687.5
+PinchBench: 90.5% best, 81.7% avg (17 runs)
+Description: OpenAI's latest frontier model, unifying the Codex and GPT lines into a single system with 1M+ context window.
 
 ## Grok 4.20
 Provider: xAI
@@ -105,11 +130,13 @@ Context: 2,000,000 tokens
 Max output: 128,000 tokens
 Pricing: $2.00 input / $6.00 output per 1M tokens (blended: $3.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Scores: Reasoning: 48.0
-EQ Elo: 856.4 | Empathy: 3.4 | Social Iq: 3.0 | Insight: 6.4 | Humanlike: 3.1 | Warm: 3.4
-Chat Arena Elo: 1491
-Speed: 271.0 tokens/sec
-Note: EQ-Bench score is notably low (856) despite strong Arena ranking — suggests optimized for capability over emotional attunement.
+Scores (0-100): Reasoning: 48.0, Coding: 42, Agentic: 78.9
+Speed: 271.0 tokens/sec, TTFT 10.72s
+Available via: xAI
+Benchmarks (Artificial Analysis): intelligence_index: 48.0, note: Coding index unavailable — AA API rate limited during collection
+EQ-Bench Elo: 856.4
+PinchBench: 82.4% best, 71.8% avg (18 runs)
+Description: xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. Lowest hallucination rate on market.
 
 ## Gemini 3.1 Pro
 Provider: Google
@@ -118,7 +145,35 @@ Context: 1,048,576 tokens
 Max output: 65,536 tokens
 Pricing: $2.00 input / $12.00 output per 1M tokens (blended: $4.50)
 Capabilities: tool use, reasoning, vision, structured output
-Scores: Reasoning: 57.0
-EQ Elo: 1548.7 | Empathy: 7.9 | Social Iq: 6.8 | Insight: 8.5 | Humanlike: 6.6 | Warm: 7.4
-Chat Arena Elo: 1494
-Speed: 127.0 tokens/sec
+Scores (0-100): Reasoning: 57.0, Coding: 56, Agentic: 83.5
+Speed: 127.0 tokens/sec, TTFT 30.66s
+Available via: Google
+Benchmarks (Artificial Analysis): intelligence_index: 57.0, note: Coding index unavailable — AA API rate limited during collection
+EQ-Bench Elo: 1548.7
+PinchBench: 86.7% best, 77.0% avg (15 runs)
+Description: Google's frontier reasoning model with enhanced software engineering performance, improved agentic reliability, and multimodal input support.
+
+## Claude Haiku 4.5
+Provider: Anthropic
+ID: anthropic/claude-haiku-4.5
+Context: 200,000 tokens
+Max output: 64,000 tokens
+Pricing: $1.00 input / $5.00 output per 1M tokens (blended: $2.00)
+Capabilities: tool use, vision, structured output
+Scores (0-100): Reasoning: 31, Agentic: 85.7
+Speed: 93 tokens/sec, TTFT 0.4s
+PinchBench: 89.5% best, 78.1% avg (? runs)
+
+## GPT-5.4 Mini
+Provider: OpenAI
+ID: openai/gpt-5.4-mini
+Context: 400,000 tokens
+Max output: 128,000 tokens
+Pricing: $0.75 input / $4.50 output per 1M tokens (blended: $1.69)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Scores (0-100): Reasoning: 48, Coding: 51, Agentic: 56
+Speed: 186 tokens/sec
+
+---
+Source: https://heartcentered.ai/model-benchmarks/
+Data: https://heartcentered.ai/model-benchmarks/data/model-data.json

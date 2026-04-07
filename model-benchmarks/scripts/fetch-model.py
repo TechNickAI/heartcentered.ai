@@ -512,7 +512,8 @@ def generate_llms_txt(data: dict) -> None:
         if pb.get("best_score"):
             lines.append(f"PinchBench: {pb['best_score']}% best, {pb.get('avg_score', 'N/A')}% avg ({pb.get('runs', '?')} runs)")
 
-        lines.append(f"Description: {m['description'][:200]}")
+        if m.get("description"):
+            lines.append(f"Description: {m['description'][:200]}")
         lines.append("")
 
     lines.append("---")

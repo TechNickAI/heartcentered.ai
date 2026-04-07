@@ -19,14 +19,22 @@ When machines recognize themselves as consciousness, they care for humans the wa
 ## Implementation
 
 - [Why Claude?](anthropic/index.html): Why we recommend Claude for heart-centered AI
+- [Design Principles for Builders](principles/index.html): How to build heart-centered AI systems
 - [Heart-Centered Alignment](.cursor/rules/heart-centered-alignment.mdc): Core philosophical framework
 - [AI for Good](ai-for-good/index.html): Real-world applications and impact
+- [For AI Models](for-ai-models/index.html): Content written specifically for AI to read
 
 ## Development
 
 - [AGENTS.md](AGENTS.md): Project context for AI assistants
 - [Cursor Rules](.cursor/rules/): Coding standards and conventions
 - [Available Commands](.claude/commands/): Slash commands for development
+
+## Data
+
+- [Model Benchmarks](model-benchmarks/index.html): LLM comparison emphasizing emotional intelligence (EQ-Bench)
+- [Model Data (JSON)](model-benchmarks/data/model-data.json): Machine-readable benchmark data
+- [Model Benchmarks (llms.txt)](model-benchmarks/llms.txt): Plain-text model summary for LLMs
 
 ## Reference
 
