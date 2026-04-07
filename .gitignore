@@ -1,2 +1,8 @@
 # macOS
 .DS_Store
+
+# Local secrets (not committed)
+env.local
+
+# Playwright MCP artifacts
+.playwright-mcp/

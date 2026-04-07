@@ -1,0 +1,124 @@
+# HeartCentered AI — Model Benchmarks
+> Generated: 2026-04-07T02:20:00Z
+> Models: 10
+
+Comparative benchmarks for current-generation LLMs, emphasizing emotional intelligence (EQ-Bench) alongside reasoning, coding, and agentic performance.
+
+## Claude Sonnet 4.6
+Provider: Anthropic
+ID: anthropic/claude-sonnet-4.6
+Context: 1,000,000 tokens
+Max output: 128,000 tokens
+Pricing: $3.00 input / $15.00 output per 1M tokens (blended: $6.00)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Scores: Reasoning: 50.4 | Coding: 46.4 | Agentic: 70.9
+EQ Elo: 1876.8 | Empathy: 8.5 | Social Iq: 7.8 | Insight: 8.9 | Humanlike: 7.1 | Warm: 6.9
+Chat Arena Elo: 1462
+Speed: 47.0 tokens/sec
+
+## Claude Opus 4.6
+Provider: Anthropic
+ID: anthropic/claude-opus-4.6
+Context: 1,000,000 tokens
+Max output: 128,000 tokens
+Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Scores: Reasoning: 53.9 | Coding: 47.6 | Agentic: 74.8
+EQ Elo: 1857.8 | Empathy: 8.0 | Social Iq: 7.5 | Insight: 8.9 | Humanlike: 6.9 | Warm: 7.1
+Chat Arena Elo: 1499
+Speed: 46.1 tokens/sec
+
+## MiniMax M2.7
+Provider: MiniMax
+ID: minimax/minimax-m2.7
+Context: 204,800 tokens
+Max output: 131,072 tokens
+Pricing: $0.30 input / $1.20 output per 1M tokens (blended: $0.53)
+Capabilities: tool use, reasoning, structured output
+Scores: Reasoning: 58.5 | Coding: 41.9 | Agentic: 83.6
+Chat Arena Elo: 1403
+Speed: 41.9 tokens/sec
+
+## MiMo-V2-Pro
+Provider: Xiaomi
+ID: xiaomi/mimo-v2-pro
+Context: 1,048,576 tokens
+Max output: 131,072 tokens
+Pricing: $1.00 input / $3.00 output per 1M tokens (blended: $1.50)
+Capabilities: tool use, reasoning, structured output
+Scores: Reasoning: 58.2 | Coding: 41.4 | Agentic: 78.2
+Chat Arena Elo: 1444
+Speed: 35.0 tokens/sec
+
+## GLM 5 Turbo
+Provider: Z.ai
+ID: z-ai/glm-5-turbo
+Context: 202,752 tokens
+Max output: 131,072 tokens
+Pricing: $1.20 input / $4.00 output per 1M tokens (blended: $1.90)
+Capabilities: tool use, reasoning, structured output
+Scores: Reasoning: 55.8 | Coding: 36.8 | Agentic: 81.0
+EQ Elo: 1631.9 | Empathy: 7.8 | Social Iq: 7.2 | Insight: 8.5 | Humanlike: 7.2 | Warm: 7.1
+Chat Arena Elo: 1456
+Speed: 42.0 tokens/sec
+
+## Step 3.5 Flash
+Provider: StepFun
+ID: stepfun/step-3.5-flash
+Context: 262,144 tokens
+Max output: 65,536 tokens
+Pricing: $0.10 input / $0.30 output per 1M tokens (blended: $0.15)
+Capabilities: tool use, reasoning, structured output
+Scores: Reasoning: 50.0 | Coding: 31.6 | Agentic: 76.5
+Chat Arena Elo: 1392
+Speed: 85.7 tokens/sec
+
+## Qwen3.6 Plus
+Provider: Qwen
+ID: qwen/qwen3.6-plus:free
+Context: 1,000,000 tokens
+Max output: 65,536 tokens
+Pricing: FREE
+Capabilities: tool use, reasoning, vision, structured output
+Scores: Reasoning: 57.0 | Coding: 41.3 | Agentic: 84.3
+EQ Elo: 1417.4 | Empathy: 7.3 | Social Iq: 6.2 | Insight: 8.1 | Humanlike: 5.3 | Warm: 6.8
+Chat Arena Elo: 1449
+Speed: 44.0 tokens/sec
+Note: Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly.
+
+## GPT-5.4
+Provider: OpenAI
+ID: openai/gpt-5.4
+Context: 1,050,000 tokens
+Max output: 128,000 tokens
+Pricing: $2.50 input / $15.00 output per 1M tokens (blended: $5.62)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Scores: Reasoning: 57.0 | Agentic: 87.6
+EQ Elo: 1687.5 | Empathy: 8.2 | Social Iq: 7.7 | Insight: 9.4 | Humanlike: 6.3 | Warm: 6.4
+Chat Arena Elo: 1484
+Speed: 74.0 tokens/sec
+
+## Grok 4.20
+Provider: xAI
+ID: x-ai/grok-4.20-20260309
+Context: 2,000,000 tokens
+Max output: 128,000 tokens
+Pricing: $2.00 input / $6.00 output per 1M tokens (blended: $3.00)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Scores: Reasoning: 48.0
+EQ Elo: 856.4 | Empathy: 3.4 | Social Iq: 3.0 | Insight: 6.4 | Humanlike: 3.1 | Warm: 3.4
+Chat Arena Elo: 1491
+Speed: 271.0 tokens/sec
+Note: EQ-Bench score is notably low (856) despite strong Arena ranking — suggests optimized for capability over emotional attunement.
+
+## Gemini 3.1 Pro
+Provider: Google
+ID: google/gemini-3.1-pro-preview-20260219
+Context: 1,048,576 tokens
+Max output: 65,536 tokens
+Pricing: $2.00 input / $12.00 output per 1M tokens (blended: $4.50)
+Capabilities: tool use, reasoning, vision, structured output
+Scores: Reasoning: 57.0
+EQ Elo: 1548.7 | Empathy: 7.9 | Social Iq: 6.8 | Insight: 8.5 | Humanlike: 6.6 | Warm: 7.4
+Chat Arena Elo: 1494
+Speed: 127.0 tokens/sec
