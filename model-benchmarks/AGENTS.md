@@ -105,6 +105,13 @@ reactive.
 - `scoreTier()` — shared color tier function (also used for mobile EQ cards)
 - Default sort: `eq_score` descending (EQ is the headline feature)
 
+## Skills
+
+Use `/model-research` when adding or enriching models. The skill at
+`.claude/skills/model-research/SKILL.md` documents the complete workflow across all 5
+data sources, including API details, Playwright scraping patterns for EQ-Bench, and
+common pitfalls (AA slug mismatches, rate limits, sparse data for newer models).
+
 ## Key Conventions
 
 - All model links point to `https://openrouter.ai/models/${id}`
@@ -113,10 +120,11 @@ reactive.
 - Accessibility is not a priority (decline ARIA suggestions)
 - Always regenerate llms.txt after changing model-data.json
 
-## Current Models (12)
+## Current Models (15)
 
 Curated set of current-generation models. Not comprehensive — chosen to represent the
-frontier across different providers, price points, and capability profiles.
+frontier across different providers, price points, and capability profiles. Includes
+budget/fast variants (Gemini Flash Lite, Gemma 4, Qwen3.5-122B) used as routing aliases.
 
-Models not in CURATED_MODELS (GPT-5.4, Grok 4.20, Gemini 3.1 Pro, Haiku 4.5, GPT-5.4
-Mini) were added manually and should be refreshed via `--refresh` not `--curated`.
+Models not in CURATED_MODELS were added manually and should be refreshed via `--refresh`
+not `--curated`.

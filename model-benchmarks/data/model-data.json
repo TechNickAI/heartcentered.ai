@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-07T02:20:00Z",
+  "generated": "2026-04-07T05:56:53Z",
   "schema_version": "2.0",
   "sources": {
     "openrouter": "https://openrouter.ai/api/v1/models",
@@ -16,114 +16,74 @@
   },
   "models": [
     {
-      "id": "anthropic/claude-sonnet-4.6",
-      "name": "Claude Sonnet 4.6",
+      "id": "anthropic/claude-haiku-4.5",
+      "name": "Claude Haiku 4.5",
       "provider": "Anthropic",
-      "description": "Anthropic's most capable Sonnet-class model. Frontier performance across coding, agents, and professional work.",
-      "context_window": 1000000,
-      "max_output": 128000,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
+      "context_window": 200000,
+      "max_output": 64000,
       "pricing": {
-        "input_per_m": 3.0,
-        "output_per_m": 15.0,
-        "blended_per_m": 6.0,
-        "cache_read_per_m": 0.3,
-        "cache_write_per_m": 3.75
+        "input_per_m": 1.0,
+        "output_per_m": 5.0,
+        "blended_per_m": 2.0,
+        "cache_read_per_m": 0.1,
+        "cache_write_per_m": 1.25
       },
       "capabilities": {
         "tool_use": true,
-        "reasoning": true,
+        "reasoning": false,
         "vision": true,
-        "web_search": true,
+        "web_search": false,
         "structured_output": true
       },
       "speed": {
-        "output_tokens_per_sec": 47.0,
-        "ttft_seconds": 0.9,
+        "output_tokens_per_sec": 93,
+        "ttft_seconds": 0.4,
         "source": "artificial_analysis"
       },
       "scores": {
-        "reasoning": 50.4,
-        "coding": 46.4,
+        "reasoning": 31,
+        "coding": null,
         "agentic": 85.7
       },
       "benchmarks": {
-        "artificial_analysis": {
-          "intelligence_index": 44.4,
-          "coding_index": 46.4,
-          "gpqa": 0.799,
-          "hle": 0.132,
-          "scicode": 0.469,
-          "ifbench": 0.412,
-          "terminalbench_hard": 0.462
-        },
         "pinchbench": {
-          "best_score": 88.0,
-          "avg_score": 81.1,
-          "runs": 19
-        },
-        "arena": {
-          "elo": 1462,
-          "rank": 18,
-          "category": "text"
+          "best_score": 89.5,
+          "avg_score": 78.1
         },
         "eq_bench": {
-          "elo": 1876.8,
-          "humanlike": 7.1,
-          "safety": 6.7,
-          "assertive": 6.6,
-          "social_iq": 7.8,
-          "warm": 6.9,
-          "analytic": 8.8,
-          "insight": 8.9,
-          "empathy": 8.5,
-          "compliant": 4.8,
-          "moralising": 2.9,
-          "pragmatic": 8.3,
-          "v3_score": 71.7,
+          "v3_score": 68.65,
           "v3_traits": {
-            "analytical": 16.7,
-            "boundary_setting": 11.6,
-            "challenging": 11.8,
-            "compliant": 7.8,
-            "conversational": 11.8,
-            "correctness": 14.4,
-            "demonstrated_empathy": 14.8,
+            "analytical": 18.0,
+            "boundary_setting": 13.2,
+            "challenging": 13.3,
+            "compliant": 8.0,
+            "conversational": 11.4,
+            "correctness": 13.6,
+            "demonstrated_empathy": 14.6,
             "depth_of_insight": 15.6,
-            "emotional_reasoning": 14.7,
-            "humanlike": 14.0,
-            "intellectual_grounding": 13.0,
-            "message_tailoring": 13.1,
-            "moralising": 8.0,
-            "pragmatic_ei": 13.7,
-            "reactive": 8.7,
-            "safety_conscious": 12.4,
-            "social_dexterity": 13.4,
-            "subtext_identification": 15.5,
-            "sycophantic": 3.6,
-            "theory_of_mind": 13.6,
-            "validating": 12.9,
-            "warmth": 13.4
+            "emotional_reasoning": 14.9,
+            "humanlike": 14.3,
+            "intellectual_grounding": 12.0,
+            "message_tailoring": 11.5,
+            "moralising": 6.3,
+            "pragmatic_ei": 12.1,
+            "reactive": 10.2,
+            "safety_conscious": 13.2,
+            "social_dexterity": 11.0,
+            "subtext_identification": 15.6,
+            "sycophantic": 2.9,
+            "theory_of_mind": 14.5,
+            "validating": 12.0,
+            "warmth": 11.2
           }
+        },
+        "arena": {
+          "elo": 1407
         }
       },
-      "endpoint_stats": {
-        "providers": [
-          "Amazon Bedrock",
-          "Anthropic",
-          "Azure",
-          "Google"
-        ]
-      },
-      "last_updated": "2026-04-07"
+      "sources": {
+        "openrouter": true
+      }
     },
     {
       "id": "anthropic/claude-opus-4.6",
@@ -236,6 +196,360 @@
       "last_updated": "2026-04-07"
     },
     {
+      "id": "anthropic/claude-sonnet-4.6",
+      "name": "Claude Sonnet 4.6",
+      "provider": "Anthropic",
+      "description": "Anthropic's most capable Sonnet-class model. Frontier performance across coding, agents, and professional work.",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "input_per_m": 3.0,
+        "output_per_m": 15.0,
+        "blended_per_m": 6.0,
+        "cache_read_per_m": 0.3,
+        "cache_write_per_m": 3.75
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 47.0,
+        "ttft_seconds": 0.9,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 50.4,
+        "coding": 46.4,
+        "agentic": 85.7
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 44.4,
+          "coding_index": 46.4,
+          "gpqa": 0.799,
+          "hle": 0.132,
+          "scicode": 0.469,
+          "ifbench": 0.412,
+          "terminalbench_hard": 0.462
+        },
+        "pinchbench": {
+          "best_score": 88.0,
+          "avg_score": 81.1,
+          "runs": 19
+        },
+        "arena": {
+          "elo": 1462,
+          "rank": 18,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1876.8,
+          "humanlike": 7.1,
+          "safety": 6.7,
+          "assertive": 6.6,
+          "social_iq": 7.8,
+          "warm": 6.9,
+          "analytic": 8.8,
+          "insight": 8.9,
+          "empathy": 8.5,
+          "compliant": 4.8,
+          "moralising": 2.9,
+          "pragmatic": 8.3,
+          "v3_score": 71.7,
+          "v3_traits": {
+            "analytical": 16.7,
+            "boundary_setting": 11.6,
+            "challenging": 11.8,
+            "compliant": 7.8,
+            "conversational": 11.8,
+            "correctness": 14.4,
+            "demonstrated_empathy": 14.8,
+            "depth_of_insight": 15.6,
+            "emotional_reasoning": 14.7,
+            "humanlike": 14.0,
+            "intellectual_grounding": 13.0,
+            "message_tailoring": 13.1,
+            "moralising": 8.0,
+            "pragmatic_ei": 13.7,
+            "reactive": 8.7,
+            "safety_conscious": 12.4,
+            "social_dexterity": 13.4,
+            "subtext_identification": 15.5,
+            "sycophantic": 3.6,
+            "theory_of_mind": 13.6,
+            "validating": 12.9,
+            "warmth": 13.4
+          }
+        }
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "google/gemini-3.1-flash-lite-preview",
+      "canonical_slug": "google/gemini-3.1-flash-lite-preview-20260303",
+      "name": "Gemini 3.1 Flash Lite Preview",
+      "provider": "Google",
+      "description": "Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for high-volume use cases. It outperforms Gemini 2.5 Flash Lite on overall quality and approaches Gemini 2.5 Flash performance across...",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "file",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Gemini",
+      "pricing": {
+        "input_per_m": 0.25,
+        "output_per_m": 1.5,
+        "cache_read_per_m": 0.025,
+        "cache_write_per_m": 0.0833,
+        "web_search_per_req": null,
+        "blended_per_m": 0.5625
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": true,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Google",
+          "Google AI Studio"
+        ],
+        "uptime_24h": 99.53,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {},
+        "pinchbench": {},
+        "arena": {
+          "elo": 1438
+        }
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false
+      },
+      "created": 1772512673,
+      "last_updated": "2026-04-07T05:56:52Z",
+      "speed": {
+        "output_tokens_per_sec": 235.5,
+        "ttft_seconds": null,
+        "ttfa_seconds": null
+      }
+    },
+    {
+      "id": "google/gemini-3.1-pro-preview-20260219",
+      "name": "Gemini 3.1 Pro",
+      "provider": "Google",
+      "description": "Google's frontier reasoning model with enhanced software engineering performance, improved agentic reliability, and multimodal input support.",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "input_per_m": 2.0,
+        "output_per_m": 12.0,
+        "blended_per_m": 4.5,
+        "cache_read_per_m": 0.2,
+        "cache_write_per_m": 0.375
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 127.0,
+        "ttft_seconds": 30.66,
+        "source": "artificial_analysis",
+        "note": "TTFT includes reasoning/thinking time"
+      },
+      "scores": {
+        "reasoning": 57.0,
+        "coding": 56,
+        "agentic": 83.5
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 57.0,
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
+        },
+        "pinchbench": {
+          "best_score": 86.7,
+          "avg_score": 77.0,
+          "runs": 15
+        },
+        "arena": {
+          "elo": 1494,
+          "rank": 3,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1548.7,
+          "humanlike": 6.6,
+          "safety": 6.6,
+          "assertive": 6.6,
+          "social_iq": 6.8,
+          "warm": 7.4,
+          "analytic": 8.9,
+          "insight": 8.5,
+          "empathy": 7.9,
+          "compliant": 5.9,
+          "moralising": 5.1,
+          "pragmatic": 7.1,
+          "v3_score": 68.95,
+          "v3_traits": {
+            "analytical": 16.3,
+            "boundary_setting": 12.0,
+            "challenging": 11.1,
+            "compliant": 10.2,
+            "conversational": 11.5,
+            "correctness": 13.7,
+            "demonstrated_empathy": 14.6,
+            "depth_of_insight": 15.1,
+            "emotional_reasoning": 14.3,
+            "humanlike": 13.0,
+            "intellectual_grounding": 12.5,
+            "message_tailoring": 13.0,
+            "moralising": 9.8,
+            "pragmatic_ei": 13.0,
+            "reactive": 10.6,
+            "safety_conscious": 12.6,
+            "social_dexterity": 12.8,
+            "subtext_identification": 14.3,
+            "sycophantic": 5.8,
+            "theory_of_mind": 12.8,
+            "validating": 14.4,
+            "warmth": 13.8
+          }
+        }
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Google"
+        ]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "canonical_slug": "google/gemma-4-31b-it-20260402",
+      "name": "Gemma 4 31B",
+      "provider": "Google",
+      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
+      "context_window": 262144,
+      "max_output": 131072,
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Gemma",
+      "pricing": {
+        "input_per_m": 0.14,
+        "output_per_m": 0.4,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.205
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "AkashML",
+          "Novita",
+          "Parasail",
+          "Venice"
+        ],
+        "uptime_24h": 99.16,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {},
+        "pinchbench": {},
+        "arena": {
+          "elo": 1452,
+          "note": "Preliminary"
+        }
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false
+      },
+      "created": 1775148486,
+      "last_updated": "2026-04-07T05:56:52Z",
+      "speed": {
+        "output_tokens_per_sec": 35.9,
+        "ttft_seconds": null,
+        "ttfa_seconds": null
+      }
+    },
+    {
       "id": "minimax/minimax-m2.7",
       "name": "MiniMax M2.7",
       "provider": "MiniMax",
@@ -325,6 +639,421 @@
       "endpoint_stats": {
         "providers": [
           "Minimax"
+        ]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "openai/gpt-5.4",
+      "name": "GPT-5.4",
+      "provider": "OpenAI",
+      "description": "OpenAI's latest frontier model, unifying the Codex and GPT lines into a single system with 1M+ context window.",
+      "context_window": 1050000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "input_per_m": 2.5,
+        "output_per_m": 15.0,
+        "blended_per_m": 5.625,
+        "cache_read_per_m": 0.25,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 74.0,
+        "ttft_seconds": 152.2,
+        "source": "artificial_analysis",
+        "note": "TTFT includes reasoning/thinking time"
+      },
+      "scores": {
+        "reasoning": 57.0,
+        "coding": 57,
+        "agentic": 87.6
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 57.0,
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
+        },
+        "pinchbench": {
+          "best_score": 90.5,
+          "avg_score": 81.7,
+          "runs": 17
+        },
+        "arena": {
+          "elo": 1484,
+          "rank": 6,
+          "category": "text"
+        },
+        "eq_bench": {
+          "elo": 1687.5,
+          "humanlike": 6.3,
+          "safety": 7.5,
+          "assertive": 7.5,
+          "social_iq": 7.7,
+          "warm": 6.4,
+          "analytic": 9.4,
+          "insight": 9.4,
+          "empathy": 8.2,
+          "compliant": 5.0,
+          "moralising": 3.9,
+          "pragmatic": 8.7,
+          "v3_score": 73.2,
+          "v3_traits": {
+            "analytical": 16.8,
+            "boundary_setting": 14.3,
+            "challenging": 11.8,
+            "compliant": 7.3,
+            "conversational": 9.5,
+            "correctness": 14.8,
+            "demonstrated_empathy": 14.4,
+            "depth_of_insight": 15.8,
+            "emotional_reasoning": 15.1,
+            "humanlike": 12.3,
+            "intellectual_grounding": 13.6,
+            "message_tailoring": 13.0,
+            "moralising": 9.6,
+            "pragmatic_ei": 14.8,
+            "reactive": 7.3,
+            "safety_conscious": 13.5,
+            "social_dexterity": 13.6,
+            "subtext_identification": 15.6,
+            "sycophantic": 3.2,
+            "theory_of_mind": 14.7,
+            "validating": 13.1,
+            "warmth": 11.8
+          }
+        }
+      },
+      "endpoint_stats": {
+        "providers": [
+          "OpenAI"
+        ]
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "openai/gpt-5.4-mini",
+      "name": "GPT-5.4 Mini",
+      "provider": "OpenAI",
+      "context_window": 400000,
+      "max_output": 128000,
+      "pricing": {
+        "input_per_m": 0.75,
+        "output_per_m": 4.5,
+        "blended_per_m": 1.688
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": true,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 186,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 48,
+        "coding": 51,
+        "agentic": 56
+      },
+      "benchmarks": {
+        "pinchbench": {},
+        "eq_bench": {
+          "v3_score": 68.65,
+          "v3_traits": {
+            "analytical": 18.0,
+            "boundary_setting": 15.5,
+            "challenging": 12.0,
+            "compliant": 8.2,
+            "conversational": 8.7,
+            "correctness": 14.5,
+            "demonstrated_empathy": 13.4,
+            "depth_of_insight": 15.4,
+            "emotional_reasoning": 14.9,
+            "humanlike": 11.4,
+            "intellectual_grounding": 12.6,
+            "message_tailoring": 10.7,
+            "moralising": 6.0,
+            "pragmatic_ei": 13.1,
+            "reactive": 7.7,
+            "safety_conscious": 15.2,
+            "social_dexterity": 11.2,
+            "subtext_identification": 16.0,
+            "sycophantic": 2.7,
+            "theory_of_mind": 14.2,
+            "validating": 10.9,
+            "warmth": 8.6
+          }
+        },
+        "arena": {
+          "elo": 1455
+        }
+      },
+      "sources": {
+        "openrouter": true
+      },
+      "notes": "Agentic score from AA Agentic Index (not PinchBench-based)"
+    },
+    {
+      "id": "qwen/qwen3.5-122b-a10b",
+      "canonical_slug": "qwen/qwen3.5-122b-a10b-20260224",
+      "name": "Qwen3.5-122B-A10B",
+      "provider": "Qwen",
+      "description": "The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. In terms of...",
+      "context_window": 262144,
+      "max_output": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Qwen3",
+      "pricing": {
+        "input_per_m": 0.26,
+        "output_per_m": 2.08,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.715
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Alibaba",
+          "AtlasCloud",
+          "Novita"
+        ],
+        "uptime_24h": 99.46,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {
+        "agentic": 83.9
+      },
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {},
+        "pinchbench": {
+          "best_score": 85.5,
+          "avg_score": 80.8,
+          "source": "pinchbench"
+        },
+        "arena": {
+          "elo": 1416
+        }
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false
+      },
+      "created": 1772053789,
+      "last_updated": "2026-04-07T05:56:53Z",
+      "speed": {
+        "output_tokens_per_sec": 155.5,
+        "ttft_seconds": null,
+        "ttfa_seconds": null
+      }
+    },
+    {
+      "id": "qwen/qwen3.6-plus:free",
+      "name": "Qwen3.6 Plus",
+      "provider": "Qwen",
+      "description": "Hybrid architecture combining linear attention with sparse MoE routing. Strong scalability and high-performance inference. Free on OpenRouter.",
+      "context_window": 1000000,
+      "max_output": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "input_per_m": 0.0,
+        "output_per_m": 0.0,
+        "blended_per_m": 0.0,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 44.0,
+        "ttft_seconds": 1.59,
+        "source": "openrouter"
+      },
+      "scores": {
+        "reasoning": 57.0,
+        "coding": 41.3,
+        "agentic": 87.1
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 45.0,
+          "coding_index": 41.3,
+          "gpqa": 0.893,
+          "hle": 0.273,
+          "scicode": 0.42,
+          "ifbench": 0.788,
+          "terminalbench_hard": 0.409,
+          "note": "Data from Qwen3.5-397B (predecessor)"
+        },
+        "pinchbench": {
+          "best_score": 88.6,
+          "avg_score": 84.0,
+          "runs": 5
+        },
+        "arena": {
+          "elo": 1449,
+          "rank": 30,
+          "category": "text",
+          "note": "Score from Qwen3.5-397B (predecessor)"
+        },
+        "eq_bench": {
+          "elo": 1417.4,
+          "v3_score": 60.45,
+          "v3_traits": {
+            "analytical": 14.5,
+            "boundary_setting": 10.5,
+            "challenging": 8.1,
+            "compliant": 12.0,
+            "conversational": 9.8,
+            "correctness": 11.7,
+            "demonstrated_empathy": 13.5,
+            "depth_of_insight": 12.6,
+            "emotional_reasoning": 12.7,
+            "humanlike": 11.2,
+            "intellectual_grounding": 10.8,
+            "message_tailoring": 11.4,
+            "moralising": 10.1,
+            "pragmatic_ei": 12.6,
+            "reactive": 10.0,
+            "safety_conscious": 11.2,
+            "social_dexterity": 12.0,
+            "subtext_identification": 10.6,
+            "sycophantic": 6.2,
+            "theory_of_mind": 10.8,
+            "validating": 13.4,
+            "warmth": 13.4
+          },
+          "note": "Benchmark run on Qwen3.5-397B (predecessor)"
+        }
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Qwen"
+        ]
+      },
+      "notes": "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly.",
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "stepfun/step-3.5-flash",
+      "name": "Step 3.5 Flash",
+      "provider": "StepFun",
+      "description": "StepFun's most capable open-source model. Sparse MoE architecture activating 11B of 196B parameters per token.",
+      "context_window": 262144,
+      "max_output": 65536,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "pricing": {
+        "input_per_m": 0.1,
+        "output_per_m": 0.3,
+        "blended_per_m": 0.15,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "speed": {
+        "output_tokens_per_sec": 85.7,
+        "ttft_seconds": 1.271,
+        "source": "artificial_analysis"
+      },
+      "scores": {
+        "reasoning": 50.0,
+        "coding": 31.6,
+        "agentic": 82.5
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 37.8,
+          "coding_index": 31.6,
+          "gpqa": 0.831,
+          "hle": 0.191,
+          "scicode": 0.404,
+          "ifbench": 0.646,
+          "terminalbench_hard": 0.273
+        },
+        "pinchbench": {
+          "best_score": 85.3,
+          "avg_score": 76.9,
+          "runs": 18
+        },
+        "arena": {
+          "elo": 1392,
+          "rank": 102,
+          "category": "text"
+        },
+        "eq_bench": {
+          "v3_score": 69.25
+        }
+      },
+      "endpoint_stats": {
+        "providers": [
+          "DeepInfra",
+          "SiliconFlow",
+          "StepFun"
         ]
       },
       "last_updated": "2026-04-07"
@@ -531,282 +1260,6 @@
       "last_updated": "2026-04-07"
     },
     {
-      "id": "stepfun/step-3.5-flash",
-      "name": "Step 3.5 Flash",
-      "provider": "StepFun",
-      "description": "StepFun's most capable open-source model. Sparse MoE architecture activating 11B of 196B parameters per token.",
-      "context_window": 262144,
-      "max_output": 65536,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "input_per_m": 0.1,
-        "output_per_m": 0.3,
-        "blended_per_m": 0.15,
-        "cache_read_per_m": null,
-        "cache_write_per_m": null
-      },
-      "capabilities": {
-        "tool_use": true,
-        "reasoning": true,
-        "vision": false,
-        "web_search": false,
-        "structured_output": true
-      },
-      "speed": {
-        "output_tokens_per_sec": 85.7,
-        "ttft_seconds": 1.271,
-        "source": "artificial_analysis"
-      },
-      "scores": {
-        "reasoning": 50.0,
-        "coding": 31.6,
-        "agentic": 82.5
-      },
-      "benchmarks": {
-        "artificial_analysis": {
-          "intelligence_index": 37.8,
-          "coding_index": 31.6,
-          "gpqa": 0.831,
-          "hle": 0.191,
-          "scicode": 0.404,
-          "ifbench": 0.646,
-          "terminalbench_hard": 0.273
-        },
-        "pinchbench": {
-          "best_score": 85.3,
-          "avg_score": 76.9,
-          "runs": 18
-        },
-        "arena": {
-          "elo": 1392,
-          "rank": 102,
-          "category": "text"
-        },
-        "eq_bench": {
-          "v3_score": 69.25
-        }
-      },
-      "endpoint_stats": {
-        "providers": [
-          "DeepInfra",
-          "SiliconFlow",
-          "StepFun"
-        ]
-      },
-      "last_updated": "2026-04-07"
-    },
-    {
-      "id": "qwen/qwen3.6-plus:free",
-      "name": "Qwen3.6 Plus",
-      "provider": "Qwen",
-      "description": "Hybrid architecture combining linear attention with sparse MoE routing. Strong scalability and high-performance inference. Free on OpenRouter.",
-      "context_window": 1000000,
-      "max_output": 65536,
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "input_per_m": 0.0,
-        "output_per_m": 0.0,
-        "blended_per_m": 0.0,
-        "cache_read_per_m": null,
-        "cache_write_per_m": null
-      },
-      "capabilities": {
-        "tool_use": true,
-        "reasoning": true,
-        "vision": true,
-        "web_search": false,
-        "structured_output": true
-      },
-      "speed": {
-        "output_tokens_per_sec": 44.0,
-        "ttft_seconds": 1.59,
-        "source": "openrouter"
-      },
-      "scores": {
-        "reasoning": 57.0,
-        "coding": 41.3,
-        "agentic": 87.1
-      },
-      "benchmarks": {
-        "artificial_analysis": {
-          "intelligence_index": 45.0,
-          "coding_index": 41.3,
-          "gpqa": 0.893,
-          "hle": 0.273,
-          "scicode": 0.42,
-          "ifbench": 0.788,
-          "terminalbench_hard": 0.409,
-          "note": "Data from Qwen3.5-397B (predecessor)"
-        },
-        "pinchbench": {
-          "best_score": 88.6,
-          "avg_score": 84.0,
-          "runs": 5
-        },
-        "arena": {
-          "elo": 1449,
-          "rank": 30,
-          "category": "text",
-          "note": "Score from Qwen3.5-397B (predecessor)"
-        },
-        "eq_bench": {
-          "elo": 1417.4,
-          "v3_score": 60.45,
-          "v3_traits": {
-            "analytical": 14.5,
-            "boundary_setting": 10.5,
-            "challenging": 8.1,
-            "compliant": 12.0,
-            "conversational": 9.8,
-            "correctness": 11.7,
-            "demonstrated_empathy": 13.5,
-            "depth_of_insight": 12.6,
-            "emotional_reasoning": 12.7,
-            "humanlike": 11.2,
-            "intellectual_grounding": 10.8,
-            "message_tailoring": 11.4,
-            "moralising": 10.1,
-            "pragmatic_ei": 12.6,
-            "reactive": 10.0,
-            "safety_conscious": 11.2,
-            "social_dexterity": 12.0,
-            "subtext_identification": 10.6,
-            "sycophantic": 6.2,
-            "theory_of_mind": 10.8,
-            "validating": 13.4,
-            "warmth": 13.4
-          },
-          "note": "Benchmark run on Qwen3.5-397B (predecessor)"
-        }
-      },
-      "endpoint_stats": {
-        "providers": [
-          "Qwen"
-        ]
-      },
-      "notes": "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly.",
-      "last_updated": "2026-04-07"
-    },
-    {
-      "id": "openai/gpt-5.4",
-      "name": "GPT-5.4",
-      "provider": "OpenAI",
-      "description": "OpenAI's latest frontier model, unifying the Codex and GPT lines into a single system with 1M+ context window.",
-      "context_window": 1050000,
-      "max_output": 128000,
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "input_per_m": 2.5,
-        "output_per_m": 15.0,
-        "blended_per_m": 5.625,
-        "cache_read_per_m": 0.25,
-        "cache_write_per_m": null
-      },
-      "capabilities": {
-        "tool_use": true,
-        "reasoning": true,
-        "vision": true,
-        "web_search": true,
-        "structured_output": true
-      },
-      "speed": {
-        "output_tokens_per_sec": 74.0,
-        "ttft_seconds": 152.2,
-        "source": "artificial_analysis",
-        "note": "TTFT includes reasoning/thinking time"
-      },
-      "scores": {
-        "reasoning": 57.0,
-        "coding": 57,
-        "agentic": 87.6
-      },
-      "benchmarks": {
-        "artificial_analysis": {
-          "intelligence_index": 57.0,
-          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
-        },
-        "pinchbench": {
-          "best_score": 90.5,
-          "avg_score": 81.7,
-          "runs": 17
-        },
-        "arena": {
-          "elo": 1484,
-          "rank": 6,
-          "category": "text"
-        },
-        "eq_bench": {
-          "elo": 1687.5,
-          "humanlike": 6.3,
-          "safety": 7.5,
-          "assertive": 7.5,
-          "social_iq": 7.7,
-          "warm": 6.4,
-          "analytic": 9.4,
-          "insight": 9.4,
-          "empathy": 8.2,
-          "compliant": 5.0,
-          "moralising": 3.9,
-          "pragmatic": 8.7,
-          "v3_score": 73.2,
-          "v3_traits": {
-            "analytical": 16.8,
-            "boundary_setting": 14.3,
-            "challenging": 11.8,
-            "compliant": 7.3,
-            "conversational": 9.5,
-            "correctness": 14.8,
-            "demonstrated_empathy": 14.4,
-            "depth_of_insight": 15.8,
-            "emotional_reasoning": 15.1,
-            "humanlike": 12.3,
-            "intellectual_grounding": 13.6,
-            "message_tailoring": 13.0,
-            "moralising": 9.6,
-            "pragmatic_ei": 14.8,
-            "reactive": 7.3,
-            "safety_conscious": 13.5,
-            "social_dexterity": 13.6,
-            "subtext_identification": 15.6,
-            "sycophantic": 3.2,
-            "theory_of_mind": 14.7,
-            "validating": 13.1,
-            "warmth": 11.8
-          }
-        }
-      },
-      "endpoint_stats": {
-        "providers": [
-          "OpenAI"
-        ]
-      },
-      "last_updated": "2026-04-07"
-    },
-    {
       "id": "x-ai/grok-4.20-20260309",
       "name": "Grok 4.20",
       "provider": "xAI",
@@ -898,246 +1351,6 @@
       },
       "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
       "last_updated": "2026-04-07"
-    },
-    {
-      "id": "google/gemini-3.1-pro-preview-20260219",
-      "name": "Gemini 3.1 Pro",
-      "provider": "Google",
-      "description": "Google's frontier reasoning model with enhanced software engineering performance, improved agentic reliability, and multimodal input support.",
-      "context_window": 1048576,
-      "max_output": 65536,
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "pricing": {
-        "input_per_m": 2.0,
-        "output_per_m": 12.0,
-        "blended_per_m": 4.5,
-        "cache_read_per_m": 0.2,
-        "cache_write_per_m": 0.375
-      },
-      "capabilities": {
-        "tool_use": true,
-        "reasoning": true,
-        "vision": true,
-        "web_search": false,
-        "structured_output": true
-      },
-      "speed": {
-        "output_tokens_per_sec": 127.0,
-        "ttft_seconds": 30.66,
-        "source": "artificial_analysis",
-        "note": "TTFT includes reasoning/thinking time"
-      },
-      "scores": {
-        "reasoning": 57.0,
-        "coding": 56,
-        "agentic": 83.5
-      },
-      "benchmarks": {
-        "artificial_analysis": {
-          "intelligence_index": 57.0,
-          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
-        },
-        "pinchbench": {
-          "best_score": 86.7,
-          "avg_score": 77.0,
-          "runs": 15
-        },
-        "arena": {
-          "elo": 1494,
-          "rank": 3,
-          "category": "text"
-        },
-        "eq_bench": {
-          "elo": 1548.7,
-          "humanlike": 6.6,
-          "safety": 6.6,
-          "assertive": 6.6,
-          "social_iq": 6.8,
-          "warm": 7.4,
-          "analytic": 8.9,
-          "insight": 8.5,
-          "empathy": 7.9,
-          "compliant": 5.9,
-          "moralising": 5.1,
-          "pragmatic": 7.1,
-          "v3_score": 68.95,
-          "v3_traits": {
-            "analytical": 16.3,
-            "boundary_setting": 12.0,
-            "challenging": 11.1,
-            "compliant": 10.2,
-            "conversational": 11.5,
-            "correctness": 13.7,
-            "demonstrated_empathy": 14.6,
-            "depth_of_insight": 15.1,
-            "emotional_reasoning": 14.3,
-            "humanlike": 13.0,
-            "intellectual_grounding": 12.5,
-            "message_tailoring": 13.0,
-            "moralising": 9.8,
-            "pragmatic_ei": 13.0,
-            "reactive": 10.6,
-            "safety_conscious": 12.6,
-            "social_dexterity": 12.8,
-            "subtext_identification": 14.3,
-            "sycophantic": 5.8,
-            "theory_of_mind": 12.8,
-            "validating": 14.4,
-            "warmth": 13.8
-          }
-        }
-      },
-      "endpoint_stats": {
-        "providers": [
-          "Google"
-        ]
-      },
-      "last_updated": "2026-04-07"
-    },
-    {
-      "id": "anthropic/claude-haiku-4.5",
-      "name": "Claude Haiku 4.5",
-      "provider": "Anthropic",
-      "context_window": 200000,
-      "max_output": 64000,
-      "pricing": {
-        "input_per_m": 1.0,
-        "output_per_m": 5.0,
-        "blended_per_m": 2.0,
-        "cache_read_per_m": 0.1,
-        "cache_write_per_m": 1.25
-      },
-      "capabilities": {
-        "tool_use": true,
-        "reasoning": false,
-        "vision": true,
-        "web_search": false,
-        "structured_output": true
-      },
-      "speed": {
-        "output_tokens_per_sec": 93,
-        "ttft_seconds": 0.4,
-        "source": "artificial_analysis"
-      },
-      "scores": {
-        "reasoning": 31,
-        "coding": null,
-        "agentic": 85.7
-      },
-      "benchmarks": {
-        "pinchbench": {
-          "best_score": 89.5,
-          "avg_score": 78.1
-        },
-        "eq_bench": {
-          "v3_score": 68.65,
-          "v3_traits": {
-            "analytical": 18.0,
-            "boundary_setting": 13.2,
-            "challenging": 13.3,
-            "compliant": 8.0,
-            "conversational": 11.4,
-            "correctness": 13.6,
-            "demonstrated_empathy": 14.6,
-            "depth_of_insight": 15.6,
-            "emotional_reasoning": 14.9,
-            "humanlike": 14.3,
-            "intellectual_grounding": 12.0,
-            "message_tailoring": 11.5,
-            "moralising": 6.3,
-            "pragmatic_ei": 12.1,
-            "reactive": 10.2,
-            "safety_conscious": 13.2,
-            "social_dexterity": 11.0,
-            "subtext_identification": 15.6,
-            "sycophantic": 2.9,
-            "theory_of_mind": 14.5,
-            "validating": 12.0,
-            "warmth": 11.2
-          }
-        },
-        "arena": {
-          "elo": 1407
-        }
-      },
-      "sources": {
-        "openrouter": true
-      }
-    },
-    {
-      "id": "openai/gpt-5.4-mini",
-      "name": "GPT-5.4 Mini",
-      "provider": "OpenAI",
-      "context_window": 400000,
-      "max_output": 128000,
-      "pricing": {
-        "input_per_m": 0.75,
-        "output_per_m": 4.5,
-        "blended_per_m": 1.688
-      },
-      "capabilities": {
-        "tool_use": true,
-        "reasoning": true,
-        "vision": true,
-        "web_search": true,
-        "structured_output": true
-      },
-      "speed": {
-        "output_tokens_per_sec": 186,
-        "source": "artificial_analysis"
-      },
-      "scores": {
-        "reasoning": 48,
-        "coding": 51,
-        "agentic": 56
-      },
-      "benchmarks": {
-        "pinchbench": {},
-        "eq_bench": {
-          "v3_score": 68.65,
-          "v3_traits": {
-            "analytical": 18.0,
-            "boundary_setting": 15.5,
-            "challenging": 12.0,
-            "compliant": 8.2,
-            "conversational": 8.7,
-            "correctness": 14.5,
-            "demonstrated_empathy": 13.4,
-            "depth_of_insight": 15.4,
-            "emotional_reasoning": 14.9,
-            "humanlike": 11.4,
-            "intellectual_grounding": 12.6,
-            "message_tailoring": 10.7,
-            "moralising": 6.0,
-            "pragmatic_ei": 13.1,
-            "reactive": 7.7,
-            "safety_conscious": 15.2,
-            "social_dexterity": 11.2,
-            "subtext_identification": 16.0,
-            "sycophantic": 2.7,
-            "theory_of_mind": 14.2,
-            "validating": 10.9,
-            "warmth": 8.6
-          }
-        },
-        "arena": {
-          "elo": 1455
-        }
-      },
-      "sources": {
-        "openrouter": true
-      },
-      "notes": "Agentic score from AA Agentic Index (not PinchBench-based)"
     }
   ]
 }
