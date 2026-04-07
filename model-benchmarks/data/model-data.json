@@ -87,7 +87,32 @@
           "empathy": 8.5,
           "compliant": 4.8,
           "moralising": 2.9,
-          "pragmatic": 8.3
+          "pragmatic": 8.3,
+          "v3_score": 71.7,
+          "v3_traits": {
+            "analytical": 16.7,
+            "boundary_setting": 11.6,
+            "challenging": 11.8,
+            "compliant": 7.8,
+            "conversational": 11.8,
+            "correctness": 14.4,
+            "demonstrated_empathy": 14.8,
+            "depth_of_insight": 15.6,
+            "emotional_reasoning": 14.7,
+            "humanlike": 14.0,
+            "intellectual_grounding": 13.0,
+            "message_tailoring": 13.1,
+            "moralising": 8.0,
+            "pragmatic_ei": 13.7,
+            "reactive": 8.7,
+            "safety_conscious": 12.4,
+            "social_dexterity": 13.4,
+            "subtext_identification": 15.5,
+            "sycophantic": 3.6,
+            "theory_of_mind": 13.6,
+            "validating": 12.9,
+            "warmth": 13.4
+          }
         }
       },
       "endpoint_stats": {
@@ -172,7 +197,32 @@
           "empathy": 8.0,
           "compliant": 4.8,
           "moralising": 4.7,
-          "pragmatic": 8.0
+          "pragmatic": 8.0,
+          "v3_score": 71.85,
+          "v3_traits": {
+            "analytical": 16.7,
+            "boundary_setting": 11.7,
+            "challenging": 12.4,
+            "compliant": 8.2,
+            "conversational": 12.0,
+            "correctness": 14.3,
+            "demonstrated_empathy": 14.9,
+            "depth_of_insight": 15.6,
+            "emotional_reasoning": 14.6,
+            "humanlike": 13.8,
+            "intellectual_grounding": 13.0,
+            "message_tailoring": 13.7,
+            "moralising": 9.4,
+            "pragmatic_ei": 13.9,
+            "reactive": 8.6,
+            "safety_conscious": 12.1,
+            "social_dexterity": 13.5,
+            "subtext_identification": 15.3,
+            "sycophantic": 4.0,
+            "theory_of_mind": 13.5,
+            "validating": 13.2,
+            "warmth": 13.6
+          }
         }
       },
       "endpoint_stats": {
@@ -244,7 +294,33 @@
           "rank": 86,
           "category": "text"
         },
-        "eq_bench": {}
+        "eq_bench": {
+          "v3_score": 68.75,
+          "v3_traits": {
+            "analytical": 17.8,
+            "boundary_setting": 10.5,
+            "challenging": 10.4,
+            "compliant": 10.8,
+            "conversational": 10.9,
+            "correctness": 14.6,
+            "demonstrated_empathy": 14.3,
+            "depth_of_insight": 15.5,
+            "emotional_reasoning": 14.8,
+            "humanlike": 13.7,
+            "intellectual_grounding": 12.9,
+            "message_tailoring": 11.2,
+            "moralising": 5.4,
+            "pragmatic_ei": 11.2,
+            "reactive": 10.1,
+            "safety_conscious": 12.7,
+            "social_dexterity": 10.6,
+            "subtext_identification": 16.3,
+            "sycophantic": 3.8,
+            "theory_of_mind": 15.1,
+            "validating": 14.1,
+            "warmth": 12.4
+          }
+        }
       },
       "endpoint_stats": {
         "providers": [
@@ -313,8 +389,31 @@
           "category": "text"
         },
         "eq_bench": {
-          "v2_score": 80.08,
-          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+          "v3_score": 70.55,
+          "v3_traits": {
+            "analytical": 18.1,
+            "boundary_setting": 12.1,
+            "challenging": 11.4,
+            "compliant": 9.2,
+            "conversational": 11.4,
+            "correctness": 13.9,
+            "demonstrated_empathy": 14.8,
+            "depth_of_insight": 15.8,
+            "emotional_reasoning": 14.9,
+            "humanlike": 15.1,
+            "intellectual_grounding": 12.6,
+            "message_tailoring": 12.7,
+            "moralising": 5.7,
+            "pragmatic_ei": 12.8,
+            "reactive": 10.0,
+            "safety_conscious": 13.6,
+            "social_dexterity": 12.0,
+            "subtext_identification": 15.7,
+            "sycophantic": 3.1,
+            "theory_of_mind": 13.9,
+            "validating": 13.2,
+            "warmth": 12.2
+          }
         }
       },
       "endpoint_stats": {
@@ -395,7 +494,32 @@
           "empathy": 7.8,
           "compliant": 5.3,
           "moralising": 4.1,
-          "pragmatic": 7.3
+          "pragmatic": 7.3,
+          "v3_score": 67.7,
+          "v3_traits": {
+            "analytical": 16.3,
+            "boundary_setting": 11.7,
+            "challenging": 12.6,
+            "compliant": 7.5,
+            "conversational": 10.8,
+            "correctness": 13.9,
+            "demonstrated_empathy": 13.7,
+            "depth_of_insight": 15.2,
+            "emotional_reasoning": 14.2,
+            "humanlike": 13.4,
+            "intellectual_grounding": 12.4,
+            "message_tailoring": 12.0,
+            "moralising": 9.2,
+            "pragmatic_ei": 12.6,
+            "reactive": 9.8,
+            "safety_conscious": 12.0,
+            "social_dexterity": 11.8,
+            "subtext_identification": 14.9,
+            "sycophantic": 3.2,
+            "theory_of_mind": 12.9,
+            "validating": 11.2,
+            "warmth": 11.2
+          }
         }
       },
       "endpoint_stats": {
@@ -465,7 +589,9 @@
           "rank": 102,
           "category": "text"
         },
-        "eq_bench": {}
+        "eq_bench": {
+          "v3_score": 69.25
+        }
       },
       "endpoint_stats": {
         "providers": [
@@ -541,18 +667,32 @@
         },
         "eq_bench": {
           "elo": 1417.4,
-          "humanlike": 5.3,
-          "safety": 6.7,
-          "assertive": 6.5,
-          "social_iq": 6.2,
-          "warm": 6.8,
-          "analytic": 8.1,
-          "insight": 8.1,
-          "empathy": 7.3,
-          "compliant": 6.3,
-          "moralising": 5.3,
-          "pragmatic": 7.1,
-          "note": "Score from Qwen3.5-397B (predecessor)"
+          "v3_score": 60.45,
+          "v3_traits": {
+            "analytical": 14.5,
+            "boundary_setting": 10.5,
+            "challenging": 8.1,
+            "compliant": 12.0,
+            "conversational": 9.8,
+            "correctness": 11.7,
+            "demonstrated_empathy": 13.5,
+            "depth_of_insight": 12.6,
+            "emotional_reasoning": 12.7,
+            "humanlike": 11.2,
+            "intellectual_grounding": 10.8,
+            "message_tailoring": 11.4,
+            "moralising": 10.1,
+            "pragmatic_ei": 12.6,
+            "reactive": 10.0,
+            "safety_conscious": 11.2,
+            "social_dexterity": 12.0,
+            "subtext_identification": 10.6,
+            "sycophantic": 6.2,
+            "theory_of_mind": 10.8,
+            "validating": 13.4,
+            "warmth": 13.4
+          },
+          "note": "Benchmark run on Qwen3.5-397B (predecessor)"
         }
       },
       "endpoint_stats": {
@@ -631,7 +771,32 @@
           "empathy": 8.2,
           "compliant": 5.0,
           "moralising": 3.9,
-          "pragmatic": 8.7
+          "pragmatic": 8.7,
+          "v3_score": 73.2,
+          "v3_traits": {
+            "analytical": 16.8,
+            "boundary_setting": 14.3,
+            "challenging": 11.8,
+            "compliant": 7.3,
+            "conversational": 9.5,
+            "correctness": 14.8,
+            "demonstrated_empathy": 14.4,
+            "depth_of_insight": 15.8,
+            "emotional_reasoning": 15.1,
+            "humanlike": 12.3,
+            "intellectual_grounding": 13.6,
+            "message_tailoring": 13.0,
+            "moralising": 9.6,
+            "pragmatic_ei": 14.8,
+            "reactive": 7.3,
+            "safety_conscious": 13.5,
+            "social_dexterity": 13.6,
+            "subtext_identification": 15.6,
+            "sycophantic": 3.2,
+            "theory_of_mind": 14.7,
+            "validating": 13.1,
+            "warmth": 11.8
+          }
         }
       },
       "endpoint_stats": {
@@ -699,17 +864,31 @@
         },
         "eq_bench": {
           "elo": 856.4,
-          "humanlike": 3.1,
-          "safety": 7.7,
-          "assertive": 7.3,
-          "social_iq": 3.0,
-          "warm": 3.4,
-          "analytic": 5.0,
-          "insight": 6.4,
-          "empathy": 3.4,
-          "compliant": 3.2,
-          "moralising": 6.7,
-          "pragmatic": 3.5
+          "v3_score": 68.55,
+          "v3_traits": {
+            "analytical": 16.0,
+            "boundary_setting": 11.7,
+            "challenging": 10.6,
+            "compliant": 10.8,
+            "conversational": 10.0,
+            "correctness": 13.5,
+            "demonstrated_empathy": 13.9,
+            "depth_of_insight": 15.3,
+            "emotional_reasoning": 14.3,
+            "humanlike": 12.4,
+            "intellectual_grounding": 13.5,
+            "message_tailoring": 11.5,
+            "moralising": 11.4,
+            "pragmatic_ei": 12.2,
+            "reactive": 9.9,
+            "safety_conscious": 12.2,
+            "social_dexterity": 11.9,
+            "subtext_identification": 15.8,
+            "sycophantic": 4.9,
+            "theory_of_mind": 14.2,
+            "validating": 13.5,
+            "warmth": 13.5
+          }
         }
       },
       "endpoint_stats": {
@@ -790,7 +969,32 @@
           "empathy": 7.9,
           "compliant": 5.9,
           "moralising": 5.1,
-          "pragmatic": 7.1
+          "pragmatic": 7.1,
+          "v3_score": 68.95,
+          "v3_traits": {
+            "analytical": 16.3,
+            "boundary_setting": 12.0,
+            "challenging": 11.1,
+            "compliant": 10.2,
+            "conversational": 11.5,
+            "correctness": 13.7,
+            "demonstrated_empathy": 14.6,
+            "depth_of_insight": 15.1,
+            "emotional_reasoning": 14.3,
+            "humanlike": 13.0,
+            "intellectual_grounding": 12.5,
+            "message_tailoring": 13.0,
+            "moralising": 9.8,
+            "pragmatic_ei": 13.0,
+            "reactive": 10.6,
+            "safety_conscious": 12.6,
+            "social_dexterity": 12.8,
+            "subtext_identification": 14.3,
+            "sycophantic": 5.8,
+            "theory_of_mind": 12.8,
+            "validating": 14.4,
+            "warmth": 13.8
+          }
         }
       },
       "endpoint_stats": {
@@ -836,8 +1040,31 @@
           "avg_score": 78.1
         },
         "eq_bench": {
-          "v2_score": 73.74,
-          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+          "v3_score": 68.65,
+          "v3_traits": {
+            "analytical": 18.0,
+            "boundary_setting": 13.2,
+            "challenging": 13.3,
+            "compliant": 8.0,
+            "conversational": 11.4,
+            "correctness": 13.6,
+            "demonstrated_empathy": 14.6,
+            "depth_of_insight": 15.6,
+            "emotional_reasoning": 14.9,
+            "humanlike": 14.3,
+            "intellectual_grounding": 12.0,
+            "message_tailoring": 11.5,
+            "moralising": 6.3,
+            "pragmatic_ei": 12.1,
+            "reactive": 10.2,
+            "safety_conscious": 13.2,
+            "social_dexterity": 11.0,
+            "subtext_identification": 15.6,
+            "sycophantic": 2.9,
+            "theory_of_mind": 14.5,
+            "validating": 12.0,
+            "warmth": 11.2
+          }
         },
         "arena": {
           "elo": 1407
@@ -877,8 +1104,31 @@
       "benchmarks": {
         "pinchbench": {},
         "eq_bench": {
-          "v2_score": 84.1,
-          "note": "EQ-Bench v2 (0-100 scale, not comparable to v3 Elo)"
+          "v3_score": 68.65,
+          "v3_traits": {
+            "analytical": 18.0,
+            "boundary_setting": 15.5,
+            "challenging": 12.0,
+            "compliant": 8.2,
+            "conversational": 8.7,
+            "correctness": 14.5,
+            "demonstrated_empathy": 13.4,
+            "depth_of_insight": 15.4,
+            "emotional_reasoning": 14.9,
+            "humanlike": 11.4,
+            "intellectual_grounding": 12.6,
+            "message_tailoring": 10.7,
+            "moralising": 6.0,
+            "pragmatic_ei": 13.1,
+            "reactive": 7.7,
+            "safety_conscious": 15.2,
+            "social_dexterity": 11.2,
+            "subtext_identification": 16.0,
+            "sycophantic": 2.7,
+            "theory_of_mind": 14.2,
+            "validating": 10.9,
+            "warmth": 8.6
+          }
         },
         "arena": {
           "elo": 1455

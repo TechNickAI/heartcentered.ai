@@ -16,7 +16,7 @@
     }
 
     let models = [];
-    let sortKey = "eq_elo";
+    let sortKey = "eq_score";
     let sortDir = "desc";
     let searchQuery = "";
     let activeFilters = new Set();
@@ -130,8 +130,8 @@
                 return model.scores?.coding ?? -1;
             case "agentic":
                 return model.scores?.agentic ?? -1;
-            case "eq_elo":
-                return model.benchmarks?.eq_bench?.elo ?? -1;
+            case "eq_score":
+                return model.benchmarks?.eq_bench?.v3_score ?? -1;
             case "arena_elo":
                 return model.benchmarks?.arena?.elo ?? -1;
             case "speed":
@@ -200,25 +200,36 @@
 
     function eqHtml(model) {
         const eq = model.benchmarks?.eq_bench;
-        if (!eq || !eq.elo) return `<span class="score-na">—</span>`;
+        if (!eq || eq.v3_score == null) return `<span class="score-na">—</span>`;
         const note = eq.note
             ? `<span class="data-note" title="${esc(eq.note)}">*</span>`
             : "";
-        const traits = [
-            ["Empathy", eq.empathy],
-            ["Social IQ", eq.social_iq],
-            ["Insight", eq.insight],
-            ["Humanlike", eq.humanlike],
-            ["Warm", eq.warm],
-        ]
-            .filter(([, v]) => v != null)
-            .map(([k, v]) => `${k}: ${v}`)
+
+        const tooltipParts = [];
+        if (eq.elo) tooltipParts.push(`Elo: ${Math.round(eq.elo)}`);
+
+        const traitKeys = [
+            ["Empathy", "demonstrated_empathy", "empathy"],
+            ["Insight", "depth_of_insight", "insight"],
+            ["Social", "social_dexterity", "social_iq"],
+            ["Warmth", "warmth", "warm"],
+            ["Humanlike", "humanlike", "humanlike"],
+        ];
+        const traits = traitKeys
+            .map(([label, v3Key, legacyKey]) => {
+                const v = eq.v3_traits?.[v3Key] ?? eq[legacyKey];
+                return v != null ? `${label}: ${v}` : null;
+            })
+            .filter(Boolean)
             .join("  ·  ");
+        if (traits) tooltipParts.push(traits);
+
+        const tier = scoreTier(eq.v3_score);
 
         return `
       <span class="eq-detail">
-        <span class="score-value">${Math.round(eq.elo)}</span>${note}
-        ${traits ? `<span class="eq-tooltip">${traits}</span>` : ""}
+        <span class="score-value ${tier}">${eq.v3_score.toFixed(1)}</span>${note}
+        ${tooltipParts.length ? `<span class="eq-tooltip">${tooltipParts.join("<br>")}</span>` : ""}
       </span>`;
     }
 
@@ -322,7 +333,7 @@
           </div>
           <div class="card-score-item">
             <div class="card-score-label">EQ</div>
-            <div class="card-score-value ${eqTier(m.benchmarks?.eq_bench?.elo)}">${m.benchmarks?.eq_bench?.elo ? Math.round(m.benchmarks.eq_bench.elo) : "—"}</div>
+            <div class="card-score-value ${scoreTier(m.benchmarks?.eq_bench?.v3_score)}">${m.benchmarks?.eq_bench?.v3_score != null ? m.benchmarks.eq_bench.v3_score.toFixed(1) : "—"}</div>
           </div>
           <div class="card-score-item">
             <div class="card-score-label">Chat</div>
@@ -346,13 +357,6 @@
         if (val == null) return "";
         if (val >= 70) return "score-high";
         if (val >= 45) return "score-mid";
-        return "score-low";
-    }
-
-    function eqTier(elo) {
-        if (elo == null) return "";
-        if (elo >= 1700) return "score-high";
-        if (elo >= 1400) return "score-mid";
         return "score-low";
     }
 
