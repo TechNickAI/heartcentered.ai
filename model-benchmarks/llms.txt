@@ -50,17 +50,6 @@ EQ-Bench Elo: 1876.8
 PinchBench: 88.0% best, 81.1% avg (19 runs)
 Description: Anthropic's most capable Sonnet-class model. Frontier performance across coding, agents, and professional work.
 
-## Gemini 3.1 Flash Lite Preview
-Provider: Google
-ID: google/gemini-3.1-flash-lite-preview
-Context: 1,048,576 tokens
-Max output: 65,536 tokens
-Pricing: $0.25 input / $1.50 output per 1M tokens (blended: $0.56)
-Capabilities: tool use, reasoning, vision, audio input, structured output
-Speed: 235.5 tokens/sec
-Available via: Google, Google AI Studio
-Description: Gemini 3.1 Flash Lite Preview is Google's high-efficiency model optimized for high-volume use cases. It outperforms Gemini 2.5 Flash Lite on overall quality and approaches Gemini 2.5 Flash performance
-
 ## Gemini 3.1 Pro
 Provider: Google
 ID: google/gemini-3.1-pro-preview-20260219
@@ -86,6 +75,7 @@ Pricing: $0.14 input / $0.40 output per 1M tokens (blended: $0.20)
 Capabilities: tool use, reasoning, vision, structured output
 Speed: 35.9 tokens/sec
 Available via: AkashML, Novita, Parasail, Venice
+EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
 
 ## MiniMax M2.7
@@ -140,6 +130,7 @@ Capabilities: tool use, reasoning, vision, structured output
 Scores (0-100): Agentic: 83.9
 Speed: 155.5 tokens/sec
 Available via: Alibaba, AtlasCloud, Novita
+EQ-Bench v3 Score: 62.95/100
 PinchBench: 85.5% best, 80.8% avg (? runs)
 Description: The Qwen3.5 122B-A10B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference eff
 
