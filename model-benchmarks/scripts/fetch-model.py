@@ -75,7 +75,6 @@ PINCHBENCH_DATA = {
     "z-ai/glm-5-turbo": {"best_score": 86.5, "avg_score": 81.6, "runs": 11},
     "minimax/minimax-m2.7": {"best_score": 89.8, "avg_score": 83.2, "runs": 11},
     "qwen/qwen3.6-plus:free": {"best_score": 88.6, "avg_score": 84.0, "runs": 5},
-    "qwen/qwen3.5-122b-a10b": {"best_score": 85.5, "avg_score": 80.8},
 }
 
 
