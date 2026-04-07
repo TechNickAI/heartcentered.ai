@@ -42,6 +42,11 @@ Static HTML/CSS/JS page — no build step, no framework.
 5. **Regenerate llms.txt** —
    `python -c "import sys; sys.path.insert(0, 'model-benchmarks/scripts'); fm = __import__('importlib').import_module('fetch-model'); data = fm.load_model_data(); fm.generate_llms_txt(data)"`
 
+6. **Update Model Personalities** — the "Model Personalities" section in `index.html`
+   has hardcoded editorial insight cards (9 curated profiles with personality reads and
+   trait chips). When adding/removing models or re-running EQ-Bench, review whether the
+   cards need updating. Trait numbers and editorial claims should match current data.
+
 ### Refreshing existing models
 
 ```bash
