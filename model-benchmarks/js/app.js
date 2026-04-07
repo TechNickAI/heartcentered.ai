@@ -200,7 +200,7 @@
 
     function eqHtml(model) {
         const eq = model.benchmarks?.eq_bench;
-        if (!eq || !eq.v3_score) return `<span class="score-na">—</span>`;
+        if (!eq || eq.v3_score == null) return `<span class="score-na">—</span>`;
         const note = eq.note
             ? `<span class="data-note" title="${esc(eq.note)}">*</span>`
             : "";
@@ -224,8 +224,7 @@
             .join("  ·  ");
         if (traits) tooltipParts.push(traits);
 
-        const pct = Math.min((eq.v3_score / 100) * 100, 100);
-        const tier = pct >= 70 ? "score-high" : pct >= 45 ? "score-mid" : "score-low";
+        const tier = scoreTier(eq.v3_score);
 
         return `
       <span class="eq-detail">
@@ -334,7 +333,7 @@
           </div>
           <div class="card-score-item">
             <div class="card-score-label">EQ</div>
-            <div class="card-score-value ${eqTier(m.benchmarks?.eq_bench?.v3_score)}">${m.benchmarks?.eq_bench?.v3_score ? m.benchmarks.eq_bench.v3_score.toFixed(1) : "—"}</div>
+            <div class="card-score-value ${scoreTier(m.benchmarks?.eq_bench?.v3_score)}">${m.benchmarks?.eq_bench?.v3_score != null ? m.benchmarks.eq_bench.v3_score.toFixed(1) : "—"}</div>
           </div>
           <div class="card-score-item">
             <div class="card-score-label">Chat</div>
@@ -358,13 +357,6 @@
         if (val == null) return "";
         if (val >= 70) return "score-high";
         if (val >= 45) return "score-mid";
-        return "score-low";
-    }
-
-    function eqTier(score) {
-        if (score == null) return "";
-        if (score >= 70) return "score-high";
-        if (score >= 45) return "score-mid";
         return "score-low";
     }
 
