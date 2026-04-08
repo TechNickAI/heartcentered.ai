@@ -57,8 +57,11 @@ CURATED_MODELS = [
 # AA often has multiple variants (reasoning/non-reasoning, effort levels).
 # We pick the "default" variant — non-reasoning or standard effort.
 AA_SLUG_MAP = {
+    "anthropic/claude-haiku-4.5": "claude-4-5-haiku",
     "anthropic/claude-sonnet-4.6": "claude-sonnet-4-6",
     "anthropic/claude-opus-4.6": "claude-opus-4-6",
+    "google/gemma-4-31b-it": "gemma-4-31b",
+    "qwen/qwen3.5-122b-a10b": "qwen3-5-122b-a10b",
     "stepfun/step-3.5-flash": "step-3-5-flash",
     "xiaomi/mimo-v2-pro": "mimo-v2-pro",
     "z-ai/glm-5-turbo": "glm-5-turbo",
@@ -402,9 +405,15 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
                 existing_bench = m.get("benchmarks", {}).get(bench_key, {})
                 if existing_bench and not new_model["benchmarks"].get(bench_key):
                     new_model["benchmarks"][bench_key] = existing_bench
-            # Preserve manually-entered scores (e.g. for models without AA slug)
-            if m.get("scores") and not any(new_model.get("scores", {}).values()):
-                new_model["scores"] = m["scores"]
+            # Preserve individual scores — only overwrite a dimension if the new
+            # value is non-null (avoids clobbering manually-entered scores with
+            # recomputed values that lost an input, e.g. IFBench dropping)
+            existing_scores = m.get("scores", {})
+            new_scores = new_model.get("scores", {})
+            for key in ("reasoning", "coding", "agentic"):
+                if existing_scores.get(key) is not None and new_scores.get(key) is None:
+                    new_scores[key] = existing_scores[key]
+            new_model["scores"] = new_scores
             # Preserve top-level notes
             if m.get("notes") and not new_model.get("notes"):
                 new_model["notes"] = m["notes"]

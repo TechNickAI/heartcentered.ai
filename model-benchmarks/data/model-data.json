@@ -42,7 +42,7 @@
       },
       "scores": {
         "reasoning": 31,
-        "coding": null,
+        "coding": 35.0,
         "agentic": 85.7
       },
       "benchmarks": {
@@ -79,6 +79,18 @@
         },
         "arena": {
           "elo": 1407
+        },
+        "artificial_analysis": {
+          "intelligence_index": 31.1,
+          "coding_index": 29.6,
+          "gpqa": 0.646,
+          "hle": 0.043,
+          "scicode": 0.344,
+          "ifbench": 0.42,
+          "terminalbench_hard": 0.273,
+          "livecodebench": 0.511,
+          "aime_25": 0.39,
+          "mmlu_pro": 0.8
         }
       },
       "sources": {
@@ -456,9 +468,21 @@
         "latency_ms": null,
         "throughput_tps": null
       },
-      "scores": {},
+      "scores": {
+        "reasoning": 52.3,
+        "coding": 38.7,
+        "agentic": 75.6
+      },
       "benchmarks": {
-        "artificial_analysis": {},
+        "artificial_analysis": {
+          "intelligence_index": 39.2,
+          "coding_index": 38.7,
+          "gpqa": 0.857,
+          "hle": 0.227,
+          "scicode": 0.434,
+          "ifbench": 0.756,
+          "terminalbench_hard": 0.364
+        },
         "eq_bench": {
           "v3_score": 66.1,
           "v3_traits": {

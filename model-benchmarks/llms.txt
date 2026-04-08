@@ -13,8 +13,9 @@ Context: 200,000 tokens
 Max output: 64,000 tokens
 Pricing: $1.00 input / $5.00 output per 1M tokens (blended: $2.00)
 Capabilities: tool use, vision, structured output
-Scores (0-100): Reasoning: 31, Agentic: 85.7
+Scores (0-100): Reasoning: 31, Coding: 35.0, Agentic: 85.7
 Speed: 93 tokens/sec, TTFT 0.4s
+Benchmarks (Artificial Analysis): intelligence_index: 31.1, coding_index: 29.6, gpqa: 0.646, hle: 0.043, scicode: 0.344, ifbench: 0.42, terminalbench_hard: 0.273, livecodebench: 0.511, aime_25: 0.39, mmlu_pro: 0.8
 EQ-Bench v3 Score: 68.65/100
 PinchBench: 89.5% best, 78.1% avg (? runs)
 
@@ -73,8 +74,10 @@ Context: 262,144 tokens
 Max output: 131,072 tokens
 Pricing: $0.14 input / $0.40 output per 1M tokens (blended: $0.20)
 Capabilities: tool use, reasoning, vision, structured output
+Scores (0-100): Reasoning: 52.3, Coding: 38.7, Agentic: 75.6
 Speed: 35.9 tokens/sec
 Available via: AkashML, Novita, Parasail, Venice
+Benchmarks (Artificial Analysis): intelligence_index: 39.2, coding_index: 38.7, gpqa: 0.857, hle: 0.227, scicode: 0.434, ifbench: 0.756, terminalbench_hard: 0.364
 EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
 
