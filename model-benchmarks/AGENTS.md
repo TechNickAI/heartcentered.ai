@@ -124,6 +124,8 @@ common pitfalls (AA slug mismatches, rate limits, sparse data for newer models).
 - No build step — Tailwind CDN, inline everything
 - Accessibility is not a priority (decline ARIA suggestions)
 - Always regenerate llms.txt after changing model-data.json
+- Models in model-data.json are sorted alphabetically by name — maintain this order when
+  adding new models to minimize merge conflicts
 
 ## Model Curation
 

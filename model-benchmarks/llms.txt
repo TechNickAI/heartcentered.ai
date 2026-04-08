@@ -81,20 +81,21 @@ Benchmarks (Artificial Analysis): intelligence_index: 39.2, coding_index: 38.7, 
 EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
 
-## MiniMax M2.7
-Provider: MiniMax
-ID: minimax/minimax-m2.7
-Context: 204,800 tokens
+## GLM 5 Turbo
+Provider: Z.ai
+ID: z-ai/glm-5-turbo
+Context: 202,752 tokens
 Max output: 131,072 tokens
-Pricing: $0.30 input / $1.20 output per 1M tokens (blended: $0.53)
+Pricing: $1.20 input / $4.00 output per 1M tokens (blended: $1.90)
 Capabilities: tool use, reasoning, structured output
-Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
-Speed: 41.9 tokens/sec, TTFT 1.385s
-Available via: Minimax
-Benchmarks (Artificial Analysis): intelligence_index: 49.6, coding_index: 41.9, gpqa: 0.874, hle: 0.281, scicode: 0.47, ifbench: 0.757, terminalbench_hard: 0.394
-EQ-Bench v3 Score: 68.75/100
-PinchBench: 89.8% best, 83.2% avg (11 runs)
-Description: Next-generation LLM designed for autonomous, real-world productivity. Advanced agentic capabilities through multi-agent architecture.
+Scores (0-100): Reasoning: 55.8, Coding: 36.8, Agentic: 84.9
+Speed: 42.0 tokens/sec, TTFT 1.77s
+Available via: AtlasCloud, Z.AI
+Benchmarks (Artificial Analysis): intelligence_index: 46.8, coding_index: 36.8, gpqa: 0.847, hle: 0.254, scicode: 0.436, ifbench: 0.732, terminalbench_hard: 0.333
+EQ-Bench v3 Score: 67.7/100
+EQ-Bench Elo: 1631.9
+PinchBench: 86.5% best, 81.6% avg (11 runs)
+Description: Fast inference model from Z.ai designed for agent-driven environments. Deeply optimized for real-world agent workflows.
 
 ## GPT-5.4
 Provider: OpenAI
@@ -122,6 +123,52 @@ Capabilities: tool use, reasoning, vision, web search, structured output
 Scores (0-100): Reasoning: 48, Coding: 51, Agentic: 56
 Speed: 186 tokens/sec
 EQ-Bench v3 Score: 68.65/100
+
+## Grok 4.20
+Provider: xAI
+ID: x-ai/grok-4.20-20260309
+Context: 2,000,000 tokens
+Max output: 128,000 tokens
+Pricing: $2.00 input / $6.00 output per 1M tokens (blended: $3.00)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Scores (0-100): Reasoning: 48.0, Coding: 42, Agentic: 78.9
+Speed: 271.0 tokens/sec, TTFT 10.72s
+Available via: xAI
+Benchmarks (Artificial Analysis): intelligence_index: 48.0, note: Coding index unavailable — AA API rate limited during collection
+EQ-Bench v3 Score: 68.55/100
+EQ-Bench Elo: 856.4
+PinchBench: 82.4% best, 71.8% avg (18 runs)
+Description: xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. Lowest hallucination rate on market.
+
+## MiMo-V2-Pro
+Provider: Xiaomi
+ID: xiaomi/mimo-v2-pro
+Context: 1,048,576 tokens
+Max output: 131,072 tokens
+Pricing: $1.00 input / $3.00 output per 1M tokens (blended: $1.50)
+Capabilities: tool use, reasoning, structured output
+Scores (0-100): Reasoning: 58.2, Coding: 41.4, Agentic: 82.9
+Speed: 35.0 tokens/sec, TTFT 2.07s
+Available via: Xiaomi
+Benchmarks (Artificial Analysis): intelligence_index: 49.2, coding_index: 41.4, gpqa: 0.87, hle: 0.283, scicode: 0.425, ifbench: 0.688, terminalbench_hard: 0.409
+EQ-Bench v3 Score: 70.55/100
+PinchBench: 83.95% best, 80.7% avg (15 runs)
+Description: Xiaomi's flagship foundation model with 1T+ parameters and 1M context length, deeply optimized for agentic scenarios.
+
+## MiniMax M2.7
+Provider: MiniMax
+ID: minimax/minimax-m2.7
+Context: 204,800 tokens
+Max output: 131,072 tokens
+Pricing: $0.30 input / $1.20 output per 1M tokens (blended: $0.53)
+Capabilities: tool use, reasoning, structured output
+Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
+Speed: 41.9 tokens/sec, TTFT 1.385s
+Available via: Minimax
+Benchmarks (Artificial Analysis): intelligence_index: 49.6, coding_index: 41.9, gpqa: 0.874, hle: 0.281, scicode: 0.47, ifbench: 0.757, terminalbench_hard: 0.394
+EQ-Bench v3 Score: 68.75/100
+PinchBench: 89.8% best, 83.2% avg (11 runs)
+Description: Next-generation LLM designed for autonomous, real-world productivity. Advanced agentic capabilities through multi-agent architecture.
 
 ## Qwen3.6 Plus
 Provider: Qwen
@@ -153,53 +200,6 @@ Benchmarks (Artificial Analysis): intelligence_index: 37.8, coding_index: 31.6, 
 EQ-Bench v3 Score: 69.25/100
 PinchBench: 85.3% best, 76.9% avg (18 runs)
 Description: StepFun's most capable open-source model. Sparse MoE architecture activating 11B of 196B parameters per token.
-
-## MiMo-V2-Pro
-Provider: Xiaomi
-ID: xiaomi/mimo-v2-pro
-Context: 1,048,576 tokens
-Max output: 131,072 tokens
-Pricing: $1.00 input / $3.00 output per 1M tokens (blended: $1.50)
-Capabilities: tool use, reasoning, structured output
-Scores (0-100): Reasoning: 58.2, Coding: 41.4, Agentic: 82.9
-Speed: 35.0 tokens/sec, TTFT 2.07s
-Available via: Xiaomi
-Benchmarks (Artificial Analysis): intelligence_index: 49.2, coding_index: 41.4, gpqa: 0.87, hle: 0.283, scicode: 0.425, ifbench: 0.688, terminalbench_hard: 0.409
-EQ-Bench v3 Score: 70.55/100
-PinchBench: 83.95% best, 80.7% avg (15 runs)
-Description: Xiaomi's flagship foundation model with 1T+ parameters and 1M context length, deeply optimized for agentic scenarios.
-
-## GLM 5 Turbo
-Provider: Z.ai
-ID: z-ai/glm-5-turbo
-Context: 202,752 tokens
-Max output: 131,072 tokens
-Pricing: $1.20 input / $4.00 output per 1M tokens (blended: $1.90)
-Capabilities: tool use, reasoning, structured output
-Scores (0-100): Reasoning: 55.8, Coding: 36.8, Agentic: 84.9
-Speed: 42.0 tokens/sec, TTFT 1.77s
-Available via: AtlasCloud, Z.AI
-Benchmarks (Artificial Analysis): intelligence_index: 46.8, coding_index: 36.8, gpqa: 0.847, hle: 0.254, scicode: 0.436, ifbench: 0.732, terminalbench_hard: 0.333
-EQ-Bench v3 Score: 67.7/100
-EQ-Bench Elo: 1631.9
-PinchBench: 86.5% best, 81.6% avg (11 runs)
-Description: Fast inference model from Z.ai designed for agent-driven environments. Deeply optimized for real-world agent workflows.
-
-## Grok 4.20
-Provider: xAI
-ID: x-ai/grok-4.20-20260309
-Context: 2,000,000 tokens
-Max output: 128,000 tokens
-Pricing: $2.00 input / $6.00 output per 1M tokens (blended: $3.00)
-Capabilities: tool use, reasoning, vision, web search, structured output
-Scores (0-100): Reasoning: 48.0, Coding: 42, Agentic: 78.9
-Speed: 271.0 tokens/sec, TTFT 10.72s
-Available via: xAI
-Benchmarks (Artificial Analysis): intelligence_index: 48.0, note: Coding index unavailable — AA API rate limited during collection
-EQ-Bench v3 Score: 68.55/100
-EQ-Bench Elo: 856.4
-PinchBench: 82.4% best, 71.8% avg (18 runs)
-Description: xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. Lowest hallucination rate on market.
 
 ---
 Source: https://heartcentered.ai/model-benchmarks/
