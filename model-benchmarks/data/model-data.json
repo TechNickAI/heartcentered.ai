@@ -105,13 +105,8 @@
       "context_window": 1000000,
       "max_output": 128000,
       "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text", "image"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 5.0,
@@ -198,12 +193,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "Amazon Bedrock",
-          "Anthropic",
-          "Azure",
-          "Google"
-        ]
+        "providers": ["Amazon Bedrock", "Anthropic", "Azure", "Google"]
       },
       "last_updated": "2026-04-07"
     },
@@ -215,13 +205,8 @@
       "context_window": 1000000,
       "max_output": 128000,
       "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text", "image"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 3.0,
@@ -308,12 +293,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "Amazon Bedrock",
-          "Anthropic",
-          "Azure",
-          "Google"
-        ]
+        "providers": ["Amazon Bedrock", "Anthropic", "Azure", "Google"]
       },
       "last_updated": "2026-04-07"
     },
@@ -325,15 +305,8 @@
       "context_window": 1048576,
       "max_output": 65536,
       "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text", "image", "audio", "video"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 2.0,
@@ -416,9 +389,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "Google"
-        ]
+        "providers": ["Google"]
       },
       "last_updated": "2026-04-07"
     },
@@ -431,14 +402,8 @@
       "context_window": 262144,
       "max_output": 131072,
       "modalities": {
-        "input": [
-          "image",
-          "text",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["image", "text", "video"],
+        "output": ["text"]
       },
       "tokenizer": "Gemma",
       "pricing": {
@@ -458,12 +423,7 @@
         "structured_output": true
       },
       "endpoint_stats": {
-        "providers": [
-          "AkashML",
-          "Novita",
-          "Parasail",
-          "Venice"
-        ],
+        "providers": ["AkashML", "Novita", "Parasail", "Venice"],
         "uptime_24h": 99.16,
         "latency_ms": null,
         "throughput_tps": null
@@ -538,12 +498,8 @@
       "context_window": 202752,
       "max_output": 131072,
       "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 1.2,
@@ -630,10 +586,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "AtlasCloud",
-          "Z.AI"
-        ]
+        "providers": ["AtlasCloud", "Z.AI"]
       },
       "last_updated": "2026-04-07"
     },
@@ -645,13 +598,8 @@
       "context_window": 1050000,
       "max_output": 128000,
       "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text", "image"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 2.5,
@@ -734,9 +682,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "OpenAI"
-        ]
+        "providers": ["OpenAI"]
       },
       "last_updated": "2026-04-07"
     },
@@ -813,13 +759,8 @@
       "context_window": 2000000,
       "max_output": 128000,
       "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text", "image"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 2.0,
@@ -891,9 +832,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "xAI"
-        ]
+        "providers": ["xAI"]
       },
       "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
       "last_updated": "2026-04-07"
@@ -906,12 +845,8 @@
       "context_window": 1048576,
       "max_output": 131072,
       "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 1.0,
@@ -986,9 +921,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "Xiaomi"
-        ]
+        "providers": ["Xiaomi"]
       },
       "last_updated": "2026-04-07"
     },
@@ -1000,12 +933,8 @@
       "context_window": 204800,
       "max_output": 131072,
       "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 0.3,
@@ -1080,9 +1009,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "Minimax"
-        ]
+        "providers": ["Minimax"]
       },
       "last_updated": "2026-04-07"
     },
@@ -1094,14 +1021,8 @@
       "context_window": 1000000,
       "max_output": 65536,
       "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text", "image", "video"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 0.0,
@@ -1180,9 +1101,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "Qwen"
-        ]
+        "providers": ["Qwen"]
       },
       "notes": "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly.",
       "last_updated": "2026-04-07"
@@ -1195,12 +1114,8 @@
       "context_window": 262144,
       "max_output": 65536,
       "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
+        "input": ["text"],
+        "output": ["text"]
       },
       "pricing": {
         "input_per_m": 0.1,
@@ -1251,11 +1166,7 @@
         }
       },
       "endpoint_stats": {
-        "providers": [
-          "DeepInfra",
-          "SiliconFlow",
-          "StepFun"
-        ]
+        "providers": ["DeepInfra", "SiliconFlow", "StepFun"]
       },
       "last_updated": "2026-04-07"
     }

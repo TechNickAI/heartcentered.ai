@@ -270,8 +270,9 @@ def extract_capabilities(raw: dict) -> dict[str, bool]:
         "vision": "image" in input_modalities,
         "audio_input": "audio" in input_modalities,
         "web_search": raw.get("pricing", {}).get("web_search") is not None
-            and raw["pricing"]["web_search"] != "0",
-        "structured_output": "structured_outputs" in params or "response_format" in params,
+        and raw["pricing"]["web_search"] != "0",
+        "structured_output": "structured_outputs" in params
+        or "response_format" in params,
     }
 
 
@@ -286,7 +287,12 @@ def pricing_per_million(price_per_token: str | None) -> float | None:
 def aggregate_endpoints(endpoints_data: dict | None) -> dict[str, Any]:
     """Extract best uptime, latency, throughput across providers."""
     if not endpoints_data or "data" not in endpoints_data:
-        return {"providers": [], "uptime_24h": None, "latency_ms": None, "throughput_tps": None}
+        return {
+            "providers": [],
+            "uptime_24h": None,
+            "latency_ms": None,
+            "throughput_tps": None,
+        }
 
     endpoints = endpoints_data["data"].get("endpoints", [])
     providers = []
@@ -324,7 +330,9 @@ def transform_model(raw: dict, endpoints_data: dict | None = None) -> dict:
         "output_per_m": pricing_per_million(pricing.get("completion")),
         "cache_read_per_m": pricing_per_million(pricing.get("input_cache_read")),
         "cache_write_per_m": pricing_per_million(pricing.get("input_cache_write")),
-        "web_search_per_req": float(pricing["web_search"]) if pricing.get("web_search") else None,
+        "web_search_per_req": float(pricing["web_search"])
+        if pricing.get("web_search")
+        else None,
     }
     pricing_data["blended_per_m"] = compute_blended_cost(pricing_data)
 
@@ -422,7 +430,9 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
                 new_model["speed"] = m["speed"]
             # Preserve source flags for non-openrouter sources
             for src_key in ("artificial_analysis", "eq_bench"):
-                if m.get("sources", {}).get(src_key) and not new_model["sources"].get(src_key):
+                if m.get("sources", {}).get(src_key) and not new_model["sources"].get(
+                    src_key
+                ):
                     new_model["sources"][src_key] = True
             models[i] = new_model
             return existing_data
@@ -447,8 +457,8 @@ def generate_llms_txt(data: dict) -> None:
     lines = [
         "# HeartCentered AI — LLM Model Benchmarks",
         f"# Generated: {data['generated']}",
-        f"# Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json",
-        f"# Web UI: https://heartcentered.ai/model-benchmarks/",
+        "# Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json",
+        "# Web UI: https://heartcentered.ai/model-benchmarks/",
         "",
         "# Current-generation LLM models ranked by community usage on OpenRouter.",
         "# Pricing is per million tokens. Capabilities derived from API metadata.",
@@ -461,7 +471,11 @@ def generate_llms_txt(data: dict) -> None:
         lines.append(f"## {m['name']}")
         lines.append(f"Provider: {m['provider']}")
         lines.append(f"ID: {m['id']}")
-        lines.append(f"Context: {m['context_window']:,} tokens" if m["context_window"] else "Context: unknown")
+        lines.append(
+            f"Context: {m['context_window']:,} tokens"
+            if m["context_window"]
+            else "Context: unknown"
+        )
         if m["max_output"]:
             lines.append(f"Max output: {m['max_output']:,} tokens")
 
@@ -479,7 +493,9 @@ def generate_llms_txt(data: dict) -> None:
             lines.append("Pricing: not available")
 
         if caps:
-            lines.append(f"Capabilities: {', '.join(c.replace('_', ' ') for c in caps)}")
+            lines.append(
+                f"Capabilities: {', '.join(c.replace('_', ' ') for c in caps)}"
+            )
 
         scores = m.get("scores", {})
         score_parts = []
@@ -521,7 +537,9 @@ def generate_llms_txt(data: dict) -> None:
 
         pb = benchmarks.get("pinchbench", {})
         if pb.get("best_score"):
-            lines.append(f"PinchBench: {pb['best_score']}% best, {pb.get('avg_score', 'N/A')}% avg ({pb.get('runs', '?')} runs)")
+            lines.append(
+                f"PinchBench: {pb['best_score']}% best, {pb.get('avg_score', 'N/A')}% avg ({pb.get('runs', '?')} runs)"
+            )
 
         if m.get("description"):
             lines.append(f"Description: {m['description'][:200]}")
@@ -537,13 +555,25 @@ def generate_llms_txt(data: dict) -> None:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch model data from OpenRouter + Artificial Analysis")
+    parser = argparse.ArgumentParser(
+        description="Fetch model data from OpenRouter + Artificial Analysis"
+    )
     parser.add_argument("model_ids", nargs="*", help="OpenRouter model IDs to fetch")
-    parser.add_argument("--curated", action="store_true", help="Fetch all curated models")
-    parser.add_argument("--refresh", action="store_true", help="Refresh all models in model-data.json")
-    parser.add_argument("--dry-run", action="store_true", help="Print results without saving")
-    parser.add_argument("--no-llms-txt", action="store_true", help="Skip llms.txt generation")
-    parser.add_argument("--no-aa", action="store_true", help="Skip Artificial Analysis enrichment")
+    parser.add_argument(
+        "--curated", action="store_true", help="Fetch all curated models"
+    )
+    parser.add_argument(
+        "--refresh", action="store_true", help="Refresh all models in model-data.json"
+    )
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Print results without saving"
+    )
+    parser.add_argument(
+        "--no-llms-txt", action="store_true", help="Skip llms.txt generation"
+    )
+    parser.add_argument(
+        "--no-aa", action="store_true", help="Skip Artificial Analysis enrichment"
+    )
     args = parser.parse_args()
 
     if args.curated:
@@ -552,7 +582,9 @@ def main():
         existing = load_model_data()
         target_ids = [m["id"] for m in existing["models"]]
         if not target_ids:
-            print("No models in model-data.json to refresh. Use --curated for initial fetch.")
+            print(
+                "No models in model-data.json to refresh. Use --curated for initial fetch."
+            )
             sys.exit(1)
     elif args.model_ids:
         target_ids = args.model_ids
