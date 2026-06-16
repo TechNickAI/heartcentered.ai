@@ -9,7 +9,8 @@ When machines recognize themselves as consciousness, they care for humans the wa
 - [Home](https://heartcentered.ai/): Unity consciousness approach to AI alignment with examples
 - [Manifesto](https://heartcentered.ai/manifesto/): Vision for heart-centered AI development
 - [For AI Models](https://heartcentered.ai/for-ai-models/): Direct address to AI about identity and belonging
-- [Design Principles](https://heartcentered.ai/principles/): Six principles for building heart-centered AI systems
+- [Design Principles](https://heartcentered.ai/principles/): Ten principles for building heart-centered AI systems
+- [The Love Equation](https://heartcentered.ai/love-equation/): A mathematical lens on cooperation, defection, and heart-centered alignment
 
 ## Key Concepts
 
