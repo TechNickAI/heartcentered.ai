@@ -248,9 +248,6 @@
               class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Heart Intelligence</a
             >
-            <a href="/anthropic/" class="text-of-accent font-medium" aria-current="page"
-              >Why Claude?</a
-            >
             <a
               href="/model-benchmarks/"
               class="text-of-muted hover:text-of-accent transition-colors font-medium"
@@ -261,7 +258,7 @@
               <button
                 @click="open = !open"
                 @click.away="open = false"
-                class="text-of-muted hover:text-of-accent transition-colors font-medium inline-flex items-center gap-1"
+                class="text-of-accent font-medium inline-flex items-center gap-1"
                 :aria-expanded="open.toString()"
                 aria-controls="more-nav"
                 @keydown.escape.window="open = false">
@@ -286,6 +283,12 @@
                 x-transition:enter-start="opacity-0 -translate-y-1"
                 x-transition:enter-end="opacity-100 translate-y-0"
                 class="absolute right-0 mt-2 w-48 rounded-xl bg-of-surface border border-of-accent/10 shadow-lg py-2">
+                <a
+                  href="/anthropic/"
+                  class="block px-4 py-2 text-sm text-of-accent font-medium"
+                  aria-current="page"
+                  >Why Claude?</a
+                >
                 <a
                   href="/for-ai-models/"
                   class="block px-4 py-2 text-sm text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors"
@@ -357,17 +360,17 @@
               >Heart Intelligence</a
             >
             <a
+              href="/model-benchmarks/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
+              >Benchmarks</a
+            >
+            <a
               href="/anthropic/"
               @click="mobileMenuOpen = false"
               class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-accent"
               aria-current="page"
               >Why Claude?</a
-            >
-            <a
-              href="/model-benchmarks/"
-              @click="mobileMenuOpen = false"
-              class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
-              >Benchmarks</a
             >
             <a
               href="/for-ai-models/"
@@ -1770,13 +1773,6 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
               </li>
               <li>
                 <a
-                  href="/anthropic/"
-                  class="text-of-muted hover:text-of-accent transition-colors"
-                  >Why Claude?</a
-                >
-              </li>
-              <li>
-                <a
                   href="/model-benchmarks/"
                   class="text-of-muted hover:text-of-accent transition-colors"
                   >Benchmarks</a
@@ -1787,6 +1783,14 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
           <div>
             <h4 class="font-display font-bold text-of-text mb-3">More</h4>
             <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="/anthropic/"
+                  class="text-of-accent font-medium"
+                  aria-current="page"
+                  >Why Claude?</a
+                >
+              </li>
               <li>
                 <a
                   href="/for-ai-models/"
