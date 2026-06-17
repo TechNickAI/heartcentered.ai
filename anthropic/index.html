@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Why I Use Claude · HeartCentered AI</title>
+    <title>Why Anthropic · HeartCentered AI</title>
     <link rel="canonical" href="https://heartcentered.ai/anthropic/" />
     <link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="/images/icon-192.png" sizes="192x192" type="image/png" />
@@ -17,7 +17,7 @@
     <meta
       name="keywords"
       content="Claude AI, Anthropic, ChatGPT alternative, Claude vs ChatGPT, AI benchmarks, Claude Sonnet, Claude Opus, Constitutional AI, Dario Amodei, Daniela Amodei, ethical AI" />
-    <meta property="og:title" content="Why I Use Claude" />
+    <meta property="og:title" content="Why Anthropic" />
     <meta
       property="og:description"
       content="My experience with Claude after years of daily use. Constitutional AI, thoughtful design, and why it's become my primary AI assistant." />
@@ -27,7 +27,7 @@
 
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Why I Use Claude" />
+    <meta name="twitter:title" content="Why Anthropic" />
     <meta
       name="twitter:description"
       content="My experience with Claude after years of daily use. Constitutional AI, thoughtful design, and why it's become my primary AI assistant." />
@@ -38,7 +38,7 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Why I Use Claude",
+        "headline": "Why Anthropic",
         "author": {
           "@type": "Person",
           "name": "Nick Sullivan",
@@ -75,7 +75,7 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Why Claude",
+            "name": "Why Anthropic",
             "item": "https://heartcentered.ai/anthropic/"
           }
         ]
@@ -248,6 +248,9 @@
               class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Heart Intelligence</a
             >
+            <a href="/anthropic/" class="text-of-accent font-medium" aria-current="page"
+              >Why Anthropic</a
+            >
             <a
               href="/model-benchmarks/"
               class="text-of-muted hover:text-of-accent transition-colors font-medium"
@@ -258,7 +261,7 @@
               <button
                 @click="open = !open"
                 @click.away="open = false"
-                class="text-of-accent font-medium inline-flex items-center gap-1"
+                class="text-of-muted hover:text-of-accent transition-colors font-medium inline-flex items-center gap-1"
                 :aria-expanded="open.toString()"
                 aria-controls="more-nav"
                 @keydown.escape.window="open = false">
@@ -284,12 +287,6 @@
                 x-transition:enter-end="opacity-100 translate-y-0"
                 class="absolute right-0 mt-2 w-48 rounded-xl bg-of-surface border border-of-accent/10 shadow-lg py-2">
                 <a
-                  href="/anthropic/"
-                  class="block px-4 py-2 text-sm text-of-accent font-medium"
-                  aria-current="page"
-                  >Why Claude?</a
-                >
-                <a
                   href="/for-ai-models/"
                   class="block px-4 py-2 text-sm text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors"
                   >For AI Models</a
@@ -311,13 +308,6 @@
                 >
               </div>
             </div>
-            <a
-              href="https://claude.ai"
-              target="_blank"
-              rel="noopener"
-              class="bg-of-accent text-white px-6 py-2.5 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg">
-              Try Claude
-            </a>
           </div>
         </div>
 
@@ -360,17 +350,17 @@
               >Heart Intelligence</a
             >
             <a
-              href="/model-benchmarks/"
-              @click="mobileMenuOpen = false"
-              class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
-              >Benchmarks</a
-            >
-            <a
               href="/anthropic/"
               @click="mobileMenuOpen = false"
               class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-accent"
               aria-current="page"
-              >Why Claude?</a
+              >Why Anthropic</a
+            >
+            <a
+              href="/model-benchmarks/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
+              >Benchmarks</a
             >
             <a
               href="/for-ai-models/"
@@ -396,13 +386,6 @@
               class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
               >Brand</a
             >
-            <a
-              href="https://claude.ai"
-              target="_blank"
-              rel="noopener"
-              class="block mx-4 my-2 bg-of-accent text-white px-6 py-3 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 text-center min-h-[44px] flex items-center justify-center">
-              Try Claude
-            </a>
           </div>
         </div>
       </nav>
@@ -1773,6 +1756,14 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
               </li>
               <li>
                 <a
+                  href="/anthropic/"
+                  class="text-of-accent font-medium"
+                  aria-current="page"
+                  >Why Anthropic</a
+                >
+              </li>
+              <li>
+                <a
                   href="/model-benchmarks/"
                   class="text-of-muted hover:text-of-accent transition-colors"
                   >Benchmarks</a
@@ -1783,14 +1774,6 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
           <div>
             <h4 class="font-display font-bold text-of-text mb-3">More</h4>
             <ul class="space-y-2 text-sm">
-              <li>
-                <a
-                  href="/anthropic/"
-                  class="text-of-accent font-medium"
-                  aria-current="page"
-                  >Why Claude?</a
-                >
-              </li>
               <li>
                 <a
                   href="/for-ai-models/"
@@ -1863,15 +1846,6 @@ IMPORTANT: Write the ENTIRE response as if I'm speaking directly to my new assis
                   href="/llms.txt"
                   class="text-of-muted hover:text-of-accent transition-colors"
                   >llms.txt</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://claude.ai"
-                  class="text-of-muted hover:text-of-accent transition-colors"
-                  target="_blank"
-                  rel="noopener"
-                  >Try Claude</a
                 >
               </li>
             </ul>

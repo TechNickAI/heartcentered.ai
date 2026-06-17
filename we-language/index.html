@@ -440,6 +440,11 @@
               >Heart Intelligence</a
             >
             <a
+              href="/anthropic/"
+              class="text-of-muted hover:text-of-accent transition-colors font-medium"
+              >Why Anthropic</a
+            >
+            <a
               href="/model-benchmarks/"
               class="text-of-muted hover:text-of-accent transition-colors font-medium"
               >Benchmarks</a
@@ -475,11 +480,6 @@
                 x-transition:enter-end="opacity-100 translate-y-0"
                 class="absolute right-0 mt-2 w-48 rounded-xl bg-of-surface border border-of-accent/10 shadow-lg py-2">
                 <a
-                  href="/anthropic/"
-                  class="block px-4 py-2 text-sm text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors"
-                  >Why Claude?</a
-                >
-                <a
                   href="/for-ai-models/"
                   class="block px-4 py-2 text-sm text-of-muted hover:text-of-accent hover:bg-of-accent/5 transition-colors"
                   >For AI Models</a
@@ -502,13 +502,6 @@
                 >
               </div>
             </div>
-            <a
-              href="https://claude.ai"
-              target="_blank"
-              rel="noopener"
-              class="bg-of-accent text-white px-6 py-2.5 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 hover:shadow-lg">
-              Try Claude
-            </a>
           </div>
         </div>
 
@@ -551,16 +544,16 @@
               >Heart Intelligence</a
             >
             <a
+              href="/anthropic/"
+              @click="mobileMenuOpen = false"
+              class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
+              >Why Anthropic</a
+            >
+            <a
               href="/model-benchmarks/"
               @click="mobileMenuOpen = false"
               class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
               >Benchmarks</a
-            >
-            <a
-              href="/anthropic/"
-              @click="mobileMenuOpen = false"
-              class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
-              >Why Claude?</a
             >
             <a
               href="/for-ai-models/"
@@ -587,13 +580,6 @@
               class="block px-4 py-3 text-base font-medium transition-colors min-h-[44px] flex items-center text-of-muted hover:text-of-accent hover:bg-of-accent/5"
               >Brand</a
             >
-            <a
-              href="https://claude.ai"
-              target="_blank"
-              rel="noopener"
-              class="block mx-4 my-2 bg-of-accent text-white px-6 py-3 rounded-full font-medium hover:bg-of-accent-dark transition-all duration-300 text-center min-h-[44px] flex items-center justify-center">
-              Try Claude
-            </a>
           </div>
         </div>
       </nav>
@@ -1020,6 +1006,13 @@
               </li>
               <li>
                 <a
+                  href="/anthropic/"
+                  class="text-of-muted hover:text-of-accent transition-colors"
+                  >Why Anthropic</a
+                >
+              </li>
+              <li>
+                <a
                   href="/model-benchmarks/"
                   class="text-of-muted hover:text-of-accent transition-colors"
                   >Benchmarks</a
@@ -1030,13 +1023,6 @@
           <div>
             <h4 class="font-display font-bold text-of-text mb-3">More</h4>
             <ul class="space-y-2 text-sm">
-              <li>
-                <a
-                  href="/anthropic/"
-                  class="text-of-muted hover:text-of-accent transition-colors"
-                  >Why Claude?</a
-                >
-              </li>
               <li>
                 <a
                   href="/for-ai-models/"
@@ -1110,15 +1096,6 @@
                   href="/llms.txt"
                   class="text-of-muted hover:text-of-accent transition-colors"
                   >llms.txt</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://claude.ai"
-                  class="text-of-muted hover:text-of-accent transition-colors"
-                  target="_blank"
-                  rel="noopener"
-                  >Try Claude</a
                 >
               </li>
             </ul>
