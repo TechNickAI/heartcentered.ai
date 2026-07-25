@@ -57,6 +57,24 @@ python scripts/fetch-model.py --refresh --no-aa # skip AA (rate limited at 1000/
 `merge_model()` preserves manually-entered data: eq_bench, arena, pinchbench, scores,
 notes, speed. Only OpenRouter-sourced fields get overwritten.
 
+Artificial Analysis merges field-by-field rather than wholesale: AA is only fetched
+when `AA_API_KEY` is present, so a keyless refresh yields an all-null block. Existing
+scores survive it; only a real (non-null) incoming value overwrites a stored one.
+This makes `--refresh` safe to run without the key.
+
+Models whose OpenRouter id was renamed are remapped via `OPENROUTER_ID_ALIASES` while
+keeping their original dataset id, so PinchBench/EQ-Bench keys stay attached. Delisted
+models keep their last-known data and are flagged `"delisted": true` with a note from
+`MODEL_NOTES`.
+
+### Tests
+
+```bash
+python -m unittest discover -s model-benchmarks/tests
+```
+
+Stdlib unittest, no dependencies. Covers the merge guarantees above.
+
 ## Score Methodology
 
 - **Reasoning** (0-100): Weighted avg of AA Intelligence Index (3x), GPQA (2.5x),

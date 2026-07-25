@@ -1,0 +1,128 @@
+"""Tests for the fetch-model.py data pipeline.
+
+Run: python -m unittest discover -s model-benchmarks/tests
+
+Focus is merge_model(), which guards manually-curated benchmark data against
+being clobbered by an automated refresh. Artificial Analysis is the subtle
+case: it is only fetched when AA_API_KEY is set, so a keyless refresh yields
+an all-null block that must not overwrite real scores.
+"""
+
+import importlib.util
+import sys
+import unittest
+from pathlib import Path
+
+_SRC = Path(__file__).resolve().parent.parent / "scripts" / "fetch-model.py"
+_spec = importlib.util.spec_from_file_location("fetch_model", _SRC)
+fm = importlib.util.module_from_spec(_spec)
+sys.modules["fetch_model"] = fm
+_spec.loader.exec_module(fm)
+
+REAL = {"intelligence_index": 46.5, "coding_index": 47.6, "gpqa": 0.84}
+NULLED = dict.fromkeys(REAL)
+
+
+def stored(aa):
+    """A dataset holding one model with curated benchmark data."""
+    return {
+        "models": [
+            {
+                "id": "acme/model-1",
+                "provider": "acme",
+                "name": "Model 1",
+                "benchmarks": {
+                    "artificial_analysis": aa,
+                    "eq_bench": {"score": 77.7},
+                    "arena": {},
+                    "pinchbench": {},
+                },
+                "scores": {"reasoning": 5, "coding": 6, "agentic": 7},
+                "sources": {"artificial_analysis": True, "eq_bench": True},
+                "notes": "hand-written note",
+                "speed": {"tps": 100},
+            }
+        ]
+    }
+
+
+def refreshed(aa, model_id="acme/model-1"):
+    """What a bare OpenRouter refresh produces: no curated data of its own."""
+    return {
+        "id": model_id,
+        "provider": "acme",
+        "name": "Model 1",
+        "benchmarks": {"artificial_analysis": aa, "eq_bench": {}},
+        "scores": dict.fromkeys(("reasoning", "coding", "agentic")),
+        "sources": {"artificial_analysis": False, "eq_bench": False},
+    }
+
+
+def merge(aa_stored, aa_new):
+    return fm.merge_model(stored(aa_stored), refreshed(aa_new))["models"][0]
+
+
+class ArtificialAnalysisPreservation(unittest.TestCase):
+    """A keyless refresh must never destroy previously-fetched AA scores."""
+
+    def test_keyless_refresh_preserves_scores(self):
+        self.assertEqual(merge(REAL, NULLED)["benchmarks"]["artificial_analysis"], REAL)
+
+    def test_fresh_value_overwrites_stale(self):
+        aa = merge(REAL, {**NULLED, "intelligence_index": 51.0})["benchmarks"][
+            "artificial_analysis"
+        ]
+        self.assertEqual(aa["intelligence_index"], 51.0)
+        self.assertEqual(aa["coding_index"], 47.6, "partial update dropped a field")
+
+    def test_repeated_refreshes_are_idempotent(self):
+        data = stored(REAL)
+        for _ in range(3):
+            data = fm.merge_model(data, refreshed(NULLED))
+        self.assertEqual(data["models"][0]["benchmarks"]["artificial_analysis"], REAL)
+
+    def test_model_without_prior_scores_accepts_incoming(self):
+        self.assertEqual(merge({}, REAL)["benchmarks"]["artificial_analysis"], REAL)
+
+
+class CuratedDataPreservation(unittest.TestCase):
+    """The guarantees AGENTS.md documents for merge_model()."""
+
+    def setUp(self):
+        self.model = merge(REAL, NULLED)
+
+    def test_manual_benchmarks_survive(self):
+        self.assertEqual(self.model["benchmarks"]["eq_bench"], {"score": 77.7})
+
+    def test_scores_survive(self):
+        self.assertEqual(self.model["scores"]["reasoning"], 5)
+
+    def test_notes_and_speed_survive(self):
+        self.assertEqual(self.model["notes"], "hand-written note")
+        self.assertEqual(self.model["speed"], {"tps": 100})
+
+    def test_source_flags_survive(self):
+        self.assertIs(self.model["sources"]["artificial_analysis"], True)
+
+    def test_new_model_is_appended(self):
+        data = fm.merge_model(stored(REAL), refreshed(REAL, "acme/model-2"))
+        self.assertEqual(
+            {m["id"] for m in data["models"]}, {"acme/model-1", "acme/model-2"}
+        )
+
+
+class AliasMap(unittest.TestCase):
+    """OpenRouter renames slugs; aliases keep dataset ids stable."""
+
+    def test_aliases_are_not_self_referential(self):
+        for old, new in fm.OPENROUTER_ID_ALIASES.items():
+            self.assertNotEqual(old, new)
+
+    def test_noted_models_are_documented(self):
+        """Every alias/delisted entry needs a note explaining the divergence."""
+        for model_id in fm.MODEL_NOTES:
+            self.assertTrue(fm.MODEL_NOTES[model_id].strip())
+
+
+if __name__ == "__main__":
+    unittest.main()

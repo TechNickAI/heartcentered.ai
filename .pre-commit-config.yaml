@@ -64,3 +64,12 @@ repos:
     hooks:
       - id: actionlint
         name: Check GitHub Actions
+
+  - repo: local
+    hooks:
+      - id: model-benchmarks-tests
+        name: Test model-benchmarks pipeline
+        entry: python -m unittest discover -s model-benchmarks/tests
+        language: system
+        pass_filenames: false
+        files: ^model-benchmarks/(scripts|tests)/
