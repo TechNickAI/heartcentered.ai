@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-04-07T05:56:53Z
+# Generated: 2026-07-25T08:58:52Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -12,12 +12,14 @@ ID: anthropic/claude-haiku-4.5
 Context: 200,000 tokens
 Max output: 64,000 tokens
 Pricing: $1.00 input / $5.00 output per 1M tokens (blended: $2.00)
-Capabilities: tool use, vision, structured output
+Capabilities: tool use, reasoning, vision, web search, structured output
 Scores (0-100): Reasoning: 31, Coding: 35.0, Agentic: 85.7
 Speed: 93 tokens/sec, TTFT 0.4s
+Available via: Amazon Bedrock, Anthropic, Azure, Google
 Benchmarks (Artificial Analysis): intelligence_index: 31.1, coding_index: 29.6, gpqa: 0.646, hle: 0.043, scicode: 0.344, ifbench: 0.42, terminalbench_hard: 0.273, livecodebench: 0.511, aime_25: 0.39, mmlu_pro: 0.8
 EQ-Bench v3 Score: 68.65/100
 PinchBench: 89.5% best, 78.1% avg (? runs)
+Description: Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s perfor
 
 ## Claude Opus 4.6
 Provider: Anthropic
@@ -33,7 +35,7 @@ Benchmarks (Artificial Analysis): intelligence_index: 46.5, coding_index: 47.6, 
 EQ-Bench v3 Score: 71.85/100
 EQ-Bench Elo: 1857.8
 PinchBench: 93.3% best, 83.1% avg (19 runs)
-Description: Anthropic's strongest model for coding and long-running professional tasks. Built for agents that operate across entire workflows.
+Description: Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially eff
 
 ## Claude Sonnet 4.6
 Provider: Anthropic
@@ -49,53 +51,52 @@ Benchmarks (Artificial Analysis): intelligence_index: 44.4, coding_index: 46.4, 
 EQ-Bench v3 Score: 71.7/100
 EQ-Bench Elo: 1876.8
 PinchBench: 88.0% best, 81.1% avg (19 runs)
-Description: Anthropic's most capable Sonnet-class model. Frontier performance across coding, agents, and professional work.
+Description: Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, 
 
-## Gemini 3.1 Pro
+## Gemini 3.1 Pro Preview
 Provider: Google
 ID: google/gemini-3.1-pro-preview-20260219
 Context: 1,048,576 tokens
 Max output: 65,536 tokens
 Pricing: $2.00 input / $12.00 output per 1M tokens (blended: $4.50)
-Capabilities: tool use, reasoning, vision, structured output
+Capabilities: tool use, reasoning, vision, audio input, web search, structured output
 Scores (0-100): Reasoning: 57.0, Coding: 56, Agentic: 83.5
 Speed: 127.0 tokens/sec, TTFT 30.66s
-Available via: Google
+Available via: Google, Google AI Studio
 Benchmarks (Artificial Analysis): intelligence_index: 57.0, note: Coding index unavailable — AA API rate limited during collection
 EQ-Bench v3 Score: 68.95/100
 EQ-Bench Elo: 1548.7
 PinchBench: 86.7% best, 77.0% avg (15 runs)
-Description: Google's frontier reasoning model with enhanced software engineering performance, improved agentic reliability, and multimodal input support.
+Description: Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows
 
 ## Gemma 4 31B
 Provider: Google
 ID: google/gemma-4-31b-it
 Context: 262,144 tokens
-Max output: 131,072 tokens
+Max output: 262,144 tokens
 Pricing: $0.14 input / $0.40 output per 1M tokens (blended: $0.20)
 Capabilities: tool use, reasoning, vision, structured output
 Scores (0-100): Reasoning: 52.3, Coding: 38.7, Agentic: 75.6
 Speed: 35.9 tokens/sec
-Available via: AkashML, Novita, Parasail, Venice
+Available via: Cerebras, Chutes, CoreWeave, Crusoe, DeepInfra, Friendli, ModelRun, Morph, Novita, OpenInference, Parasail, Phala, SambaNova, SiliconFlow, Together, Venice
 Benchmarks (Artificial Analysis): intelligence_index: 39.2, coding_index: 38.7, gpqa: 0.857, hle: 0.227, scicode: 0.434, ifbench: 0.756, terminalbench_hard: 0.364
 EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
 
-## GLM 5 Turbo
-Provider: Z.ai
-ID: z-ai/glm-5-turbo
-Context: 202,752 tokens
+## MiniMax M2.7
+Provider: MiniMax
+ID: minimax/minimax-m2.7
+Context: 204,800 tokens
 Max output: 131,072 tokens
-Pricing: $1.20 input / $4.00 output per 1M tokens (blended: $1.90)
+Pricing: $0.25 input / $1.00 output per 1M tokens (blended: $0.44)
 Capabilities: tool use, reasoning, structured output
-Scores (0-100): Reasoning: 55.8, Coding: 36.8, Agentic: 84.9
-Speed: 42.0 tokens/sec, TTFT 1.77s
-Available via: AtlasCloud, Z.AI
-Benchmarks (Artificial Analysis): intelligence_index: 46.8, coding_index: 36.8, gpqa: 0.847, hle: 0.254, scicode: 0.436, ifbench: 0.732, terminalbench_hard: 0.333
-EQ-Bench v3 Score: 67.7/100
-EQ-Bench Elo: 1631.9
-PinchBench: 86.5% best, 81.6% avg (11 runs)
-Description: Fast inference model from Z.ai designed for agent-driven environments. Deeply optimized for real-world agent workflows.
+Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
+Speed: 41.9 tokens/sec, TTFT 1.385s
+Available via: AtlasCloud, DeepInfra, Fireworks, GMICloud, Groq, Mara, Minimax, Novita, SambaNova, Together
+Benchmarks (Artificial Analysis): intelligence_index: 49.6, coding_index: 41.9, gpqa: 0.874, hle: 0.281, scicode: 0.47, ifbench: 0.757, terminalbench_hard: 0.394
+EQ-Bench v3 Score: 68.75/100
+PinchBench: 89.8% best, 83.2% avg (11 runs)
+Description: MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates 
 
 ## GPT-5.4
 Provider: OpenAI
@@ -106,12 +107,12 @@ Pricing: $2.50 input / $15.00 output per 1M tokens (blended: $5.62)
 Capabilities: tool use, reasoning, vision, web search, structured output
 Scores (0-100): Reasoning: 57.0, Coding: 57, Agentic: 87.6
 Speed: 74.0 tokens/sec, TTFT 152.2s
-Available via: OpenAI
+Available via: Azure, OpenAI
 Benchmarks (Artificial Analysis): intelligence_index: 57.0, note: Coding index unavailable — AA API rate limited during collection
 EQ-Bench v3 Score: 73.2/100
 EQ-Bench Elo: 1687.5
 PinchBench: 90.5% best, 81.7% avg (17 runs)
-Description: OpenAI's latest frontier model, unifying the Codex and GPT lines into a single system with 1M+ context window.
+Description: GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for...
 
 ## GPT-5.4 Mini
 Provider: OpenAI
@@ -122,23 +123,40 @@ Pricing: $0.75 input / $4.50 output per 1M tokens (blended: $1.69)
 Capabilities: tool use, reasoning, vision, web search, structured output
 Scores (0-100): Reasoning: 48, Coding: 51, Agentic: 56
 Speed: 186 tokens/sec
+Available via: Azure, OpenAI
 EQ-Bench v3 Score: 68.65/100
+Description: GPT-5.4 mini brings the core capabilities of GPT-5.4 to a faster, more efficient model optimized for high-throughput workloads. It supports text and image inputs with strong performance across reasoni
 
-## Grok 4.20
-Provider: xAI
-ID: x-ai/grok-4.20-20260309
-Context: 2,000,000 tokens
-Max output: 128,000 tokens
-Pricing: $2.00 input / $6.00 output per 1M tokens (blended: $3.00)
-Capabilities: tool use, reasoning, vision, web search, structured output
-Scores (0-100): Reasoning: 48.0, Coding: 42, Agentic: 78.9
-Speed: 271.0 tokens/sec, TTFT 10.72s
-Available via: xAI
-Benchmarks (Artificial Analysis): intelligence_index: 48.0, note: Coding index unavailable — AA API rate limited during collection
-EQ-Bench v3 Score: 68.55/100
-EQ-Bench Elo: 856.4
-PinchBench: 82.4% best, 71.8% avg (18 runs)
-Description: xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. Lowest hallucination rate on market.
+## Qwen3.6 Plus
+Provider: Qwen
+ID: qwen/qwen3.6-plus:free
+Context: 1,000,000 tokens
+Max output: 65,536 tokens
+Pricing: $0.33 input / $1.95 output per 1M tokens (blended: $0.73)
+Capabilities: tool use, reasoning, vision, structured output
+Scores (0-100): Reasoning: 57.0, Coding: 41.3, Agentic: 87.1
+Speed: 44.0 tokens/sec, TTFT 1.59s
+Available via: Alibaba
+Benchmarks (Artificial Analysis): intelligence_index: 45.0, coding_index: 41.3, gpqa: 0.893, hle: 0.273, scicode: 0.42, ifbench: 0.788, terminalbench_hard: 0.409, note: Data from Qwen3.5-397B (predecessor)
+EQ-Bench v3 Score: 60.45/100
+EQ-Bench Elo: 1417.4
+PinchBench: 88.6% best, 84.0% avg (5 runs)
+Description: Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to t
+
+## Step 3.5 Flash
+Provider: StepFun
+ID: stepfun/step-3.5-flash
+Context: 262,144 tokens
+Max output: 65,536 tokens
+Pricing: $0.10 input / $0.30 output per 1M tokens (blended: $0.15)
+Capabilities: tool use, reasoning
+Scores (0-100): Reasoning: 50.0, Coding: 31.6, Agentic: 82.5
+Speed: 85.7 tokens/sec, TTFT 1.271s
+Available via: SiliconFlow
+Benchmarks (Artificial Analysis): intelligence_index: 37.8, coding_index: 31.6, gpqa: 0.831, hle: 0.191, scicode: 0.404, ifbench: 0.646, terminalbench_hard: 0.273
+EQ-Bench v3 Score: 69.25/100
+PinchBench: 85.3% best, 76.9% avg (18 runs)
+Description: Step 3.5 Flash is StepFun's most capable open-source foundation model. Built on a sparse Mixture of Experts (MoE) architecture, it selectively activates only 11B of its 196B parameters per token....
 
 ## MiMo-V2-Pro
 Provider: Xiaomi
@@ -155,51 +173,36 @@ EQ-Bench v3 Score: 70.55/100
 PinchBench: 83.95% best, 80.7% avg (15 runs)
 Description: Xiaomi's flagship foundation model with 1T+ parameters and 1M context length, deeply optimized for agentic scenarios.
 
-## MiniMax M2.7
-Provider: MiniMax
-ID: minimax/minimax-m2.7
-Context: 204,800 tokens
+## GLM 5 Turbo
+Provider: Z.ai
+ID: z-ai/glm-5-turbo
+Context: 202,752 tokens
 Max output: 131,072 tokens
-Pricing: $0.30 input / $1.20 output per 1M tokens (blended: $0.53)
+Pricing: $1.20 input / $4.00 output per 1M tokens (blended: $1.90)
 Capabilities: tool use, reasoning, structured output
-Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
-Speed: 41.9 tokens/sec, TTFT 1.385s
-Available via: Minimax
-Benchmarks (Artificial Analysis): intelligence_index: 49.6, coding_index: 41.9, gpqa: 0.874, hle: 0.281, scicode: 0.47, ifbench: 0.757, terminalbench_hard: 0.394
-EQ-Bench v3 Score: 68.75/100
-PinchBench: 89.8% best, 83.2% avg (11 runs)
-Description: Next-generation LLM designed for autonomous, real-world productivity. Advanced agentic capabilities through multi-agent architecture.
+Scores (0-100): Reasoning: 55.8, Coding: 36.8, Agentic: 84.9
+Speed: 42.0 tokens/sec, TTFT 1.77s
+Available via: Z.AI
+Benchmarks (Artificial Analysis): intelligence_index: 46.8, coding_index: 36.8, gpqa: 0.847, hle: 0.254, scicode: 0.436, ifbench: 0.732, terminalbench_hard: 0.333
+EQ-Bench v3 Score: 67.7/100
+EQ-Bench Elo: 1631.9
+PinchBench: 86.5% best, 81.6% avg (11 runs)
+Description: GLM-5 Turbo is a new model from Z.ai designed for fast inference and strong performance in agent-driven environments such as OpenClaw scenarios. It is deeply optimized for real-world agent workflows..
 
-## Qwen3.6 Plus
-Provider: Qwen
-ID: qwen/qwen3.6-plus:free
-Context: 1,000,000 tokens
-Max output: 65,536 tokens
-Pricing: FREE
-Capabilities: tool use, reasoning, vision, structured output
-Scores (0-100): Reasoning: 57.0, Coding: 41.3, Agentic: 87.1
-Speed: 44.0 tokens/sec, TTFT 1.59s
-Available via: Qwen
-Benchmarks (Artificial Analysis): intelligence_index: 45.0, coding_index: 41.3, gpqa: 0.893, hle: 0.273, scicode: 0.42, ifbench: 0.788, terminalbench_hard: 0.409, note: Data from Qwen3.5-397B (predecessor)
-EQ-Bench v3 Score: 60.45/100
-EQ-Bench Elo: 1417.4
-PinchBench: 88.6% best, 84.0% avg (5 runs)
-Description: Hybrid architecture combining linear attention with sparse MoE routing. Strong scalability and high-performance inference. Free on OpenRouter.
-
-## Step 3.5 Flash
-Provider: StepFun
-ID: stepfun/step-3.5-flash
-Context: 262,144 tokens
-Max output: 65,536 tokens
-Pricing: $0.10 input / $0.30 output per 1M tokens (blended: $0.15)
-Capabilities: tool use, reasoning, structured output
-Scores (0-100): Reasoning: 50.0, Coding: 31.6, Agentic: 82.5
-Speed: 85.7 tokens/sec, TTFT 1.271s
-Available via: DeepInfra, SiliconFlow, StepFun
-Benchmarks (Artificial Analysis): intelligence_index: 37.8, coding_index: 31.6, gpqa: 0.831, hle: 0.191, scicode: 0.404, ifbench: 0.646, terminalbench_hard: 0.273
-EQ-Bench v3 Score: 69.25/100
-PinchBench: 85.3% best, 76.9% avg (18 runs)
-Description: StepFun's most capable open-source model. Sparse MoE architecture activating 11B of 196B parameters per token.
+## Grok 4.20
+Provider: xAI
+ID: x-ai/grok-4.20-20260309
+Context: 2,000,000 tokens
+Pricing: $1.25 input / $2.50 output per 1M tokens (blended: $1.56)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Scores (0-100): Reasoning: 48.0, Coding: 42, Agentic: 78.9
+Speed: 271.0 tokens/sec, TTFT 10.72s
+Available via: xAI
+Benchmarks (Artificial Analysis): intelligence_index: 48.0, note: Coding index unavailable — AA API rate limited during collection
+EQ-Bench v3 Score: 68.55/100
+EQ-Bench Elo: 856.4
+PinchBench: 82.4% best, 71.8% avg (18 runs)
+Description: Grok 4.20 is a reasoning model from xAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, deliver
 
 ---
 Source: https://heartcentered.ai/model-benchmarks/

@@ -68,6 +68,30 @@ AA_SLUG_MAP = {
     "minimax/minimax-m2.7": "minimax-m2-7",
 }
 
+# OpenRouter renames/retires slugs over time. A dataset entry keeps its original
+# id (so PinchBench/EQ-Bench keys and site URLs stay stable) but its live
+# metadata is fetched from the current OpenRouter id listed here.
+OPENROUTER_ID_ALIASES = {
+    "google/gemini-3.1-pro-preview-20260219": "google/gemini-3.1-pro-preview",
+    "x-ai/grok-4.20-20260309": "x-ai/grok-4.20",
+    "qwen/qwen3.6-plus:free": "qwen/qwen3.6-plus",
+}
+
+# Notes that must survive a --refresh (merge only preserves a note when the
+# incoming model has none, and OpenRouter never supplies these).
+MODEL_NOTES = {
+    "qwen/qwen3.6-plus:free": (
+        "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from "
+        "Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; "
+        "pricing shown is the paid qwen/qwen3.6-plus endpoint."
+    ),
+    "xiaomi/mimo-v2-pro": (
+        "Delisted from OpenRouter. Pricing and availability are frozen as of "
+        "the last successful fetch; successor is xiaomi/mimo-v2.5-pro, which "
+        "has not been benchmarked here."
+    ),
+}
+
 # PinchBench scores — manually maintained from pinchbench.com
 # Last updated: 2026-03-31
 PINCHBENCH_DATA = {
@@ -413,6 +437,18 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
                 existing_bench = m.get("benchmarks", {}).get(bench_key, {})
                 if existing_bench and not new_model["benchmarks"].get(bench_key):
                     new_model["benchmarks"][bench_key] = existing_bench
+            # Artificial Analysis is fetched only when AA_API_KEY is present. A
+            # keyless refresh returns an all-null AA block, which used to WIPE
+            # previously-fetched scores. Merge field-by-field instead: keep any
+            # existing value unless the incoming refresh has a real one.
+            existing_aa = m.get("benchmarks", {}).get("artificial_analysis") or {}
+            new_aa = new_model["benchmarks"].get("artificial_analysis") or {}
+            if existing_aa:
+                merged_aa = dict(existing_aa)
+                for k, v in new_aa.items():
+                    if v is not None:
+                        merged_aa[k] = v
+                new_model["benchmarks"]["artificial_analysis"] = merged_aa
             # Preserve individual scores — only overwrite a dimension if the new
             # value is non-null (avoids clobbering manually-entered scores with
             # recomputed values that lost an input, e.g. IFBench dropping)
@@ -616,15 +652,33 @@ def main():
 
     for model_id in target_ids:
         raw = models_by_id.get(model_id)
+        alias = None
+        if not raw:
+            alias = OPENROUTER_ID_ALIASES.get(model_id)
+            if alias:
+                raw = models_by_id.get(alias)
         if not raw:
             print(f"  WARNING: {model_id} not found on OpenRouter, skipping")
+            if not args.dry_run and model_id in MODEL_NOTES:
+                for m in data["models"]:
+                    if m["id"] == model_id:
+                        m["notes"] = MODEL_NOTES[model_id]
+                        m["delisted"] = True
             continue
 
         slug = raw.get("canonical_slug", model_id)
-        print(f"  Fetching {model_id} (endpoints: {slug})...")
+        if alias:
+            print(f"  Fetching {model_id} via alias {alias} (endpoints: {slug})...")
+        else:
+            print(f"  Fetching {model_id} (endpoints: {slug})...")
         endpoints_data = fetch_endpoints(slug)
 
         transformed = transform_model(raw, endpoints_data)
+        if alias:
+            # Keep the dataset's stable id so benchmark keys stay attached.
+            transformed["id"] = model_id
+        if model_id in MODEL_NOTES:
+            transformed["notes"] = MODEL_NOTES[model_id]
 
         # Enrich with Artificial Analysis data if available
         aa_slug = AA_SLUG_MAP.get(model_id)
