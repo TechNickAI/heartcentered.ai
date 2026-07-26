@@ -164,7 +164,9 @@ def public_eq_block(model_id: str, leaderboard: dict, traits: dict) -> dict | No
         return None
     row = leaderboard.get(key)
     if row is None:
-        print(f"  WARNING: {model_id} mapped to '{key}' which is not on the leaderboard")
+        print(
+            f"  WARNING: {model_id} mapped to '{key}' which is not on the leaderboard"
+        )
         return None
     block: dict = {"public_source_key": key}
     if (rubric := row.get("rubric_0_100")) is not None:

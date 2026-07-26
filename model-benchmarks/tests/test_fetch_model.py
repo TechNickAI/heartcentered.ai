@@ -196,7 +196,10 @@ class PublicEqIsolation(unittest.TestCase):
 class DiscoverNewModels(unittest.TestCase):
     def test_untracked_and_live_is_discovered(self):
         data = {"models": [{"id": "anthropic/claude-opus-4.6"}]}
-        live = [{"id": "anthropic/claude-opus-4.8"}, {"id": "anthropic/claude-opus-4.6"}]
+        live = [
+            {"id": "anthropic/claude-opus-4.8"},
+            {"id": "anthropic/claude-opus-4.6"},
+        ]
         self.assertIn("anthropic/claude-opus-4.8", fm.discover_new_models(data, live))
 
     def test_already_tracked_is_not_rediscovered(self):
