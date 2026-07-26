@@ -1948,35 +1948,7 @@
           "terminalbench_hard": 0.409,
           "note": "Data from Qwen3.5-397B (predecessor)"
         },
-        "eq_bench": {
-          "elo": 1417.4,
-          "v3_score": 60.45,
-          "v3_traits": {
-            "analytical": 14.5,
-            "boundary_setting": 10.5,
-            "challenging": 8.1,
-            "compliant": 12.0,
-            "conversational": 9.8,
-            "correctness": 11.7,
-            "demonstrated_empathy": 13.5,
-            "depth_of_insight": 12.6,
-            "emotional_reasoning": 12.7,
-            "humanlike": 11.2,
-            "intellectual_grounding": 10.8,
-            "message_tailoring": 11.4,
-            "moralising": 10.1,
-            "pragmatic_ei": 12.6,
-            "reactive": 10.0,
-            "safety_conscious": 11.2,
-            "social_dexterity": 12.0,
-            "subtext_identification": 10.6,
-            "sycophantic": 6.2,
-            "theory_of_mind": 10.8,
-            "validating": 13.4,
-            "warmth": 13.4
-          },
-          "note": "Benchmark run on Qwen3.5-397B (predecessor)"
-        },
+        "eq_bench": {},
         "pinchbench": {
           "best_score": 88.6,
           "avg_score": 84.0,
@@ -1997,7 +1969,7 @@
       },
       "created": 1775133557,
       "last_updated": "2026-07-25T08:58:52Z",
-      "notes": "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; pricing shown is the paid qwen/qwen3.6-plus endpoint.",
+      "notes": "EQ-Bench scores removed 2026-07-26: they were inherited from predecessor Qwen3.5-397B-A17B, which is now tracked as its own row (qwen/qwen3.5-397b-a17b). Qwen3.6 Plus has not been benchmarked on EQ-Bench. PinchBench is from Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; pricing shown is the paid qwen/qwen3.6-plus endpoint.",
       "speed": {
         "output_tokens_per_sec": 44.0,
         "ttft_seconds": 1.59,

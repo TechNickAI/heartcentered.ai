@@ -84,9 +84,11 @@ OPENROUTER_ID_ALIASES = {
 # incoming model has none, and OpenRouter never supplies these).
 MODEL_NOTES = {
     "qwen/qwen3.6-plus:free": (
-        "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from "
-        "Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; "
-        "pricing shown is the paid qwen/qwen3.6-plus endpoint."
+        "EQ-Bench scores removed 2026-07-26: they were inherited from predecessor "
+        "Qwen3.5-397B-A17B, which is now tracked as its own row "
+        "(qwen/qwen3.5-397b-a17b). Qwen3.6 Plus has not been benchmarked on "
+        "EQ-Bench. PinchBench is from Qwen3.6 Plus directly. The :free OpenRouter "
+        "tier has been retired; pricing shown is the paid qwen/qwen3.6-plus endpoint."
     ),
     "xiaomi/mimo-v2-pro": (
         "Delisted from OpenRouter. Pricing and availability are frozen as of "

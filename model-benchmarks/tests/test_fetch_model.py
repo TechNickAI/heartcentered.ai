@@ -9,6 +9,7 @@ an all-null block that must not overwrite real scores.
 """
 
 import importlib.util
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -209,6 +210,47 @@ class DiscoverNewModels(unittest.TestCase):
         """EQ-Bench lists models OpenRouter doesn't serve; never invent a row."""
         data = {"models": []}
         self.assertEqual(fm.discover_new_models(data, []), [])
+
+
+class NoInheritedScores(unittest.TestCase):
+    """Charter non-negotiable: never present a predecessor's score as a model's own.
+
+    qwen/qwen3.6-plus:free carried EQ-Bench data copied from Qwen3.5-397B-A17B.
+    That predecessor is now tracked as its own row, so the inherited copy was
+    removed 2026-07-26 rather than merely footnoted.
+    """
+
+    DATA = Path(__file__).resolve().parent.parent / "data" / "model-data.json"
+
+    def setUp(self):
+        with open(self.DATA) as f:
+            self.models = {m["id"]: m for m in json.load(f)["models"]}
+
+    def test_qwen36_has_no_inherited_eq(self):
+        eq = self.models["qwen/qwen3.6-plus:free"]["benchmarks"].get("eq_bench", {})
+        for field in ("v3_score", "v3_traits", "elo"):
+            self.assertIsNone(
+                eq.get(field),
+                f"qwen3.6-plus has {field} again — it belongs to Qwen3.5-397B",
+            )
+
+    def test_predecessor_is_tracked_separately(self):
+        self.assertIn("qwen/qwen3.5-397b-a17b", self.models)
+
+    def test_qwen36_keeps_its_own_pinchbench(self):
+        """PinchBench was run on Qwen3.6 directly, so it must survive."""
+        pb = self.models["qwen/qwen3.6-plus:free"]["benchmarks"]["pinchbench"]
+        self.assertEqual(pb["best_score"], 88.6)
+
+    def test_no_two_models_share_a_public_source_key(self):
+        """Two rows citing one EQ-Bench entry means one of them inherited it."""
+        seen = {}
+        for mid, m in self.models.items():
+            key = m["benchmarks"].get("eq_bench", {}).get("public_source_key")
+            if key is None:
+                continue
+            self.assertNotIn(key, seen, f"{mid} and {seen.get(key)} share EQ key {key}")
+            seen[key] = mid
 
 
 if __name__ == "__main__":

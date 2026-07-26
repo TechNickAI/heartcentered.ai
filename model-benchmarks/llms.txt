@@ -228,8 +228,6 @@ Scores (0-100): Reasoning: 57.0, Coding: 41.3, Agentic: 87.1
 Speed: 44.0 tokens/sec, TTFT 1.59s
 Available via: Alibaba
 Benchmarks (Artificial Analysis): intelligence_index: 45.0, coding_index: 41.3, gpqa: 0.893, hle: 0.273, scicode: 0.42, ifbench: 0.788, terminalbench_hard: 0.409, note: Data from Qwen3.5-397B (predecessor)
-EQ-Bench v3 Score: 60.45/100
-EQ-Bench Elo: 1417.4
 PinchBench: 88.6% best, 84.0% avg (5 runs)
 Description: Qwen 3.6 Plus builds on a hybrid architecture that combines efficient linear attention with sparse mixture-of-experts routing, enabling strong scalability and high-performance inference. Compared to t
 
