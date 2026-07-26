@@ -30,6 +30,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).parent))
+import eqbench_public  # noqa: E402
+
 SCRIPT_DIR = Path(__file__).parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
 MODEL_DATA_PATH = DATA_DIR / "model-data.json"
@@ -427,6 +430,65 @@ def load_model_data() -> dict:
     }
 
 
+def apply_public_eq(data: dict, only_ids: list[str] | None = None) -> tuple[int, int]:
+    """Attach public EQ-Bench v3 leaderboard fields to models already in `data`.
+
+    Writes ONLY the `public_*` keys owned by eqbench_public. Nick's locally-run
+    `v3_score` / `v3_traits` / `elo` are a DIFFERENT rubric (see the module
+    docstring) and are never read or written here.
+
+    Returns (models_updated, models_with_no_public_entry).
+    """
+    leaderboard = eqbench_public.fetch_public_leaderboard()
+    traits = eqbench_public.fetch_public_traits()
+    print(f"  EQ-Bench public leaderboard: {len(leaderboard)} models")
+
+    updated = missing = 0
+    for m in data["models"]:
+        if only_ids is not None and m["id"] not in only_ids:
+            continue
+        block = eqbench_public.public_eq_block(m["id"], leaderboard, traits)
+        if block is None:
+            missing += 1
+            continue
+        eq = m.setdefault("benchmarks", {}).setdefault("eq_bench", {})
+        before = {k: eq.get(k) for k in eqbench_public.PUBLIC_EQ_FIELDS}
+        eq.update(block)
+        if {k: eq.get(k) for k in eqbench_public.PUBLIC_EQ_FIELDS} != before:
+            updated += 1
+            print(
+                f"    + {m['id']} public rubric="
+                f"{block.get('public_rubric_0_100')} elo={block.get('public_elo_norm')}"
+            )
+        m.setdefault("sources", {})["eq_bench_public"] = True
+    return updated, missing
+
+
+def discover_new_models(data: dict, openrouter_models: list[dict]) -> list[str]:
+    """Return OpenRouter ids that have a hand-verified EQ-Bench entry but are
+    not yet in the dataset.
+
+    This is the "ADD, don't just refresh" half. It is deliberately gated on
+    EQBENCH_PUBLIC_MAP rather than on OpenRouter's full catalogue: the site's
+    whole thesis is emotional intelligence, so a model with no EQ evidence has
+    nothing to say on the page. Gating on a hand-verified map also means
+    discovery can never invent a mapping.
+    """
+    known = {m["id"] for m in data["models"]}
+    # Aliased rows keep a stable dataset id; treat their live id as known too.
+    known |= {OPENROUTER_ID_ALIASES[k] for k in OPENROUTER_ID_ALIASES if k in known}
+    live = {m["id"] for m in openrouter_models}
+    found = []
+    for model_id in eqbench_public.EQBENCH_PUBLIC_MAP:
+        if model_id in known:
+            continue
+        if model_id not in live:
+            print(f"  skip {model_id}: has EQ-Bench data but not live on OpenRouter")
+            continue
+        found.append(model_id)
+    return sorted(found)
+
+
 def merge_model(existing_data: dict, new_model: dict) -> dict:
     """Merge a new/updated model into the dataset. Preserves manually-added data."""
     models = existing_data["models"]
@@ -610,6 +672,17 @@ def main():
     parser.add_argument(
         "--no-aa", action="store_true", help="Skip Artificial Analysis enrichment"
     )
+    parser.add_argument(
+        "--discover",
+        action="store_true",
+        help="Add models that have hand-verified EQ-Bench entries but aren't tracked yet",
+    )
+    parser.add_argument(
+        "--eq-public",
+        action="store_true",
+        help="Fetch public EQ-Bench v3 leaderboard fields (public_rubric_0_100, "
+        "public_elo_norm, public_traits_17). Never touches locally-run v3_score.",
+    )
     args = parser.parse_args()
 
     if args.curated:
@@ -624,6 +697,8 @@ def main():
             sys.exit(1)
     elif args.model_ids:
         target_ids = args.model_ids
+    elif args.discover or args.eq_public:
+        target_ids = []
     else:
         parser.print_help()
         sys.exit(1)
@@ -632,6 +707,18 @@ def main():
     print(f"Fetching {len(target_ids)} model(s) from OpenRouter...")
     all_models = fetch_openrouter_models()
     models_by_id = {m["id"]: m for m in all_models}
+
+    data = load_model_data()
+
+    if args.discover:
+        discovered = discover_new_models(data, all_models)
+        if discovered:
+            print(f"Discovered {len(discovered)} new model(s) with EQ-Bench data:")
+            for d in discovered:
+                print(f"    {d}")
+            target_ids = list(target_ids) + discovered
+        else:
+            print("Discovered 0 new models with EQ-Bench data.")
 
     # Fetch Artificial Analysis data if available
     aa_models = {}
@@ -647,9 +734,7 @@ def main():
         else:
             print("  No AA API key found (set AA_API_KEY or add to env.local)")
 
-    data = load_model_data()
     fetched = 0
-
     for model_id in target_ids:
         raw = models_by_id.get(model_id)
         alias = None
@@ -693,6 +778,14 @@ def main():
         else:
             data = merge_model(data, transformed)
         fetched += 1
+
+    if args.eq_public:
+        print("Fetching public EQ-Bench v3 leaderboard...")
+        updated, missing = apply_public_eq(data)
+        print(
+            f"  Public EQ applied to {updated} model(s); "
+            f"{missing} have no hand-verified public entry (left empty)."
+        )
 
     if not args.dry_run:
         save_model_data(data)

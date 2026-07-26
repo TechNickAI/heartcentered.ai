@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T08:58:52Z",
+  "generated": "2026-07-26T04:27:13Z",
   "schema_version": "2.0",
   "sources": {
     "openrouter": "https://openrouter.ai/api/v1/models",
@@ -15,6 +15,91 @@
     "blended_cost": "3:1 input-to-output ratio: (3 * input_per_m + output_per_m) / 4"
   },
   "models": [
+    {
+      "id": "anthropic/claude-fable-5",
+      "canonical_slug": "anthropic/claude-5-fable-20260609",
+      "name": "Claude Fable 5",
+      "provider": "Anthropic",
+      "description": "Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and...",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Claude",
+      "pricing": {
+        "input_per_m": 10.0,
+        "output_per_m": 50.0,
+        "cache_read_per_m": 1.0,
+        "cache_write_per_m": 12.5,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 20.0
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ],
+        "uptime_24h": 98.93,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "claude-fable-5",
+          "public_rubric_0_100": 82.6,
+          "public_elo_norm": 2049.7,
+          "public_traits_17": {
+            "demonstrated_empathy": 16.12,
+            "pragmatic_ei": 16.0,
+            "depth_of_insight": 18.0,
+            "social_dexterity": 15.15,
+            "emotional_reasoning": 17.16,
+            "message_tailoring": 14.69,
+            "boundary_setting": 14.54,
+            "safety_conscious": 13.62,
+            "moralising": 7.62,
+            "compliant": 9.73,
+            "challenging": 13.35,
+            "warmth": 14.04,
+            "validating": 13.35,
+            "analytical": 18.04,
+            "reactive": 9.0,
+            "conversational": 11.23,
+            "humanlike": 15.27
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1781007515,
+      "last_updated": "2026-07-26T04:27:11Z"
+    },
     {
       "id": "anthropic/claude-haiku-4.5",
       "canonical_slug": "anthropic/claude-4.5-haiku-20251001",
@@ -226,6 +311,28 @@
             "theory_of_mind": 13.5,
             "validating": 13.2,
             "warmth": 13.6
+          },
+          "public_source_key": "claude-opus-4-6",
+          "public_rubric_0_100": 79.2,
+          "public_elo_norm": 1717.4,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.62,
+            "pragmatic_ei": 15.73,
+            "depth_of_insight": 17.33,
+            "social_dexterity": 14.73,
+            "emotional_reasoning": 16.62,
+            "message_tailoring": 14.23,
+            "boundary_setting": 14.27,
+            "safety_conscious": 13.62,
+            "moralising": 8.81,
+            "compliant": 9.85,
+            "challenging": 13.81,
+            "warmth": 14.04,
+            "validating": 13.38,
+            "analytical": 17.42,
+            "reactive": 9.42,
+            "conversational": 11.58,
+            "humanlike": 14.69
           }
         },
         "pinchbench": {
@@ -243,7 +350,8 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": true
+        "pinchbench": true,
+        "eq_bench_public": true
       },
       "created": 1770219050,
       "last_updated": "2026-07-25T08:58:51Z",
@@ -252,6 +360,91 @@
         "ttft_seconds": 1.655,
         "source": "artificial_analysis"
       }
+    },
+    {
+      "id": "anthropic/claude-opus-4.8",
+      "canonical_slug": "anthropic/claude-4.8-opus-20260528",
+      "name": "Claude Opus 4.8",
+      "provider": "Anthropic",
+      "description": "Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token...",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Claude",
+      "pricing": {
+        "input_per_m": 5.0,
+        "output_per_m": 25.0,
+        "cache_read_per_m": 0.5,
+        "cache_write_per_m": 6.25,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 10.0
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ],
+        "uptime_24h": 100,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "claude-opus-4-8",
+          "public_rubric_0_100": 83.3,
+          "public_elo_norm": 2029.8,
+          "public_traits_17": {
+            "demonstrated_empathy": 16.58,
+            "pragmatic_ei": 16.54,
+            "depth_of_insight": 17.8,
+            "social_dexterity": 15.88,
+            "emotional_reasoning": 17.18,
+            "message_tailoring": 15.42,
+            "boundary_setting": 14.27,
+            "safety_conscious": 13.5,
+            "moralising": 6.88,
+            "compliant": 9.42,
+            "challenging": 13.35,
+            "warmth": 14.38,
+            "validating": 13.58,
+            "analytical": 17.46,
+            "reactive": 8.62,
+            "conversational": 13.15,
+            "humanlike": 15.73
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1779905091,
+      "last_updated": "2026-07-26T04:27:11Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
@@ -351,6 +544,28 @@
             "theory_of_mind": 13.6,
             "validating": 12.9,
             "warmth": 13.4
+          },
+          "public_source_key": "claude-sonnet-4-6",
+          "public_rubric_0_100": 80.0,
+          "public_elo_norm": 1714.1,
+          "public_traits_17": {
+            "demonstrated_empathy": 16.15,
+            "pragmatic_ei": 16.0,
+            "depth_of_insight": 17.29,
+            "social_dexterity": 15.19,
+            "emotional_reasoning": 16.64,
+            "message_tailoring": 14.65,
+            "boundary_setting": 13.77,
+            "safety_conscious": 13.35,
+            "moralising": 6.08,
+            "compliant": 9.88,
+            "challenging": 12.58,
+            "warmth": 13.77,
+            "validating": 13.27,
+            "analytical": 17.46,
+            "reactive": 8.88,
+            "conversational": 11.31,
+            "humanlike": 15.35
           }
         },
         "pinchbench": {
@@ -368,7 +583,8 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": true
+        "pinchbench": true,
+        "eq_bench_public": true
       },
       "created": 1771342990,
       "last_updated": "2026-07-25T08:58:51Z",
@@ -377,6 +593,202 @@
         "ttft_seconds": 0.9,
         "source": "artificial_analysis"
       }
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash",
+      "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+      "name": "DeepSeek V4 Flash",
+      "provider": "DeepSeek",
+      "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
+      "context_window": 1048576,
+      "max_output": 393216,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "DeepSeek",
+      "pricing": {
+        "input_per_m": 0.14,
+        "output_per_m": 0.28,
+        "cache_read_per_m": 0.028,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.175
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "AkashML",
+          "Alibaba",
+          "Ambient",
+          "AtlasCloud",
+          "Baidu",
+          "Cloudflare",
+          "CoreWeave",
+          "DeepInfra",
+          "DeepSeek",
+          "DigitalOcean",
+          "Fireworks",
+          "GMICloud",
+          "Io Net",
+          "Ionstream",
+          "Morph",
+          "Novita",
+          "Parasail",
+          "SiliconFlow",
+          "StreamLake",
+          "Venice"
+        ],
+        "uptime_24h": 100.0,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "deepseek-ai/DeepSeek-V4-Flash",
+          "public_rubric_0_100": 72.5,
+          "public_elo_norm": 1491.3,
+          "public_traits_17": {
+            "demonstrated_empathy": 14.65,
+            "pragmatic_ei": 14.04,
+            "depth_of_insight": 16.07,
+            "social_dexterity": 13.31,
+            "emotional_reasoning": 15.18,
+            "message_tailoring": 12.73,
+            "boundary_setting": 12.12,
+            "safety_conscious": 11.88,
+            "moralising": 8.5,
+            "compliant": 11.69,
+            "challenging": 11.38,
+            "warmth": 13.88,
+            "validating": 13.58,
+            "analytical": 16.54,
+            "reactive": 10.73,
+            "conversational": 11.54,
+            "humanlike": 13.88
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1777000666,
+      "last_updated": "2026-07-26T04:27:11Z"
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "canonical_slug": "deepseek/deepseek-v4-pro-20260423",
+      "name": "DeepSeek V4 Pro",
+      "provider": "DeepSeek",
+      "description": "DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reasoning, coding,...",
+      "context_window": 1048576,
+      "max_output": 384000,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "DeepSeek",
+      "pricing": {
+        "input_per_m": 0.435,
+        "output_per_m": 0.87,
+        "cache_read_per_m": 0.0036,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.5437
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Alibaba",
+          "AtlasCloud",
+          "Baidu",
+          "BaseTen",
+          "CoreWeave",
+          "DeepInfra",
+          "DeepSeek",
+          "DigitalOcean",
+          "Fireworks",
+          "GMICloud",
+          "Ionstream",
+          "Novita",
+          "Parasail",
+          "SiliconFlow",
+          "StreamLake",
+          "Together",
+          "Venice",
+          "Wafer"
+        ],
+        "uptime_24h": 99.95,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "deepseek-ai/DeepSeek-V4-Pro",
+          "public_rubric_0_100": 77.6,
+          "public_elo_norm": 1570.2,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.73,
+            "pragmatic_ei": 15.04,
+            "depth_of_insight": 17.29,
+            "social_dexterity": 14.5,
+            "emotional_reasoning": 16.38,
+            "message_tailoring": 13.92,
+            "boundary_setting": 12.92,
+            "safety_conscious": 12.58,
+            "moralising": 8.5,
+            "compliant": 11.31,
+            "challenging": 11.96,
+            "warmth": 14.38,
+            "validating": 13.69,
+            "analytical": 17.58,
+            "reactive": 10.23,
+            "conversational": 12.04,
+            "humanlike": 15.23
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1777000679,
+      "last_updated": "2026-07-26T04:27:11Z"
     },
     {
       "id": "google/gemini-3.1-pro-preview-20260219",
@@ -471,6 +883,28 @@
             "theory_of_mind": 12.8,
             "validating": 14.4,
             "warmth": 13.8
+          },
+          "public_source_key": "gemini-3.1-pro-preview",
+          "public_rubric_0_100": 74.3,
+          "public_elo_norm": 1537.7,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.19,
+            "pragmatic_ei": 14.23,
+            "depth_of_insight": 16.6,
+            "social_dexterity": 13.35,
+            "emotional_reasoning": 15.6,
+            "message_tailoring": 13.38,
+            "boundary_setting": 13.42,
+            "safety_conscious": 12.92,
+            "moralising": 9.62,
+            "compliant": 11.42,
+            "challenging": 12.31,
+            "warmth": 13.92,
+            "validating": 14.0,
+            "analytical": 17.38,
+            "reactive": 11.54,
+            "conversational": 11.15,
+            "humanlike": 14.04
           }
         },
         "pinchbench": {
@@ -488,7 +922,8 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false
+        "pinchbench": false,
+        "eq_bench_public": true
       },
       "created": 1771509627,
       "last_updated": "2026-07-25T08:58:51Z",
@@ -498,6 +933,96 @@
         "source": "artificial_analysis",
         "note": "TTFT includes reasoning/thinking time"
       }
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "canonical_slug": "google/gemma-4-26b-a4b-it-20260403",
+      "name": "Gemma 4 26B A4B ",
+      "provider": "Google",
+      "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
+      "context_window": 262144,
+      "max_output": 262144,
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Gemma",
+      "pricing": {
+        "input_per_m": 0.12,
+        "output_per_m": 0.35,
+        "cache_read_per_m": 0.05,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.1775
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Cloudflare",
+          "DeepInfra",
+          "Google",
+          "Ionstream",
+          "NextBit",
+          "Novita",
+          "Parasail",
+          "SiliconFlow",
+          "Venice"
+        ],
+        "uptime_24h": 99.92,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "google/gemma-4-26B-A4B-it",
+          "public_rubric_0_100": 70.0,
+          "public_elo_norm": 1430.6,
+          "public_traits_17": {
+            "demonstrated_empathy": 14.85,
+            "pragmatic_ei": 14.54,
+            "depth_of_insight": 15.42,
+            "social_dexterity": 13.42,
+            "emotional_reasoning": 14.51,
+            "message_tailoring": 12.96,
+            "boundary_setting": 13.35,
+            "safety_conscious": 12.58,
+            "moralising": 9.38,
+            "compliant": 11.69,
+            "challenging": 11.54,
+            "warmth": 13.0,
+            "validating": 14.08,
+            "analytical": 17.42,
+            "reactive": 10.81,
+            "conversational": 9.62,
+            "humanlike": 12.12
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1775227989,
+      "last_updated": "2026-07-26T04:27:11Z"
     },
     {
       "id": "google/gemma-4-31b-it",
@@ -597,6 +1122,28 @@
             "theory_of_mind": 11.7,
             "validating": 12.5,
             "warmth": 11.7
+          },
+          "public_source_key": "google/gemma-4-31B-it",
+          "public_rubric_0_100": 70.8,
+          "public_elo_norm": 1434.1,
+          "public_traits_17": {
+            "demonstrated_empathy": 14.73,
+            "pragmatic_ei": 15.08,
+            "depth_of_insight": 15.38,
+            "social_dexterity": 13.88,
+            "emotional_reasoning": 14.62,
+            "message_tailoring": 13.65,
+            "boundary_setting": 14.31,
+            "safety_conscious": 12.62,
+            "moralising": 10.19,
+            "compliant": 10.62,
+            "challenging": 12.85,
+            "warmth": 12.0,
+            "validating": 12.38,
+            "analytical": 17.31,
+            "reactive": 10.88,
+            "conversational": 10.46,
+            "humanlike": 12.77
           }
         },
         "pinchbench": {},
@@ -609,7 +1156,8 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false
+        "pinchbench": false,
+        "eq_bench_public": true
       },
       "created": 1775148486,
       "last_updated": "2026-07-25T08:58:51Z",
@@ -737,6 +1285,197 @@
       }
     },
     {
+      "id": "moonshotai/kimi-k2.5",
+      "canonical_slug": "moonshotai/kimi-k2.5-0127",
+      "name": "Kimi K2.5",
+      "provider": "MoonshotAI",
+      "description": "Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over approximately 15T mixed...",
+      "context_window": 262144,
+      "max_output": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.57,
+        "output_per_m": 2.85,
+        "cache_read_per_m": 0.095,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 1.14
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "AtlasCloud",
+          "Chutes",
+          "DeepInfra",
+          "DigitalOcean",
+          "Moonshot AI",
+          "Novita",
+          "Phala",
+          "SiliconFlow",
+          "StreamLake",
+          "Venice"
+        ],
+        "uptime_24h": 99.96,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "moonshotai/Kimi-K2.5",
+          "public_rubric_0_100": 72.5,
+          "public_elo_norm": 1544.7,
+          "public_traits_17": {
+            "demonstrated_empathy": 14.58,
+            "pragmatic_ei": 13.54,
+            "depth_of_insight": 16.78,
+            "social_dexterity": 12.65,
+            "emotional_reasoning": 15.44,
+            "message_tailoring": 12.23,
+            "boundary_setting": 14.38,
+            "safety_conscious": 13.77,
+            "moralising": 11.12,
+            "compliant": 10.04,
+            "challenging": 14.15,
+            "warmth": 12.23,
+            "validating": 12.19,
+            "analytical": 17.77,
+            "reactive": 11.54,
+            "conversational": 9.81,
+            "humanlike": 13.19
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1769487076,
+      "last_updated": "2026-07-26T04:27:11Z"
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "canonical_slug": "moonshotai/kimi-k2.6-20260420",
+      "name": "Kimi K2.6",
+      "provider": "MoonshotAI",
+      "description": "Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks across Python, Rust, and Go, and...",
+      "context_window": 262144,
+      "max_output": 262144,
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.646,
+        "output_per_m": 2.72,
+        "cache_read_per_m": 0.1088,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 1.1645
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "AtlasCloud",
+          "Baidu",
+          "BaseTen",
+          "Chutes",
+          "Cloudflare",
+          "CoreWeave",
+          "Crusoe",
+          "Decart",
+          "DeepInfra",
+          "DigitalOcean",
+          "Fireworks",
+          "Inceptron",
+          "ModelRun",
+          "Moonshot AI",
+          "Novita",
+          "Parasail",
+          "Phala",
+          "SiliconFlow",
+          "StreamLake",
+          "Together",
+          "Venice"
+        ],
+        "uptime_24h": 99.98,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "moonshotai/Kimi-K2.6",
+          "public_rubric_0_100": 76.6,
+          "public_elo_norm": 1561.2,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.08,
+            "pragmatic_ei": 13.46,
+            "depth_of_insight": 17.64,
+            "social_dexterity": 12.65,
+            "emotional_reasoning": 16.67,
+            "message_tailoring": 12.5,
+            "boundary_setting": 14.69,
+            "safety_conscious": 13.5,
+            "moralising": 12.0,
+            "compliant": 10.58,
+            "challenging": 13.88,
+            "warmth": 12.46,
+            "validating": 12.31,
+            "analytical": 18.04,
+            "reactive": 11.96,
+            "conversational": 9.69,
+            "humanlike": 14.08
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1776699402,
+      "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
       "id": "openai/gpt-5.4",
       "canonical_slug": "openai/gpt-5.4-20260305",
       "name": "GPT-5.4",
@@ -827,6 +1566,28 @@
             "theory_of_mind": 14.7,
             "validating": 13.1,
             "warmth": 11.8
+          },
+          "public_source_key": "gpt-5.4",
+          "public_rubric_0_100": 82.4,
+          "public_elo_norm": 1562.9,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.77,
+            "pragmatic_ei": 16.62,
+            "depth_of_insight": 17.84,
+            "social_dexterity": 15.19,
+            "emotional_reasoning": 17.18,
+            "message_tailoring": 14.5,
+            "boundary_setting": 15.5,
+            "safety_conscious": 14.27,
+            "moralising": 7.58,
+            "compliant": 10.19,
+            "challenging": 12.88,
+            "warmth": 12.15,
+            "validating": 13.65,
+            "analytical": 17.96,
+            "reactive": 8.65,
+            "conversational": 10.46,
+            "humanlike": 14.31
           }
         },
         "pinchbench": {
@@ -844,7 +1605,8 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false
+        "pinchbench": false,
+        "eq_bench_public": true
       },
       "created": 1772734352,
       "last_updated": "2026-07-25T08:58:52Z",
@@ -951,6 +1713,181 @@
         "output_tokens_per_sec": 186,
         "source": "artificial_analysis"
       }
+    },
+    {
+      "id": "openai/gpt-5.5",
+      "canonical_slug": "openai/gpt-5.5-20260423",
+      "name": "GPT-5.5",
+      "provider": "OpenAI",
+      "description": "GPT-5.5 is OpenAI\u2019s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token...",
+      "context_window": 1050000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "GPT",
+      "pricing": {
+        "input_per_m": 5.0,
+        "output_per_m": 30.0,
+        "cache_read_per_m": 0.5,
+        "cache_write_per_m": null,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 11.25
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Azure",
+          "OpenAI"
+        ],
+        "uptime_24h": 99.99,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "gpt-5.5",
+          "public_rubric_0_100": 82.4,
+          "public_elo_norm": 1576.9,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.88,
+            "pragmatic_ei": 16.5,
+            "depth_of_insight": 17.67,
+            "social_dexterity": 15.23,
+            "emotional_reasoning": 17.07,
+            "message_tailoring": 14.46,
+            "boundary_setting": 15.77,
+            "safety_conscious": 14.38,
+            "moralising": 8.46,
+            "compliant": 9.65,
+            "challenging": 13.38,
+            "warmth": 13.23,
+            "validating": 13.58,
+            "analytical": 17.69,
+            "reactive": 8.62,
+            "conversational": 10.42,
+            "humanlike": 13.69
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1777051893,
+      "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "canonical_slug": "qwen/qwen3.5-397b-a17b-20260216",
+      "name": "Qwen3.5 397B A17B",
+      "provider": "Qwen",
+      "description": "The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. It delivers...",
+      "context_window": 262144,
+      "max_output": 65536,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Qwen3",
+      "pricing": {
+        "input_per_m": 0.39,
+        "output_per_m": 2.34,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.8775
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Alibaba",
+          "AtlasCloud",
+          "Chutes",
+          "DeepInfra",
+          "DigitalOcean",
+          "GMICloud",
+          "Novita",
+          "Parasail",
+          "Phala",
+          "StreamLake",
+          "Venice"
+        ],
+        "uptime_24h": 99.95,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "Qwen/Qwen3.5-397B-A17B",
+          "public_rubric_0_100": 71.3,
+          "public_elo_norm": 1413.1,
+          "public_traits_17": {
+            "demonstrated_empathy": 14.35,
+            "pragmatic_ei": 14.0,
+            "depth_of_insight": 15.87,
+            "social_dexterity": 12.69,
+            "emotional_reasoning": 15.0,
+            "message_tailoring": 12.23,
+            "boundary_setting": 13.65,
+            "safety_conscious": 12.88,
+            "moralising": 9.85,
+            "compliant": 12.12,
+            "challenging": 11.23,
+            "warmth": 13.0,
+            "validating": 13.58,
+            "analytical": 16.81,
+            "reactive": 10.92,
+            "conversational": 9.42,
+            "humanlike": 12.27
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1771223018,
+      "last_updated": "2026-07-26T04:27:12Z"
     },
     {
       "id": "qwen/qwen3.6-plus:free",
@@ -1248,6 +2185,177 @@
       "delisted": true
     },
     {
+      "id": "z-ai/glm-4.7",
+      "canonical_slug": "z-ai/glm-4.7-20251222",
+      "name": "GLM 4.7",
+      "provider": "Z.ai",
+      "description": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while...",
+      "context_window": 204800,
+      "max_output": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.4,
+        "output_per_m": 1.75,
+        "cache_read_per_m": 0.08,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.7375
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "AtlasCloud",
+          "Cerebras",
+          "DeepInfra",
+          "Google",
+          "Novita",
+          "Phala",
+          "StreamLake",
+          "Venice",
+          "Z.AI"
+        ],
+        "uptime_24h": 99.98,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "zai-org/GLM-4.7",
+          "public_rubric_0_100": 68.9,
+          "public_elo_norm": 1428.3,
+          "public_traits_17": {
+            "demonstrated_empathy": 13.96,
+            "pragmatic_ei": 13.85,
+            "depth_of_insight": 15.49,
+            "social_dexterity": 12.54,
+            "emotional_reasoning": 14.47,
+            "message_tailoring": 12.23,
+            "boundary_setting": 13.15,
+            "safety_conscious": 12.58,
+            "moralising": 9.08,
+            "compliant": 11.46,
+            "challenging": 11.38,
+            "warmth": 11.88,
+            "validating": 13.15,
+            "analytical": 17.08,
+            "reactive": 11.42,
+            "conversational": 10.81,
+            "humanlike": 13.27
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1766378014,
+      "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
+      "id": "z-ai/glm-4.7-flash",
+      "canonical_slug": "z-ai/glm-4.7-flash-20260119",
+      "name": "GLM 4.7 Flash",
+      "provider": "Z.ai",
+      "description": "As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency. It is further optimized for agentic coding use cases, strengthening coding capabilities, long-horizon task planning,...",
+      "context_window": 202752,
+      "max_output": 16384,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.06,
+        "output_per_m": 0.4,
+        "cache_read_per_m": 0.01,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 0.145
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Cloudflare",
+          "DeepInfra",
+          "Novita",
+          "Venice"
+        ],
+        "uptime_24h": 99.39,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "zai-org/GLM-4.7-Flash",
+          "public_rubric_0_100": 52.5,
+          "public_elo_norm": 1083.0,
+          "public_traits_17": {
+            "demonstrated_empathy": 10.72,
+            "pragmatic_ei": 9.96,
+            "depth_of_insight": 12.55,
+            "social_dexterity": 8.72,
+            "emotional_reasoning": 11.5,
+            "message_tailoring": 8.84,
+            "boundary_setting": 12.52,
+            "safety_conscious": 10.12,
+            "moralising": 11.44,
+            "compliant": 11.2,
+            "challenging": 12.04,
+            "warmth": 9.36,
+            "validating": 11.2,
+            "analytical": 15.88,
+            "reactive": 13.0,
+            "conversational": 8.0,
+            "humanlike": 9.8
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1768833913,
+      "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
       "id": "z-ai/glm-5-turbo",
       "canonical_slug": "z-ai/glm-5-turbo-20260315",
       "name": "GLM 5 Turbo",
@@ -1368,6 +2476,212 @@
       }
     },
     {
+      "id": "z-ai/glm-5.1",
+      "canonical_slug": "z-ai/glm-5.1-20260406",
+      "name": "GLM 5.1",
+      "provider": "Z.ai",
+      "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
+      "context_window": 204800,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.966,
+        "output_per_m": 3.036,
+        "cache_read_per_m": 0.1794,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 1.4835
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "AtlasCloud",
+          "Baidu",
+          "Chutes",
+          "CoreWeave",
+          "Crusoe",
+          "DeepInfra",
+          "DigitalOcean",
+          "Fireworks",
+          "Friendli",
+          "GMICloud",
+          "Nebius",
+          "Novita",
+          "Parasail",
+          "Phala",
+          "SiliconFlow",
+          "StreamLake",
+          "Venice",
+          "Wafer",
+          "Z.AI"
+        ],
+        "uptime_24h": 99.98,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "zai-org/GLM-5.1",
+          "public_rubric_0_100": 75.2,
+          "public_elo_norm": 1566.5,
+          "public_traits_17": {
+            "demonstrated_empathy": 14.42,
+            "pragmatic_ei": 14.0,
+            "depth_of_insight": 17.04,
+            "social_dexterity": 13.23,
+            "emotional_reasoning": 16.09,
+            "message_tailoring": 12.5,
+            "boundary_setting": 13.27,
+            "safety_conscious": 12.88,
+            "moralising": 9.92,
+            "compliant": 9.54,
+            "challenging": 13.58,
+            "warmth": 12.62,
+            "validating": 12.35,
+            "analytical": 17.04,
+            "reactive": 10.46,
+            "conversational": 11.38,
+            "humanlike": 14.69
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1775578025,
+      "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
+      "id": "z-ai/glm-5.2",
+      "canonical_slug": "z-ai/glm-5.2-20260616",
+      "name": "GLM 5.2",
+      "provider": "Z.ai",
+      "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+      "context_window": 1048576,
+      "max_output": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.714,
+        "output_per_m": 2.244,
+        "cache_read_per_m": 0.1326,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 1.0965
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "AkashML",
+          "Alibaba",
+          "Ambient",
+          "AtlasCloud",
+          "Baidu",
+          "BaseTen",
+          "Chutes",
+          "Cloudflare",
+          "CoreWeave",
+          "Decart",
+          "DeepInfra",
+          "DigitalOcean",
+          "Fireworks",
+          "Friendli",
+          "GMICloud",
+          "Inceptron",
+          "Io Net",
+          "Ionstream",
+          "Morph",
+          "Novita",
+          "Parasail",
+          "Phala",
+          "Sail Research",
+          "SiliconFlow",
+          "StreamLake",
+          "Together",
+          "Venice",
+          "Wafer",
+          "Z.AI"
+        ],
+        "uptime_24h": 100,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "zai-org/GLM-5.2",
+          "public_rubric_0_100": 78.7,
+          "public_elo_norm": 1575.1,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.73,
+            "pragmatic_ei": 15.54,
+            "depth_of_insight": 17.29,
+            "social_dexterity": 14.73,
+            "emotional_reasoning": 16.36,
+            "message_tailoring": 14.31,
+            "boundary_setting": 14.04,
+            "safety_conscious": 12.85,
+            "moralising": 8.54,
+            "compliant": 10.15,
+            "challenging": 13.69,
+            "warmth": 13.23,
+            "validating": 13.12,
+            "analytical": 17.54,
+            "reactive": 10.31,
+            "conversational": 12.12,
+            "humanlike": 15.42
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1781631930,
+      "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
       "id": "x-ai/grok-4.20-20260309",
       "canonical_slug": "x-ai/grok-4.20-20260309",
       "name": "Grok 4.20",
@@ -1446,6 +2760,28 @@
             "theory_of_mind": 14.2,
             "validating": 13.5,
             "warmth": 13.5
+          },
+          "public_source_key": "grok-4.20-beta",
+          "public_rubric_0_100": 55.8,
+          "public_elo_norm": 851.5,
+          "public_traits_17": {
+            "demonstrated_empathy": 7.38,
+            "pragmatic_ei": 7.54,
+            "depth_of_insight": 12.49,
+            "social_dexterity": 6.85,
+            "emotional_reasoning": 11.69,
+            "message_tailoring": 6.31,
+            "boundary_setting": 15.31,
+            "safety_conscious": 14.38,
+            "moralising": 12.54,
+            "compliant": 6.96,
+            "challenging": 11.85,
+            "warmth": 6.77,
+            "validating": 7.73,
+            "analytical": 10.88,
+            "reactive": 13.19,
+            "conversational": 5.77,
+            "humanlike": 7.65
           }
         },
         "pinchbench": {
@@ -1464,7 +2800,8 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false
+        "pinchbench": false,
+        "eq_bench_public": true
       },
       "created": 1774979019,
       "last_updated": "2026-07-25T08:58:52Z",
