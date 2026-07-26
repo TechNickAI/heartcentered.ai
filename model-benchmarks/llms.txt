@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-07-26T04:27:13Z
+# Generated: 2026-07-26T13:04:59Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -31,6 +31,16 @@ EQ-Bench v3 Score: 68.65/100
 PinchBench: 89.5% best, 78.1% avg (? runs)
 Description: Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s perfor
 
+## Claude Opus 4.5
+Provider: Anthropic
+ID: anthropic/claude-opus-4.5
+Context: 200,000 tokens
+Max output: 64,000 tokens
+Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Available via: Amazon Bedrock, Anthropic, Azure, Google
+Description: Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competit
+
 ## Claude Opus 4.6
 Provider: Anthropic
 ID: anthropic/claude-opus-4.6
@@ -47,6 +57,16 @@ EQ-Bench Elo: 1857.8
 PinchBench: 93.3% best, 83.1% avg (19 runs)
 Description: Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially eff
 
+## Claude Opus 4.7
+Provider: Anthropic
+ID: anthropic/claude-opus-4.7
+Context: 1,000,000 tokens
+Max output: 128,000 tokens
+Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Available via: Amazon Bedrock, Anthropic, Azure, Google
+Description: Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..
+
 ## Claude Opus 4.8
 Provider: Anthropic
 ID: anthropic/claude-opus-4.8
@@ -56,6 +76,16 @@ Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
 Available via: Amazon Bedrock, Anthropic, Azure, Google
 Description: Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token...
+
+## Claude Sonnet 4.5
+Provider: Anthropic
+ID: anthropic/claude-sonnet-4.5
+Context: 1,000,000 tokens
+Max output: 64,000 tokens
+Pricing: $3.00 input / $15.00 output per 1M tokens (blended: $6.00)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Available via: Amazon Bedrock, Anthropic, Azure, Google
+Description: Claude Sonnet 4.5 is Anthropic’s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-ben
 
 ## Claude Sonnet 4.6
 Provider: Anthropic
@@ -148,6 +178,16 @@ EQ-Bench v3 Score: 68.75/100
 PinchBench: 89.8% best, 83.2% avg (11 runs)
 Description: MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates 
 
+## Kimi K2 0711
+Provider: MoonshotAI
+ID: moonshotai/kimi-k2
+Context: 131,072 tokens
+Max output: 100,352 tokens
+Pricing: $0.57 input / $2.30 output per 1M tokens (blended: $1.00)
+Capabilities: tool use
+Available via: Novita
+Description: Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for..
+
 ## Kimi K2.5
 Provider: MoonshotAI
 ID: moonshotai/kimi-k2.5
@@ -167,6 +207,45 @@ Pricing: $0.65 input / $2.72 output per 1M tokens (blended: $1.16)
 Capabilities: tool use, reasoning, vision, structured output
 Available via: AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Inceptron, ModelRun, Moonshot AI, Novita, Parasail, Phala, SiliconFlow, StreamLake, Together, Venice
 Description: Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks
+
+## Hermes 4 405B
+Provider: Nous
+ID: nousresearch/hermes-4-405b
+Context: 131,072 tokens
+Pricing: $1.00 input / $3.00 output per 1M tokens (blended: $1.50)
+Capabilities: reasoning, structured output
+Available via: Nebius
+Description: Hermes 4 is a large-scale reasoning model built on Meta-Llama-3.1-405B and released by Nous Research. It introduces a hybrid reasoning mode, where the model can choose to deliberate internally with...
+
+## GPT-5.1
+Provider: OpenAI
+ID: openai/gpt-5.1
+Context: 400,000 tokens
+Max output: 128,000 tokens
+Pricing: $1.25 input / $10.00 output per 1M tokens (blended: $3.44)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Available via: Azure, OpenAI
+Description: GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. 
+
+## GPT-5.2
+Provider: OpenAI
+ID: openai/gpt-5.2
+Context: 400,000 tokens
+Max output: 128,000 tokens
+Pricing: $1.75 input / $14.00 output per 1M tokens (blended: $4.81)
+Capabilities: tool use, reasoning, vision, web search, structured output
+Available via: Azure, OpenAI
+Description: GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamicall
+
+## GPT-5.3 Chat
+Provider: OpenAI
+ID: openai/gpt-5.3-chat
+Context: 128,000 tokens
+Max output: 16,384 tokens
+Pricing: $1.75 input / $14.00 output per 1M tokens (blended: $4.81)
+Capabilities: tool use, vision, web search, structured output
+Available via: Azure, OpenAI
+Description: GPT-5.3 Chat is an update to ChatGPT's most-used model that makes everyday conversations smoother, more useful, and more directly helpful. It delivers more accurate answers with better contextualizati
 
 ## GPT-5.4
 Provider: OpenAI
@@ -280,6 +359,16 @@ Pricing: $0.06 input / $0.40 output per 1M tokens (blended: $0.14)
 Capabilities: tool use, reasoning, structured output
 Available via: Cloudflare, DeepInfra, Novita, Venice
 Description: As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that balances performance and efficiency. It is further optimized for agentic coding use cases, strengthening coding capabilities, long-hor
+
+## GLM 5
+Provider: Z.ai
+ID: z-ai/glm-5
+Context: 204,800 tokens
+Max output: 131,072 tokens
+Pricing: $0.95 input / $2.55 output per 1M tokens (blended: $1.35)
+Capabilities: tool use, reasoning, structured output
+Available via: Amazon Bedrock, AtlasCloud, Baidu, Chutes, DeepInfra, DigitalOcean, GMICloud, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice, Z.AI
+Description: GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on l
 
 ## GLM 5 Turbo
 Provider: Z.ai

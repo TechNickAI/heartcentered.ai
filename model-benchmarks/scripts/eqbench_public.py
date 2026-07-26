@@ -80,6 +80,31 @@ EQBENCH_PUBLIC_MAP: dict[str, str] = {
     "moonshotai/kimi-k2.5": "moonshotai/Kimi-K2.5",
     "google/gemma-4-26b-a4b-it": "google/gemma-4-26B-A4B-it",
     "qwen/qwen3.5-397b-a17b": "Qwen/Qwen3.5-397B-A17B",
+    # --- added 2026-07-26: each confirmed live on OpenRouter AND present
+    # upstream. Verified pairwise by name + canonical_slug, never by substring.
+    #   eqbench key                -> openrouter canonical_slug
+    #   claude-opus-4-7            -> anthropic/claude-4.7-opus-20260416
+    #   gpt-5.2                    -> openai/gpt-5.2-20251211
+    #   claude-opus-4-5-20251101   -> anthropic/claude-4.5-opus-20251124
+    #   zai-org/GLM-5              -> z-ai/glm-5-20260211
+    #   claude-sonnet-4.5          -> anthropic/claude-4.5-sonnet-20250929
+    #   gpt-5.3-chat               -> openai/gpt-5.3-chat-20260303
+    #   gpt-5.1-2025-11-13         -> openai/gpt-5.1-20251113
+    #   moonshotai/Kimi-K2-Instruct-> moonshotai/kimi-k2 ("Kimi K2 0711")
+    #   NousResearch/Hermes-4-405B -> nousresearch/hermes-4-405b
+    "anthropic/claude-opus-4.7": "claude-opus-4-7",
+    "openai/gpt-5.2": "gpt-5.2",
+    "anthropic/claude-opus-4.5": "claude-opus-4-5-20251101",
+    "z-ai/glm-5": "zai-org/GLM-5",
+    "anthropic/claude-sonnet-4.5": "claude-sonnet-4.5",
+    "openai/gpt-5.3-chat": "gpt-5.3-chat",
+    "openai/gpt-5.1": "gpt-5.1-2025-11-13",
+    "moonshotai/kimi-k2": "moonshotai/Kimi-K2-Instruct",
+    "nousresearch/hermes-4-405b": "NousResearch/Hermes-4-405B",
+    # NOTE deliberately absent, verified NOT live on OpenRouter (2026-07-26),
+    # so there is no row to attach a real score to:
+    #   grok-4, grok-4.1-fast, google/gemma-4-12B-it,
+    #   HiveLabsAI/hivemind-32b-preview, openrouter/horizon-alpha
     # NOTE deliberately absent, verified as NOT on the public leaderboard:
     #   anthropic/claude-opus-5, anthropic/claude-opus-5-fast, x-ai/grok-4.5,
     #   moonshotai/kimi-k3, openai/gpt-5.6-*, google/gemini-3.6-flash

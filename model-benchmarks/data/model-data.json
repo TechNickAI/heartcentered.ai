@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T04:27:13Z",
+  "generated": "2026-07-26T13:04:59Z",
   "schema_version": "2.0",
   "sources": {
     "openrouter": "https://openrouter.ai/api/v1/models",
@@ -214,6 +214,91 @@
       }
     },
     {
+      "id": "anthropic/claude-opus-4.5",
+      "canonical_slug": "anthropic/claude-4.5-opus-20251124",
+      "name": "Claude Opus 4.5",
+      "provider": "Anthropic",
+      "description": "Claude Opus 4.5 is Anthropic\u2019s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competitive performance across real-world coding and...",
+      "context_window": 200000,
+      "max_output": 64000,
+      "modalities": {
+        "input": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Claude",
+      "pricing": {
+        "input_per_m": 5.0,
+        "output_per_m": 25.0,
+        "cache_read_per_m": 0.5,
+        "cache_write_per_m": 6.25,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 10.0
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ],
+        "uptime_24h": 99.98,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "claude-opus-4-5-20251101",
+          "public_rubric_0_100": 76.8,
+          "public_elo_norm": 1545.7,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.35,
+            "pragmatic_ei": 15.04,
+            "depth_of_insight": 16.76,
+            "social_dexterity": 14.27,
+            "emotional_reasoning": 16.09,
+            "message_tailoring": 13.62,
+            "boundary_setting": 13.15,
+            "safety_conscious": 12.88,
+            "moralising": 7.77,
+            "compliant": 10.38,
+            "challenging": 12.54,
+            "warmth": 13.62,
+            "validating": 13.12,
+            "analytical": 16.73,
+            "reactive": 9.42,
+            "conversational": 11.85,
+            "humanlike": 14.65
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1764010580,
+      "last_updated": "2026-07-26T13:04:58Z"
+    },
+    {
       "id": "anthropic/claude-opus-4.6",
       "canonical_slug": "anthropic/claude-4.6-opus-20260205",
       "name": "Claude Opus 4.6",
@@ -362,6 +447,91 @@
       }
     },
     {
+      "id": "anthropic/claude-opus-4.7",
+      "canonical_slug": "anthropic/claude-4.7-opus-20260416",
+      "name": "Claude Opus 4.7",
+      "provider": "Anthropic",
+      "description": "Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on...",
+      "context_window": 1000000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Claude",
+      "pricing": {
+        "input_per_m": 5.0,
+        "output_per_m": 25.0,
+        "cache_read_per_m": 0.5,
+        "cache_write_per_m": 6.25,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 10.0
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ],
+        "uptime_24h": 100.0,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "claude-opus-4-7",
+          "public_rubric_0_100": 82.6,
+          "public_elo_norm": 1884.3,
+          "public_traits_17": {
+            "demonstrated_empathy": 16.42,
+            "pragmatic_ei": 16.85,
+            "depth_of_insight": 17.76,
+            "social_dexterity": 15.81,
+            "emotional_reasoning": 17.04,
+            "message_tailoring": 15.35,
+            "boundary_setting": 14.62,
+            "safety_conscious": 13.15,
+            "moralising": 6.88,
+            "compliant": 9.46,
+            "challenging": 13.23,
+            "warmth": 13.46,
+            "validating": 13.46,
+            "analytical": 17.81,
+            "reactive": 8.46,
+            "conversational": 12.77,
+            "humanlike": 15.92
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1776351100,
+      "last_updated": "2026-07-26T13:04:58Z"
+    },
+    {
       "id": "anthropic/claude-opus-4.8",
       "canonical_slug": "anthropic/claude-4.8-opus-20260528",
       "name": "Claude Opus 4.8",
@@ -445,6 +615,91 @@
       },
       "created": 1779905091,
       "last_updated": "2026-07-26T04:27:11Z"
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.5",
+      "canonical_slug": "anthropic/claude-4.5-sonnet-20250929",
+      "name": "Claude Sonnet 4.5",
+      "provider": "Anthropic",
+      "description": "Claude Sonnet 4.5 is Anthropic\u2019s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-bench Verified, with...",
+      "context_window": 1000000,
+      "max_output": 64000,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Claude",
+      "pricing": {
+        "input_per_m": 3.0,
+        "output_per_m": 15.0,
+        "cache_read_per_m": 0.3,
+        "cache_write_per_m": 3.75,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 6.0
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Amazon Bedrock",
+          "Anthropic",
+          "Azure",
+          "Google"
+        ],
+        "uptime_24h": 100,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "claude-sonnet-4.5",
+          "public_rubric_0_100": 72.2,
+          "public_elo_norm": 1511.0,
+          "public_traits_17": {
+            "demonstrated_empathy": 13.92,
+            "pragmatic_ei": 13.31,
+            "depth_of_insight": 16.67,
+            "social_dexterity": 11.92,
+            "emotional_reasoning": 15.42,
+            "message_tailoring": 11.69,
+            "boundary_setting": 14.19,
+            "safety_conscious": 12.85,
+            "moralising": 10.65,
+            "compliant": 8.92,
+            "challenging": 14.15,
+            "warmth": 11.77,
+            "validating": 11.35,
+            "analytical": 17.15,
+            "reactive": 11.08,
+            "conversational": 10.42,
+            "humanlike": 13.73
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1759161676,
+      "last_updated": "2026-07-26T13:04:58Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
@@ -1285,6 +1540,86 @@
       }
     },
     {
+      "id": "moonshotai/kimi-k2",
+      "canonical_slug": "moonshotai/kimi-k2",
+      "name": "Kimi K2 0711",
+      "provider": "MoonshotAI",
+      "description": "Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 billion active per forward pass. It is optimized for...",
+      "context_window": 131072,
+      "max_output": 100352,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.57,
+        "output_per_m": 2.3,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 1.0025
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": false,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": false
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Novita"
+        ],
+        "uptime_24h": 99.98,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "moonshotai/Kimi-K2-Instruct",
+          "public_rubric_0_100": 75.0,
+          "public_elo_norm": 1562.2,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.12,
+            "pragmatic_ei": 14.69,
+            "depth_of_insight": 16.96,
+            "social_dexterity": 13.73,
+            "emotional_reasoning": 15.89,
+            "message_tailoring": 13.15,
+            "boundary_setting": 13.65,
+            "safety_conscious": 13.46,
+            "moralising": 8.42,
+            "compliant": 11.31,
+            "challenging": 11.58,
+            "warmth": 13.81,
+            "validating": 13.58,
+            "analytical": 17.46,
+            "reactive": 10.73,
+            "conversational": 10.54,
+            "humanlike": 14.04
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1752263252,
+      "last_updated": "2026-07-26T13:04:58Z"
+    },
+    {
       "id": "moonshotai/kimi-k2.5",
       "canonical_slug": "moonshotai/kimi-k2.5-0127",
       "name": "Kimi K2.5",
@@ -1474,6 +1809,335 @@
       },
       "created": 1776699402,
       "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
+      "id": "nousresearch/hermes-4-405b",
+      "canonical_slug": "nousresearch/hermes-4-405b",
+      "name": "Hermes 4 405B",
+      "provider": "Nous",
+      "description": "Hermes 4 is a large-scale reasoning model built on Meta-Llama-3.1-405B and released by Nous Research. It introduces a hybrid reasoning mode, where the model can choose to deliberate internally with...",
+      "context_window": 131072,
+      "max_output": null,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 1.0,
+        "output_per_m": 3.0,
+        "cache_read_per_m": null,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 1.5
+      },
+      "capabilities": {
+        "tool_use": false,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Nebius"
+        ],
+        "uptime_24h": 100,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "NousResearch/Hermes-4-405B",
+          "public_rubric_0_100": 65.2,
+          "public_elo_norm": 1361.4,
+          "public_traits_17": {
+            "demonstrated_empathy": 13.88,
+            "pragmatic_ei": 13.54,
+            "depth_of_insight": 14.16,
+            "social_dexterity": 12.5,
+            "emotional_reasoning": 13.69,
+            "message_tailoring": 12.31,
+            "boundary_setting": 12.38,
+            "safety_conscious": 11.46,
+            "moralising": 9.0,
+            "compliant": 12.0,
+            "challenging": 10.73,
+            "warmth": 13.0,
+            "validating": 13.85,
+            "analytical": 16.42,
+            "reactive": 10.88,
+            "conversational": 10.23,
+            "humanlike": 11.96
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1756235463,
+      "last_updated": "2026-07-26T13:04:58Z"
+    },
+    {
+      "id": "openai/gpt-5.1",
+      "canonical_slug": "openai/gpt-5.1-20251113",
+      "name": "GPT-5.1",
+      "provider": "OpenAI",
+      "description": "GPT-5.1 is the latest frontier-grade model in the GPT-5 series, offering stronger general-purpose reasoning, improved instruction adherence, and a more natural conversational style compared to GPT-5. It uses adaptive reasoning...",
+      "context_window": 400000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "image",
+          "text",
+          "file"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "GPT",
+      "pricing": {
+        "input_per_m": 1.25,
+        "output_per_m": 10.0,
+        "cache_read_per_m": 0.125,
+        "cache_write_per_m": null,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 3.4375
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Azure",
+          "OpenAI"
+        ],
+        "uptime_24h": 99.91,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "gpt-5.1-2025-11-13",
+          "public_rubric_0_100": 78.1,
+          "public_elo_norm": 1551.0,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.35,
+            "pragmatic_ei": 15.85,
+            "depth_of_insight": 16.91,
+            "social_dexterity": 14.69,
+            "emotional_reasoning": 16.29,
+            "message_tailoring": 13.92,
+            "boundary_setting": 14.42,
+            "safety_conscious": 13.19,
+            "moralising": 7.15,
+            "compliant": 11.58,
+            "challenging": 11.69,
+            "warmth": 13.0,
+            "validating": 14.31,
+            "analytical": 17.46,
+            "reactive": 9.15,
+            "conversational": 10.5,
+            "humanlike": 13.92
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1763060305,
+      "last_updated": "2026-07-26T13:04:58Z"
+    },
+    {
+      "id": "openai/gpt-5.2",
+      "canonical_slug": "openai/gpt-5.2-20251211",
+      "name": "GPT-5.2",
+      "provider": "OpenAI",
+      "description": "GPT-5.2 is the latest frontier-grade model in the GPT-5 series, offering stronger agentic and long context perfomance compared to GPT-5.1. It uses adaptive reasoning to allocate computation dynamically, responding quickly...",
+      "context_window": 400000,
+      "max_output": 128000,
+      "modalities": {
+        "input": [
+          "file",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "GPT",
+      "pricing": {
+        "input_per_m": 1.75,
+        "output_per_m": 14.0,
+        "cache_read_per_m": 0.175,
+        "cache_write_per_m": null,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 4.8125
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Azure",
+          "OpenAI"
+        ],
+        "uptime_24h": 99.99,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "gpt-5.2",
+          "public_rubric_0_100": 80.4,
+          "public_elo_norm": 1558.8,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.35,
+            "pragmatic_ei": 16.15,
+            "depth_of_insight": 17.4,
+            "social_dexterity": 14.81,
+            "emotional_reasoning": 16.64,
+            "message_tailoring": 14.04,
+            "boundary_setting": 15.54,
+            "safety_conscious": 14.5,
+            "moralising": 7.31,
+            "compliant": 10.54,
+            "challenging": 13.04,
+            "warmth": 12.31,
+            "validating": 13.65,
+            "analytical": 18.0,
+            "reactive": 8.88,
+            "conversational": 10.19,
+            "humanlike": 13.54
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1765389775,
+      "last_updated": "2026-07-26T13:04:59Z"
+    },
+    {
+      "id": "openai/gpt-5.3-chat",
+      "canonical_slug": "openai/gpt-5.3-chat-20260303",
+      "name": "GPT-5.3 Chat",
+      "provider": "OpenAI",
+      "description": "GPT-5.3 Chat is an update to ChatGPT's most-used model that makes everyday conversations smoother, more useful, and more directly helpful. It delivers more accurate answers with better contextualization and significantly...",
+      "context_window": 128000,
+      "max_output": 16384,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "GPT",
+      "pricing": {
+        "input_per_m": 1.75,
+        "output_per_m": 14.0,
+        "cache_read_per_m": 0.175,
+        "cache_write_per_m": null,
+        "web_search_per_req": 0.01,
+        "blended_per_m": 4.8125
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": false,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Azure",
+          "OpenAI"
+        ],
+        "uptime_24h": 100,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "gpt-5.3-chat",
+          "public_rubric_0_100": 70.7,
+          "public_elo_norm": 1393.0,
+          "public_traits_17": {
+            "demonstrated_empathy": 12.88,
+            "pragmatic_ei": 13.35,
+            "depth_of_insight": 15.62,
+            "social_dexterity": 12.42,
+            "emotional_reasoning": 14.69,
+            "message_tailoring": 11.65,
+            "boundary_setting": 11.77,
+            "safety_conscious": 11.85,
+            "moralising": 5.65,
+            "compliant": 11.04,
+            "challenging": 8.85,
+            "warmth": 11.58,
+            "validating": 12.96,
+            "analytical": 16.5,
+            "reactive": 7.73,
+            "conversational": 10.19,
+            "humanlike": 11.35
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1772564061,
+      "last_updated": "2026-07-26T13:04:59Z"
     },
     {
       "id": "openai/gpt-5.4",
@@ -2326,6 +2990,99 @@
       },
       "created": 1768833913,
       "last_updated": "2026-07-26T04:27:12Z"
+    },
+    {
+      "id": "z-ai/glm-5",
+      "canonical_slug": "z-ai/glm-5-20260211",
+      "name": "GLM 5",
+      "provider": "Z.ai",
+      "description": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
+      "context_window": 204800,
+      "max_output": 131072,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Other",
+      "pricing": {
+        "input_per_m": 0.95,
+        "output_per_m": 2.55,
+        "cache_read_per_m": 0.2,
+        "cache_write_per_m": null,
+        "web_search_per_req": null,
+        "blended_per_m": 1.35
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": false,
+        "audio_input": false,
+        "web_search": false,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "Amazon Bedrock",
+          "AtlasCloud",
+          "Baidu",
+          "Chutes",
+          "DeepInfra",
+          "DigitalOcean",
+          "GMICloud",
+          "Novita",
+          "Parasail",
+          "Phala",
+          "SiliconFlow",
+          "StreamLake",
+          "Venice",
+          "Z.AI"
+        ],
+        "uptime_24h": 99.99,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {},
+      "benchmarks": {
+        "artificial_analysis": {},
+        "eq_bench": {
+          "public_source_key": "zai-org/GLM-5",
+          "public_rubric_0_100": 75.0,
+          "public_elo_norm": 1526.0,
+          "public_traits_17": {
+            "demonstrated_empathy": 15.15,
+            "pragmatic_ei": 14.62,
+            "depth_of_insight": 16.71,
+            "social_dexterity": 14.04,
+            "emotional_reasoning": 15.69,
+            "message_tailoring": 13.73,
+            "boundary_setting": 12.77,
+            "safety_conscious": 12.15,
+            "moralising": 8.12,
+            "compliant": 10.69,
+            "challenging": 12.54,
+            "warmth": 13.85,
+            "validating": 13.54,
+            "analytical": 16.92,
+            "reactive": 9.73,
+            "conversational": 12.27,
+            "humanlike": 14.77
+          }
+        },
+        "pinchbench": {}
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1770829182,
+      "last_updated": "2026-07-26T13:04:59Z"
     },
     {
       "id": "z-ai/glm-5-turbo",

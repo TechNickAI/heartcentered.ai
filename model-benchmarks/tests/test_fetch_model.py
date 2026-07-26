@@ -193,6 +193,43 @@ class PublicEqIsolation(unittest.TestCase):
             self.assertNotIn(risky, eqp.EQBENCH_PUBLIC_MAP)
 
 
+class PublicMapIsInjective(unittest.TestCase):
+    """Two OpenRouter ids must never claim the same upstream EQ-Bench row.
+
+    That is exactly the shape of the inherited-score bug (D-001): one real run
+    presented as two models' own results. Cheap to assert, so assert it.
+    """
+
+    def test_no_two_models_share_an_eqbench_key(self):
+        seen: dict[str, str] = {}
+        for model_id, key in eqp.EQBENCH_PUBLIC_MAP.items():
+            self.assertNotIn(
+                key,
+                seen,
+                f"{model_id} and {seen.get(key)} both map to upstream {key!r} "
+                "— one of them would be showing the other's score",
+            )
+            seen[key] = model_id
+
+
+class Glm5TurboProvenance(unittest.TestCase):
+    """z-ai/glm-5-turbo and z-ai/glm-5 are DIFFERENT models.
+
+    glm-5-turbo carries a legacy 11-trait EQ block of unknown provenance. It was
+    suspected of being GLM-5's data. Checked against upstream 2026-07-26: on the
+    shared 0-10 rescaling only 4 of 11 traits agree within rounding (humanlike
+    7.20 vs 6.76, social_iq 7.20 vs 6.94), and the stored elo 1631.9 differs from
+    GLM-5's public elo_norm 1526.0. So it is NOT a copy of GLM-5 and stays put —
+    but glm-5-turbo must never be mapped to the GLM-5 row.
+    """
+
+    def test_turbo_is_not_mapped_to_glm5(self):
+        self.assertNotIn("z-ai/glm-5-turbo", eqp.EQBENCH_PUBLIC_MAP)
+
+    def test_glm5_maps_to_glm5(self):
+        self.assertEqual(eqp.EQBENCH_PUBLIC_MAP.get("z-ai/glm-5"), "zai-org/GLM-5")
+
+
 class DiscoverNewModels(unittest.TestCase):
     def test_untracked_and_live_is_discovered(self):
         data = {"models": [{"id": "anthropic/claude-opus-4.6"}]}
