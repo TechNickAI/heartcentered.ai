@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T08:58:52Z",
+  "generated": "2026-07-27T12:36:58Z",
   "schema_version": "2.0",
   "sources": {
     "openrouter": "https://openrouter.ai/api/v1/models",
@@ -121,7 +121,7 @@
         "pinchbench": false
       },
       "created": 1760547638,
-      "last_updated": "2026-07-25T08:58:51Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 93,
         "ttft_seconds": 0.4,
@@ -246,7 +246,7 @@
         "pinchbench": true
       },
       "created": 1770219050,
-      "last_updated": "2026-07-25T08:58:51Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 46.1,
         "ttft_seconds": 1.655,
@@ -295,7 +295,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 99.97,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -371,7 +371,7 @@
         "pinchbench": true
       },
       "created": 1771342990,
-      "last_updated": "2026-07-25T08:58:51Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 47.0,
         "ttft_seconds": 0.9,
@@ -420,7 +420,7 @@
           "Google",
           "Google AI Studio"
         ],
-        "uptime_24h": 99.61,
+        "uptime_24h": 99.36,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -491,7 +491,7 @@
         "pinchbench": false
       },
       "created": 1771509627,
-      "last_updated": "2026-07-25T08:58:51Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 127.0,
         "ttft_seconds": 30.66,
@@ -553,7 +553,7 @@
           "Together",
           "Venice"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 99.96,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -612,7 +612,7 @@
         "pinchbench": false
       },
       "created": 1775148486,
-      "last_updated": "2026-07-25T08:58:51Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 35.9,
         "ttft_seconds": null,
@@ -665,7 +665,7 @@
           "SambaNova",
           "Together"
         ],
-        "uptime_24h": 99.92,
+        "uptime_24h": 99.8,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -729,7 +729,7 @@
         "pinchbench": true
       },
       "created": 1773836697,
-      "last_updated": "2026-07-25T08:58:51Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 41.9,
         "ttft_seconds": 1.385,
@@ -847,7 +847,7 @@
         "pinchbench": false
       },
       "created": 1772734352,
-      "last_updated": "2026-07-25T08:58:52Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 74.0,
         "ttft_seconds": 152.2,
@@ -895,7 +895,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 99.46,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -945,7 +945,7 @@
         "pinchbench": false
       },
       "created": 1773748178,
-      "last_updated": "2026-07-25T08:58:52Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "notes": "Agentic score from AA Agentic Index (not PinchBench-based)",
       "speed": {
         "output_tokens_per_sec": 186,
@@ -1059,7 +1059,7 @@
         "pinchbench": false
       },
       "created": 1775133557,
-      "last_updated": "2026-07-25T08:58:52Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "notes": "Benchmark scores from Qwen3.5-397B (predecessor). PinchBench is from Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; pricing shown is the paid qwen/qwen3.6-plus endpoint.",
       "speed": {
         "output_tokens_per_sec": 44.0,
@@ -1144,7 +1144,7 @@
         "pinchbench": true
       },
       "created": 1769728337,
-      "last_updated": "2026-07-25T08:58:52Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 85.7,
         "ttft_seconds": 1.271,
@@ -1360,7 +1360,7 @@
         "pinchbench": true
       },
       "created": 1773583573,
-      "last_updated": "2026-07-25T08:58:52Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "speed": {
         "output_tokens_per_sec": 42.0,
         "ttft_seconds": 1.77,
@@ -1406,7 +1406,7 @@
         "providers": [
           "xAI"
         ],
-        "uptime_24h": 99.94,
+        "uptime_24h": 99.98,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1467,7 +1467,7 @@
         "pinchbench": false
       },
       "created": 1774979019,
-      "last_updated": "2026-07-25T08:58:52Z",
+      "last_updated": "2026-07-27T12:36:58Z",
       "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
       "speed": {
         "output_tokens_per_sec": 271.0,

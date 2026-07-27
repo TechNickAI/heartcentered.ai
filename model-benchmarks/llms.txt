@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-07-25T08:58:52Z
+# Generated: 2026-07-27T12:36:58Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
