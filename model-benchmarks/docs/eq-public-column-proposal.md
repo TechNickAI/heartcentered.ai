@@ -53,7 +53,10 @@ Headless Chromium against a local server, reading the rendered DOM:
   Cost, Context. `colspan` updated 9 → 10 in all three placeholder states.
 - Test suite: 26/26 pass. Pre-commit hooks pass including Prettier.
 
-Screenshots: `/tmp/hcshot/before.png`, `/tmp/hcshot/after.png`.
+Screenshots (tracked with this proposal):
+
+- [Before: one EQ column, 23 blanks](assets/eq-public-before.png)
+- [After: separate local and public EQ columns](assets/eq-public-after.png)
 
 ## Open question for Nick
 
