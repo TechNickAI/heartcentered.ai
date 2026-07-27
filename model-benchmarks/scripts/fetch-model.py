@@ -685,7 +685,29 @@ def main():
         help="Fetch public EQ-Bench v3 leaderboard fields (public_rubric_0_100, "
         "public_elo_norm, public_traits_17). Never touches locally-run v3_score.",
     )
+    parser.add_argument(
+        "--watch-eqbench",
+        action="store_true",
+        help="Report new/disappeared EQ-Bench upstream rows and exit. Read-only "
+        "with respect to model-data.json; never auto-maps a new row.",
+    )
     args = parser.parse_args()
+
+    if args.watch_eqbench:
+        from eqbench_watch import format_report, run_watch
+
+        existing = load_model_data()
+        blocked = [
+            m["id"]
+            for m in existing["models"]
+            if (m.get("benchmarks", {}).get("eq_bench") or {}).get(
+                "public_rubric_0_100"
+            )
+            is None
+        ]
+        report = run_watch(blocked, write_snapshot=not args.dry_run)
+        print(format_report(report))
+        sys.exit(0)
 
     if args.curated:
         target_ids = CURATED_MODELS
