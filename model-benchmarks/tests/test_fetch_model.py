@@ -9,6 +9,7 @@ an all-null block that must not overwrite real scores.
 """
 
 import importlib.util
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -18,6 +19,8 @@ _spec = importlib.util.spec_from_file_location("fetch_model", _SRC)
 fm = importlib.util.module_from_spec(_spec)
 sys.modules["fetch_model"] = fm
 _spec.loader.exec_module(fm)
+
+import eqbench_public as eqp  # noqa: E402  (path set up by fetch-model.py import)
 
 REAL = {"intelligence_index": 46.5, "coding_index": 47.6, "gpqa": 0.84}
 NULLED = dict.fromkeys(REAL)
@@ -122,6 +125,172 @@ class AliasMap(unittest.TestCase):
         """Every alias/delisted entry needs a note explaining the divergence."""
         for model_id in fm.MODEL_NOTES:
             self.assertTrue(fm.MODEL_NOTES[model_id].strip())
+
+
+class PublicEqIsolation(unittest.TestCase):
+    """The public EQ-Bench rubric is a DIFFERENT metric from Nick's local runs.
+
+    Public `rubric_0_100` runs 5-9 points higher than local `v3_score` over 17
+    traits instead of 22. Leaking it into `v3_score` would silently inflate new
+    models against existing rows and corrupt the leaderboard ordering.
+    """
+
+    def setUp(self):
+        self.leaderboard = {
+            "claude-opus-4-6": {"rubric_0_100": 79.2, "elo_norm": 1717.4},
+        }
+        self.traits = {"claude-opus-4-6": {"warmth": 14.04, "analytical": 17.42}}
+
+    def test_public_block_never_emits_local_fields(self):
+        block = eqp.public_eq_block(
+            "anthropic/claude-opus-4.6", self.leaderboard, self.traits
+        )
+        for forbidden in ("v3_score", "v3_traits", "elo"):
+            self.assertNotIn(forbidden, block)
+
+    def test_public_block_emits_namespaced_fields(self):
+        block = eqp.public_eq_block(
+            "anthropic/claude-opus-4.6", self.leaderboard, self.traits
+        )
+        self.assertEqual(block["public_rubric_0_100"], 79.2)
+        self.assertEqual(block["public_elo_norm"], 1717.4)
+        self.assertEqual(block["public_source_key"], "claude-opus-4-6")
+
+    def test_unmapped_model_gets_nothing(self):
+        """An unmapped model must yield None, never a fuzzy-matched score."""
+        self.assertIsNone(
+            eqp.public_eq_block("acme/never-heard-of-it", self.leaderboard, self.traits)
+        )
+
+    def test_local_v3_score_survives_public_fetch(self):
+        data = {
+            "models": [
+                {
+                    "id": "anthropic/claude-opus-4.6",
+                    "benchmarks": {
+                        "eq_bench": {"v3_score": 71.85, "v3_traits": {"warmth": 13.6}}
+                    },
+                }
+            ]
+        }
+        eq = data["models"][0]["benchmarks"]["eq_bench"]
+        eq.update(
+            eqp.public_eq_block(
+                "anthropic/claude-opus-4.6", self.leaderboard, self.traits
+            )
+        )
+        self.assertEqual(eq["v3_score"], 71.85, "local v3_score was clobbered")
+        self.assertEqual(eq["v3_traits"], {"warmth": 13.6})
+        self.assertEqual(eq["public_rubric_0_100"], 79.2)
+
+    def test_map_has_no_fuzzy_lookalikes(self):
+        """Models whose names invite a wrong substring match stay unmapped."""
+        for risky in (
+            "openai/gpt-5.4-mini",
+            "z-ai/glm-5-turbo",
+            "anthropic/claude-haiku-4.5",
+        ):
+            self.assertNotIn(risky, eqp.EQBENCH_PUBLIC_MAP)
+
+
+class PublicMapIsInjective(unittest.TestCase):
+    """Two OpenRouter ids must never claim the same upstream EQ-Bench row.
+
+    That is exactly the shape of the inherited-score bug (D-001): one real run
+    presented as two models' own results. Cheap to assert, so assert it.
+    """
+
+    def test_no_two_models_share_an_eqbench_key(self):
+        seen: dict[str, str] = {}
+        for model_id, key in eqp.EQBENCH_PUBLIC_MAP.items():
+            self.assertNotIn(
+                key,
+                seen,
+                f"{model_id} and {seen.get(key)} both map to upstream {key!r} "
+                "— one of them would be showing the other's score",
+            )
+            seen[key] = model_id
+
+
+class Glm5TurboProvenance(unittest.TestCase):
+    """z-ai/glm-5-turbo and z-ai/glm-5 are DIFFERENT models.
+
+    glm-5-turbo carries a legacy 11-trait EQ block of unknown provenance. It was
+    suspected of being GLM-5's data. Checked against upstream 2026-07-26: on the
+    shared 0-10 rescaling only 4 of 11 traits agree within rounding (humanlike
+    7.20 vs 6.76, social_iq 7.20 vs 6.94), and the stored elo 1631.9 differs from
+    GLM-5's public elo_norm 1526.0. So it is NOT a copy of GLM-5 and stays put —
+    but glm-5-turbo must never be mapped to the GLM-5 row.
+    """
+
+    def test_turbo_is_not_mapped_to_glm5(self):
+        self.assertNotIn("z-ai/glm-5-turbo", eqp.EQBENCH_PUBLIC_MAP)
+
+    def test_glm5_maps_to_glm5(self):
+        self.assertEqual(eqp.EQBENCH_PUBLIC_MAP.get("z-ai/glm-5"), "zai-org/GLM-5")
+
+
+class DiscoverNewModels(unittest.TestCase):
+    def test_untracked_and_live_is_discovered(self):
+        data = {"models": [{"id": "anthropic/claude-opus-4.6"}]}
+        live = [
+            {"id": "anthropic/claude-opus-4.8"},
+            {"id": "anthropic/claude-opus-4.6"},
+        ]
+        self.assertIn("anthropic/claude-opus-4.8", fm.discover_new_models(data, live))
+
+    def test_already_tracked_is_not_rediscovered(self):
+        data = {"models": [{"id": "anthropic/claude-opus-4.8"}]}
+        live = [{"id": "anthropic/claude-opus-4.8"}]
+        self.assertNotIn(
+            "anthropic/claude-opus-4.8", fm.discover_new_models(data, live)
+        )
+
+    def test_not_live_on_openrouter_is_skipped(self):
+        """EQ-Bench lists models OpenRouter doesn't serve; never invent a row."""
+        data = {"models": []}
+        self.assertEqual(fm.discover_new_models(data, []), [])
+
+
+class NoInheritedScores(unittest.TestCase):
+    """Charter non-negotiable: never present a predecessor's score as a model's own.
+
+    qwen/qwen3.6-plus:free carried EQ-Bench data copied from Qwen3.5-397B-A17B.
+    That predecessor is now tracked as its own row, so the inherited copy was
+    removed 2026-07-26 rather than merely footnoted.
+    """
+
+    DATA = Path(__file__).resolve().parent.parent / "data" / "model-data.json"
+
+    def setUp(self):
+        with open(self.DATA) as f:
+            self.models = {m["id"]: m for m in json.load(f)["models"]}
+
+    def test_qwen36_has_no_inherited_eq(self):
+        eq = self.models["qwen/qwen3.6-plus:free"]["benchmarks"].get("eq_bench", {})
+        for field in ("v3_score", "v3_traits", "elo"):
+            self.assertIsNone(
+                eq.get(field),
+                f"qwen3.6-plus has {field} again — it belongs to Qwen3.5-397B",
+            )
+
+    def test_predecessor_is_tracked_separately(self):
+        self.assertIn("qwen/qwen3.5-397b-a17b", self.models)
+
+    def test_qwen36_keeps_its_own_pinchbench(self):
+        """PinchBench was run on Qwen3.6 directly, so it must survive."""
+        pb = self.models["qwen/qwen3.6-plus:free"]["benchmarks"]["pinchbench"]
+        self.assertEqual(pb["best_score"], 88.6)
+
+    def test_no_two_models_share_a_public_source_key(self):
+        """Two rows citing one EQ-Bench entry means one of them inherited it."""
+        seen = {}
+        for mid, m in self.models.items():
+            key = m["benchmarks"].get("eq_bench", {}).get("public_source_key")
+            if key is None:
+                continue
+            self.assertNotIn(key, seen, f"{mid} and {seen.get(key)} share EQ key {key}")
+            seen[key] = mid
 
 
 if __name__ == "__main__":

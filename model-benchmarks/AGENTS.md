@@ -19,9 +19,16 @@ Static HTML/CSS/JS page — no build step, no framework.
 
 ## Data Pipeline
 
+### Python environment
+
+Python 3.13 via uv. The repo pins it in `.python-version`; create the venv once with
+`uv venv --python 3.13` from the repo root, then prefix every command with
+`uv run --no-project python`. Do NOT use bare `python3` — on macOS that resolves to
+Apple's 3.9 and the scripts fail on `str | None` syntax. Stdlib only, no deps to install.
+
 ### Adding a new model
 
-1. **Fetch from OpenRouter** — `python scripts/fetch-model.py <openrouter-id>`
+1. **Fetch from OpenRouter** — `uv run --no-project python scripts/fetch-model.py <openrouter-id>`
    - Gets pricing, context window, capabilities, endpoint stats
    - Optionally enriches with Artificial Analysis (needs AA_API_KEY in env.local)
 
@@ -40,7 +47,7 @@ Static HTML/CSS/JS page — no build step, no framework.
    - Elo and traits show in tooltip on hover
 
 5. **Regenerate llms.txt** —
-   `python -c "import sys; sys.path.insert(0, 'model-benchmarks/scripts'); fm = __import__('importlib').import_module('fetch-model'); data = fm.load_model_data(); fm.generate_llms_txt(data)"`
+   `uv run --no-project python -c "import sys; sys.path.insert(0, 'model-benchmarks/scripts'); fm = __import__('importlib').import_module('fetch-model'); data = fm.load_model_data(); fm.generate_llms_txt(data)"`
 
 6. **Update Model Personalities** — the "Model Personalities" section in `index.html`
    has hardcoded editorial insight cards (9 curated profiles with personality reads and
@@ -50,8 +57,8 @@ Static HTML/CSS/JS page — no build step, no framework.
 ### Refreshing existing models
 
 ```bash
-python scripts/fetch-model.py --refresh        # all models
-python scripts/fetch-model.py --refresh --no-aa # skip AA (rate limited at 1000/day)
+uv run --no-project python scripts/fetch-model.py --refresh        # all models
+uv run --no-project python scripts/fetch-model.py --refresh --no-aa # skip AA (rate limited at 1000/day)
 ```
 
 `merge_model()` preserves manually-entered data: eq_bench, arena, pinchbench, scores,
@@ -70,7 +77,7 @@ models keep their last-known data and are flagged `"delisted": true` with a note
 ### Tests
 
 ```bash
-python -m unittest discover -s model-benchmarks/tests
+uv run --no-project python -m unittest discover -s model-benchmarks/tests
 ```
 
 Stdlib unittest, no dependencies. Covers the merge guarantees above.
