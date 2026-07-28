@@ -528,12 +528,20 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
             # Preserve speed data if new model doesn't have it
             if not new_model.get("speed") and m.get("speed"):
                 new_model["speed"] = m["speed"]
-            # Preserve source flags for non-openrouter sources
-            for src_key in ("artificial_analysis", "eq_bench"):
-                if m.get("sources", {}).get(src_key) and not new_model["sources"].get(
-                    src_key
-                ):
-                    new_model["sources"][src_key] = True
+            # Preserve provenance flags for every non-OpenRouter source.
+            # This is deliberately NOT a hardcoded key whitelist. It used to be
+            # ("artificial_analysis", "eq_bench"), which meant any source added
+            # later was invisible to the merge and got silently destroyed on the
+            # next metadata refresh: the weekly CI run in 72b7149 wiped
+            # `eq_bench_public` from all 28 rows that carried real public
+            # EQ-Bench scores. The scores survived, the provenance did not.
+            # A refresh must never destroy a field it does not know about.
+            existing_sources = m.get("sources") or {}
+            for src_key, was_set in existing_sources.items():
+                if src_key == "openrouter":
+                    continue
+                if was_set and not new_model["sources"].get(src_key):
+                    new_model["sources"][src_key] = was_set
             models[i] = new_model
             return existing_data
 
