@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T13:04:59Z",
+  "generated": "2026-07-28T01:11:44Z",
   "schema_version": "2.0",
   "sources": {
     "openrouter": "https://openrouter.ai/api/v1/models",
@@ -57,7 +57,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 98.93,
+        "uptime_24h": 98.45,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -94,18 +94,17 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1781007515,
-      "last_updated": "2026-07-26T04:27:11Z"
+      "last_updated": "2026-07-28T01:11:41Z"
     },
     {
       "id": "anthropic/claude-haiku-4.5",
       "canonical_slug": "anthropic/claude-4.5-haiku-20251001",
       "name": "Claude Haiku 4.5",
       "provider": "Anthropic",
-      "description": "Claude Haiku 4.5 is Anthropic’s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4’s performance...",
+      "description": "Claude Haiku 4.5 is Anthropic\u2019s fastest and most efficient model, delivering near-frontier intelligence at a fraction of the cost and latency of larger Claude models. Matching Claude Sonnet 4\u2019s performance...",
       "context_window": 200000,
       "max_output": 64000,
       "modalities": {
@@ -206,7 +205,7 @@
         "pinchbench": false
       },
       "created": 1760547638,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:41Z",
       "speed": {
         "output_tokens_per_sec": 93,
         "ttft_seconds": 0.4,
@@ -218,7 +217,7 @@
       "canonical_slug": "anthropic/claude-4.5-opus-20251124",
       "name": "Claude Opus 4.5",
       "provider": "Anthropic",
-      "description": "Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competitive performance across real-world coding and...",
+      "description": "Claude Opus 4.5 is Anthropic\u2019s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competitive performance across real-world coding and...",
       "context_window": 200000,
       "max_output": 64000,
       "modalities": {
@@ -255,7 +254,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -292,18 +291,17 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1764010580,
-      "last_updated": "2026-07-26T13:04:58Z"
+      "last_updated": "2026-07-28T01:11:41Z"
     },
     {
       "id": "anthropic/claude-opus-4.6",
       "canonical_slug": "anthropic/claude-4.6-opus-20260205",
       "name": "Claude Opus 4.6",
       "provider": "Anthropic",
-      "description": "Opus 4.6 is Anthropic’s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective...",
+      "description": "Opus 4.6 is Anthropic\u2019s strongest model for coding and long-running professional tasks. It is built for agents that operate across entire workflows rather than single prompts, making it especially effective...",
       "context_window": 1000000,
       "max_output": 128000,
       "modalities": {
@@ -435,11 +433,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": true,
-        "eq_bench_public": true
+        "pinchbench": true
       },
       "created": 1770219050,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:41Z",
       "speed": {
         "output_tokens_per_sec": 46.1,
         "ttft_seconds": 1.655,
@@ -488,7 +485,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 100.0,
+        "uptime_24h": 99.96,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -525,11 +522,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1776351100,
-      "last_updated": "2026-07-26T13:04:58Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "anthropic/claude-opus-4.8",
@@ -573,7 +569,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 99.95,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -610,18 +606,17 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1779905091,
-      "last_updated": "2026-07-26T04:27:11Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.5",
       "canonical_slug": "anthropic/claude-4.5-sonnet-20250929",
       "name": "Claude Sonnet 4.5",
       "provider": "Anthropic",
-      "description": "Claude Sonnet 4.5 is Anthropic’s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-bench Verified, with...",
+      "description": "Claude Sonnet 4.5 is Anthropic\u2019s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-bench Verified, with...",
       "context_window": 1000000,
       "max_output": 64000,
       "modalities": {
@@ -695,11 +690,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1759161676,
-      "last_updated": "2026-07-26T13:04:58Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
@@ -838,11 +832,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": true,
-        "eq_bench_public": true
+        "pinchbench": true
       },
       "created": 1771342990,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:42Z",
       "speed": {
         "output_tokens_per_sec": 47.0,
         "ttft_seconds": 0.9,
@@ -898,6 +891,7 @@
           "GMICloud",
           "Io Net",
           "Ionstream",
+          "Mancer 2",
           "Morph",
           "Novita",
           "Parasail",
@@ -905,7 +899,7 @@
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 100.0,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -942,11 +936,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1777000666,
-      "last_updated": "2026-07-26T04:27:11Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "deepseek/deepseek-v4-pro",
@@ -1002,7 +995,7 @@
           "Venice",
           "Wafer"
         ],
-        "uptime_24h": 99.95,
+        "uptime_24h": 99.91,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1039,18 +1032,17 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1777000679,
-      "last_updated": "2026-07-26T04:27:11Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "google/gemini-3.1-pro-preview-20260219",
       "canonical_slug": "google/gemini-3.1-pro-preview-20260219",
       "name": "Gemini 3.1 Pro Preview",
       "provider": "Google",
-      "description": "Gemini 3.1 Pro Preview is Google’s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows. Building on the multimodal foundation...",
+      "description": "Gemini 3.1 Pro Preview is Google\u2019s frontier reasoning model, delivering enhanced software engineering performance, improved agentic reliability, and more efficient token usage across complex workflows. Building on the multimodal foundation...",
       "context_window": 1048576,
       "max_output": 65536,
       "modalities": {
@@ -1087,7 +1079,7 @@
           "Google",
           "Google AI Studio"
         ],
-        "uptime_24h": 99.36,
+        "uptime_24h": 99.46,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1099,7 +1091,7 @@
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 57.0,
-          "note": "Coding index unavailable — AA API rate limited during collection"
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
         "eq_bench": {
           "elo": 1548.7,
@@ -1177,11 +1169,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1771509627,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:42Z",
       "speed": {
         "output_tokens_per_sec": 127.0,
         "ttft_seconds": 30.66,
@@ -1194,7 +1185,7 @@
       "canonical_slug": "google/gemma-4-26b-a4b-it-20260403",
       "name": "Gemma 4 26B A4B ",
       "provider": "Google",
-      "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B quality at...",
+      "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "context_window": 262144,
       "max_output": 262144,
       "modalities": {
@@ -1209,12 +1200,12 @@
       },
       "tokenizer": "Gemma",
       "pricing": {
-        "input_per_m": 0.12,
-        "output_per_m": 0.35,
+        "input_per_m": 0.14,
+        "output_per_m": 0.42,
         "cache_read_per_m": 0.05,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 0.1775
+        "blended_per_m": 0.21
       },
       "capabilities": {
         "tool_use": true,
@@ -1236,7 +1227,7 @@
           "SiliconFlow",
           "Venice"
         ],
-        "uptime_24h": 99.92,
+        "uptime_24h": 99.66,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1273,11 +1264,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1775227989,
-      "last_updated": "2026-07-26T04:27:11Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "google/gemma-4-31b-it",
@@ -1333,7 +1323,7 @@
           "Together",
           "Venice"
         ],
-        "uptime_24h": 99.96,
+        "uptime_24h": 99.97,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1411,11 +1401,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1775148486,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:42Z",
       "speed": {
         "output_tokens_per_sec": 35.9,
         "ttft_seconds": null,
@@ -1468,7 +1457,7 @@
           "SambaNova",
           "Together"
         ],
-        "uptime_24h": 99.8,
+        "uptime_24h": 99.75,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1532,7 +1521,7 @@
         "pinchbench": true
       },
       "created": 1773836697,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:42Z",
       "speed": {
         "output_tokens_per_sec": 41.9,
         "ttft_seconds": 1.385,
@@ -1613,11 +1602,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1752263252,
-      "last_updated": "2026-07-26T13:04:58Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "moonshotai/kimi-k2.5",
@@ -1666,7 +1654,7 @@
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 99.96,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1703,11 +1691,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1769487076,
-      "last_updated": "2026-07-26T04:27:11Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "moonshotai/kimi-k2.6",
@@ -1762,6 +1749,7 @@
           "Novita",
           "Parasail",
           "Phala",
+          "Sail Research",
           "SiliconFlow",
           "StreamLake",
           "Together",
@@ -1804,11 +1792,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1776699402,
-      "last_updated": "2026-07-26T04:27:12Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "nousresearch/hermes-4-405b",
@@ -1884,11 +1871,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1756235463,
-      "last_updated": "2026-07-26T13:04:58Z"
+      "last_updated": "2026-07-28T01:11:42Z"
     },
     {
       "id": "openai/gpt-5.1",
@@ -1930,7 +1916,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 99.91,
+        "uptime_24h": 99.93,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1967,11 +1953,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1763060305,
-      "last_updated": "2026-07-26T13:04:58Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "openai/gpt-5.2",
@@ -2013,7 +1998,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 100.0,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2050,11 +2035,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1765389775,
-      "last_updated": "2026-07-26T13:04:59Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "openai/gpt-5.3-chat",
@@ -2096,7 +2080,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 100.0,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2133,18 +2117,17 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1772564061,
-      "last_updated": "2026-07-26T13:04:59Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "openai/gpt-5.4",
       "canonical_slug": "openai/gpt-5.4-20260305",
       "name": "GPT-5.4",
       "provider": "OpenAI",
-      "description": "GPT-5.4 is OpenAI’s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for...",
+      "description": "GPT-5.4 is OpenAI\u2019s latest frontier model, unifying the Codex and GPT lines into a single system. It features a 1M+ token context window (922K input, 128K output) with support for...",
       "context_window": 1050000,
       "max_output": 128000,
       "modalities": {
@@ -2191,7 +2174,7 @@
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 57.0,
-          "note": "Coding index unavailable — AA API rate limited during collection"
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
         "eq_bench": {
           "elo": 1687.5,
@@ -2269,11 +2252,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1772734352,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:43Z",
       "speed": {
         "output_tokens_per_sec": 74.0,
         "ttft_seconds": 152.2,
@@ -2321,7 +2303,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 99.98,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2371,7 +2353,7 @@
         "pinchbench": false
       },
       "created": 1773748178,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:43Z",
       "notes": "Agentic score from AA Agentic Index (not PinchBench-based)",
       "speed": {
         "output_tokens_per_sec": 186,
@@ -2383,7 +2365,7 @@
       "canonical_slug": "openai/gpt-5.5-20260423",
       "name": "GPT-5.5",
       "provider": "OpenAI",
-      "description": "GPT-5.5 is OpenAI’s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token...",
+      "description": "GPT-5.5 is OpenAI\u2019s frontier model designed for complex professional workloads, building on GPT-5.4 with stronger reasoning, higher reliability, and improved token efficiency on hard tasks. It features a 1M+ token...",
       "context_window": 1050000,
       "max_output": 128000,
       "modalities": {
@@ -2455,11 +2437,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1777051893,
-      "last_updated": "2026-07-26T04:27:12Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "qwen/qwen3.5-397b-a17b",
@@ -2510,7 +2491,7 @@
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 99.95,
+        "uptime_24h": 99.88,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2547,11 +2528,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1771223018,
-      "last_updated": "2026-07-26T04:27:12Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "qwen/qwen3.6-plus:free",
@@ -2632,7 +2612,7 @@
         "pinchbench": false
       },
       "created": 1775133557,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:43Z",
       "notes": "EQ-Bench scores removed 2026-07-26: they were inherited from predecessor Qwen3.5-397B-A17B, which is now tracked as its own row (qwen/qwen3.5-397b-a17b). Qwen3.6 Plus has not been benchmarked on EQ-Bench. PinchBench is from Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; pricing shown is the paid qwen/qwen3.6-plus endpoint.",
       "speed": {
         "output_tokens_per_sec": 44.0,
@@ -2717,7 +2697,7 @@
         "pinchbench": true
       },
       "created": 1769728337,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:43Z",
       "speed": {
         "output_tokens_per_sec": 85.7,
         "ttft_seconds": 1.271,
@@ -2825,7 +2805,7 @@
       "canonical_slug": "z-ai/glm-4.7-20251222",
       "name": "GLM 4.7",
       "provider": "Z.ai",
-      "description": "GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while...",
+      "description": "GLM-4.7 is Z.ai\u2019s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements in executing complex agent tasks while...",
       "context_window": 204800,
       "max_output": 131072,
       "modalities": {
@@ -2865,7 +2845,7 @@
           "Venice",
           "Z.AI"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2902,11 +2882,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1766378014,
-      "last_updated": "2026-07-26T04:27:12Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "z-ai/glm-4.7-flash",
@@ -2948,7 +2927,7 @@
           "Novita",
           "Venice"
         ],
-        "uptime_24h": 99.39,
+        "uptime_24h": 99.63,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2985,18 +2964,17 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1768833913,
-      "last_updated": "2026-07-26T04:27:12Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "z-ai/glm-5",
       "canonical_slug": "z-ai/glm-5-20260211",
       "name": "GLM 5",
       "provider": "Z.ai",
-      "description": "GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
+      "description": "GLM-5 is Z.ai\u2019s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on large-scale programming tasks, rivaling leading...",
       "context_window": 204800,
       "max_output": 131072,
       "modalities": {
@@ -3041,7 +3019,7 @@
           "Venice",
           "Z.AI"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 99.97,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3078,11 +3056,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1770829182,
-      "last_updated": "2026-07-26T13:04:59Z"
+      "last_updated": "2026-07-28T01:11:43Z"
     },
     {
       "id": "z-ai/glm-5-turbo",
@@ -3121,7 +3098,7 @@
         "providers": [
           "Z.AI"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 99.85,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3197,7 +3174,7 @@
         "pinchbench": true
       },
       "created": 1773583573,
-      "last_updated": "2026-07-27T12:36:58Z",
+      "last_updated": "2026-07-28T01:11:44Z",
       "speed": {
         "output_tokens_per_sec": 42.0,
         "ttft_seconds": 1.77,
@@ -3259,7 +3236,7 @@
           "Wafer",
           "Z.AI"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3296,11 +3273,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1775578025,
-      "last_updated": "2026-07-26T04:27:12Z"
+      "last_updated": "2026-07-28T01:11:44Z"
     },
     {
       "id": "z-ai/glm-5.2",
@@ -3320,12 +3296,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.714,
-        "output_per_m": 2.244,
-        "cache_read_per_m": 0.1326,
+        "input_per_m": 0.735,
+        "output_per_m": 2.31,
+        "cache_read_per_m": 0.1365,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 1.0965
+        "blended_per_m": 1.1288
       },
       "capabilities": {
         "tool_use": true,
@@ -3367,7 +3343,7 @@
           "Wafer",
           "Z.AI"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3404,11 +3380,10 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1781631930,
-      "last_updated": "2026-07-26T04:27:12Z"
+      "last_updated": "2026-07-28T01:11:44Z"
     },
     {
       "id": "x-ai/grok-4.20-20260309",
@@ -3449,7 +3424,7 @@
         "providers": [
           "xAI"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 99.97,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3461,7 +3436,7 @@
       "benchmarks": {
         "artificial_analysis": {
           "intelligence_index": 48.0,
-          "note": "Coding index unavailable — AA API rate limited during collection"
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
         },
         "eq_bench": {
           "elo": 856.4,
@@ -3529,12 +3504,11 @@
         "openrouter": true,
         "artificial_analysis": false,
         "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
+        "pinchbench": false
       },
       "created": 1774979019,
-      "last_updated": "2026-07-27T12:36:58Z",
-      "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking — suggests optimized for capability over emotional attunement.",
+      "last_updated": "2026-07-28T01:11:44Z",
+      "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
       "speed": {
         "output_tokens_per_sec": 271.0,
         "ttft_seconds": 10.72,
