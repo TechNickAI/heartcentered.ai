@@ -452,6 +452,13 @@ def apply_public_eq(data: dict, only_ids: list[str] | None = None) -> tuple[int,
         block = eqbench_public.public_eq_block(m["id"], leaderboard, traits)
         if block is None:
             missing += 1
+            # Clear stale public fields so outdated data isn't published after a
+            # mapped row disappears or is renamed upstream.
+            eq = m.get("benchmarks", {}).get("eq_bench", {})
+            if any(eq.get(f) is not None for f in eqbench_public.PUBLIC_EQ_FIELDS):
+                for f in eqbench_public.PUBLIC_EQ_FIELDS:
+                    eq.pop(f, None)
+                m.get("sources", {}).pop("eq_bench_public", None)
             continue
         eq = m.setdefault("benchmarks", {}).setdefault("eq_bench", {})
         before = {k: eq.get(k) for k in eqbench_public.PUBLIC_EQ_FIELDS}
@@ -529,7 +536,7 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
             if not new_model.get("speed") and m.get("speed"):
                 new_model["speed"] = m["speed"]
             # Preserve source flags for non-openrouter sources
-            for src_key in ("artificial_analysis", "eq_bench"):
+            for src_key in ("artificial_analysis", "eq_bench", "eq_bench_public"):
                 if m.get("sources", {}).get(src_key) and not new_model["sources"].get(
                     src_key
                 ):
@@ -746,6 +753,7 @@ def main():
 
     data = load_model_data()
 
+    discovered = []
     if args.discover:
         discovered = discover_new_models(data, all_models)
         if discovered:
@@ -818,6 +826,15 @@ def main():
     if args.eq_public:
         print("Fetching public EQ-Bench v3 leaderboard...")
         updated, missing = apply_public_eq(data)
+        print(
+            f"  Public EQ applied to {updated} model(s); "
+            f"{missing} have no hand-verified public entry (left empty)."
+        )
+    elif discovered:
+        # --discover gates on EQ-Bench map entries, so every discovered model
+        # already has a verified mapping — fetch their public scores automatically.
+        print(f"Fetching public EQ-Bench scores for {len(discovered)} discovered model(s)...")
+        updated, missing = apply_public_eq(data, only_ids=set(discovered))
         print(
             f"  Public EQ applied to {updated} model(s); "
             f"{missing} have no hand-verified public entry (left empty)."
