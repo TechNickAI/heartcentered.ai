@@ -179,5 +179,59 @@ class TestNoDataMutation(unittest.TestCase):
             self.assertNotIn(banned, blob)
 
 
+class TestNeedsAttention(unittest.TestCase):
+    """The CI gate. These tests are the reason CI can be trusted to stay quiet."""
+
+    @staticmethod
+    def _report(**over):
+        base = {
+            "upstream_total": 79,
+            "snapshot_total": 79,
+            "new_upstream_keys": [],
+            "disappeared_upstream_keys": [],
+            "unmapped_upstream_keys": [],
+            "actionable": [],
+            "still_blocked": [],
+        }
+        base.update(over)
+        return base
+
+    def test_quiet_when_nothing_changed(self):
+        self.assertFalse(ew.needs_attention(self._report()))
+
+    def test_fires_on_new_upstream_row(self):
+        self.assertTrue(ew.needs_attention(self._report(new_upstream_keys=["kimi-k3"])))
+
+    def test_fires_on_disappeared_row(self):
+        # The D-001 delisting shape. Silently dropping one is the exact failure
+        # this project has already made once.
+        self.assertTrue(
+            ew.needs_attention(self._report(disappeared_upstream_keys=["mimo-v2-pro"]))
+        )
+
+    def test_fires_when_tracked_model_becomes_scoreable(self):
+        self.assertTrue(
+            ew.needs_attention(self._report(actionable=["anthropic/claude-opus-5"]))
+        )
+
+    def test_stays_quiet_on_unmapped_keys_alone(self):
+        """The anti-alarm-fatigue guarantee.
+
+        ~51 upstream rows are permanently unmapped (old models we do not track).
+        If those triggered the gate, CI would fire every week forever and the
+        signal would be ignored -- which is strictly worse than no watcher.
+        """
+        self.assertFalse(
+            ew.needs_attention(
+                self._report(unmapped_upstream_keys=["gpt-4-0314", "o3", "grok-4"])
+            )
+        )
+
+    def test_still_blocked_alone_is_quiet(self):
+        self.assertFalse(
+            ew.needs_attention(self._report(still_blocked=["x-ai/grok-4.5"]))
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

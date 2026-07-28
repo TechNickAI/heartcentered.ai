@@ -691,10 +691,18 @@ def main():
         help="Report new/disappeared EQ-Bench upstream rows and exit. Read-only "
         "with respect to model-data.json; never auto-maps a new row.",
     )
+    parser.add_argument(
+        "--fail-on-change",
+        action="store_true",
+        help="With --watch-eqbench, exit 2 when upstream changed in a way that "
+        "needs a human decision (new row, withdrawn row, or a tracked model "
+        "becoming scoreable). Exit 0 when there is nothing to decide. Lets CI "
+        "surface upstream movement without ever auto-mapping it.",
+    )
     args = parser.parse_args()
 
     if args.watch_eqbench:
-        from eqbench_watch import format_report, run_watch
+        from eqbench_watch import format_report, needs_attention, run_watch
 
         existing = load_model_data()
         blocked = [
@@ -707,6 +715,10 @@ def main():
         ]
         report = run_watch(blocked, write_snapshot=not args.dry_run)
         print(format_report(report))
+        # Exit 2, not 1: 1 is what an unhandled crash produces, and CI must be
+        # able to tell "upstream moved" apart from "the watcher broke".
+        if args.fail_on_change and needs_attention(report):
+            sys.exit(2)
         sys.exit(0)
 
     if args.curated:

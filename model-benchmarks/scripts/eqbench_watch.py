@@ -125,6 +125,26 @@ def run_watch(tracked_ids: list[str], write_snapshot: bool = True) -> dict:
     return report
 
 
+def needs_attention(report: dict) -> bool:
+    """True when a human has something to decide.
+
+    Three shapes qualify, and only these three:
+      - a NEW upstream key appeared (someone must hand-map it, or decide not to)
+      - an upstream key DISAPPEARED (the D-001 delisting shape)
+      - a tracked model became ACTIONABLE (already mapped, now scoreable)
+
+    Deliberately NOT included: `unmapped_upstream_keys`. That set is large and
+    mostly permanent (older models we never intend to track), so gating on it
+    would fire on every single run and train everyone to ignore the signal. A
+    watcher that always cries wolf is worse than no watcher.
+    """
+    return bool(
+        report["new_upstream_keys"]
+        or report["disappeared_upstream_keys"]
+        or report["actionable"]
+    )
+
+
 def format_report(report: dict) -> str:
     """Human-readable work order. Explicitly says when nothing changed."""
     lines = [
