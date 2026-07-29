@@ -528,12 +528,20 @@ def merge_model(existing_data: dict, new_model: dict) -> dict:
             # Preserve speed data if new model doesn't have it
             if not new_model.get("speed") and m.get("speed"):
                 new_model["speed"] = m["speed"]
-            # Preserve source flags for non-openrouter sources
-            for src_key in ("artificial_analysis", "eq_bench"):
-                if m.get("sources", {}).get(src_key) and not new_model["sources"].get(
-                    src_key
-                ):
-                    new_model["sources"][src_key] = True
+            # Preserve provenance flags for every non-OpenRouter source.
+            # This is deliberately NOT a hardcoded key whitelist. It used to be
+            # ("artificial_analysis", "eq_bench"), which meant any source added
+            # later was invisible to the merge and got silently destroyed on the
+            # next metadata refresh: the weekly CI run in 72b7149 wiped
+            # `eq_bench_public` from all 28 rows that carried real public
+            # EQ-Bench scores. The scores survived, the provenance did not.
+            # A refresh must never destroy a field it does not know about.
+            existing_sources = m.get("sources") or {}
+            for src_key, was_set in existing_sources.items():
+                if src_key == "openrouter":
+                    continue
+                if was_set and not new_model["sources"].get(src_key):
+                    new_model["sources"][src_key] = was_set
             models[i] = new_model
             return existing_data
 
@@ -685,7 +693,41 @@ def main():
         help="Fetch public EQ-Bench v3 leaderboard fields (public_rubric_0_100, "
         "public_elo_norm, public_traits_17). Never touches locally-run v3_score.",
     )
+    parser.add_argument(
+        "--watch-eqbench",
+        action="store_true",
+        help="Report new/disappeared EQ-Bench upstream rows and exit. Read-only "
+        "with respect to model-data.json; never auto-maps a new row.",
+    )
+    parser.add_argument(
+        "--fail-on-change",
+        action="store_true",
+        help="With --watch-eqbench, exit 2 when upstream changed in a way that "
+        "needs a human decision (new row, withdrawn row, or a tracked model "
+        "becoming scoreable). Exit 0 when there is nothing to decide. Lets CI "
+        "surface upstream movement without ever auto-mapping it.",
+    )
     args = parser.parse_args()
+
+    if args.watch_eqbench:
+        from eqbench_watch import format_report, needs_attention, run_watch
+
+        existing = load_model_data()
+        blocked = [
+            m["id"]
+            for m in existing["models"]
+            if (m.get("benchmarks", {}).get("eq_bench") or {}).get(
+                "public_rubric_0_100"
+            )
+            is None
+        ]
+        report = run_watch(blocked, write_snapshot=not args.dry_run)
+        print(format_report(report))
+        # Exit 2, not 1: 1 is what an unhandled crash produces, and CI must be
+        # able to tell "upstream moved" apart from "the watcher broke".
+        if args.fail_on_change and needs_attention(report):
+            sys.exit(2)
+        sys.exit(0)
 
     if args.curated:
         target_ids = CURATED_MODELS

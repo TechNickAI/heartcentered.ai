@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: refresh-model-benchmarks
@@ -25,17 +26,56 @@ jobs:
       - name: Refresh OpenRouter metadata
         run: python model-benchmarks/scripts/fetch-model.py --refresh --no-aa
 
+      - name: Watch EQ-Bench upstream for new rows
+        id: watch
+        # Detection is automatable; identity is not. This step NEVER maps a new
+        # upstream key to an OpenRouter id and never writes model-data.json --
+        # it only records the key set and reports movement. Exit 2 means
+        # "upstream moved, a human must decide"; that is a signal, not a
+        # failure, so we capture it rather than let it kill the job.
+        run: |
+          set +e
+          python model-benchmarks/scripts/fetch-model.py \
+            --watch-eqbench --fail-on-change --no-aa > /tmp/eqbench-watch.txt 2>&1
+          code=$?
+          set -e
+          cat /tmp/eqbench-watch.txt
+          if [ "$code" -eq 2 ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif [ "$code" -ne 0 ]; then
+            echo "The watcher itself failed (exit $code), which is a real error."
+            exit "$code"
+          fi
+          {
+            echo 'report<<EOF'
+            cat /tmp/eqbench-watch.txt
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
       - name: Test benchmark pipeline
         run: python -m unittest discover -s model-benchmarks/tests
 
+      - name: Open an issue when upstream moved
+        if: steps.watch.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPORT: ${{ steps.watch.outputs.report }}
+        run: |
+          gh issue create \
+            --title "EQ-Bench upstream changed — hand-mapping needed" \
+            --label benchmark \
+            --body "$(printf '%s\n\n%s\n' \
+              'The weekly watcher saw upstream movement. New rows are NEVER auto-mapped: fuzzy matching demonstrably mis-assigns (gpt-5.4-mini->gpt-5.4, glm-5-turbo->GLM-5), which writes one model'"'"'s score into another'"'"'s row. Add a hand-verified entry to EQBENCH_PUBLIC_MAP, confirming the pair on name + canonical_slug.' \
+              "$REPORT")"
+
       - name: Publish changes
         run: |
-          if git diff --quiet -- model-benchmarks/data/model-data.json model-benchmarks/llms.txt; then
+          if git diff --quiet -- model-benchmarks/data/model-data.json model-benchmarks/llms.txt model-benchmarks/data/eqbench-upstream-keys.json; then
             echo "Model metadata is already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add model-benchmarks/data/model-data.json model-benchmarks/llms.txt
+          git add model-benchmarks/data/model-data.json model-benchmarks/llms.txt model-benchmarks/data/eqbench-upstream-keys.json
           git commit -m "chore(benchmarks): refresh model metadata"
           git push

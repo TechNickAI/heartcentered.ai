@@ -114,6 +114,65 @@ class CuratedDataPreservation(unittest.TestCase):
         )
 
 
+class UnknownProvenanceFlagPreservation(unittest.TestCase):
+    """Regression guard for the 72b7149 provenance wipe.
+
+    The weekly CI metadata refresh deleted `sources.eq_bench_public` from all 28
+    rows carrying real public EQ-Bench scores, because merge_model() preserved a
+    hardcoded whitelist of source keys ("artificial_analysis", "eq_bench") and
+    silently dropped everything else. The scores survived; the provenance did
+    not. A refresh must preserve source keys it has never heard of.
+    """
+
+    def _merge_with_sources(self, stored_sources):
+        data = stored(REAL)
+        data["models"][0]["sources"] = stored_sources
+        return fm.merge_model(data, refreshed(NULLED))["models"][0]["sources"]
+
+    def test_eq_bench_public_survives_a_metadata_refresh(self):
+        out = self._merge_with_sources(
+            {"openrouter": True, "eq_bench": True, "eq_bench_public": True}
+        )
+        self.assertIs(
+            out.get("eq_bench_public"),
+            True,
+            "eq_bench_public was dropped by a metadata refresh (regression of 72b7149)",
+        )
+
+    def test_arbitrary_future_source_key_survives(self):
+        """The bug was the whitelist itself, not the one missing key."""
+        out = self._merge_with_sources(
+            {"openrouter": True, "some_source_invented_next_year": True}
+        )
+        self.assertIs(out.get("some_source_invented_next_year"), True)
+
+    def test_falsy_flags_do_not_resurrect(self):
+        out = self._merge_with_sources({"openrouter": True, "eq_bench_public": False})
+        self.assertFalse(out.get("eq_bench_public"))
+
+    def test_incoming_truthy_value_is_not_downgraded(self):
+        data = stored(REAL)
+        data["models"][0]["sources"] = {"eq_bench_public": True}
+        new = refreshed(NULLED)
+        new["sources"]["eq_bench_public"] = True
+        out = fm.merge_model(data, new)["models"][0]["sources"]
+        self.assertIs(out["eq_bench_public"], True)
+
+    def test_repeated_refreshes_do_not_erode_provenance(self):
+        data = stored(REAL)
+        data["models"][0]["sources"] = {"openrouter": True, "eq_bench_public": True}
+        for _ in range(3):
+            data = fm.merge_model(data, refreshed(NULLED))
+        self.assertIs(data["models"][0]["sources"]["eq_bench_public"], True)
+
+    def test_model_with_no_sources_block_does_not_crash(self):
+        """xiaomi/mimo-v2-pro is delisted and carries no `sources` key at all."""
+        data = stored(REAL)
+        del data["models"][0]["sources"]
+        out = fm.merge_model(data, refreshed(NULLED))["models"][0]["sources"]
+        self.assertIsInstance(out, dict)
+
+
 class AliasMap(unittest.TestCase):
     """OpenRouter renames slugs; aliases keep dataset ids stable."""
 

@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-07-26T13:04:59Z
+# Generated: 2026-07-28T13:03:03Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -110,7 +110,7 @@ Context: 1,048,576 tokens
 Max output: 393,216 tokens
 Pricing: $0.14 input / $0.28 output per 1M tokens (blended: $0.17)
 Capabilities: tool use, reasoning, structured output
-Available via: AkashML, Alibaba, Ambient, AtlasCloud, Baidu, Cloudflare, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, Fireworks, GMICloud, Io Net, Ionstream, Morph, Novita, Parasail, SiliconFlow, StreamLake, Venice
+Available via: AkashML, Alibaba, Ambient, AtlasCloud, Baidu, Cloudflare, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, Fireworks, GMICloud, Ionstream, Mancer 2, Morph, Novita, Parasail, SiliconFlow, StreamLake, Venice
 Description: DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa
 
 ## DeepSeek V4 Pro
@@ -144,7 +144,7 @@ Provider: Google
 ID: google/gemma-4-26b-a4b-it
 Context: 262,144 tokens
 Max output: 262,144 tokens
-Pricing: $0.12 input / $0.35 output per 1M tokens (blended: $0.18)
+Pricing: $0.14 input / $0.42 output per 1M tokens (blended: $0.21)
 Capabilities: tool use, reasoning, vision, structured output
 Available via: Cloudflare, DeepInfra, Google, Ionstream, NextBit, Novita, Parasail, SiliconFlow, Venice
 Description: Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual
@@ -158,7 +158,7 @@ Pricing: $0.14 input / $0.40 output per 1M tokens (blended: $0.20)
 Capabilities: tool use, reasoning, vision, structured output
 Scores (0-100): Reasoning: 52.3, Coding: 38.7, Agentic: 75.6
 Speed: 35.9 tokens/sec
-Available via: Cerebras, Chutes, CoreWeave, Crusoe, DeepInfra, Friendli, ModelRun, Morph, Novita, OpenInference, Parasail, Phala, SambaNova, SiliconFlow, Together, Venice
+Available via: Cerebras, Chutes, CoreWeave, Crusoe, DeepInfra, Friendli, ModelRun, Morph, NextBit, Novita, OpenInference, Parasail, Phala, SambaNova, SiliconFlow, Together, Venice
 Benchmarks (Artificial Analysis): intelligence_index: 39.2, coding_index: 38.7, gpqa: 0.857, hle: 0.227, scicode: 0.434, ifbench: 0.756, terminalbench_hard: 0.364
 EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
@@ -172,7 +172,7 @@ Pricing: $0.25 input / $1.00 output per 1M tokens (blended: $0.44)
 Capabilities: tool use, reasoning, structured output
 Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
 Speed: 41.9 tokens/sec, TTFT 1.385s
-Available via: AtlasCloud, DeepInfra, Fireworks, GMICloud, Groq, Mara, Minimax, Novita, SambaNova, Together
+Available via: AtlasCloud, DeepInfra, Fireworks, GMICloud, Groq, Mara, Minimax, Novita, SambaNova
 Benchmarks (Artificial Analysis): intelligence_index: 49.6, coding_index: 41.9, gpqa: 0.874, hle: 0.281, scicode: 0.47, ifbench: 0.757, terminalbench_hard: 0.394
 EQ-Bench v3 Score: 68.75/100
 PinchBench: 89.8% best, 83.2% avg (11 runs)
@@ -205,7 +205,7 @@ Context: 262,144 tokens
 Max output: 262,144 tokens
 Pricing: $0.65 input / $2.72 output per 1M tokens (blended: $1.16)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Inceptron, ModelRun, Moonshot AI, Novita, Parasail, Phala, SiliconFlow, StreamLake, Together, Venice
+Available via: AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Inceptron, ModelRun, Moonshot AI, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Together, Venice
 Description: Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks
 
 ## Hermes 4 405B
@@ -401,9 +401,9 @@ Provider: Z.ai
 ID: z-ai/glm-5.2
 Context: 1,048,576 tokens
 Max output: 131,072 tokens
-Pricing: $0.71 input / $2.24 output per 1M tokens (blended: $1.10)
+Pricing: $0.77 input / $2.42 output per 1M tokens (blended: $1.18)
 Capabilities: tool use, reasoning, structured output
-Available via: AkashML, Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, Io Net, Ionstream, Morph, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
+Available via: AkashML, Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, Ionstream, Morph, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
 Description: GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering
 
 ## Grok 4.20
