@@ -40,7 +40,7 @@
     async function init() {
         const tbody = document.getElementById("table-body");
         const cards = document.getElementById("mobile-cards");
-        tbody.innerHTML = `<tr><td colspan="9" class="text-center py-8 text-of-muted">Loading models...</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="10" class="text-center py-8 text-of-muted">Loading models...</td></tr>`;
         cards.innerHTML = `<div class="text-center py-8 text-of-muted">Loading models...</div>`;
 
         try {
@@ -61,7 +61,7 @@
             bindEvents();
             render();
         } catch (err) {
-            tbody.innerHTML = `<tr><td colspan="9" class="text-center py-8 text-of-muted">Failed to load model data. Try refreshing the page.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="10" class="text-center py-8 text-of-muted">Failed to load model data. Try refreshing the page.</td></tr>`;
             cards.innerHTML = `<div class="text-center py-8 text-of-muted">Failed to load model data. Try refreshing the page.</div>`;
         }
     }
@@ -132,6 +132,8 @@
                 return model.scores?.agentic ?? -1;
             case "eq_score":
                 return model.benchmarks?.eq_bench?.v3_score ?? -1;
+            case "eq_public":
+                return model.benchmarks?.eq_bench?.public_rubric_0_100 ?? -1;
             case "arena_elo":
                 return model.benchmarks?.arena?.elo ?? -1;
             case "speed":
@@ -233,6 +235,38 @@
       </span>`;
     }
 
+    function eqPublicHtml(model) {
+        const eq = model.benchmarks?.eq_bench;
+        const val = eq?.public_rubric_0_100;
+        if (val == null) return `<span class="score-na">—</span>`;
+
+        const tooltipParts = ["Public EQ-Bench v3 leaderboard (17-trait rubric)"];
+        if (eq.public_elo_norm)
+            tooltipParts.push(`Elo: ${Math.round(eq.public_elo_norm)}`);
+
+        const traitKeys = [
+            ["Empathy", "demonstrated_empathy"],
+            ["Insight", "depth_of_insight"],
+            ["Social", "social_dexterity"],
+            ["Warmth", "warmth"],
+            ["Humanlike", "humanlike"],
+        ];
+        const traits = traitKeys
+            .map(([label, key]) => {
+                const v = eq.public_traits_17?.[key];
+                return v != null ? `${label}: ${v}/20` : null;
+            })
+            .filter(Boolean)
+            .join("  ·  ");
+        if (traits) tooltipParts.push(traits);
+
+        return `
+      <span class="eq-detail">
+        <span class="score-value ${scoreTier(val)}">${val.toFixed(1)}</span>
+        <span class="eq-tooltip">${tooltipParts.join("<br>")}</span>
+      </span>`;
+    }
+
     function costHtml(pricing) {
         const blended = pricing?.blended_per_m;
         if (blended === 0 || blended == null) {
@@ -273,7 +307,7 @@
     function renderTable(list) {
         const tbody = document.getElementById("table-body");
         if (!list.length) {
-            tbody.innerHTML = `<tr><td colspan="9" class="text-center py-8 text-of-muted">No models match your filters.</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="10" class="text-center py-8 text-of-muted">No models match your filters.</td></tr>`;
             return;
         }
         tbody.innerHTML = list
@@ -290,6 +324,7 @@
         <td class="score-cell">${scoreHtml(m.scores?.coding)}</td>
         <td class="score-cell">${scoreHtml(m.scores?.agentic)}</td>
         <td class="score-cell eq-cell">${eqHtml(m)}</td>
+        <td class="score-cell eq-cell">${eqPublicHtml(m)}</td>
         <td class="score-cell">${arenaHtml(m)}</td>
         <td class="score-cell">${speedHtml(m.speed)}</td>
         <td class="score-cell">${costHtml(m.pricing)}</td>
@@ -332,8 +367,12 @@
             <div class="card-score-value ${scoreTier(m.scores?.agentic)}">${m.scores?.agentic != null ? Math.round(m.scores.agentic) : "—"}</div>
           </div>
           <div class="card-score-item">
-            <div class="card-score-label">EQ</div>
+            <div class="card-score-label">EQ (local)</div>
             <div class="card-score-value ${scoreTier(m.benchmarks?.eq_bench?.v3_score)}">${m.benchmarks?.eq_bench?.v3_score != null ? m.benchmarks.eq_bench.v3_score.toFixed(1) : "—"}</div>
+          </div>
+          <div class="card-score-item">
+            <div class="card-score-label">EQ (public)</div>
+            <div class="card-score-value ${scoreTier(m.benchmarks?.eq_bench?.public_rubric_0_100)}">${m.benchmarks?.eq_bench?.public_rubric_0_100 != null ? m.benchmarks.eq_bench.public_rubric_0_100.toFixed(1) : "—"}</div>
           </div>
           <div class="card-score-item">
             <div class="card-score-label">Chat</div>
