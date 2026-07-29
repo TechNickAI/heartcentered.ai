@@ -1,0 +1,19 @@
+# Prettier ignore
+#
+# Script-generated JSON data files. These are written by
+# `model-benchmarks/scripts/*.py` via `json.dump(..., indent=2)`, which expands
+# every array to one element per line. Prettier collapses short arrays onto a
+# single line, so the two formatters disagree permanently: every pipeline run
+# rewrites the file, Prettier reformats it, and the pre-commit hook fails.
+#
+# That conflict left `main` red on six consecutive pre-commit runs (2026-07-25
+# through 2026-07-28) and the failures were misattributed to whichever PR
+# happened to be open, which is how PR #23 sat blocked for five review passes on
+# a check that had nothing to do with it.
+#
+# These files are machine-written and machine-read; their formatting is decided
+# by the generator, not by a human editing them. Prettier has no useful opinion
+# here.
+model-benchmarks/data/model-data.json
+model-benchmarks/data/eqbench-upstream-keys.json
+model-benchmarks/data/eqbench-raw.json
