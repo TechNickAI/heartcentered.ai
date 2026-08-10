@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-03T12:35:54Z",
+  "generated": "2026-08-10T10:36:17Z",
   "schema_version": "2.0",
   "sources": {
     "openrouter": "https://openrouter.ai/api/v1/models",
@@ -57,7 +57,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 97.85,
+        "uptime_24h": 96.85,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -98,7 +98,7 @@
         "eq_bench_public": true
       },
       "created": 1781007515,
-      "last_updated": "2026-08-03T12:35:50Z"
+      "last_updated": "2026-08-10T10:36:15Z"
     },
     {
       "id": "anthropic/claude-haiku-4.5",
@@ -206,7 +206,7 @@
         "pinchbench": false
       },
       "created": 1760547638,
-      "last_updated": "2026-08-03T12:35:50Z",
+      "last_updated": "2026-08-10T10:36:15Z",
       "speed": {
         "output_tokens_per_sec": 93,
         "ttft_seconds": 0.4,
@@ -296,7 +296,7 @@
         "eq_bench_public": true
       },
       "created": 1764010580,
-      "last_updated": "2026-08-03T12:35:51Z"
+      "last_updated": "2026-08-10T10:36:15Z"
     },
     {
       "id": "anthropic/claude-opus-4.6",
@@ -439,7 +439,7 @@
         "eq_bench_public": true
       },
       "created": 1770219050,
-      "last_updated": "2026-08-03T12:35:51Z",
+      "last_updated": "2026-08-10T10:36:15Z",
       "speed": {
         "output_tokens_per_sec": 46.1,
         "ttft_seconds": 1.655,
@@ -488,7 +488,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 100.0,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -529,7 +529,7 @@
         "eq_bench_public": true
       },
       "created": 1776351100,
-      "last_updated": "2026-08-03T12:35:51Z"
+      "last_updated": "2026-08-10T10:36:15Z"
     },
     {
       "id": "anthropic/claude-opus-4.8",
@@ -614,7 +614,7 @@
         "eq_bench_public": true
       },
       "created": 1779905091,
-      "last_updated": "2026-08-03T12:35:51Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.5",
@@ -699,7 +699,7 @@
         "eq_bench_public": true
       },
       "created": 1759161676,
-      "last_updated": "2026-08-03T12:35:51Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
@@ -743,7 +743,7 @@
           "Azure",
           "Google"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -842,7 +842,7 @@
         "eq_bench_public": true
       },
       "created": 1771342990,
-      "last_updated": "2026-08-03T12:35:51Z",
+      "last_updated": "2026-08-10T10:36:16Z",
       "speed": {
         "output_tokens_per_sec": 47.0,
         "ttft_seconds": 0.9,
@@ -852,7 +852,7 @@
     {
       "id": "deepseek/deepseek-v4-flash",
       "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
-      "name": "DeepSeek V4 Flash",
+      "name": "DeepSeek V4 Flash 0423",
       "provider": "DeepSeek",
       "description": "DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fast inference and...",
       "context_window": 1048576,
@@ -884,7 +884,6 @@
       },
       "endpoint_stats": {
         "providers": [
-          "AkashML",
           "Alibaba",
           "Ambient",
           "AtlasCloud",
@@ -906,7 +905,7 @@
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -947,7 +946,7 @@
         "eq_bench_public": true
       },
       "created": 1777000666,
-      "last_updated": "2026-08-03T12:35:51Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "deepseek/deepseek-v4-pro",
@@ -1003,7 +1002,7 @@
           "Together",
           "Venice"
         ],
-        "uptime_24h": 99.79,
+        "uptime_24h": 99.92,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1044,7 +1043,7 @@
         "eq_bench_public": true
       },
       "created": 1777000679,
-      "last_updated": "2026-08-03T12:35:51Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "google/gemini-3.1-pro-preview-20260219",
@@ -1088,7 +1087,7 @@
           "Google",
           "Google AI Studio"
         ],
-        "uptime_24h": 99.42,
+        "uptime_24h": 99.77,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1182,7 +1181,7 @@
         "eq_bench_public": true
       },
       "created": 1771509627,
-      "last_updated": "2026-08-03T12:35:51Z",
+      "last_updated": "2026-08-10T10:36:16Z",
       "speed": {
         "output_tokens_per_sec": 127.0,
         "ttft_seconds": 30.66,
@@ -1197,7 +1196,7 @@
       "provider": "Google",
       "description": "Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference \u2014 delivering near-31B quality at...",
       "context_window": 262144,
-      "max_output": 16384,
+      "max_output": 262144,
       "modalities": {
         "input": [
           "image",
@@ -1210,12 +1209,12 @@
       },
       "tokenizer": "Gemma",
       "pricing": {
-        "input_per_m": 0.07,
-        "output_per_m": 0.34,
-        "cache_read_per_m": null,
+        "input_per_m": 0.12,
+        "output_per_m": 0.4,
+        "cache_read_per_m": 0.05,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 0.1375
+        "blended_per_m": 0.19
       },
       "capabilities": {
         "tool_use": true,
@@ -1237,7 +1236,7 @@
           "SiliconFlow",
           "Venice"
         ],
-        "uptime_24h": 99.91,
+        "uptime_24h": 99.85,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1278,7 +1277,7 @@
         "eq_bench_public": true
       },
       "created": 1775227989,
-      "last_updated": "2026-08-03T12:35:51Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "google/gemma-4-31b-it",
@@ -1416,7 +1415,7 @@
         "eq_bench_public": true
       },
       "created": 1775148486,
-      "last_updated": "2026-08-03T12:35:51Z",
+      "last_updated": "2026-08-10T10:36:16Z",
       "speed": {
         "output_tokens_per_sec": 35.9,
         "ttft_seconds": null,
@@ -1441,12 +1440,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.25,
-        "output_per_m": 1.0,
-        "cache_read_per_m": 0.05,
+        "input_per_m": 0.3,
+        "output_per_m": 1.2,
+        "cache_read_per_m": 0.06,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 0.4375
+        "blended_per_m": 0.525
       },
       "capabilities": {
         "tool_use": true,
@@ -1468,7 +1467,7 @@
           "Novita",
           "SambaNova"
         ],
-        "uptime_24h": 99.89,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1532,7 +1531,7 @@
         "pinchbench": true
       },
       "created": 1773836697,
-      "last_updated": "2026-08-03T12:35:52Z",
+      "last_updated": "2026-08-10T10:36:16Z",
       "speed": {
         "output_tokens_per_sec": 41.9,
         "ttft_seconds": 1.385,
@@ -1576,7 +1575,7 @@
         "providers": [
           "Novita"
         ],
-        "uptime_24h": 100.0,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1617,7 +1616,7 @@
         "eq_bench_public": true
       },
       "created": 1752263252,
-      "last_updated": "2026-08-03T12:35:52Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "moonshotai/kimi-k2.5",
@@ -1707,7 +1706,7 @@
         "eq_bench_public": true
       },
       "created": 1769487076,
-      "last_updated": "2026-08-03T12:35:52Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "moonshotai/kimi-k2.6",
@@ -1728,12 +1727,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.6,
-        "output_per_m": 3.41,
-        "cache_read_per_m": 0.2,
+        "input_per_m": 0.95,
+        "output_per_m": 4.0,
+        "cache_read_per_m": 0.16,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 1.3025
+        "blended_per_m": 1.7125
       },
       "capabilities": {
         "tool_use": true,
@@ -1767,7 +1766,7 @@
           "Together",
           "Venice"
         ],
-        "uptime_24h": 99.94,
+        "uptime_24h": 99.95,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1808,7 +1807,7 @@
         "eq_bench_public": true
       },
       "created": 1776699402,
-      "last_updated": "2026-08-03T12:35:52Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "nousresearch/hermes-4-405b",
@@ -1888,7 +1887,7 @@
         "eq_bench_public": true
       },
       "created": 1756235463,
-      "last_updated": "2026-08-03T12:35:52Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "openai/gpt-5.1",
@@ -1930,7 +1929,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 99.74,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1971,7 +1970,7 @@
         "eq_bench_public": true
       },
       "created": 1763060305,
-      "last_updated": "2026-08-03T12:35:52Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "openai/gpt-5.2",
@@ -2013,7 +2012,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2054,7 +2053,7 @@
         "eq_bench_public": true
       },
       "created": 1765389775,
-      "last_updated": "2026-08-03T12:35:52Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "openai/gpt-5.3-chat",
@@ -2093,7 +2092,6 @@
       },
       "endpoint_stats": {
         "providers": [
-          "Azure",
           "OpenAI"
         ],
         "uptime_24h": 100,
@@ -2137,7 +2135,7 @@
         "eq_bench_public": true
       },
       "created": 1772564061,
-      "last_updated": "2026-08-03T12:35:52Z"
+      "last_updated": "2026-08-10T10:36:16Z"
     },
     {
       "id": "openai/gpt-5.4",
@@ -2274,7 +2272,7 @@
         "eq_bench_public": true
       },
       "created": 1772734352,
-      "last_updated": "2026-08-03T12:35:52Z",
+      "last_updated": "2026-08-10T10:36:17Z",
       "speed": {
         "output_tokens_per_sec": 74.0,
         "ttft_seconds": 152.2,
@@ -2322,7 +2320,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 100.0,
+        "uptime_24h": 99.99,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2372,7 +2370,7 @@
         "pinchbench": false
       },
       "created": 1773748178,
-      "last_updated": "2026-08-03T12:35:52Z",
+      "last_updated": "2026-08-10T10:36:17Z",
       "notes": "Agentic score from AA Agentic Index (not PinchBench-based)",
       "speed": {
         "output_tokens_per_sec": 186,
@@ -2420,7 +2418,7 @@
           "Azure",
           "OpenAI"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 97.89,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2461,7 +2459,7 @@
         "eq_bench_public": true
       },
       "created": 1777051893,
-      "last_updated": "2026-08-03T12:35:53Z"
+      "last_updated": "2026-08-10T10:36:17Z"
     },
     {
       "id": "qwen/qwen3.5-397b-a17b",
@@ -2512,7 +2510,7 @@
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 99.84,
+        "uptime_24h": 99.72,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2553,7 +2551,7 @@
         "eq_bench_public": true
       },
       "created": 1771223018,
-      "last_updated": "2026-08-03T12:35:53Z"
+      "last_updated": "2026-08-10T10:36:17Z"
     },
     {
       "id": "qwen/qwen3.6-plus:free",
@@ -2594,7 +2592,7 @@
         "providers": [
           "Alibaba"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 100.0,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2634,12 +2632,143 @@
         "pinchbench": false
       },
       "created": 1775133557,
-      "last_updated": "2026-08-03T12:35:53Z",
+      "last_updated": "2026-08-10T10:36:17Z",
       "notes": "EQ-Bench scores removed 2026-07-26: they were inherited from predecessor Qwen3.5-397B-A17B, which is now tracked as its own row (qwen/qwen3.5-397b-a17b). Qwen3.6 Plus has not been benchmarked on EQ-Bench. PinchBench is from Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; pricing shown is the paid qwen/qwen3.6-plus endpoint.",
       "speed": {
         "output_tokens_per_sec": 44.0,
         "ttft_seconds": 1.59,
         "source": "openrouter"
+      }
+    },
+    {
+      "id": "x-ai/grok-4.20-20260309",
+      "canonical_slug": "x-ai/grok-4.20-20260309",
+      "name": "Grok 4.20",
+      "provider": "SpaceXAI",
+      "description": "Grok 4.20 is a reasoning model from SpaceXAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering...",
+      "context_window": 2000000,
+      "max_output": null,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "tokenizer": "Grok",
+      "pricing": {
+        "input_per_m": 1.25,
+        "output_per_m": 2.5,
+        "cache_read_per_m": 0.2,
+        "cache_write_per_m": null,
+        "web_search_per_req": 0.005,
+        "blended_per_m": 1.5625
+      },
+      "capabilities": {
+        "tool_use": true,
+        "reasoning": true,
+        "vision": true,
+        "audio_input": false,
+        "web_search": true,
+        "structured_output": true
+      },
+      "endpoint_stats": {
+        "providers": [
+          "xAI"
+        ],
+        "uptime_24h": 99.9,
+        "latency_ms": null,
+        "throughput_tps": null
+      },
+      "scores": {
+        "reasoning": 48.0,
+        "coding": 42,
+        "agentic": 78.9
+      },
+      "benchmarks": {
+        "artificial_analysis": {
+          "intelligence_index": 48.0,
+          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
+        },
+        "eq_bench": {
+          "elo": 856.4,
+          "v3_score": 68.55,
+          "v3_traits": {
+            "analytical": 16.0,
+            "boundary_setting": 11.7,
+            "challenging": 10.6,
+            "compliant": 10.8,
+            "conversational": 10.0,
+            "correctness": 13.5,
+            "demonstrated_empathy": 13.9,
+            "depth_of_insight": 15.3,
+            "emotional_reasoning": 14.3,
+            "humanlike": 12.4,
+            "intellectual_grounding": 13.5,
+            "message_tailoring": 11.5,
+            "moralising": 11.4,
+            "pragmatic_ei": 12.2,
+            "reactive": 9.9,
+            "safety_conscious": 12.2,
+            "social_dexterity": 11.9,
+            "subtext_identification": 15.8,
+            "sycophantic": 4.9,
+            "theory_of_mind": 14.2,
+            "validating": 13.5,
+            "warmth": 13.5
+          },
+          "public_source_key": "grok-4.20-beta",
+          "public_rubric_0_100": 55.8,
+          "public_elo_norm": 851.5,
+          "public_traits_17": {
+            "demonstrated_empathy": 7.38,
+            "pragmatic_ei": 7.54,
+            "depth_of_insight": 12.49,
+            "social_dexterity": 6.85,
+            "emotional_reasoning": 11.69,
+            "message_tailoring": 6.31,
+            "boundary_setting": 15.31,
+            "safety_conscious": 14.38,
+            "moralising": 12.54,
+            "compliant": 6.96,
+            "challenging": 11.85,
+            "warmth": 6.77,
+            "validating": 7.73,
+            "analytical": 10.88,
+            "reactive": 13.19,
+            "conversational": 5.77,
+            "humanlike": 7.65
+          }
+        },
+        "pinchbench": {
+          "best_score": 82.4,
+          "avg_score": 71.8,
+          "runs": 18,
+          "note": "Score from grok-4.1-fast (closest available)"
+        },
+        "arena": {
+          "elo": 1491,
+          "rank": 4,
+          "category": "text"
+        }
+      },
+      "sources": {
+        "openrouter": true,
+        "artificial_analysis": false,
+        "eq_bench": false,
+        "pinchbench": false,
+        "eq_bench_public": true
+      },
+      "created": 1774979019,
+      "last_updated": "2026-08-10T10:36:17Z",
+      "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
+      "speed": {
+        "output_tokens_per_sec": 271.0,
+        "ttft_seconds": 10.72,
+        "source": "artificial_analysis"
       }
     },
     {
@@ -2719,7 +2848,7 @@
         "pinchbench": true
       },
       "created": 1769728337,
-      "last_updated": "2026-08-03T12:35:53Z",
+      "last_updated": "2026-08-10T10:36:17Z",
       "speed": {
         "output_tokens_per_sec": 85.7,
         "ttft_seconds": 1.271,
@@ -2861,12 +2990,13 @@
           "Cerebras",
           "DeepInfra",
           "Google",
+          "Mancer 2",
           "Novita",
           "StreamLake",
           "Venice",
           "Z.AI"
         ],
-        "uptime_24h": 100.0,
+        "uptime_24h": 99.97,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2907,7 +3037,7 @@
         "eq_bench_public": true
       },
       "created": 1766378014,
-      "last_updated": "2026-08-03T12:35:53Z"
+      "last_updated": "2026-08-10T10:36:17Z"
     },
     {
       "id": "z-ai/glm-4.7-flash",
@@ -2949,7 +3079,7 @@
           "Novita",
           "Venice"
         ],
-        "uptime_24h": 99.5,
+        "uptime_24h": 99.76,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2990,7 +3120,7 @@
         "eq_bench_public": true
       },
       "created": 1768833913,
-      "last_updated": "2026-08-03T12:35:53Z"
+      "last_updated": "2026-08-10T10:36:17Z"
     },
     {
       "id": "z-ai/glm-5",
@@ -3034,14 +3164,13 @@
           "DigitalOcean",
           "GMICloud",
           "Novita",
-          "Parasail",
           "Phala",
           "SiliconFlow",
           "StreamLake",
           "Venice",
           "Z.AI"
         ],
-        "uptime_24h": 99.93,
+        "uptime_24h": 99.91,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3082,7 +3211,7 @@
         "eq_bench_public": true
       },
       "created": 1770829182,
-      "last_updated": "2026-08-03T12:35:53Z"
+      "last_updated": "2026-08-10T10:36:17Z"
     },
     {
       "id": "z-ai/glm-5-turbo",
@@ -3197,7 +3326,7 @@
         "pinchbench": true
       },
       "created": 1773583573,
-      "last_updated": "2026-08-03T12:35:53Z",
+      "last_updated": "2026-08-10T10:36:17Z",
       "speed": {
         "output_tokens_per_sec": 42.0,
         "ttft_seconds": 1.77,
@@ -3211,7 +3340,7 @@
       "provider": "Z.ai",
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "context_window": 204800,
-      "max_output": 128000,
+      "max_output": 131072,
       "modalities": {
         "input": [
           "text"
@@ -3222,12 +3351,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.966,
-        "output_per_m": 3.036,
-        "cache_read_per_m": 0.1794,
+        "input_per_m": 1.4,
+        "output_per_m": 4.4,
+        "cache_read_per_m": 0.26,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 1.4835
+        "blended_per_m": 2.15
       },
       "capabilities": {
         "tool_use": true,
@@ -3243,7 +3372,6 @@
           "AtlasCloud",
           "Baidu",
           "Chutes",
-          "CoreWeave",
           "Crusoe",
           "DeepInfra",
           "DigitalOcean",
@@ -3259,7 +3387,7 @@
           "Wafer",
           "Z.AI"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 99.98,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3300,7 +3428,7 @@
         "eq_bench_public": true
       },
       "created": 1775578025,
-      "last_updated": "2026-08-03T12:35:54Z"
+      "last_updated": "2026-08-10T10:36:17Z"
     },
     {
       "id": "z-ai/glm-5.2",
@@ -3309,7 +3437,7 @@
       "provider": "Z.ai",
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "context_window": 1048576,
-      "max_output": 131072,
+      "max_output": 262144,
       "modalities": {
         "input": [
           "text"
@@ -3320,12 +3448,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.707,
-        "output_per_m": 2.222,
-        "cache_read_per_m": 0.1313,
+        "input_per_m": 0.76,
+        "output_per_m": 2.42,
+        "cache_read_per_m": 0.14,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 1.0857
+        "blended_per_m": 1.175
       },
       "capabilities": {
         "tool_use": true,
@@ -3343,7 +3471,6 @@
           "AtlasCloud",
           "Baidu",
           "BaseTen",
-          "Chutes",
           "Cloudflare",
           "CoreWeave",
           "Crusoe",
@@ -3354,7 +3481,6 @@
           "Friendli",
           "GMICloud",
           "Inceptron",
-          "Ionstream",
           "Morph",
           "Novita",
           "Parasail",
@@ -3367,7 +3493,7 @@
           "Wafer",
           "Z.AI"
         ],
-        "uptime_24h": 99.96,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3408,138 +3534,7 @@
         "eq_bench_public": true
       },
       "created": 1781631930,
-      "last_updated": "2026-08-03T12:35:54Z"
-    },
-    {
-      "id": "x-ai/grok-4.20-20260309",
-      "canonical_slug": "x-ai/grok-4.20-20260309",
-      "name": "Grok 4.20",
-      "provider": "xAI",
-      "description": "Grok 4.20 is a reasoning model from xAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering...",
-      "context_window": 2000000,
-      "max_output": null,
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "tokenizer": "Grok",
-      "pricing": {
-        "input_per_m": 1.25,
-        "output_per_m": 2.5,
-        "cache_read_per_m": 0.2,
-        "cache_write_per_m": null,
-        "web_search_per_req": 0.005,
-        "blended_per_m": 1.5625
-      },
-      "capabilities": {
-        "tool_use": true,
-        "reasoning": true,
-        "vision": true,
-        "audio_input": false,
-        "web_search": true,
-        "structured_output": true
-      },
-      "endpoint_stats": {
-        "providers": [
-          "xAI"
-        ],
-        "uptime_24h": 99.99,
-        "latency_ms": null,
-        "throughput_tps": null
-      },
-      "scores": {
-        "reasoning": 48.0,
-        "coding": 42,
-        "agentic": 78.9
-      },
-      "benchmarks": {
-        "artificial_analysis": {
-          "intelligence_index": 48.0,
-          "note": "Coding index unavailable \u2014 AA API rate limited during collection"
-        },
-        "eq_bench": {
-          "elo": 856.4,
-          "v3_score": 68.55,
-          "v3_traits": {
-            "analytical": 16.0,
-            "boundary_setting": 11.7,
-            "challenging": 10.6,
-            "compliant": 10.8,
-            "conversational": 10.0,
-            "correctness": 13.5,
-            "demonstrated_empathy": 13.9,
-            "depth_of_insight": 15.3,
-            "emotional_reasoning": 14.3,
-            "humanlike": 12.4,
-            "intellectual_grounding": 13.5,
-            "message_tailoring": 11.5,
-            "moralising": 11.4,
-            "pragmatic_ei": 12.2,
-            "reactive": 9.9,
-            "safety_conscious": 12.2,
-            "social_dexterity": 11.9,
-            "subtext_identification": 15.8,
-            "sycophantic": 4.9,
-            "theory_of_mind": 14.2,
-            "validating": 13.5,
-            "warmth": 13.5
-          },
-          "public_source_key": "grok-4.20-beta",
-          "public_rubric_0_100": 55.8,
-          "public_elo_norm": 851.5,
-          "public_traits_17": {
-            "demonstrated_empathy": 7.38,
-            "pragmatic_ei": 7.54,
-            "depth_of_insight": 12.49,
-            "social_dexterity": 6.85,
-            "emotional_reasoning": 11.69,
-            "message_tailoring": 6.31,
-            "boundary_setting": 15.31,
-            "safety_conscious": 14.38,
-            "moralising": 12.54,
-            "compliant": 6.96,
-            "challenging": 11.85,
-            "warmth": 6.77,
-            "validating": 7.73,
-            "analytical": 10.88,
-            "reactive": 13.19,
-            "conversational": 5.77,
-            "humanlike": 7.65
-          }
-        },
-        "pinchbench": {
-          "best_score": 82.4,
-          "avg_score": 71.8,
-          "runs": 18,
-          "note": "Score from grok-4.1-fast (closest available)"
-        },
-        "arena": {
-          "elo": 1491,
-          "rank": 4,
-          "category": "text"
-        }
-      },
-      "sources": {
-        "openrouter": true,
-        "artificial_analysis": false,
-        "eq_bench": false,
-        "pinchbench": false,
-        "eq_bench_public": true
-      },
-      "created": 1774979019,
-      "last_updated": "2026-08-03T12:35:54Z",
-      "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
-      "speed": {
-        "output_tokens_per_sec": 271.0,
-        "ttft_seconds": 10.72,
-        "source": "artificial_analysis"
-      }
+      "last_updated": "2026-08-10T10:36:17Z"
     }
   ]
 }
