@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-08-10T10:36:17Z
+# Generated: 2026-08-17T09:57:30Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -107,20 +107,20 @@ Description: Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with
 Provider: DeepSeek
 ID: deepseek/deepseek-v4-flash
 Context: 1,048,576 tokens
-Max output: 393,216 tokens
-Pricing: $0.14 input / $0.28 output per 1M tokens (blended: $0.17)
+Max output: 384,000 tokens
+Pricing: $0.08 input / $0.17 output per 1M tokens (blended: $0.10)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, Ambient, AtlasCloud, Baidu, Cloudflare, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, Fireworks, GMICloud, Mancer 2, Morph, Novita, OpenInference, Parasail, Phala, SiliconFlow, StreamLake, Venice
+Available via: Alibaba, AtlasCloud, Azure, Baidu, Cloudflare, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, GMICloud, Mancer 2, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Venice
 Description: DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa
 
-## DeepSeek V4 Pro
+## DeepSeek V4 Pro 0423
 Provider: DeepSeek
 ID: deepseek/deepseek-v4-pro
 Context: 1,048,576 tokens
 Max output: 384,000 tokens
-Pricing: $0.43 input / $0.87 output per 1M tokens (blended: $0.54)
+Pricing: $1.32 input / $3.96 output per 1M tokens (blended: $1.98)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, Fireworks, GMICloud, Ionstream, Novita, Parasail, SiliconFlow, StreamLake, Together, Venice
+Available via: Alibaba, AtlasCloud, Azure, Baidu, BaseTen, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, Fireworks, GMICloud, Ionstream, Novita, Parasail, SiliconFlow, StreamLake, Together, Venice
 Description: DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso
 
 ## Gemini 3.1 Pro Preview
@@ -143,10 +143,10 @@ Description: Gemini 3.1 Pro Preview is Google’s frontier reasoning model, deli
 Provider: Google
 ID: google/gemma-4-26b-a4b-it
 Context: 262,144 tokens
-Max output: 262,144 tokens
-Pricing: $0.12 input / $0.40 output per 1M tokens (blended: $0.19)
+Max output: 16,384 tokens
+Pricing: $0.07 input / $0.34 output per 1M tokens (blended: $0.14)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: Cloudflare, DeepInfra, Google, Ionstream, NextBit, Novita, Parasail, SiliconFlow, Venice
+Available via: Cloudflare, DeepInfra, Google, NextBit, Novita, Parasail, SiliconFlow, Venice
 Description: Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual
 
 ## Gemma 4 31B
@@ -379,10 +379,10 @@ Description: As a 30B-class SOTA model, GLM-4.7-Flash offers a new option that b
 Provider: Z.ai
 ID: z-ai/glm-5
 Context: 204,800 tokens
-Max output: 131,072 tokens
-Pricing: $0.95 input / $2.55 output per 1M tokens (blended: $1.35)
+Max output: 128,000 tokens
+Pricing: $0.60 input / $1.92 output per 1M tokens (blended: $0.93)
 Capabilities: tool use, reasoning, structured output
-Available via: Amazon Bedrock, AtlasCloud, Baidu, DeepInfra, DigitalOcean, GMICloud, Novita, Phala, SiliconFlow, StreamLake, Venice, Z.AI
+Available via: Amazon Bedrock, AtlasCloud, Baidu, DeepInfra, DigitalOcean, GMICloud, Novita, SiliconFlow, StreamLake, Venice, Z.AI
 Description: GLM-5 is Z.ai’s flagship open-source foundation model engineered for complex systems design and long-horizon agent workflows. Built for expert developers, it delivers production-grade performance on l
 
 ## GLM 5 Turbo
@@ -405,8 +405,8 @@ Description: GLM-5 Turbo is a new model from Z.ai designed for fast inference an
 Provider: Z.ai
 ID: z-ai/glm-5.1
 Context: 204,800 tokens
-Max output: 131,072 tokens
-Pricing: $1.40 input / $4.40 output per 1M tokens (blended: $2.15)
+Max output: 128,000 tokens
+Pricing: $0.97 input / $3.04 output per 1M tokens (blended: $1.48)
 Capabilities: tool use, reasoning, structured output
 Available via: Alibaba, AtlasCloud, Baidu, Chutes, Crusoe, DeepInfra, DigitalOcean, Friendli, GMICloud, Nebius, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice, Wafer, Z.AI
 Description: GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work 
@@ -416,9 +416,9 @@ Provider: Z.ai
 ID: z-ai/glm-5.2
 Context: 1,048,576 tokens
 Max output: 262,144 tokens
-Pricing: $0.76 input / $2.42 output per 1M tokens (blended: $1.18)
+Pricing: $1.19 input / $3.74 output per 1M tokens (blended: $1.83)
 Capabilities: tool use, reasoning, structured output
-Available via: AkashML, Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, Morph, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
+Available via: AkashML, Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, ModelRun, Morph, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
 Description: GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering
 
 ---
