@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-08-17T09:57:30Z
+# Generated: 2026-08-24T10:04:02Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -13,7 +13,7 @@ Context: 1,000,000 tokens
 Max output: 128,000 tokens
 Pricing: $10.00 input / $50.00 output per 1M tokens (blended: $20.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Available via: Amazon Bedrock, Anthropic, Azure, Google
+Available via: Amazon Bedrock, Anthropic, Azure, Claude Platform on AWS, Google
 Description: Claude Fable 5 is a Mythos-class model from Anthropic, built for autonomous knowledge work and coding. It supports text, image, and file inputs with text output, with reasoning support and...
 
 ## Claude Haiku 4.5
@@ -38,7 +38,7 @@ Context: 200,000 tokens
 Max output: 64,000 tokens
 Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Available via: Amazon Bedrock, Anthropic, Azure, Google
+Available via: Amazon Bedrock, Anthropic, Azure, Claude Platform on AWS, Google
 Description: Claude Opus 4.5 is Anthropic’s frontier reasoning model optimized for complex software engineering, agentic workflows, and long-horizon computer use. It offers strong multimodal capabilities, competit
 
 ## Claude Opus 4.6
@@ -50,7 +50,7 @@ Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
 Scores (0-100): Reasoning: 53.9, Coding: 47.6, Agentic: 89.9
 Speed: 46.1 tokens/sec, TTFT 1.655s
-Available via: Amazon Bedrock, Anthropic, Azure, Google
+Available via: Amazon Bedrock, Anthropic, Azure, Claude Platform on AWS, Google
 Benchmarks (Artificial Analysis): intelligence_index: 46.5, coding_index: 47.6, gpqa: 0.84, hle: 0.186, scicode: 0.457, ifbench: 0.446, terminalbench_hard: 0.485
 EQ-Bench v3 Score: 71.85/100
 EQ-Bench Elo: 1857.8
@@ -64,7 +64,7 @@ Context: 1,000,000 tokens
 Max output: 128,000 tokens
 Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Available via: Amazon Bedrock, Anthropic, Azure, Google
+Available via: Amazon Bedrock, Anthropic, Azure, Claude Platform on AWS, Google
 Description: Opus 4.7 is the next generation of Anthropic's Opus family, built for long-running, asynchronous agents. Building on the coding and agentic strengths of Opus 4.6, it delivers stronger performance on..
 
 ## Claude Opus 4.8
@@ -74,7 +74,7 @@ Context: 1,000,000 tokens
 Max output: 128,000 tokens
 Pricing: $5.00 input / $25.00 output per 1M tokens (blended: $10.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Available via: Amazon Bedrock, Anthropic, Azure, Google
+Available via: Amazon Bedrock, Anthropic, Azure, Claude Platform on AWS, Google
 Description: Claude Opus 4.8 is Anthropic's most capable generally available model in the Opus family. It supports text, image, and file inputs with text output, with reasoning support and a 1M-token...
 
 ## Claude Sonnet 4.5
@@ -84,7 +84,7 @@ Context: 1,000,000 tokens
 Max output: 64,000 tokens
 Pricing: $3.00 input / $15.00 output per 1M tokens (blended: $6.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
-Available via: Amazon Bedrock, Anthropic, Azure, Google
+Available via: Amazon Bedrock, Anthropic, Azure, Claude Platform on AWS, Google
 Description: Claude Sonnet 4.5 is Anthropic’s most advanced Sonnet model to date, optimized for real-world agents and coding workflows. It delivers state-of-the-art performance on coding benchmarks such as SWE-ben
 
 ## Claude Sonnet 4.6
@@ -96,7 +96,7 @@ Pricing: $3.00 input / $15.00 output per 1M tokens (blended: $6.00)
 Capabilities: tool use, reasoning, vision, web search, structured output
 Scores (0-100): Reasoning: 50.4, Coding: 46.4, Agentic: 85.7
 Speed: 47.0 tokens/sec, TTFT 0.9s
-Available via: Amazon Bedrock, Anthropic, Azure, Google
+Available via: Amazon Bedrock, Anthropic, Azure, Claude Platform on AWS, Google
 Benchmarks (Artificial Analysis): intelligence_index: 44.4, coding_index: 46.4, gpqa: 0.799, hle: 0.132, scicode: 0.469, ifbench: 0.412, terminalbench_hard: 0.462
 EQ-Bench v3 Score: 71.7/100
 EQ-Bench Elo: 1876.8
@@ -108,9 +108,9 @@ Provider: DeepSeek
 ID: deepseek/deepseek-v4-flash
 Context: 1,048,576 tokens
 Max output: 384,000 tokens
-Pricing: $0.08 input / $0.17 output per 1M tokens (blended: $0.10)
+Pricing: $0.06 input / $0.11 output per 1M tokens (blended: $0.07)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Azure, Baidu, Cloudflare, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, GMICloud, Mancer 2, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Venice
+Available via: Alibaba, AtlasCloud, Azure, Baidu, Cloudflare, CoreWeave, DeepInfra, DigitalOcean, GMICloud, Mancer 2, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Venice
 Description: DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa
 
 ## DeepSeek V4 Pro 0423
@@ -118,9 +118,9 @@ Provider: DeepSeek
 ID: deepseek/deepseek-v4-pro
 Context: 1,048,576 tokens
 Max output: 384,000 tokens
-Pricing: $1.32 input / $3.96 output per 1M tokens (blended: $1.98)
+Pricing: $0.53 input / $1.05 output per 1M tokens (blended: $0.66)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Azure, Baidu, BaseTen, CoreWeave, DeepInfra, DeepSeek, DigitalOcean, Fireworks, GMICloud, Ionstream, Novita, Parasail, SiliconFlow, StreamLake, Together, Venice
+Available via: Alibaba, AtlasCloud, Azure, Baidu, BaseTen, CoreWeave, DeepInfra, DigitalOcean, Fireworks, GMICloud, Ionstream, Novita, Parasail, SiliconFlow, StreamLake, Together, Venice
 Description: DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso
 
 ## Gemini 3.1 Pro Preview
@@ -146,7 +146,7 @@ Context: 262,144 tokens
 Max output: 16,384 tokens
 Pricing: $0.07 input / $0.34 output per 1M tokens (blended: $0.14)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: Cloudflare, DeepInfra, Google, NextBit, Novita, Parasail, SiliconFlow, Venice
+Available via: Cloudflare, Darkbloom, DeepInfra, Google, NextBit, Novita, Parasail, SiliconFlow, Venice
 Description: Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual
 
 ## Gemma 4 31B
@@ -158,7 +158,7 @@ Pricing: $0.10 input / $0.34 output per 1M tokens (blended: $0.16)
 Capabilities: tool use, reasoning, vision, structured output
 Scores (0-100): Reasoning: 52.3, Coding: 38.7, Agentic: 75.6
 Speed: 35.9 tokens/sec
-Available via: Cerebras, Chutes, CoreWeave, Crusoe, DeepInfra, Friendli, ModelRun, Morph, Novita, OpenInference, Parasail, Phala, SambaNova, SiliconFlow, Together, Venice
+Available via: Cerebras, Chutes, CoreWeave, Crusoe, DeepInfra, Friendli, ModelRun, Novita, OpenInference, Parasail, Phala, SambaNova, SiliconFlow, Together, Venice
 Benchmarks (Artificial Analysis): intelligence_index: 39.2, coding_index: 38.7, gpqa: 0.857, hle: 0.227, scicode: 0.434, ifbench: 0.756, terminalbench_hard: 0.364
 EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
@@ -167,8 +167,7 @@ Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal mo
 Provider: MiniMax
 ID: minimax/minimax-m2.7
 Context: 204,800 tokens
-Max output: 131,072 tokens
-Pricing: $0.30 input / $1.20 output per 1M tokens (blended: $0.53)
+Pricing: $0.24 input / $0.96 output per 1M tokens (blended: $0.42)
 Capabilities: tool use, reasoning, structured output
 Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
 Speed: 41.9 tokens/sec, TTFT 1.385s
@@ -193,7 +192,7 @@ Provider: MoonshotAI
 ID: moonshotai/kimi-k2.5
 Context: 262,144 tokens
 Max output: 262,144 tokens
-Pricing: $0.57 input / $2.85 output per 1M tokens (blended: $1.14)
+Pricing: $0.45 input / $2.25 output per 1M tokens (blended: $0.90)
 Capabilities: tool use, reasoning, vision, structured output
 Available via: Amazon Bedrock, AtlasCloud, DeepInfra, DigitalOcean, Moonshot AI, Novita, Phala, SiliconFlow, StreamLake, Venice
 Description: Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over appr
@@ -202,10 +201,9 @@ Description: Kimi K2.5 is Moonshot AI's native multimodal model, delivering stat
 Provider: MoonshotAI
 ID: moonshotai/kimi-k2.6
 Context: 262,144 tokens
-Max output: 262,144 tokens
 Pricing: $0.95 input / $4.00 output per 1M tokens (blended: $1.71)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Inceptron, Moonshot AI, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Together, Venice
+Available via: AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Inceptron, Moonshot AI, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice
 Description: Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks
 
 ## Hermes 4 405B
@@ -290,10 +288,10 @@ Description: GPT-5.5 is OpenAI’s frontier model designed for complex professio
 Provider: Qwen
 ID: qwen/qwen3.5-397b-a17b
 Context: 262,144 tokens
-Max output: 65,536 tokens
-Pricing: $0.39 input / $2.34 output per 1M tokens (blended: $0.88)
+Max output: 262,144 tokens
+Pricing: $0.50 input / $3.60 output per 1M tokens (blended: $1.27)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: Alibaba, AtlasCloud, Chutes, DeepInfra, DigitalOcean, GMICloud, Novita, Parasail, Phala, StreamLake, Venice
+Available via: Alibaba, AtlasCloud, DeepInfra, DigitalOcean, GMICloud, Novita, Parasail, Phala, StreamLake, Venice
 Description: The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher infere
 
 ## Qwen3.6 Plus
@@ -362,7 +360,7 @@ Context: 204,800 tokens
 Max output: 131,072 tokens
 Pricing: $0.40 input / $1.75 output per 1M tokens (blended: $0.74)
 Capabilities: tool use, reasoning, structured output
-Available via: AtlasCloud, Cerebras, DeepInfra, Google, Mancer 2, Novita, StreamLake, Venice, Z.AI
+Available via: AtlasCloud, DeepInfra, Google, Mancer 2, Novita, StreamLake, Venice, Z.AI
 Description: GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements
 
 ## GLM 4.7 Flash
@@ -408,17 +406,17 @@ Context: 204,800 tokens
 Max output: 128,000 tokens
 Pricing: $0.97 input / $3.04 output per 1M tokens (blended: $1.48)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Baidu, Chutes, Crusoe, DeepInfra, DigitalOcean, Friendli, GMICloud, Nebius, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice, Wafer, Z.AI
+Available via: Alibaba, AtlasCloud, Baidu, Chutes, Crusoe, DeepInfra, DigitalOcean, Friendli, GMICloud, Nebius, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice, Z.AI
 Description: GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work 
 
 ## GLM 5.2
 Provider: Z.ai
 ID: z-ai/glm-5.2
 Context: 1,048,576 tokens
-Max output: 262,144 tokens
-Pricing: $1.19 input / $3.74 output per 1M tokens (blended: $1.83)
+Max output: 131,072 tokens
+Pricing: $0.97 input / $3.04 output per 1M tokens (blended: $1.48)
 Capabilities: tool use, reasoning, structured output
-Available via: AkashML, Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, ModelRun, Morph, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
+Available via: Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, Mistral, Morph, Novita, Parasail, Phala, Reka, Sail Research, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
 Description: GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering
 
 ---
