@@ -24,6 +24,7 @@ Not safe for concurrent execution — parallel runs will race on model-data.json
 import argparse
 import json
 import os
+import re
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -70,6 +71,38 @@ AA_SLUG_MAP = {
     "z-ai/glm-5-turbo": "glm-5-turbo",
     "minimax/minimax-m2.7": "minimax-m2-7",
 }
+
+
+def derive_aa_slug(model_id: str) -> str:
+    """Derive a candidate Artificial Analysis slug from an OpenRouter model id.
+
+    AA slugs are the bare model name with dots flattened to hyphens and any
+    trailing instruct-tuning marker dropped. Verified against every entry in
+    AA_SLUG_MAP by test_derive_aa_slug(); the one entry it cannot reproduce
+    (claude-haiku-4.5 -> claude-4-5-haiku, which reorders the name) stays in
+    the hand map, which always wins.
+    """
+    slug = model_id.split("/", 1)[1] if "/" in model_id else model_id
+    slug = re.sub(r"-it$", "", slug)
+    return slug.replace(".", "-")
+
+
+def resolve_aa_slug(model_id: str, aa_models: dict) -> str | None:
+    """Resolve a model id to an AA slug: hand map first, then derivation.
+
+    The hand map is authoritative and is returned as-is, so a stale entry
+    still surfaces via the caller's "AA slug not found" diagnostic instead of
+    disappearing silently.
+
+    A DERIVED slug is only ever returned when it is an EXACT key in the AA
+    payload. A near-miss returns None rather than a guess, so derivation can
+    add coverage but can never attach one model's scores to another.
+    """
+    if slug := AA_SLUG_MAP.get(model_id):
+        return slug
+    candidate = derive_aa_slug(model_id)
+    return candidate if candidate in aa_models else None
+
 
 # OpenRouter renames/retires slugs over time. A dataset entry keeps its original
 # id (so PinchBench/EQ-Bench keys and site URLs stay stable) but its live
@@ -810,7 +843,7 @@ def main():
             transformed["notes"] = MODEL_NOTES[model_id]
 
         # Enrich with Artificial Analysis data if available
-        aa_slug = AA_SLUG_MAP.get(model_id)
+        aa_slug = resolve_aa_slug(model_id, aa_models)
         if aa_slug and aa_slug in aa_models:
             transformed = enrich_with_aa(transformed, aa_models[aa_slug])
             print(f"    + Enriched with Artificial Analysis data (slug: {aa_slug})")
