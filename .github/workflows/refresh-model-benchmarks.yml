@@ -24,7 +24,13 @@ jobs:
           python-version: "3.13"
 
       - name: Refresh OpenRouter metadata
-        run: python model-benchmarks/scripts/fetch-model.py --refresh --no-aa
+        # AA enrichment is attempted only when AA_API_KEY exists as a repo
+        # secret. Without it load_aa_api_key() returns None and the run is
+        # byte-identical to the old --no-aa behaviour, so adding the secret
+        # is the ONLY switch needed to start populating scores.
+        env:
+          AA_API_KEY: ${{ secrets.AA_API_KEY }}
+        run: python model-benchmarks/scripts/fetch-model.py --refresh
 
       - name: Watch EQ-Bench upstream for new rows
         id: watch
