@@ -103,6 +103,7 @@ def resolve_aa_slug(model_id: str, aa_models: dict) -> str | None:
     candidate = derive_aa_slug(model_id)
     return candidate if candidate in aa_models else None
 
+
 # OpenRouter renames/retires slugs over time. A dataset entry keeps its original
 # id (so PinchBench/EQ-Bench keys and site URLs stay stable) but its live
 # metadata is fetched from the current OpenRouter id listed here.
