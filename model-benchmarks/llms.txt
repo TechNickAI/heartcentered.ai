@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-09-14T15:53:29Z
+# Generated: 2026-09-21T15:53:44Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -108,17 +108,17 @@ Provider: DeepSeek
 ID: deepseek/deepseek-v4-flash
 Context: 1,048,576 tokens
 Max output: 384,000 tokens
-Pricing: $0.08 input / $0.17 output per 1M tokens (blended: $0.10)
+Pricing: $0.06 input / $0.11 output per 1M tokens (blended: $0.07)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Azure, Baidu, DeepInfra, DigitalOcean, GMICloud, Mancer 2, NextBit, Novita, OpenInference, Parasail, Phala, SiliconFlow, StreamLake, Venice, Wafer
+Available via: Alibaba, AtlasCloud, Azure, Baidu, DeepInfra, DigitalOcean, GMICloud, Mancer 2, NextBit, Novita, OpenInference, Parasail, SiliconFlow, StreamLake, Venice
 Description: DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa
 
 ## DeepSeek V4 Pro 0423
 Provider: DeepSeek
 ID: deepseek/deepseek-v4-pro
 Context: 1,048,576 tokens
-Max output: 393,216 tokens
-Pricing: $1.60 input / $3.20 output per 1M tokens (blended: $2.00)
+Max output: 384,000 tokens
+Pricing: $0.94 input / $1.88 output per 1M tokens (blended: $1.17)
 Capabilities: tool use, reasoning, structured output
 Available via: Alibaba, AtlasCloud, Azure, Baidu, BaseTen, Cloudflare, DeepInfra, DigitalOcean, GMICloud, NextBit, Novita, Parasail, SiliconFlow, StreamLake, Venice
 Description: DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso
@@ -195,7 +195,7 @@ Context: 262,144 tokens
 Max output: 235,929 tokens
 Pricing: $0.45 input / $2.25 output per 1M tokens (blended: $0.90)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: Amazon Bedrock, AtlasCloud, Novita, Phala, SiliconFlow, Venice
+Available via: Amazon Bedrock, AtlasCloud, Novita, SiliconFlow, Venice
 Description: Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over appr
 
 ## Kimi K2.6
@@ -205,7 +205,7 @@ Context: 262,144 tokens
 Max output: 235,929 tokens
 Pricing: $0.95 input / $4.00 output per 1M tokens (blended: $1.71)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, GMICloud, Inceptron, Moonshot AI, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice
+Available via: AtlasCloud, Baidu, BaseTen, Chutes, Cloudflare, CoreWeave, Crusoe, Decart, DeepInfra, DigitalOcean, Fireworks, GMICloud, Inceptron, Moonshot AI, Novita, Parasail, Phala, Sail Research, SiliconFlow, StreamLake, Venice
 Description: Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks
 
 ## Hermes 4 405B
@@ -418,9 +418,9 @@ Provider: Z.ai
 ID: z-ai/glm-5.2
 Context: 1,048,576 tokens
 Max output: 131,072 tokens
-Pricing: $0.68 input / $2.15 output per 1M tokens (blended: $1.05)
+Pricing: $0.65 input / $2.04 output per 1M tokens (blended: $1.00)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, Mistral, Novita, Parasail, Phala, SiliconFlow, StreamLake, Together, Venice, Z.AI
+Available via: Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, Decart, DeepInfra, DigitalOcean, Fireworks, Friendli, GMICloud, Inceptron, Novita, Parasail, Phala, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
 Description: GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering
 
 ---
