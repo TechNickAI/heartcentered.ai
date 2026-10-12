@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T09:43:55Z",
+  "generated": "2026-10-12T09:47:32Z",
   "schema_version": "2.0",
   "sources": {
     "openrouter": "https://openrouter.ai/api/v1/models",
@@ -99,7 +99,7 @@
         "eq_bench_public": true
       },
       "created": 1781007515,
-      "last_updated": "2026-10-05T09:43:51Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "anthropic/claude-haiku-4.5",
@@ -207,7 +207,7 @@
         "pinchbench": false
       },
       "created": 1760547638,
-      "last_updated": "2026-10-05T09:43:51Z",
+      "last_updated": "2026-10-12T09:47:31Z",
       "speed": {
         "output_tokens_per_sec": 93,
         "ttft_seconds": 0.4,
@@ -298,7 +298,7 @@
         "eq_bench_public": true
       },
       "created": 1764010580,
-      "last_updated": "2026-10-05T09:43:51Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "anthropic/claude-opus-4.6",
@@ -343,7 +343,7 @@
           "Claude Platform on AWS",
           "Google"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -442,7 +442,7 @@
         "eq_bench_public": true
       },
       "created": 1770219050,
-      "last_updated": "2026-10-05T09:43:51Z",
+      "last_updated": "2026-10-12T09:47:31Z",
       "speed": {
         "output_tokens_per_sec": 46.1,
         "ttft_seconds": 1.655,
@@ -533,7 +533,7 @@
         "eq_bench_public": true
       },
       "created": 1776351100,
-      "last_updated": "2026-10-05T09:43:52Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "anthropic/claude-opus-4.8",
@@ -619,7 +619,7 @@
         "eq_bench_public": true
       },
       "created": 1779905091,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.5",
@@ -705,7 +705,7 @@
         "eq_bench_public": true
       },
       "created": 1759161676,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "anthropic/claude-sonnet-4.6",
@@ -849,7 +849,7 @@
         "eq_bench_public": true
       },
       "created": 1771342990,
-      "last_updated": "2026-10-05T09:43:53Z",
+      "last_updated": "2026-10-12T09:47:31Z",
       "speed": {
         "output_tokens_per_sec": 47.0,
         "ttft_seconds": 0.9,
@@ -900,15 +900,15 @@
           "DigitalOcean",
           "GMICloud",
           "Mancer 2",
-          "Novita",
           "OpenInference",
           "Parasail",
           "Relace",
           "SiliconFlow",
           "StreamLake",
-          "Venice"
+          "Venice",
+          "Wafer"
         ],
-        "uptime_24h": 99.97,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -949,7 +949,7 @@
         "eq_bench_public": true
       },
       "created": 1777000666,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "deepseek/deepseek-v4-pro",
@@ -969,12 +969,12 @@
       },
       "tokenizer": "DeepSeek",
       "pricing": {
-        "input_per_m": 0.2088,
-        "output_per_m": 0.4176,
-        "cache_read_per_m": 0.0174,
+        "input_per_m": 0.9553,
+        "output_per_m": 1.9105,
+        "cache_read_per_m": 0.0796,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 0.261
+        "blended_per_m": 1.1941
       },
       "capabilities": {
         "tool_use": true,
@@ -994,16 +994,14 @@
           "DeepInfra",
           "DigitalOcean",
           "GMICloud",
-          "NextBit",
           "Novita",
           "Parasail",
           "Reka",
-          "Relace",
           "SiliconFlow",
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 99.97,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1044,7 +1042,7 @@
         "eq_bench_public": true
       },
       "created": 1777000679,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "google/gemini-3.1-pro-preview-20260219",
@@ -1088,7 +1086,7 @@
           "Google",
           "Google AI Studio"
         ],
-        "uptime_24h": 99.96,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1182,7 +1180,7 @@
         "eq_bench_public": true
       },
       "created": 1771509627,
-      "last_updated": "2026-10-05T09:43:53Z",
+      "last_updated": "2026-10-12T09:47:31Z",
       "speed": {
         "output_tokens_per_sec": 127.0,
         "ttft_seconds": 30.66,
@@ -1241,7 +1239,7 @@
           "SiliconFlow",
           "Venice"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1282,7 +1280,7 @@
         "eq_bench_public": true
       },
       "created": 1775227989,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:31Z"
     },
     {
       "id": "google/gemma-4-31b-it",
@@ -1334,7 +1332,7 @@
           "SiliconFlow",
           "Venice"
         ],
-        "uptime_24h": 99.76,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1416,7 +1414,7 @@
         "eq_bench_public": true
       },
       "created": 1775148486,
-      "last_updated": "2026-10-05T09:43:53Z",
+      "last_updated": "2026-10-12T09:47:31Z",
       "speed": {
         "output_tokens_per_sec": 35.9,
         "ttft_seconds": null,
@@ -1462,10 +1460,9 @@
           "GMICloud",
           "Groq",
           "Minimax",
-          "Novita",
-          "SambaNova"
+          "Novita"
         ],
-        "uptime_24h": 99.75,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1529,7 +1526,7 @@
         "pinchbench": true
       },
       "created": 1773836697,
-      "last_updated": "2026-10-05T09:43:53Z",
+      "last_updated": "2026-10-12T09:47:32Z",
       "speed": {
         "output_tokens_per_sec": 41.9,
         "ttft_seconds": 1.385,
@@ -1573,7 +1570,7 @@
         "providers": [
           "Novita"
         ],
-        "uptime_24h": 100.0,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1614,7 +1611,7 @@
         "eq_bench_public": true
       },
       "created": 1752263252,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "moonshotai/kimi-k2.5",
@@ -1635,12 +1632,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.45,
-        "output_per_m": 2.25,
-        "cache_read_per_m": 0.07,
+        "input_per_m": 0.5,
+        "output_per_m": 2.5,
+        "cache_read_per_m": 0.15,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 0.9
+        "blended_per_m": 1.0
       },
       "capabilities": {
         "tool_use": true,
@@ -1658,7 +1655,7 @@
           "SiliconFlow",
           "Venice"
         ],
-        "uptime_24h": 99.95,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1699,7 +1696,7 @@
         "eq_bench_public": true
       },
       "created": 1769487076,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "moonshotai/kimi-k2.6",
@@ -1720,12 +1717,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.95,
-        "output_per_m": 4.0,
-        "cache_read_per_m": 0.16,
+        "input_per_m": 0.65,
+        "output_per_m": 3.41,
+        "cache_read_per_m": 0.15,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 1.7125
+        "blended_per_m": 1.34
       },
       "capabilities": {
         "tool_use": true,
@@ -1743,7 +1740,6 @@
           "Cloudflare",
           "CoreWeave",
           "Crusoe",
-          "Decart",
           "DeepInfra",
           "DigitalOcean",
           "GMICloud",
@@ -1756,7 +1752,7 @@
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 99.95,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -1797,7 +1793,7 @@
         "eq_bench_public": true
       },
       "created": 1776699402,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "nousresearch/hermes-4-405b",
@@ -1877,7 +1873,7 @@
         "eq_bench_public": true
       },
       "created": 1756235463,
-      "last_updated": "2026-10-05T09:43:53Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "openai/gpt-5.1",
@@ -1960,7 +1956,7 @@
         "eq_bench_public": true
       },
       "created": 1763060305,
-      "last_updated": "2026-10-05T09:43:54Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "openai/gpt-5.2",
@@ -2043,7 +2039,7 @@
         "eq_bench_public": true
       },
       "created": 1765389775,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "openai/gpt-5.3-chat",
@@ -2262,7 +2258,7 @@
         "eq_bench_public": true
       },
       "created": 1772734352,
-      "last_updated": "2026-10-05T09:43:55Z",
+      "last_updated": "2026-10-12T09:47:32Z",
       "speed": {
         "output_tokens_per_sec": 74.0,
         "ttft_seconds": 152.2,
@@ -2360,7 +2356,7 @@
         "pinchbench": false
       },
       "created": 1773748178,
-      "last_updated": "2026-10-05T09:43:55Z",
+      "last_updated": "2026-10-12T09:47:32Z",
       "notes": "Agentic score from AA Agentic Index (not PinchBench-based)",
       "speed": {
         "output_tokens_per_sec": 186,
@@ -2449,7 +2445,7 @@
         "eq_bench_public": true
       },
       "created": 1777051893,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "qwen/qwen3.5-397b-a17b",
@@ -2499,7 +2495,7 @@
           "StreamLake",
           "Venice"
         ],
-        "uptime_24h": 99.97,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2540,7 +2536,7 @@
         "eq_bench_public": true
       },
       "created": 1771223018,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "qwen/qwen3.6-plus:free",
@@ -2581,7 +2577,7 @@
         "providers": [
           "Alibaba"
         ],
-        "uptime_24h": 99.95,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2621,7 +2617,7 @@
         "pinchbench": false
       },
       "created": 1775133557,
-      "last_updated": "2026-10-05T09:43:55Z",
+      "last_updated": "2026-10-12T09:47:32Z",
       "notes": "EQ-Bench scores removed 2026-07-26: they were inherited from predecessor Qwen3.5-397B-A17B, which is now tracked as its own row (qwen/qwen3.5-397b-a17b). Qwen3.6 Plus has not been benchmarked on EQ-Bench. PinchBench is from Qwen3.6 Plus directly. The :free OpenRouter tier has been retired; pricing shown is the paid qwen/qwen3.6-plus endpoint.",
       "speed": {
         "output_tokens_per_sec": 44.0,
@@ -2752,7 +2748,7 @@
         "eq_bench_public": true
       },
       "created": 1774979019,
-      "last_updated": "2026-10-05T09:43:55Z",
+      "last_updated": "2026-10-12T09:47:32Z",
       "notes": "EQ-Bench score is notably low (856) despite strong Arena ranking \u2014 suggests optimized for capability over emotional attunement.",
       "speed": {
         "output_tokens_per_sec": 271.0,
@@ -2797,7 +2793,7 @@
         "providers": [
           "SiliconFlow"
         ],
-        "uptime_24h": 100,
+        "uptime_24h": 99.39,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -2837,7 +2833,7 @@
         "pinchbench": true
       },
       "created": 1769728337,
-      "last_updated": "2026-10-05T09:43:55Z",
+      "last_updated": "2026-10-12T09:47:32Z",
       "speed": {
         "output_tokens_per_sec": 85.7,
         "ttft_seconds": 1.271,
@@ -2975,7 +2971,6 @@
       },
       "endpoint_stats": {
         "providers": [
-          "AtlasCloud",
           "DeepInfra",
           "Google",
           "Mancer 2",
@@ -2983,7 +2978,7 @@
           "Venice",
           "Z.AI"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3024,7 +3019,7 @@
         "eq_bench_public": true
       },
       "created": 1766378014,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "z-ai/glm-4.7-flash",
@@ -3065,7 +3060,7 @@
           "Novita",
           "Venice"
         ],
-        "uptime_24h": 99.29,
+        "uptime_24h": 99.86,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3106,7 +3101,7 @@
         "eq_bench_public": true
       },
       "created": 1768833913,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "z-ai/glm-5",
@@ -3193,7 +3188,7 @@
         "eq_bench_public": true
       },
       "created": 1770829182,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "z-ai/glm-5-turbo",
@@ -3232,7 +3227,7 @@
         "providers": [
           "Z.AI"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3308,7 +3303,7 @@
         "pinchbench": true
       },
       "created": 1773583573,
-      "last_updated": "2026-10-05T09:43:55Z",
+      "last_updated": "2026-10-12T09:47:32Z",
       "speed": {
         "output_tokens_per_sec": 42.0,
         "ttft_seconds": 1.77,
@@ -3322,7 +3317,7 @@
       "provider": "Z.ai",
       "description": "GLM-5.1 delivers a major leap in coding capability, with particularly significant gains in handling long-horizon tasks. Unlike previous models built around minute-level interactions, GLM-5.1 can work independently and continuously on...",
       "context_window": 204800,
-      "max_output": 131072,
+      "max_output": 128000,
       "modalities": {
         "input": [
           "text"
@@ -3333,12 +3328,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 1.4,
-        "output_per_m": 4.4,
-        "cache_read_per_m": 0.26,
+        "input_per_m": 0.966,
+        "output_per_m": 3.036,
+        "cache_read_per_m": 0.1794,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 2.15
+        "blended_per_m": 1.4835
       },
       "capabilities": {
         "tool_use": true,
@@ -3364,7 +3359,7 @@
           "Venice",
           "Z.AI"
         ],
-        "uptime_24h": 99.98,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3405,7 +3400,7 @@
         "eq_bench_public": true
       },
       "created": 1775578025,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     },
     {
       "id": "z-ai/glm-5.2",
@@ -3414,7 +3409,7 @@
       "provider": "Z.ai",
       "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
       "context_window": 1048576,
-      "max_output": 131072,
+      "max_output": 943718,
       "modalities": {
         "input": [
           "text"
@@ -3425,12 +3420,12 @@
       },
       "tokenizer": "Other",
       "pricing": {
-        "input_per_m": 0.0224,
-        "output_per_m": 16.0,
-        "cache_read_per_m": 0.0224,
+        "input_per_m": 0.06,
+        "output_per_m": 7.0,
+        "cache_read_per_m": 0.059,
         "cache_write_per_m": null,
         "web_search_per_req": null,
-        "blended_per_m": 4.0168
+        "blended_per_m": 1.795
       },
       "capabilities": {
         "tool_use": true,
@@ -3457,10 +3452,10 @@
           "InferenceNet",
           "Mistral",
           "Morph",
+          "Nebius",
           "Novita",
           "Parasail",
           "Phala",
-          "Relace",
           "SiliconFlow",
           "StreamLake",
           "Together",
@@ -3468,7 +3463,7 @@
           "Wafer",
           "Z.AI"
         ],
-        "uptime_24h": 99.99,
+        "uptime_24h": 100,
         "latency_ms": null,
         "throughput_tps": null
       },
@@ -3509,7 +3504,7 @@
         "eq_bench_public": true
       },
       "created": 1781631930,
-      "last_updated": "2026-10-05T09:43:55Z"
+      "last_updated": "2026-10-12T09:47:32Z"
     }
   ]
 }
