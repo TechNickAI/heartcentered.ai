@@ -1,5 +1,5 @@
 {
-  "count": 79,
+  "count": 83,
   "keys": [
     "HiveLabsAI/hivemind-32b-preview",
     "Nanbeige/Nanbeige4-3B-Thinking-2511",
@@ -9,6 +9,7 @@
     "Qwen/Qwen3-32B",
     "Qwen/Qwen3-8B",
     "Qwen/Qwen3.5-397B-A17B",
+    "Qwen/Qwen3.5-4B",
     "chatgpt-4o-latest-2025-03-27",
     "chatgpt-4o-latest-2025-04-25",
     "claude-3-5-sonnet-20241022",
@@ -39,6 +40,7 @@
     "google/gemma-4-12B-it",
     "google/gemma-4-26B-A4B-it",
     "google/gemma-4-31B-it",
+    "google/gemma-4-E4B-it",
     "gpt-4-0314",
     "gpt-4.1",
     "gpt-4.1-mini",
@@ -66,6 +68,8 @@
     "moonshotai/Kimi-K2-Instruct",
     "moonshotai/Kimi-K2.5",
     "moonshotai/Kimi-K2.6",
+    "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+    "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-BF16",
     "nvidia/llama-3.1-nemotron-ultra-253b-v1:free",
     "o3",
     "o4-mini",
