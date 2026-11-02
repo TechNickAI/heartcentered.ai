@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-10-26T09:41:43Z
+# Generated: 2026-11-02T09:23:56Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -117,10 +117,10 @@ Description: DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts mod
 Provider: DeepSeek
 ID: deepseek/deepseek-v4-pro
 Context: 1,048,576 tokens
-Max output: 384,000 tokens
-Pricing: $0.96 input / $1.91 output per 1M tokens (blended: $1.19)
+Max output: 393,216 tokens
+Pricing: $1.60 input / $3.20 output per 1M tokens (blended: $2.00)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Azure, Baidu, Cloudflare, Crusoe, DeepInfra, DigitalOcean, GMICloud, Novita, Reka, Relace, SiliconFlow, StreamLake, Venice
+Available via: Alibaba, AtlasCloud, Azure, Baidu, Cloudflare, Crusoe, DeepInfra, DigitalOcean, GMICloud, Novita, Relace, SiliconFlow, StreamLake, Venice
 Description: DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso
 
 ## Gemini 3.1 Pro Preview
@@ -143,22 +143,22 @@ Description: Gemini 3.1 Pro Preview is Google’s frontier reasoning model, deli
 Provider: Google
 ID: google/gemma-4-26b-a4b-it
 Context: 262,144 tokens
-Max output: 235,929 tokens
-Pricing: $0.09 input / $0.30 output per 1M tokens (blended: $0.14)
+Max output: 32,768 tokens
+Pricing: $0.08 input / $0.25 output per 1M tokens (blended: $0.13)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: Cloudflare, CoreWeave, Darkbloom, DeepInfra, DekaLLM, Google, Io Net, Makora, NextBit, Novita, Parasail, SiliconFlow, Venice
+Available via: AkashML, Cloudflare, CoreWeave, Darkbloom, DeepInfra, DekaLLM, Google, Io Net, Makora, NextBit, Novita, Parasail, PrimeIntellect, SiliconFlow, Venice
 Description: Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual
 
 ## Gemma 4 31B
 Provider: Google
 ID: google/gemma-4-31b-it
 Context: 262,144 tokens
-Max output: 235,929 tokens
-Pricing: $0.10 input / $0.34 output per 1M tokens (blended: $0.16)
+Max output: 16,384 tokens
+Pricing: $0.20 input / $0.40 output per 1M tokens (blended: $0.25)
 Capabilities: tool use, reasoning, vision, structured output
 Scores (0-100): Reasoning: 52.3, Coding: 38.7, Agentic: 75.6
 Speed: 35.9 tokens/sec
-Available via: Chutes, CoreWeave, Crusoe, DeepInfra, Friendli, Io Net, ModelRun, Novita, Parasail, SambaNova, SiliconFlow, Venice
+Available via: Chutes, CoreWeave, Crusoe, DeepInfra, DekaLLM, Friendli, Io Net, ModelRun, Novita, Parasail, PrimeIntellect, SambaNova, SiliconFlow, Venice
 Benchmarks (Artificial Analysis): intelligence_index: 39.2, coding_index: 38.7, gpqa: 0.857, hle: 0.227, scicode: 0.434, ifbench: 0.756, terminalbench_hard: 0.364
 EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
@@ -362,9 +362,9 @@ Provider: Z.ai
 ID: z-ai/glm-4.7
 Context: 204,800 tokens
 Max output: 131,072 tokens
-Pricing: $0.54 input / $1.98 output per 1M tokens (blended: $0.90)
+Pricing: $0.60 input / $2.20 output per 1M tokens (blended: $1.00)
 Capabilities: tool use, reasoning, structured output
-Available via: DeepInfra, Google, Mancer 2, Novita, Venice, Z.AI
+Available via: DeepInfra, Mancer 2, Novita, Venice, Z.AI
 Description: GLM-4.7 is Z.ai’s latest flagship model, featuring upgrades in two key areas: enhanced programming capabilities and more stable multi-step reasoning/execution. It demonstrates significant improvements
 
 ## GLM 4.7 Flash
@@ -418,9 +418,9 @@ Provider: Z.ai
 ID: z-ai/glm-5.2
 Context: 1,048,576 tokens
 Max output: 943,718 tokens
-Pricing: $0.03 input / $7.00 output per 1M tokens (blended: $1.78)
+Pricing: $0.01 input / $6.80 output per 1M tokens (blended: $1.70)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, Decart, DeepInfra, DigitalOcean, Friendli, GMICloud, Inceptron, Mistral, Morph, Nebius, Novita, Parasail, Relace, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
+Available via: Alibaba, Ambient, AtlasCloud, Baidu, BaseTen, Cloudflare, CoreWeave, DeepInfra, DigitalOcean, Friendli, GMICloud, Inceptron, Mistral, Morph, Nebius, Novita, Parasail, Relace, SiliconFlow, StreamLake, Together, Venice, Wafer, Z.AI
 Description: GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering
 
 ---
