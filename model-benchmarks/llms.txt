@@ -1,5 +1,5 @@
 # HeartCentered AI — LLM Model Benchmarks
-# Generated: 2026-11-02T09:23:56Z
+# Generated: 2026-11-09T09:24:17Z
 # Full data: https://heartcentered.ai/model-benchmarks/data/model-data.json
 # Web UI: https://heartcentered.ai/model-benchmarks/
 
@@ -110,17 +110,17 @@ Context: 1,048,576 tokens
 Max output: 943,717 tokens
 Pricing: $0.09 input / $0.18 output per 1M tokens (blended: $0.11)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Azure, Baidu, Cloudflare, Crusoe, DeepInfra, DigitalOcean, Fireworks, GMICloud, Mancer 2, Parasail, Relace, SiliconFlow, StreamLake, Venice, Wafer
+Available via: AtlasCloud, Azure, Baidu, DeepInfra, DigitalOcean, Fireworks, GMICloud, Mancer 2, Parasail, Relace, SiliconFlow, StreamLake, Venice, Wafer
 Description: DeepSeek V4 Flash is an efficiency-optimized Mixture-of-Experts model from DeepSeek with 284B total parameters and 13B activated parameters, supporting a 1M-token context window. It is designed for fa
 
 ## DeepSeek V4 Pro 0423
 Provider: DeepSeek
 ID: deepseek/deepseek-v4-pro
 Context: 1,048,576 tokens
-Max output: 393,216 tokens
-Pricing: $1.60 input / $3.20 output per 1M tokens (blended: $2.00)
+Max output: 384,000 tokens
+Pricing: $0.96 input / $1.91 output per 1M tokens (blended: $1.19)
 Capabilities: tool use, reasoning, structured output
-Available via: Alibaba, AtlasCloud, Azure, Baidu, Cloudflare, Crusoe, DeepInfra, DigitalOcean, GMICloud, Novita, Relace, SiliconFlow, StreamLake, Venice
+Available via: Alibaba, AtlasCloud, Azure, Baidu, DeepInfra, DigitalOcean, GMICloud, Nebius, Novita, Relace, SiliconFlow, StreamLake, Venice
 Description: DeepSeek V4 Pro is a large-scale Mixture-of-Experts model from DeepSeek with 1.6T total parameters and 49B activated parameters, supporting a 1M-token context window. It is designed for advanced reaso
 
 ## Gemini 3.1 Pro Preview
@@ -143,8 +143,8 @@ Description: Gemini 3.1 Pro Preview is Google’s frontier reasoning model, deli
 Provider: Google
 ID: google/gemma-4-26b-a4b-it
 Context: 262,144 tokens
-Max output: 32,768 tokens
-Pricing: $0.08 input / $0.25 output per 1M tokens (blended: $0.13)
+Max output: 235,929 tokens
+Pricing: $0.09 input / $0.30 output per 1M tokens (blended: $0.14)
 Capabilities: tool use, reasoning, vision, structured output
 Available via: AkashML, Cloudflare, CoreWeave, Darkbloom, DeepInfra, DekaLLM, Google, Io Net, Makora, NextBit, Novita, Parasail, PrimeIntellect, SiliconFlow, Venice
 Description: Gemma 4 26B A4B IT is an instruction-tuned Mixture-of-Experts (MoE) model from Google DeepMind. Despite 25.2B total parameters, only 3.8B activate per token during inference — delivering near-31B qual
@@ -158,7 +158,7 @@ Pricing: $0.20 input / $0.40 output per 1M tokens (blended: $0.25)
 Capabilities: tool use, reasoning, vision, structured output
 Scores (0-100): Reasoning: 52.3, Coding: 38.7, Agentic: 75.6
 Speed: 35.9 tokens/sec
-Available via: Chutes, CoreWeave, Crusoe, DeepInfra, DekaLLM, Friendli, Io Net, ModelRun, Novita, Parasail, PrimeIntellect, SambaNova, SiliconFlow, Venice
+Available via: Chutes, CoreWeave, Crusoe, DeepInfra, DekaLLM, Friendli, Io Net, Modal, ModelRun, NextBit, Novita, Parasail, PrimeIntellect, SambaNova, SiliconFlow, Venice
 Benchmarks (Artificial Analysis): intelligence_index: 39.2, coding_index: 38.7, gpqa: 0.857, hle: 0.227, scicode: 0.434, ifbench: 0.756, terminalbench_hard: 0.364
 EQ-Bench v3 Score: 66.1/100
 Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, nat
@@ -167,12 +167,12 @@ Description: Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal mo
 Provider: MiniMax
 ID: minimax/minimax-m2.7
 Context: 204,800 tokens
-Max output: 131,072 tokens
-Pricing: $0.30 input / $1.20 output per 1M tokens (blended: $0.53)
+Max output: 176,947 tokens
+Pricing: $0.21 input / $0.84 output per 1M tokens (blended: $0.37)
 Capabilities: tool use, reasoning, structured output
 Scores (0-100): Reasoning: 58.5, Coding: 41.9, Agentic: 87.6
 Speed: 41.9 tokens/sec, TTFT 1.385s
-Available via: AtlasCloud, GMICloud, Groq, Minimax, Novita
+Available via: GMICloud, Groq, Novita
 Benchmarks (Artificial Analysis): intelligence_index: 49.6, coding_index: 41.9, gpqa: 0.874, hle: 0.281, scicode: 0.47, ifbench: 0.757, terminalbench_hard: 0.394
 EQ-Bench v3 Score: 68.75/100
 PinchBench: 89.8% best, 83.2% avg (11 runs)
@@ -192,8 +192,8 @@ Description: Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language
 Provider: MoonshotAI
 ID: moonshotai/kimi-k2.5
 Context: 262,144 tokens
-Max output: 235,929 tokens
-Pricing: $0.50 input / $2.50 output per 1M tokens (blended: $1.00)
+Max output: 65,536 tokens
+Pricing: $0.53 input / $3.33 output per 1M tokens (blended: $1.23)
 Capabilities: tool use, reasoning, vision, structured output
 Available via: Amazon Bedrock, AtlasCloud, Novita, SiliconFlow, Venice
 Description: Kimi K2.5 is Moonshot AI's native multimodal model, delivering state-of-the-art visual coding capability and a self-directed agent swarm paradigm. Built on Kimi K2 with continued pretraining over appr
@@ -205,7 +205,7 @@ Context: 262,144 tokens
 Max output: 235,929 tokens
 Pricing: $0.65 input / $3.41 output per 1M tokens (blended: $1.34)
 Capabilities: tool use, reasoning, vision, structured output
-Available via: AtlasCloud, Baidu, Chutes, Cloudflare, CoreWeave, Crusoe, DeepInfra, DigitalOcean, GMICloud, Inceptron, Moonshot AI, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice
+Available via: AtlasCloud, Baidu, Chutes, Cloudflare, CoreWeave, Crusoe, DeepInfra, DigitalOcean, Inceptron, Moonshot AI, Novita, Parasail, Phala, SiliconFlow, StreamLake, Venice
 Description: Kimi K2.6 is Moonshot AI's next-generation multimodal model, designed for long-horizon coding, coding-driven UI/UX generation, and multi-agent orchestration. It handles complex end-to-end coding tasks
 
 ## Hermes 4 405B
@@ -291,8 +291,8 @@ Description: GPT-5.5 is OpenAI’s frontier model designed for complex professio
 Provider: Qwen
 ID: qwen/qwen3.5-397b-a17b
 Context: 262,144 tokens
-Max output: 235,929 tokens
-Pricing: $0.50 input / $3.60 output per 1M tokens (blended: $1.27)
+Max output: 64,000 tokens
+Pricing: $0.60 input / $3.60 output per 1M tokens (blended: $1.35)
 Capabilities: tool use, reasoning, vision, structured output
 Available via: Alibaba, AtlasCloud, DeepInfra, DigitalOcean, GMICloud, Novita, Parasail, Phala, StreamLake, Venice
 Description: The Qwen3.5 series 397B-A17B native vision-language model is built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher infere
